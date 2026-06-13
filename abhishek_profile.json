@@ -624,6 +624,18 @@
     "Sharing Mentorship Figma Crash Course – 3 Days"
   ],
 
+  "certifications": [
+    {
+      "title": "Google Professional Certificate",
+      "issuer": "Google",
+      "platform": "Coursera",
+      "date": "2024",
+      "url": null,
+      "credentialId": null,
+      "skills": ["Digital Marketing", "SEO", "Analytics", "Professional Development"]
+    }
+  ],
+
   "recommendations": [
     {
       "name": "Er. Himal Rawal",

@@ -345,6 +345,64 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Certifications */}
+        <section id="certifications">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Certifications</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {(profileData as any).certifications?.map((cert: any, i: number) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07, duration: 0.4 }}
+                className="relative p-5 rounded-2xl border border-muted bg-muted/30 flex flex-col gap-3 hover:border-primary/40 transition-colors"
+              >
+                {/* Issuer badge */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <span className="text-primary font-bold text-sm">
+                      {cert.issuer.slice(0, 2).toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xs font-semibold text-primary truncate">{cert.issuer}</div>
+                    {cert.platform && (
+                      <div className="text-xs text-muted-foreground">{cert.platform}</div>
+                    )}
+                  </div>
+                </div>
+
+                <h3 className="font-bold text-sm leading-snug">{cert.title}</h3>
+
+                {cert.skills && cert.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {cert.skills.map((sk: string, s: number) => (
+                      <span key={s} className="text-xs px-2 py-0.5 bg-muted rounded-full text-muted-foreground">{sk}</span>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between mt-auto pt-1">
+                  <span className="text-xs font-mono text-muted-foreground">{cert.date}</span>
+                  {cert.url ? (
+                    <a href={cert.url} target="_blank" rel="noopener noreferrer"
+                      className="text-xs text-primary hover:underline flex items-center gap-1">
+                      <ExternalLink size={12} /> View
+                    </a>
+                  ) : (
+                    <span className="text-xs text-muted-foreground/50 italic">No link yet</span>
+                  )}
+                </div>
+
+                {cert.credentialId && (
+                  <p className="text-xs text-muted-foreground font-mono truncate">ID: {cert.credentialId}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Blog */}
         <section id="blog">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Blog</h2>
