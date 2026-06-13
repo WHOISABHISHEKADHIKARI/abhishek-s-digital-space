@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin, Camera, Award, FileImage, Image } from "lucide-react";
 import profileData from "../../../../abhishek_profile.json";
 
 export default function Portfolio() {
@@ -178,14 +178,65 @@ export default function Portfolio() {
         <section id="volunteering">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Volunteering & Leadership</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {profileData.volunteering.map((vol: any, i: number) => (
-              <div key={i} className="p-6 rounded-2xl bg-card border shadow-sm">
-                <div className="text-xs font-mono text-muted-foreground mb-2">{vol.date || vol.startDate}</div>
-                <h3 className="font-bold text-lg leading-tight mb-1">{vol.role}</h3>
-                <div className="text-primary text-sm mb-4">{vol.organization}</div>
-                <p className="text-sm text-muted-foreground">{vol.summary}</p>
-              </div>
-            ))}
+            {profileData.volunteering.map((vol: any, i: number) => {
+              const img = vol.images?.[0];
+              const typeConfig: Record<string, { icon: React.ReactNode; label: string; gradient: string }> = {
+                event_photo: {
+                  icon: <Camera size={28} />,
+                  label: "Event Photo",
+                  gradient: "from-emerald-900/60 to-emerald-700/30",
+                },
+                certificate: {
+                  icon: <Award size={28} />,
+                  label: "Certificate",
+                  gradient: "from-amber-900/60 to-amber-700/30",
+                },
+                poster: {
+                  icon: <FileImage size={28} />,
+                  label: "Poster",
+                  gradient: "from-blue-900/60 to-blue-700/30",
+                },
+              };
+              const cfg = img ? (typeConfig[img.type] ?? { icon: <Image size={28} />, label: img.type, gradient: "from-slate-800/60 to-slate-600/30" }) : null;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04, duration: 0.4 }}
+                  className="rounded-2xl bg-card border shadow-sm overflow-hidden flex flex-col"
+                  data-testid={`card-volunteering-${i}`}
+                >
+                  {/* Image placeholder */}
+                  {cfg && (
+                    <div className={`relative w-full aspect-[16/7] bg-gradient-to-br ${cfg.gradient} flex flex-col items-center justify-center gap-2 text-white/50`}>
+                      {cfg.icon}
+                      <span className="text-xs font-semibold tracking-widest uppercase opacity-60">{cfg.label}</span>
+                      {img.imageUrl && (
+                        <img
+                          src={img.imageUrl}
+                          alt={img.caption}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      )}
+                      {img.caption && (
+                        <div className="absolute bottom-0 inset-x-0 px-4 py-2 bg-foreground/40 backdrop-blur-sm">
+                          <p className="text-white text-xs line-clamp-1">{img.caption}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {/* Card body */}
+                  <div className="p-5 flex flex-col gap-1">
+                    <div className="text-xs font-mono text-muted-foreground">{vol.date || vol.startDate}</div>
+                    <h3 className="font-bold text-base leading-tight">{vol.role}</h3>
+                    <div className="text-primary text-sm mb-2">{vol.organization}</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{vol.summary}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </section>
 
