@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin, Camera, Award, FileImage, Image } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin, Camera, Award, FileImage, Image, ArrowUp, Send } from "lucide-react";
 import profileData from "../../../../abhishek_profile.json";
 
 export default function Portfolio() {
   const [isDark, setIsDark] = useState(false);
+  const [showTop, setShowTop] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sent, setSent] = useState(false);
 
   useEffect(() => {
     if (isDark) {
@@ -13,6 +16,22 @@ export default function Portfolio() {
       document.documentElement.classList.remove("dark");
     }
   }, [isDark]);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Portfolio message from ${form.name}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.open(`mailto:${profileData.profile.email ?? "abhishek@abhishekadhikari.com"}?subject=${subject}&body=${body}`);
+    setSent(true);
+    setTimeout(() => setSent(false), 4000);
+    setForm({ name: "", email: "", message: "" });
+  };
 
   return (
     <div className="min-h-screen font-sans">
@@ -344,7 +363,98 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Contact */}
+        <section id="contact">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Get In Touch</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                Whether you have a collaboration in mind, want to discuss agritech, or just want to say hello — my inbox is open.
+              </p>
+              <div className="space-y-3 pt-2">
+                <a href={`mailto:${profileData.profile.email ?? "abhishek@abhishekadhikari.com"}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Mail size={16} /> {profileData.profile.email ?? "abhishek@abhishekadhikari.com"}
+                </a>
+                <a href={profileData.profile.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin size={16} /> LinkedIn
+                </a>
+                <a href={profileData.profile.website} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <ExternalLink size={16} /> {profileData.profile.website?.replace(/^https?:\/\//, "")}
+                </a>
+              </div>
+            </div>
+
+            <motion.form
+              onSubmit={handleSubmit}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+              data-testid="form-contact"
+            >
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Name</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Your name"
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    data-testid="input-name"
+                    className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Email</label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                    value={form.email}
+                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                    data-testid="input-email"
+                    className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Message</label>
+                <textarea
+                  required
+                  rows={5}
+                  placeholder="What's on your mind?"
+                  value={form.message}
+                  onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                  data-testid="input-message"
+                  className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 transition resize-none"
+                />
+              </div>
+              <button
+                type="submit"
+                data-testid="button-submit"
+                className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+              >
+                {sent ? "Opened in mail app!" : <><Send size={15} /> Send Message</>}
+              </button>
+            </motion.form>
+          </div>
+        </section>
+
       </main>
+
+      {/* Back to top */}
+      <motion.button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: showTop ? 1 : 0, scale: showTop ? 1 : 0.8, pointerEvents: showTop ? "auto" : "none" }}
+        transition={{ duration: 0.2 }}
+        data-testid="button-back-to-top"
+        className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors"
+        aria-label="Back to top"
+      >
+        <ArrowUp size={18} />
+      </motion.button>
 
       {/* Footer */}
       <footer className="border-t bg-card py-12">
