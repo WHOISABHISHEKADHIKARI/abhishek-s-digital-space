@@ -43,6 +43,7 @@ export default function Portfolio() {
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
             <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-full hover:bg-muted transition-colors">
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
