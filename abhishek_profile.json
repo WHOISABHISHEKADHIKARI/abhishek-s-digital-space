@@ -2,11 +2,19 @@
   "profile": {
     "name": "Abhishek Adhikari",
     "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari/",
+    "github": "https://github.com/WHOISABHISHEKADHIKARI",
     "website": "https://abhishekadhikari.com",
     "redesignProfile": "https://www.redesignprofile.com"
   },
 
   "projects": [
+    {
+      "category": "Personal Brand",
+      "items": [
+        { "name": "Abhishek Adhikari", "url": "https://abhishekadhikari.com" },
+        { "name": "Redesign Profile", "url": "https://www.redesignprofile.com" }
+      ]
+    },
     {
       "category": "SEO & Tools",
       "items": [
@@ -301,7 +309,8 @@
           "type": "event_photo",
           "caption": "AWS Cloud Innovation Day – Hetauda 2026",
           "description": "Speaking at AWS Cloud Innovation Day in Hetauda as Lead Organizer, where developers, students, and tech enthusiasts gathered to explore cloud technologies through workshops, demonstrations, and discussions.",
-          "pdfLine": 222
+          "pdfLine": 222,
+          "imageUrl": null
         }
       ]
     },
@@ -326,7 +335,8 @@
           "type": "event_photo",
           "caption": "Panel Discussion – Hult Prize IOF Hetauda",
           "description": "Participating as a panelist during the Hult Prize program at the Institute of Forestry (IOF), Tribhuvan University Hetauda. Discussion focused on Nepal's startup ecosystem, youth innovation, entrepreneurship, and agritech.",
-          "pdfLine": 65
+          "pdfLine": 65,
+          "imageUrl": null
         }
       ]
     },
@@ -352,7 +362,8 @@
           "type": "event_photo",
           "caption": "Guest Lecture – Arduino Robotics Training",
           "description": "Delivered a guest lecture on Arduino programming and basic robotics concepts during the Junior Scientist Robotics Workshop.",
-          "pdfLine": 247
+          "pdfLine": 247,
+          "imageUrl": null
         }
       ]
     },
@@ -378,7 +389,8 @@
           "type": "event_poster",
           "caption": "3-Day Figma UI/UX Workshop – Code for Change Chitwan",
           "description": "Poster for a 3-Day Figma UI/UX Workshop organized by Code for Change Chitwan featuring mentor Abhishek Adhikari.",
-          "pdfLine": 138
+          "pdfLine": 138,
+          "imageUrl": null
         }
       ]
     },
@@ -405,7 +417,8 @@
           "filename": "CRTFCT.jpg",
           "caption": "Certificate of Appreciation – Code for Change",
           "description": "Certificate received for mentoring participants at Code for Change Dang on UI/UX design and Figma.",
-          "pdfLine": 90
+          "pdfLine": 90,
+          "imageUrl": null
         }
       ]
     },
@@ -430,7 +443,8 @@
           "type": "certificate",
           "caption": "Letter of Appreciation – Innovation Pavilion Supervisor",
           "description": "Letter of Appreciation received for contributing to the International Conference on Capacity Development as Innovation Pavilion Supervisor.",
-          "pdfLine": 114
+          "pdfLine": 114,
+          "imageUrl": null
         }
       ]
     },
@@ -458,7 +472,8 @@
           "type": "group_photo",
           "caption": "Coding Olympics Nepal – WE TRIED OUR BEST",
           "description": "Group photo from Coding Olympics Nepal activities and outreach work.",
-          "pdfLine": 166
+          "pdfLine": 166,
+          "imageUrl": null
         }
       ]
     },
@@ -474,7 +489,8 @@
           "type": "certificate",
           "caption": "Certificate of Appreciation – Tech Disrupters 2023",
           "description": "Certificate of Appreciation from DEV Community Nepal for supporting the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'.",
-          "pdfLine": 182
+          "pdfLine": 182,
+          "imageUrl": null
         }
       ]
     },
@@ -490,7 +506,8 @@
           "type": "certificate",
           "caption": "Certificate of Appreciation – Figma UI/UX Workshop Mentor",
           "description": "Recognized by Sharing Mentorship Kathmandu Chapter for mentoring participants during a 3-Day Figma Crash Course, sharing practical insights on UI/UX design, interface layout, and collaborative design using Figma.",
-          "pdfLine": 205
+          "pdfLine": 205,
+          "imageUrl": null
         }
       ]
     },
@@ -515,7 +532,8 @@
           "type": "certificate",
           "caption": "Certificate of Appreciation – UI/UX Design Session",
           "description": "Recognition from DEV Community Nepal for sharing knowledge and mentoring participants during an 18-day UI/UX Designing session.",
-          "pdfLine": 277
+          "pdfLine": 277,
+          "imageUrl": null
         }
       ]
     },
@@ -538,7 +556,8 @@
           "type": "event_photo",
           "caption": "Nepal Scouts – Rover/Ranger Training Camp",
           "description": "Worked as a Manahari Ward Representative. Participated in the Rover/Ranger Training Camp organized by Nepal Scouts, Manahari Municipality Committee, Makawanpur, focusing on leadership, teamwork, discipline, and community service.",
-          "pdfLine": 303
+          "pdfLine": 303,
+          "imageUrl": null
         }
       ]
     },
