@@ -266,7 +266,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
-            {["about", "experience", "projects", "certifications", "contact"].map((section) => (
+            {["about", "experience", "projects", "certifications", "blog", "contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
