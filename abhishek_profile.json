@@ -574,6 +574,32 @@
         "Improved ability to communicate technical concepts to non-technical audiences",
         "Strengthened skills in automation, UI/UX design, and problem solving"
       ]
+    },
+    {
+      "role": "UI/UX Mentor",
+      "organization": "Hetauda School of Management and Social Sciences (HSMSS)",
+      "date": "2024",
+      "duration": "10 days",
+      "category": "Education",
+      "summary": "Conducted a 10-day intensive UI/UX design training session covering Figma, design thinking, prototyping, and real-world product workflows.",
+      "responsibilities": [
+        "Delivered structured daily sessions on UI/UX fundamentals and Figma",
+        "Guided students through wireframing, prototyping, and design critique",
+        "Shared real-world project examples from agritech and community platforms"
+      ],
+      "impact": [
+        "Trained students in industry-standard design tools over 10 focused days",
+        "Built foundational design skills in a new batch of Nepal's tech talent"
+      ],
+      "images": [
+        {
+          "type": "event_photo",
+          "caption": "10-Day UI/UX Training – HSMSS",
+          "description": "10-day intensive UI/UX training session at Hetauda School of Management and Social Sciences.",
+          "pdfLine": null,
+          "imageUrl": null
+        }
+      ]
     }
   ],
 
@@ -675,6 +701,44 @@
       "relationship": "Colleague (different teams)",
       "date": "April 23, 2023",
       "excerpt": "Abhishek consistently demonstrated exceptional organizational skills and strong attention to detail. Their positive attitude and willingness to go above and beyond their duties made them a valuable asset."
+    }
+  ],
+
+  "blog": [
+    {
+      "title": "The Ultimate Guide to Future Design Perfection",
+      "publication": "TechSathi",
+      "date": "2024",
+      "url": "https://techsathi.com",
+      "summary": "An in-depth guide exploring future-forward design principles, tools, and workflows for digital creators and product teams.",
+      "tags": ["Design", "UI/UX", "Future Tech"]
+    }
+  ],
+
+  "newsMedia": [
+    {
+      "type": "recognition",
+      "title": "Top 10 Contributor – Prompt Engineering Roadmap",
+      "source": "3 Hours of Prompt Engineering",
+      "date": "2024",
+      "description": "Listed as a top 10 contributor to the 3 Hours of Prompt Engineering roadmap event in Hetauda — one of the key knowledge contributors among all participants.",
+      "url": null
+    },
+    {
+      "type": "event_coverage",
+      "title": "Lead Organizer – HRIC STEAM Program 2025",
+      "source": "HRIC Hetauda",
+      "date": "2025",
+      "description": "Featured as Lead Organizer of the HRIC STEAM Program 2025 in Hetauda, coordinating speakers, logistics, and student engagement.",
+      "url": null
+    },
+    {
+      "type": "speaking",
+      "title": "Panelist – Hult Prize IOF Hetauda",
+      "source": "Hult Prize",
+      "date": "Dec 2025",
+      "description": "Invited as a panelist at the Hult Prize IOF chapter in Hetauda, contributing industry and entrepreneurship perspective to student pitches.",
+      "url": null
     }
   ]
 }

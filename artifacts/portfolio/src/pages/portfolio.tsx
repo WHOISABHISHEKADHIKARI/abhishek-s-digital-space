@@ -317,6 +317,90 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Blog */}
+        <section id="blog">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Blog</h2>
+          <div className="space-y-4">
+            {(profileData as any).blog?.map((post: any, i: number) => (
+              <motion.a
+                key={i}
+                href={post.url ?? "#"}
+                target={post.url ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
+                className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
+              >
+                <div className="flex-1 space-y-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
+                    <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{post.publication}</span>
+                  </div>
+                  <h3 className="font-bold text-base group-hover:text-primary transition-colors">{post.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{post.summary}</p>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {post.tags?.map((tag: string, t: number) => (
+                      <span key={t} className="text-xs px-2 py-0.5 bg-muted rounded-full text-muted-foreground">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                {post.url && (
+                  <ExternalLink size={16} className="shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                )}
+              </motion.a>
+            ))}
+          </div>
+        </section>
+
+        {/* News & Media */}
+        <section id="news">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">News & Recognition</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {(profileData as any).newsMedia?.map((item: any, i: number) => {
+              const typeColors: Record<string, string> = {
+                recognition: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400",
+                event_coverage: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+                speaking: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400",
+                press: "bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400",
+              };
+              const typeLabel: Record<string, string> = {
+                recognition: "Recognition",
+                event_coverage: "Event",
+                speaking: "Speaking",
+                press: "Press",
+              };
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06, duration: 0.4 }}
+                  className="p-5 rounded-2xl bg-muted/30 border border-muted flex flex-col gap-3"
+                >
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${typeColors[item.type] ?? typeColors.press}`}>
+                      {typeLabel[item.type] ?? item.type}
+                    </span>
+                    <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
+                  </div>
+                  <h3 className="font-bold text-sm leading-snug">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  <div className="text-xs text-primary/70 font-medium">{item.source}</div>
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer"
+                      className="text-xs text-primary hover:underline flex items-center gap-1 w-fit">
+                      <ExternalLink size={12} /> View coverage
+                    </a>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
+
         {/* Recommendations */}
         <section id="recommendations">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Recommendations</h2>
