@@ -75,33 +75,78 @@ export default function Portfolio() {
         {/* Experience */}
         <section id="experience">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Experience</h2>
-          <div className="space-y-12">
-            {profileData.experience.map((exp: any, i: number) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative pl-8 border-l-2 border-muted"
-              >
-                <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2 border-2 border-background" />
-                <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
-                  <h3 className="text-xl font-semibold">{exp.role}</h3>
-                  <span className="text-sm text-muted-foreground font-mono mt-1 md:mt-0">{exp.startDate} - {exp.endDate}</span>
-                </div>
-                <div className="text-primary font-medium mb-4">{exp.organization} <span className="text-muted-foreground font-normal text-sm ml-2">({exp.type})</span></div>
-                <p className="text-foreground/80 mb-4">{exp.summary}</p>
-                {exp.impact && (
-                  <ul className="list-none space-y-2 text-sm text-muted-foreground">
-                    {exp.impact.map((imp: string, j: number) => (
-                      <li key={j} className="flex gap-2">
-                        <span className="text-primary mt-1">▹</span> {imp}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </motion.div>
-            ))}
+          <div className="relative">
+            {/* Vertical timeline line */}
+            <div className="absolute left-5 top-0 bottom-0 w-px bg-border hidden md:block" />
+            <div className="space-y-6">
+              {profileData.experience.map((exp: any, i: number) => {
+                const orgColors = [
+                  "bg-emerald-800 text-white",
+                  "bg-teal-800 text-white",
+                  "bg-slate-700 text-white",
+                  "bg-amber-800 text-white",
+                  "bg-indigo-800 text-white",
+                  "bg-lime-800 text-white",
+                  "bg-cyan-800 text-white",
+                  "bg-rose-800 text-white",
+                ];
+                const colorClass = orgColors[i % orgColors.length];
+                const orgInitials = exp.organization
+                  .split(/[\s&]+/)
+                  .filter((w: string) => w.length > 2)
+                  .slice(0, 2)
+                  .map((w: string) => w[0].toUpperCase())
+                  .join("");
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05, duration: 0.4 }}
+                    className="relative md:pl-16"
+                    data-testid={`card-experience-${i}`}
+                  >
+                    {/* Logo tile — sits on the timeline */}
+                    <div className={`hidden md:flex absolute left-0 top-0 w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
+                      {orgInitials || exp.organization.slice(0, 2).toUpperCase()}
+                    </div>
+
+                    {/* Card */}
+                    <div className="rounded-2xl border bg-card p-5 shadow-sm hover:shadow-md transition-shadow">
+                      {/* Header — logo inline on mobile, hidden on desktop (logo is absolute there) */}
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className={`flex md:hidden w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
+                          {orgInitials || exp.organization.slice(0, 2).toUpperCase()}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                            <h3 className="text-base font-semibold leading-tight">{exp.role}</h3>
+                            <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{exp.startDate} – {exp.endDate}</span>
+                          </div>
+                          <div className="flex items-center gap-2 mt-0.5">
+                            <span className="text-sm font-medium text-primary">{exp.organization}</span>
+                            <span className="text-xs text-muted-foreground border rounded-full px-2 py-0.5">{exp.type}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className="text-sm text-foreground/75 mb-3 leading-relaxed">{exp.summary}</p>
+                      {exp.impact && (
+                        <ul className="space-y-1.5">
+                          {exp.impact.map((imp: string, j: number) => (
+                            <li key={j} className="flex gap-2 text-sm text-muted-foreground">
+                              <span className="text-primary mt-0.5 shrink-0">▹</span>
+                              <span>{imp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
