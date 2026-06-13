@@ -68,7 +68,7 @@ export default function Portfolio() {
         <section id="about">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-6">About</h2>
           <p className="text-lg md:text-xl leading-relaxed text-foreground/90">
-            I am a Nepal-based agritech entrepreneur and tech community leader. I scaled Himalaya Krishi from 25 to 220+ livestock using digital farm management, while simultaneously co-founding DEV Community Nepal to bridge rural tech talent with central ecosystems. Whether I'm building SEO-driven digital growth systems at Hashtag Web Solutions or mentoring hundreds of students, my focus is on sustainable impact and technological empowerment.
+            I am a Nepal-based agritech entrepreneur and tech community leader. I scaled Himalaya Krishi from 25 to 220+ livestock using digital farm management, while simultaneously co-founding DEV Community Nepal to bridge rural tech talent with central ecosystems. After building SEO-driven digital growth systems at Hashtag Web Solutions and mentoring hundreds of students, my focus remains on sustainable impact and technological empowerment across Nepal.
           </p>
         </section>
 
