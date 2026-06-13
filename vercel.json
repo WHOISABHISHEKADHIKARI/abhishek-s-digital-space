@@ -4,6 +4,6 @@
   "outputDirectory": "artifacts/portfolio/dist/public",
   "installCommand": "pnpm install --frozen-lockfile",
   "rewrites": [
-    { "source": "/((?!api/|assets/|sections/|abhishek-adhikari-|favicon\\.|sitemap\\.xml|image-sitemap\\.xml|robots\\.txt|llms\\.txt).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|assets/|sections/|abhishek-adhikari-|favicon\\.|sitemap\\.xml|robots\\.txt|llms\\.txt).*)", "destination": "/index.html" }
   ]
 }

@@ -713,9 +713,10 @@ export default function Portfolio() {
             {(profileData as any).blog.map((post: any, i: number) => (
               <motion.a
                 key={i}
-                href={post.url ?? "#"}
+                href={post.url || "#"}
                 target={post.url ? "_blank" : undefined}
-                rel="noopener noreferrer"
+                rel={post.url ? "noopener noreferrer" : undefined}
+                onClick={post.url ? undefined : (e) => e.preventDefault()}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

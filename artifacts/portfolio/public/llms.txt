@@ -18,9 +18,19 @@
 - Google Digital Marketing certified
 - Based in Hetauda, Bagmati Province, Nepal
 
-## Social profiles
+## Certifications
+- Google UX Design Professional Certificate (Coursera)
+- Google Digital Garage Certificate (2022)
+- CalArts Fundamentals of Graphic Design (Coursera)
+
+## Contact
+- Email: abhishek@abhishekadhikari.com
 - LinkedIn: https://www.linkedin.com/in/whoisabhishekadhikari/
 - GitHub: https://github.com/WHOISABHISHEKADHIKARI
+- Preferred contact: LinkedIn DM or email
 
 ## Sitemaps
 - https://abhishekadhikari.com/sitemap.xml — All 23 site URLs with 53 images
+
+## Topics
+agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership
