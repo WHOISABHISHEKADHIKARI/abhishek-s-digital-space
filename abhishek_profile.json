@@ -624,6 +624,55 @@
     "Sharing Mentorship Figma Crash Course – 3 Days"
   ],
 
+  "skills": [
+    {
+      "category": "Agritech & Rural Development",
+      "items": [
+        { "name": "Farm Operations & Livestock Management", "level": 5 },
+        { "name": "Digital Farm Record Systems", "level": 4 },
+        { "name": "Agritech Strategy", "level": 4 },
+        { "name": "Sustainable Agriculture", "level": 3 }
+      ]
+    },
+    {
+      "category": "SEO & Digital Marketing",
+      "items": [
+        { "name": "SEO (Technical & Content)", "level": 5 },
+        { "name": "Keyword Research & Audit", "level": 5 },
+        { "name": "Content Strategy", "level": 4 },
+        { "name": "Brand Transformation", "level": 4 },
+        { "name": "AI-Assisted Marketing Workflows", "level": 4 }
+      ]
+    },
+    {
+      "category": "Design & Product",
+      "items": [
+        { "name": "UI/UX Design (Figma)", "level": 4 },
+        { "name": "Design Thinking", "level": 4 },
+        { "name": "Wireframing & Prototyping", "level": 4 },
+        { "name": "Design Mentoring", "level": 5 }
+      ]
+    },
+    {
+      "category": "Community & Leadership",
+      "items": [
+        { "name": "Community Building", "level": 5 },
+        { "name": "Event Organizing & Facilitation", "level": 5 },
+        { "name": "Public Speaking", "level": 4 },
+        { "name": "Team Leadership", "level": 4 },
+        { "name": "Mentorship", "level": 5 }
+      ]
+    },
+    {
+      "category": "AI & Emerging Tech",
+      "items": [
+        { "name": "Prompt Engineering", "level": 4 },
+        { "name": "AI Agentic Workflows", "level": 4 },
+        { "name": "AI Tool Integration", "level": 4 }
+      ]
+    }
+  ],
+
   "certifications": [
     {
       "title": "Google Professional Certificate",

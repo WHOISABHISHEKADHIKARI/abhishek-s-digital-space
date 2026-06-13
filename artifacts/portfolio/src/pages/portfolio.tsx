@@ -345,6 +345,44 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Skills */}
+        <section id="skills">
+          <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Skills</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {(profileData as any).skills?.map((group: any, gi: number) => (
+              <motion.div
+                key={gi}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: gi * 0.06, duration: 0.4 }}
+                className="space-y-4"
+              >
+                <h3 className="text-xs font-bold tracking-widest uppercase text-primary/70">{group.category}</h3>
+                <div className="space-y-3">
+                  {group.items.map((skill: { name: string; level: number }, si: number) => (
+                    <div key={si} className="space-y-1">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-foreground/90">{skill.name}</span>
+                        <span className="text-xs text-muted-foreground font-mono">{skill.level}/5</span>
+                      </div>
+                      <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${(skill.level / 5) * 100}%` }}
+                          viewport={{ once: true }}
+                          transition={{ delay: gi * 0.06 + si * 0.05, duration: 0.6, ease: "easeOut" }}
+                          className="h-full rounded-full bg-primary"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Certifications */}
         <section id="certifications">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Certifications</h2>
