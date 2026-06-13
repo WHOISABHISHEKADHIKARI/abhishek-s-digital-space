@@ -1,0 +1,27 @@
+# Abhishek Adhikari — Portfolio
+> Agritech entrepreneur, SEO consultant, and community builder from Hetauda, Nepal
+
+## Core pages
+- https://abhishekadhikari.com/ — Home: portfolio overview, key metrics, skills, experience, projects, certifications, blog, recommendations, contact
+- https://abhishekadhikari.com/about — About: background in agritech, community building, and digital growth
+- https://abhishekadhikari.com/work — Projects: 12 digital products built across agriculture, SEO, coffee, and business sectors
+- https://abhishekadhikari.com/blog — Blog: articles on design trends, agritech Nepal, React performance, content strategy, user research, no-code development
+- https://abhishekadhikari.com/contact — Contact form and social links
+
+## Key facts
+- Founded Himalaya Krishi: scaled Murrah buffalo livestock from 25 to 220+ head
+- Co-founded DEV Community Nepal: organized 100+ virtual events and 10+ physical meetups
+- Built Hashtag Web Solutions: SEO consulting for 10+ clients, built 100+ SEO tools
+- Deputy Community Builder at Coding Olympics Nepal: reached 16+ colleges
+- Contributed 12 agentic skills to Antigravity Awesome Skills (40k+ stars, 1,541+ skills)
+- Google UX Design Professional Certificate holder
+- Google Digital Marketing certified
+- Based in Hetauda, Bagmati Province, Nepal
+
+## Social profiles
+- LinkedIn: https://www.linkedin.com/in/whoisabhishekadhikari/
+- GitHub: https://github.com/WHOISABHISHEKADHIKARI
+
+## Sitemaps
+- https://abhishekadhikari.com/sitemap.xml — All 23 site URLs
+- https://abhishekadhikari.com/image-sitemap.xml — All 52 images with captions
