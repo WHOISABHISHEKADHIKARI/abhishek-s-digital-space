@@ -24,4 +24,3 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://abhishekadhikari.com/sitemap.xml
-Sitemap: https://abhishekadhikari.com/image-sitemap.xml

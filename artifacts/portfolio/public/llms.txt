@@ -23,5 +23,4 @@
 - GitHub: https://github.com/WHOISABHISHEKADHIKARI
 
 ## Sitemaps
-- https://abhishekadhikari.com/sitemap.xml — All 23 site URLs
-- https://abhishekadhikari.com/image-sitemap.xml — All 52 images with captions
+- https://abhishekadhikari.com/sitemap.xml — All 23 site URLs with 53 images
