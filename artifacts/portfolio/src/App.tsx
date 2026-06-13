@@ -2,7 +2,6 @@ import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
 import Portfolio from "@/pages/portfolio";
 
 const queryClient = new QueryClient();
@@ -10,8 +9,7 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Portfolio} />
-      <Route component={NotFound} />
+      <Route path="/:rest*" component={Portfolio} />
     </Switch>
   );
 }
