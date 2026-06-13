@@ -2,7 +2,7 @@
 
 Drop your profile photo here named exactly:
 
-  photo.jpg   (or photo.png / photo.webp)
+  images/photo.jpg
 
 It will appear as a circular avatar in the Hero section of your portfolio.
 

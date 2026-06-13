@@ -3,51 +3,98 @@
     "name": "Abhishek Adhikari",
     "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari/",
     "github": "https://github.com/WHOISABHISHEKADHIKARI",
+    "email": "abhishek@abhishekadhikari.com",
     "website": "https://abhishekadhikari.com",
     "redesignProfile": "https://www.redesignprofile.com"
   },
-
   "projects": [
     {
       "category": "Personal Brand",
       "items": [
-        { "name": "Abhishek Adhikari", "url": "https://abhishekadhikari.com" },
-        { "name": "Redesign Profile", "url": "https://www.redesignprofile.com" }
+        {
+          "name": "Abhishek Adhikari",
+          "url": "https://abhishekadhikari.com"
+        },
+        {
+          "name": "Redesign Profile",
+          "url": "https://www.redesignprofile.com"
+        }
       ]
     },
     {
       "category": "SEO & Tools",
       "items": [
-        { "name": "100SEOTools", "url": "https://100seotools.com" }
+        {
+          "name": "100SEOTools",
+          "url": "https://100seotools.com"
+        }
       ]
     },
     {
       "category": "Agriculture",
       "items": [
-        { "name": "Krishi Himalaya", "url": "https://krishihimalaya.com" },
-        { "name": "Himalaya Krishi", "url": "https://himalayakrishi.com" },
-        { "name": "Murraa", "url": "https://murraa.com" }
+        {
+          "name": "Krishi Himalaya",
+          "url": "https://krishihimalaya.com",
+          "imageUrl": "/sections/projects/images/abhishek-adhikari--krishi-himalaya-live.png"
+        },
+        {
+          "name": "Himalaya Krishi",
+          "url": "https://himalayakrishi.com"
+        },
+        {
+          "name": "Murraa",
+          "url": "https://murraa.com"
+        },
+        {
+          "name": "Aayo Rides Platform",
+          "url": "https://aayorides.com"
+        }
       ]
     },
     {
       "category": "Coffee & Training",
       "items": [
-        { "name": "JNB Coffee", "url": "https://jnbcoffee.com.np" },
-        { "name": "J&B Barista Academy", "url": "https://jandbbaristaacademy.edu.np" }
+        {
+          "name": "JNB Coffee",
+          "url": "https://jnbcoffee.com.np"
+        },
+        {
+          "name": "J&B Barista Academy",
+          "url": "https://jandbbaristaacademy.edu.np"
+        }
       ]
     },
     {
       "category": "Business & Corporate",
       "items": [
-        { "name": "GITA Nepal", "url": "https://www.gitanepal.com.np" },
-        { "name": "Tax Care Nepal", "url": "https://taxcare.com.np" },
-        { "name": "Trailokya Builders Nepal", "url": "https://trailokyabuilders.com.np" },
-        { "name": "Hetaudacity", "url": "https://hetaudacity.com" },
-        { "name": "SFM Fresh Masala", "url": "https://sfmfreshmasala.com" }
+        {
+          "name": "Delta Engineering",
+          "url": "https://deltaengineering.com.np"
+        },
+        {
+          "name": "GITA Nepal",
+          "url": "https://www.gitanepal.com.np"
+        },
+        {
+          "name": "Tax Care Nepal",
+          "url": "https://taxcare.com.np"
+        },
+        {
+          "name": "Trailokya Builders Nepal",
+          "url": "https://trailokyabuilders.com.np"
+        },
+        {
+          "name": "Hetaudacity",
+          "url": "https://hetaudacity.com"
+        },
+        {
+          "name": "SFM Fresh Masala",
+          "url": "https://sfmfreshmasala.com"
+        }
       ]
     }
   ],
-
   "experience": [
     {
       "role": "Co-Founder",
@@ -69,7 +116,10 @@
         "Helped bridge the gap between local talent and national innovation platforms",
         "Contributed to building a more inclusive and accessible tech ecosystem in Nepal"
       ],
-      "skills": ["Community Building"]
+      "skills": [
+        "Community Building"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--dev-community-nepal-logo.jpeg"
     },
     {
       "role": "Founder",
@@ -92,7 +142,10 @@
         "Improved operational efficiency and farm management processes",
         "Represented the farm and agritech ideas at different events and platforms"
       ],
-      "skills": ["Agritech Innovation"]
+      "skills": [
+        "Agritech Innovation"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--himalaya-krishi-logo.jpeg"
     },
     {
       "role": "Founder",
@@ -115,7 +168,10 @@
         "Created and maintained 100+ SEO tools for keyword research, technical audits, content optimization, and ranking analysis",
         "Managed 10+ clients from onboarding to strategy, execution, and delivery"
       ],
-      "skills": ["SEO Audits"]
+      "skills": [
+        "SEO Audits"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--hashtag-web-solutions-logo.jpeg"
     },
     {
       "role": "Business Development Manager",
@@ -138,7 +194,10 @@
         "Improved operational coordination and service delivery",
         "Strengthened local market presence through partnerships and outreach"
       ],
-      "skills": ["Business Development"]
+      "skills": [
+        "Business Development"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--aayo-rides-nepal-logo.jpeg"
     },
     {
       "role": "Branch Manager",
@@ -160,7 +219,8 @@
         "Hired and managed a team of 5 employees",
         "Onboarded 200+ riders through targeted ad campaigns and community outreach",
         "Expanded local network coverage and improved service availability"
-      ]
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--aayo-rides-nepal-logo.jpeg"
     },
     {
       "role": "Marketing Manager",
@@ -183,7 +243,10 @@
         "Attracted early-stage riders and improved platform activity",
         "Strengthened local brand visibility through community-driven marketing"
       ],
-      "skills": ["Brand Promotion"]
+      "skills": [
+        "Brand Promotion"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--aayo-rides-nepal-logo.jpeg"
     },
     {
       "role": "Deputy Manager",
@@ -204,7 +267,10 @@
         "Increased student participation by onboarding new members into the club",
         "Built collaboration with external parties for upskilling and knowledge sharing"
       ],
-      "skills": ["Event Coordination"]
+      "skills": [
+        "Event Coordination"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--it-club-hsmss-logo.jpeg"
     },
     {
       "role": "Deputy Minuting Manager",
@@ -226,7 +292,10 @@
         "Improved planning and execution through organized tracking",
         "Strengthened communication flow and accountability among team members"
       ],
-      "skills": ["Organization Skills"]
+      "skills": [
+        "Organization Skills"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--it-club-hsmss-logo.jpeg"
     },
     {
       "role": "Product Designer",
@@ -247,7 +316,8 @@
         "Improved usability and navigation across key product features",
         "Enhanced overall product experience through structured design approach",
         "Supported delivery of user-focused digital solutions"
-      ]
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--sajilo-patro-logo.jpeg"
     },
     {
       "role": "UI/UX Designer",
@@ -269,7 +339,10 @@
         "Enhanced overall user experience through clean and intuitive design",
         "Contributed to building a more user-centric agritech platform"
       ],
-      "skills": ["Design Thinking"]
+      "skills": [
+        "Design Thinking"
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--kisan-care-logo.jpeg"
     },
     {
       "role": "Content Writer",
@@ -290,25 +363,25 @@
         "Improved content quality and consistency across platforms",
         "Supported brand visibility through optimized and engaging writing",
         "Contributed to stronger online presence and audience engagement"
-      ]
+      ],
+      "logoUrl": "/sections/experience/images/abhishek-adhikari--menzz-logo.jpeg"
     }
   ],
-
   "volunteering": [
     {
       "role": "Lead Organizer & Speaker",
-      "organization": "AWS Cloud Innovation Day – Hetauda 2026",
+      "organization": "AWS Cloud Innovation Day \u2013 Hetauda 2026",
       "date": "Feb 2026",
       "duration": "1 mo",
       "category": "Education",
-      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day – Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning.",
+      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day \u2013 Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning.",
       "images": [
         {
           "type": "event_photo",
-          "caption": "AWS Cloud Innovation Day – Hetauda 2026",
+          "caption": "AWS Cloud Innovation Day Hetauda 2026 \u2014 Abhishek Adhikari leading cloud technology event in Nepal",
           "description": "Speaking at AWS Cloud Innovation Day in Hetauda as Lead Organizer, where developers, students, and tech enthusiasts gathered to explore cloud technologies through workshops, demonstrations, and discussions.",
           "pdfLine": 222,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
         }
       ]
     },
@@ -331,10 +404,10 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "Panel Discussion – Hult Prize IOF Hetauda",
+          "caption": "Hult Prize IOF Hetauda panel discussion \u2014 Abhishek Adhikari agritech entrepreneur sharing startup insights Nepal",
           "description": "Participating as a panelist during the Hult Prize program at the Institute of Forestry (IOF), Tribhuvan University Hetauda. Discussion focused on Nepal's startup ecosystem, youth innovation, entrepreneurship, and agritech.",
           "pdfLine": 65,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg"
         }
       ]
     },
@@ -358,10 +431,10 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "Guest Lecture – Arduino Robotics Training",
+          "caption": "Arduino robotics training workshop \u2014 Abhishek Adhikari teaching embedded systems at Navodaya School Nepal",
           "description": "Delivered a guest lecture on Arduino programming and basic robotics concepts during the Junior Scientist Robotics Workshop.",
           "pdfLine": 247,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--arduino-robotics-workshop-trainer.jpeg"
         }
       ]
     },
@@ -385,10 +458,10 @@
       "images": [
         {
           "type": "event_poster",
-          "caption": "3-Day Figma UI/UX Workshop – Code for Change Chitwan",
+          "caption": "Code for Change Chitwan Figma UI UX workshop \u2014 Abhishek Adhikari mentoring design in Nepal",
           "description": "Poster for a 3-Day Figma UI/UX Workshop organized by Code for Change Chitwan featuring mentor Abhishek Adhikari.",
           "pdfLine": 138,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--code-for-change-chitwan-figma-workshop.jpeg"
         }
       ]
     },
@@ -413,10 +486,10 @@
         {
           "type": "certificate",
           "filename": "CRTFCT.jpg",
-          "caption": "Certificate of Appreciation – Code for Change",
+          "caption": "Code for Change Dang Figma course token of love \u2014 Abhishek Adhikari UI UX mentorship Nepal",
           "description": "Certificate received for mentoring participants at Code for Change Dang on UI/UX design and Figma.",
           "pdfLine": 90,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--code-for-change-dang-token-of-love.jpeg"
         }
       ]
     },
@@ -439,10 +512,10 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "Letter of Appreciation – Innovation Pavilion Supervisor",
+          "caption": "Innovation Pavilion Supervisor appreciation \u2014 Abhishek Adhikari capacity development conference Nepal",
           "description": "Letter of Appreciation received for contributing to the International Conference on Capacity Development as Innovation Pavilion Supervisor.",
           "pdfLine": 114,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--capacity-development-ivp-letter.jpeg"
         }
       ]
     },
@@ -468,10 +541,10 @@
       "images": [
         {
           "type": "group_photo",
-          "caption": "Coding Olympics Nepal – WE TRIED OUR BEST",
+          "caption": "Coding Olympics Nepal outreach team \u2014 Abhishek Adhikari deputy community builder 2079-2080",
           "description": "Group photo from Coding Olympics Nepal activities and outreach work.",
           "pdfLine": 166,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--coding-olympics-certificate.jpeg"
         }
       ]
     },
@@ -481,20 +554,20 @@
       "date": "Jan 2023",
       "duration": "1 mo",
       "category": "Science and Technology",
-      "summary": "Contributed to the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'. Received Certificate of Appreciation from DEV Community Nepal.",
+      "summary": "Contributed to the Tech Meetup 'Tech Disrupters 2023 \u2013 Exploring Future Tech in Nepal'. Received Certificate of Appreciation from DEV Community Nepal.",
       "images": [
         {
           "type": "certificate",
-          "caption": "Certificate of Appreciation – Tech Disrupters 2023",
-          "description": "Certificate of Appreciation from DEV Community Nepal for supporting the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'.",
+          "caption": "Tech Disrupters 2023 DEV Community Nepal \u2014 Abhishek Adhikari tech meetup appreciation certificate",
+          "description": "Certificate of Appreciation from DEV Community Nepal for supporting the Tech Meetup 'Tech Disrupters 2023 \u2013 Exploring Future Tech in Nepal'.",
           "pdfLine": 182,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-tech-disrupters-certificate.jpeg"
         }
       ]
     },
     {
       "role": "UI/UX & Figma Workshop Mentor",
-      "organization": "Sharing Mentorship – Kathmandu Chapter",
+      "organization": "Sharing Mentorship \u2013 Kathmandu Chapter",
       "date": "Dec 2022",
       "duration": "1 mo",
       "category": "Education",
@@ -502,10 +575,10 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "Certificate of Appreciation – Figma UI/UX Workshop Mentor",
+          "caption": "Sharing Mentorship Kathmandu Figma crash course \u2014 Abhishek Adhikari UI UX workshop mentor Nepal",
           "description": "Recognized by Sharing Mentorship Kathmandu Chapter for mentoring participants during a 3-Day Figma Crash Course, sharing practical insights on UI/UX design, interface layout, and collaborative design using Figma.",
           "pdfLine": 205,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--sharing-mentorship-figma-crash-course.jpeg"
         }
       ]
     },
@@ -528,34 +601,10 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "Certificate of Appreciation – UI/UX Design Session",
+          "caption": "18 Days UI UX Designing trainer DEV Community Nepal \u2014 Abhishek Adhikari mentorship certificate",
           "description": "Recognition from DEV Community Nepal for sharing knowledge and mentoring participants during an 18-day UI/UX Designing session.",
           "pdfLine": 277,
-          "imageUrl": null
-        }
-      ]
-    },
-    {
-      "role": "Member",
-      "organization": "Nepal Scouts – Manahari Municipality Committee",
-      "category": "Social Services",
-      "summary": "Contributed to community development initiatives and youth engagement through scouting activities.",
-      "responsibilities": [
-        "Explored and supported local funding processes within the municipality",
-        "Engaged students to participate in scouting and community service programs",
-        "Promoted teamwork, leadership, and community responsibility among youth"
-      ],
-      "impact": [
-        "Increased student participation in scouting and community initiatives",
-        "Contributed to building a more active and engaged youth community"
-      ],
-      "images": [
-        {
-          "type": "event_photo",
-          "caption": "Nepal Scouts – Rover/Ranger Training Camp",
-          "description": "Worked as a Manahari Ward Representative. Participated in the Rover/Ranger Training Camp organized by Nepal Scouts, Manahari Municipality Committee, Makawanpur, focusing on leadership, teamwork, discipline, and community service.",
-          "pdfLine": 303,
-          "imageUrl": null
+          "imageUrl": "/sections/certifications/images/abhishek-adhikari--dev-community-18-days-uiux-trainer.png"
         }
       ]
     },
@@ -594,177 +643,425 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "10-Day UI/UX Training – HSMSS",
+          "caption": "10 Day UI UX training HSMSS Hetauda \u2014 Abhishek Adhikari Figma design bootcamp instructor Nepal",
           "description": "10-day intensive UI/UX training session at Hetauda School of Management and Social Sciences.",
           "pdfLine": null,
-          "imageUrl": null
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--hsmss-10-days-ux-bootcamp.jpeg"
+        }
+      ]
+    },
+    {
+      "role": "Tech Meetup Participant & Community Contributor",
+      "organization": "DEV Community Nepal Chitwan",
+      "date": "2023",
+      "duration": "1 day",
+      "category": "Science and Technology",
+      "summary": "Participated in and supported a DEV Community Nepal tech meetup in Chitwan, connecting local developers and technology enthusiasts.",
+      "images": [
+        {
+          "type": "event_photo",
+          "caption": "DEV Community Nepal tech meetup Chitwan \u2014 Abhishek Adhikari community contributor Nepal",
+          "description": "Group photo from the DEV Community Nepal tech meetup in Chitwan.",
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-chitwan-tech-meetup.jpeg"
+        }
+      ]
+    },
+    {
+      "role": "Tech Meetup Organizer",
+      "organization": "DEV Community Hetauda",
+      "date": "2023",
+      "duration": "1 day",
+      "category": "Science and Technology",
+      "summary": "Helped organize a local tech meetup in Hetauda to bring together developers, students, and technology community members.",
+      "images": [
+        {
+          "type": "event_photo",
+          "caption": "DEV Community Hetauda second tech meetup \u2014 Abhishek Adhikari organizer Nepal",
+          "description": "Group photo from the second DEV Community Hetauda tech meetup.",
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-hetauda-tech-meetup.jpeg"
+        }
+      ]
+    },
+    {
+      "role": "Prompt Engineering Facilitator",
+      "organization": "J&B Coffee",
+      "date": "2024",
+      "duration": "1 day",
+      "category": "Education",
+      "summary": "Facilitated a prompt engineering session for learners, introducing practical AI prompting workflows and applied examples.",
+      "images": [
+        {
+          "type": "event_photo",
+          "caption": "Prompt engineering workshop J&B Coffee Hetauda \u2014 Abhishek Adhikari AI facilitator Nepal",
+          "description": "Teaching prompt engineering concepts during a session at J&B Coffee.",
+          "imageUrl": "/sections/volunteering/images/abhishek-adhikari--prompt-engineering-jb-coffee.jpg"
         }
       ]
     }
   ],
-
   "featuredHighlights": [
     "Lead Organizer at HRIC STEAM Program 2025, Hetauda",
     "Facilitated an AI & Digital Literacy Workshop at Nirmal Secondary School",
-    "Listed as a top 10 contributor – 3 Hours of Prompt Engineering roadmap in Hetauda",
+    "Listed as a top 10 contributor \u2013 3 Hours of Prompt Engineering roadmap in Hetauda",
     "Project 100 Minds by DEV Community Nepal",
     "100 SEO Tools",
     "Facilitated at AWS Cloud event at Hetauda (single-handedly, no volunteer)",
     "Panelist at Hult Prize IOF Hetauda",
-    "Mentor at Hetauda School of Management – 10 Days UI/UX Session",
-    "Mentor at Code for Change Chitwan – 3 Days UI/UX Session",
+    "Mentor at Hetauda School of Management \u2013 10 Days UI/UX Session",
+    "Mentor at Code for Change Chitwan \u2013 3 Days UI/UX Session",
     "Latarambeshwor Hike",
     "Innovation Pavilion Supervisor at Capacity Development Conference",
     "Deputy Community Builder for Coding Olympics Nepal (2079-80)",
-    "DEV Community Nepal – Organized a meetup in Hetauda",
+    "DEV Community Nepal \u2013 Organized a meetup in Hetauda",
     "Tech Meetup at Chiyaghar, Chitwan by DEV Community Nepal",
-    "Google Professional Certificate",
-    "Published blog on TechSathi – The Ultimate Guide to Future Design Perfection",
+    "Published blog on TechSathi \u2013 The Ultimate Guide to Future Design Perfection",
     "Lead Organizer Certificate of Appreciation",
-    "Sharing Mentorship Figma Crash Course – 3 Days"
+    "Sharing Mentorship Figma Crash Course \u2013 3 Days"
   ],
-
   "skills": [
     {
       "category": "Agritech & Rural Development",
       "items": [
-        { "name": "Farm Operations & Livestock Management", "level": 5 },
-        { "name": "Digital Farm Record Systems", "level": 4 },
-        { "name": "Agritech Strategy", "level": 4 },
-        { "name": "Sustainable Agriculture", "level": 3 }
+        {
+          "name": "Farm Operations & Livestock Management",
+          "level": 5
+        },
+        {
+          "name": "Digital Farm Record Systems",
+          "level": 4
+        },
+        {
+          "name": "Agritech Strategy",
+          "level": 4
+        },
+        {
+          "name": "Sustainable Agriculture",
+          "level": 3
+        }
       ]
     },
     {
       "category": "SEO & Digital Marketing",
       "items": [
-        { "name": "SEO (Technical & Content)", "level": 5 },
-        { "name": "Keyword Research & Audit", "level": 5 },
-        { "name": "Content Strategy", "level": 4 },
-        { "name": "Brand Transformation", "level": 4 },
-        { "name": "AI-Assisted Marketing Workflows", "level": 4 }
+        {
+          "name": "SEO (Technical & Content)",
+          "level": 5
+        },
+        {
+          "name": "Keyword Research & Audit",
+          "level": 5
+        },
+        {
+          "name": "Content Strategy",
+          "level": 4
+        },
+        {
+          "name": "Brand Transformation",
+          "level": 4
+        },
+        {
+          "name": "AI-Assisted Marketing Workflows",
+          "level": 4
+        }
       ]
     },
     {
       "category": "Design & Product",
       "items": [
-        { "name": "UI/UX Design (Figma)", "level": 4 },
-        { "name": "Design Thinking", "level": 4 },
-        { "name": "Wireframing & Prototyping", "level": 4 },
-        { "name": "Design Mentoring", "level": 5 }
+        {
+          "name": "UI/UX Design (Figma)",
+          "level": 4
+        },
+        {
+          "name": "Design Thinking",
+          "level": 4
+        },
+        {
+          "name": "Wireframing & Prototyping",
+          "level": 4
+        },
+        {
+          "name": "Design Mentoring",
+          "level": 5
+        }
       ]
     },
     {
       "category": "Community & Leadership",
       "items": [
-        { "name": "Community Building", "level": 5 },
-        { "name": "Event Organizing & Facilitation", "level": 5 },
-        { "name": "Public Speaking", "level": 4 },
-        { "name": "Team Leadership", "level": 4 },
-        { "name": "Mentorship", "level": 5 }
+        {
+          "name": "Community Building",
+          "level": 5
+        },
+        {
+          "name": "Event Organizing & Facilitation",
+          "level": 5
+        },
+        {
+          "name": "Public Speaking",
+          "level": 4
+        },
+        {
+          "name": "Team Leadership",
+          "level": 4
+        },
+        {
+          "name": "Mentorship",
+          "level": 5
+        }
       ]
     },
     {
       "category": "AI & Emerging Tech",
       "items": [
-        { "name": "Prompt Engineering", "level": 4 },
-        { "name": "AI Agentic Workflows", "level": 4 },
-        { "name": "AI Tool Integration", "level": 4 }
+        {
+          "name": "Prompt Engineering",
+          "level": 4
+        },
+        {
+          "name": "AI Agentic Workflows",
+          "level": 4
+        },
+        {
+          "name": "AI Tool Integration",
+          "level": 4
+        }
       ]
     }
   ],
-
   "certifications": [
     {
-      "title": "Google Professional Certificate",
-      "issuer": "Google",
-      "platform": "Coursera",
+      "title": "Token of Love - 5 Days Figma Course",
+      "issuer": "Code for Change Dang",
+      "platform": null,
       "date": "2024",
       "url": null,
       "credentialId": null,
-      "skills": ["Digital Marketing", "SEO", "Analytics", "Professional Development"]
+      "skills": [
+        "Figma",
+        "UI/UX Mentoring",
+        "Design Training"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--code-for-change-dang-figma-token-of-love.png"
+    },
+    {
+      "title": "Special Recognition - 4 Week IoT Internship Program",
+      "issuer": "enCypher Technologies Pvt. Ltd.",
+      "platform": null,
+      "date": "2023",
+      "url": null,
+      "credentialId": null,
+      "skills": [
+        "IoT",
+        "Internship",
+        "Technology"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--encypher-iot-internship-special-recognition-2023.png"
+    },
+    {
+      "title": "Certificate of Appreciation - Deputy Community Builder",
+      "issuer": "Coding Olympics Nepal",
+      "platform": null,
+      "date": "2079-80 BS",
+      "url": null,
+      "credentialId": "CON-0558",
+      "skills": [
+        "Community Building",
+        "Outreach",
+        "Student Engagement"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--coding-olympics-community-builder-2079-2080.png"
+    },
+    {
+      "title": "Certificate of Appreciation - Flutter Yoddha 1.0 Facilitator",
+      "issuer": "DEV Community Nepal",
+      "platform": null,
+      "date": "June 4, 2023",
+      "url": null,
+      "credentialId": null,
+      "skills": [
+        "Facilitation",
+        "Flutter",
+        "Community Training"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--dev-community-flutter-yoddha-facilitator.png"
+    },
+    {
+      "title": "Certificate of Appreciation - 18 Days UI/UX Designing Trainer",
+      "issuer": "DEV Community Nepal",
+      "platform": null,
+      "date": "November 23, 2022",
+      "url": null,
+      "credentialId": null,
+      "skills": [
+        "UI/UX Design",
+        "Training",
+        "Mentorship"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--dev-community-18-days-uiux-trainer.png"
+    },
+    {
+      "title": "Certificate of Appreciation - Figma Crash Course",
+      "issuer": "Sharing Mentorship Kathmandu Chapter",
+      "platform": null,
+      "date": "December 12, 2022",
+      "url": null,
+      "credentialId": null,
+      "skills": [
+        "Figma",
+        "UI Design",
+        "Mentorship"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--sharing-mentorship-figma-crash-course-certificate.png"
+    },
+    {
+      "title": "Certificate of Internship - Content Writer",
+      "issuer": "Menzz",
+      "platform": null,
+      "date": "2078-2079 BS",
+      "url": null,
+      "credentialId": null,
+      "skills": [
+        "Content Writing",
+        "SEO Content",
+        "Internship"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--menzz-content-writer-internship.png"
+    },
+    {
+      "title": "Fundamentals of Graphic Design",
+      "issuer": "California Institute of the Arts",
+      "platform": "Coursera",
+      "date": "October 2, 2022",
+      "url": "https://coursera.org/verify/WDD88ZADNSNZ",
+      "credentialId": "WDD88ZADNSNZ",
+      "skills": [
+        "Graphic Design",
+        "Visual Design",
+        "Design Fundamentals"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--calarts-fundamentals-graphic-design-coursera.png"
+    },
+    {
+      "title": "The Fundamentals of Digital Marketing",
+      "issuer": "Google Digital Garage",
+      "platform": "Google Digital Garage",
+      "date": "November 10, 2022",
+      "url": "https://learndigital.withgoogle.com/link/1qsdpcedm9s",
+      "credentialId": "PD6 D3Q AKF",
+      "skills": [
+        "Digital Marketing",
+        "SEO",
+        "Analytics"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--google-digital-garage-2022.png"
+    },
+    {
+      "title": "Google UX Design Professional Certificate",
+      "issuer": "Google",
+      "platform": "Coursera",
+      "date": "June 13, 2023",
+      "url": "https://coursera.org/verify/professional-cert/PTDVQ2Y782T8",
+      "credentialId": "PTDVQ2Y782T8",
+      "skills": [
+        "UX Design",
+        "Wireframing",
+        "Prototyping",
+        "User Research"
+      ],
+      "imageUrl": "/sections/certifications/images/abhishek-adhikari--google-ux-design-coursera.jpg"
     }
   ],
-
   "recommendations": [
     {
       "name": "Er. Himal Rawal",
       "title": "EdTech Founder Building Nepal's IT Talent Pipeline | Sipalaya InfoTech | CareerJudge",
       "relationship": "Mentor",
       "date": "May 24, 2026",
-      "excerpt": "Abhishek has strong knowledge of AI, agritech, and startup development, but what stands out most is his community-focused mindset. His combination of technical curiosity, communication skills, and passion for community building makes him a valuable person to work with."
+      "excerpt": "Abhishek has strong knowledge of AI, agritech, and startup development, but what stands out most is his community-focused mindset. His combination of technical curiosity, communication skills, and passion for community building makes him a valuable person to work with.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--er-himal-rawal.jpeg"
     },
     {
       "name": "Tanka Bhattarai",
       "title": "HR & OD Consultant | Human Capital Strategist",
       "relationship": "Mentor",
       "date": "May 13, 2026",
-      "excerpt": "Abhishek Adhikari has a highly energetic and innovation-driven profile with a strong entrepreneurial mindset, digital capability, and self-learning attitude."
+      "excerpt": "Abhishek Adhikari has a highly energetic and innovation-driven profile with a strong entrepreneurial mindset, digital capability, and self-learning attitude.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--tanka-bhattarai.jpeg"
     },
     {
       "name": "Ramesh Shrestha",
       "title": "Technical Project Manager / Senior Software Engineer / PM / Business Development Manager",
       "relationship": "Mentor",
       "date": "April 11, 2026",
-      "excerpt": "An enthusiastic and collaborative professional who actively contributes to agritech and community building initiatives. His approach is grounded in execution, continuous learning, and real-world impact."
+      "excerpt": "An enthusiastic and collaborative professional who actively contributes to agritech and community building initiatives. His approach is grounded in execution, continuous learning, and real-world impact.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--ramesh-shrestha.jpeg"
     },
     {
       "name": "Er. Shreeraj Khatiwada",
-      "title": "President – CAN Makawanpur | IT Lecturer | AI & Digital Transformation Advocate",
+      "title": "President \u2013 CAN Makawanpur | IT Lecturer | AI & Digital Transformation Advocate",
       "relationship": "Teacher",
       "date": "March 12, 2026",
-      "excerpt": "Abhishek Adhikari is a forward-thinking innovator with strong expertise in agritech, modern technology, and emerging fields like AI. His curiosity, technical capability, and entrepreneurial mindset make him a valuable asset."
+      "excerpt": "Abhishek Adhikari is a forward-thinking innovator with strong expertise in agritech, modern technology, and emerging fields like AI. His curiosity, technical capability, and entrepreneurial mindset make him a valuable asset.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--er-shreeraj-khatiwada.jpeg"
     },
     {
       "name": "Lava Kafle",
       "title": "Cybersecurity | AI | ML | DL | Software Solutions Architect",
       "relationship": "Colleague (different companies)",
       "date": "March 10, 2026",
-      "excerpt": "Awesome technology agritech agriculture and IT/ICT software enabling people, society, and country via modern logic and adaptive thinking."
+      "excerpt": "Awesome technology agritech agriculture and IT/ICT software enabling people, society, and country via modern logic and adaptive thinking.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--lava-kafle.jpeg"
     },
     {
       "name": "Jagadish Bidari",
-      "title": "Founder & CEO – J&B Group | Former Qatar Airways Airport Operations",
+      "title": "Founder & CEO \u2013 J&B Group | Former Qatar Airways Airport Operations",
       "relationship": "Mentor",
       "date": "March 4, 2026",
-      "excerpt": "Over five years, I have closely observed Abhishek's consistent contribution to building a technology-oriented professional community in Hetauda. He brings nearly a decade of experience in agritech entrepreneurship through Himalaya Krishi."
+      "excerpt": "Over five years, I have closely observed Abhishek's consistent contribution to building a technology-oriented professional community in Hetauda. He brings nearly a decade of experience in agritech entrepreneurship through Himalaya Krishi.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--jagadish-bidari.jpeg"
     },
     {
       "name": "Upendra Prasad Neupane",
       "title": "Building value from void",
       "relationship": "Colleague (different companies)",
       "date": "February 21, 2026",
-      "excerpt": "Abhishek is an excellent design thinker and an active community builder who has been contributing to the tech ecosystem for more than five years. His work in AgriTech stands out and brings a unique perspective."
+      "excerpt": "Abhishek is an excellent design thinker and an active community builder who has been contributing to the tech ecosystem for more than five years. His work in AgriTech stands out and brings a unique perspective.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--upendra-prasad-neupane.jpeg"
     },
     {
       "name": "Sushovan Paudyal",
       "title": "Tech and business",
       "relationship": "Same team",
       "date": "February 21, 2026",
-      "excerpt": "Abhishek is an amazing personality to work with. His vision, networking, planning and implementation are top notch."
+      "excerpt": "Abhishek is an amazing personality to work with. His vision, networking, planning and implementation are top notch.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--sushovan-paudyal.jpeg"
     },
     {
       "name": "Rajiv Raman Neupane",
       "title": "Founder & CEO of Kisan Care | Agronomist | Regenerative Agriculture",
       "relationship": "Client",
       "date": "April 22, 2024",
-      "excerpt": "I am thrilled to recommend Abhishek Adhikari for his exceptional UX design abilities. His dedication to giving 100% to every aspect of product designing and collaboration is evident in the quality of his work."
+      "excerpt": "I am thrilled to recommend Abhishek Adhikari for his exceptional UX design abilities. His dedication to giving 100% to every aspect of product designing and collaboration is evident in the quality of his work.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--rajiv-raman-neupane.jpeg"
     },
     {
       "name": "SUMAN POUDEL",
       "title": "Graduate Research Assistant | Chi Epsilon",
       "relationship": "Direct manager",
       "date": "April 27, 2023",
-      "excerpt": "You handled your task effortlessly without any supervision and actually led the entire content team. From the get-go, you instinctively knew how to write good content and capture the audience's attention."
+      "excerpt": "You handled your task effortlessly without any supervision and actually led the entire content team. From the get-go, you instinctively knew how to write good content and capture the audience's attention.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--suman-poudel.jpeg"
     },
     {
       "name": "Ishwor Sapkota",
       "title": "Chief Executive Officer @ DigiPrabhat | Computer Science",
       "relationship": "Colleague (different teams)",
       "date": "April 23, 2023",
-      "excerpt": "Abhishek consistently demonstrated exceptional organizational skills and strong attention to detail. Their positive attitude and willingness to go above and beyond their duties made them a valuable asset."
+      "excerpt": "Abhishek consistently demonstrated exceptional organizational skills and strong attention to detail. Their positive attitude and willingness to go above and beyond their duties made them a valuable asset.",
+      "imageUrl": "/sections/recommendations/images/abhishek-adhikari--ishwor-sapkota.jpeg"
     }
   ],
-
   "blog": [
     {
       "title": "The Ultimate Guide to Future Design Perfection",
@@ -772,34 +1069,148 @@
       "date": "2024",
       "url": "https://techsathi.com",
       "summary": "An in-depth guide exploring future-forward design principles, tools, and workflows for digital creators and product teams.",
-      "tags": ["Design", "UI/UX", "Future Tech"]
+      "tags": [
+        "Design",
+        "UI/UX",
+        "Future Tech"
+      ]
+    },
+    {
+      "title": "Design Trends 2024: UI/UX Patterns Shaping Digital Products",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/design-trends-2024",
+      "summary": "Exploring the top UI/UX design trends of 2024 including neumorphism, glassmorphism, micro-interactions, and data-driven design patterns shaping modern digital products and user experiences.",
+      "tags": [
+        "Design",
+        "UI/UX",
+        "Trends"
+      ]
+    },
+    {
+      "title": "AgriTech in Nepal: Opportunities and Challenges for Digital Agriculture",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/agri-tech-nepal",
+      "summary": "An analysis of the agritech landscape in Nepal covering opportunities in livestock management, digital farm systems, supply chain technology, and the challenges facing agricultural technology adoption.",
+      "tags": [
+        "AgriTech",
+        "Nepal",
+        "Agriculture"
+      ]
+    },
+    {
+      "title": "React Performance Best Practices for Modern Web Applications",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/react-performance-best-practices",
+      "summary": "Practical React performance optimization techniques including code splitting, memoization, lazy loading, virtualization, and bundle analysis for building fast modern web applications.",
+      "tags": [
+        "React",
+        "Performance",
+        "Web Development"
+      ]
+    },
+    {
+      "title": "Content Strategy for Digital Products: A Practical Framework",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/content-strategy-digital-products",
+      "summary": "A step-by-step framework for developing content strategy for digital products including audience research, content auditing, SEO optimization, information architecture, and measurement.",
+      "tags": [
+        "Content Strategy",
+        "SEO",
+        "Digital Products"
+      ]
+    },
+    {
+      "title": "User Research Methods for Product Design Teams",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/user-research-methods",
+      "summary": "A comprehensive guide to user research methods including interviews, surveys, usability testing, analytics analysis, and contextual inquiry for product design and UX teams.",
+      "tags": [
+        "User Research",
+        "UX",
+        "Product Design"
+      ]
+    },
+    {
+      "title": "No-Code and Modern Development: Building Without Traditional Programming",
+      "publication": "Abhishek Adhikari",
+      "date": "2024",
+      "url": "https://abhishekadhikari.com/blog/no-code-modern-development",
+      "summary": "Exploring the no-code and low-code development landscape including tools, platforms, use cases, and how modern development approaches enable faster prototyping and digital product creation.",
+      "tags": [
+        "No-Code",
+        "Development",
+        "Tools"
+      ]
     }
   ],
-
   "newsMedia": [
     {
       "type": "recognition",
-      "title": "Top 10 Contributor – Prompt Engineering Roadmap",
+      "title": "Top 10 Contributor \u2013 Prompt Engineering Roadmap",
       "source": "3 Hours of Prompt Engineering",
       "date": "2024",
-      "description": "Listed as a top 10 contributor to the 3 Hours of Prompt Engineering roadmap event in Hetauda — one of the key knowledge contributors among all participants.",
-      "url": null
+      "description": "Top 10 contributor at 3 Hours of Prompt Engineering roadmap in Hetauda \u2014 Abhishek Adhikari recognized among key knowledge contributors for AI prompt engineering workshop Nepal",
+      "url": null,
+      "imageUrl": "/sections/news/images/abhishek-adhikari--top-10-contributor-prompt-engineering-roadmap.png"
     },
     {
       "type": "event_coverage",
-      "title": "Lead Organizer – HRIC STEAM Program 2025",
+      "title": "Lead Organizer \u2013 HRIC STEAM Program 2025",
       "source": "HRIC Hetauda",
       "date": "2025",
-      "description": "Featured as Lead Organizer of the HRIC STEAM Program 2025 in Hetauda, coordinating speakers, logistics, and student engagement.",
+      "description": "Lead Organizer at HRIC STEAM Program 2025 Hetauda Nepal \u2014 Abhishek Adhikari coordinated speakers, logistics, and student engagement for this science technology engineering arts mathematics event",
+      "url": null,
+      "imageUrl": "/sections/news/images/abhishek-adhikari--hric-steam-program-2025-hetauda.jpeg"
+    },
+    {
+      "type": "speaking",
+      "title": "Panelist \u2013 Hult Prize IOF Hetauda",
+      "source": "Hult Prize",
+      "date": "Dec 2025",
+      "description": "Panelist at Hult Prize IOF Hetauda Nepal \u2014 Abhishek Adhikari agritech entrepreneur shared startup ecosystem and youth innovation insights with students at Institute of Forestry Tribhuvan University",
+      "url": null,
+      "imageUrl": "/sections/news/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg"
+    },
+    {
+      "type": "event_coverage",
+      "title": "Project 100 Minds \u2013 Bagmati Province Cohort",
+      "source": "DEV Community Nepal",
+      "date": "2026",
+      "description": "Project 100 Minds Cohort I Bagmati Province by DEV Community Nepal \u2014 Abhishek Adhikari contributing to youth technology capacity building initiative",
+      "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-project-100-bagamati.jpeg",
       "url": null
     },
     {
       "type": "speaking",
-      "title": "Panelist – Hult Prize IOF Hetauda",
-      "source": "Hult Prize",
-      "date": "Dec 2025",
-      "description": "Invited as a panelist at the Hult Prize IOF chapter in Hetauda, contributing industry and entrepreneurship perspective to student pitches.",
+      "title": "Organizer & Key Speaker \u2013 Krishi Pradarshani 2083",
+      "source": "Krishi Pradarshani 2083",
+      "date": "2083 BS",
+      "description": "Organizer and key speaker at Krishi Pradarshani 2083 Nepal \u2014 Abhishek Adhikari sharing agritech entrepreneurship and sustainable farming insights at agricultural exhibition",
+      "imageUrl": "/sections/news/images/abhishek-adhikari--krishi-pradarshani-2083-speaker.jpeg",
       "url": null
+    },
+    {
+      "type": "recognition",
+      "title": "Hetauda's Abhishek Ranks Global Top 10 International Tech",
+      "source": "ICT Frame",
+      "date": "Jun 2026",
+      "description": "Hetauda Nepal Abhishek Adhikari ranked global top 10 in Antigravity Awesome Skills project \u2014 international recognition for digital knowledge contribution used by 40000+ users worldwide",
+      "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
+      "imageUrl": null
+    },
+    {
+      "type": "recognition",
+      "title": "Proud Achievement \u2013 Agritech Entrepreneurship",
+      "source": "RON Education",
+      "date": "2026",
+      "description": "RON Education recognizes Abhishek Adhikari agritech entrepreneur founder of Himalaya Krishi for community building and agricultural technology contributions in Nepal",
+      "url": "https://www.facebook.com/officialronbeducation/photos/proud-achievement-abhishek-adhikari-founder-of-himalaya-krishi-and-an-agritech-e/1048115057724349/",
+      "imageUrl": null
     }
   ]
 }
