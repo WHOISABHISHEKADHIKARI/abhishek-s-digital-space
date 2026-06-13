@@ -1,0 +1,574 @@
+{
+  "profile": {
+    "name": "Abhishek Adhikari",
+    "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari/",
+    "website": "https://abhishekadhikari.com",
+    "redesignProfile": "https://www.redesignprofile.com"
+  },
+
+  "projects": [
+    {
+      "category": "SEO & Tools",
+      "items": [
+        { "name": "100SEOTools", "url": "https://100seotools.com" }
+      ]
+    },
+    {
+      "category": "Agriculture",
+      "items": [
+        { "name": "Krishi Himalaya", "url": "https://krishihimalaya.com" },
+        { "name": "Himalaya Krishi", "url": "https://himalayakrishi.com" },
+        { "name": "Murraa", "url": "https://murraa.com" },
+        { "name": "Bahun Ko Khasi", "url": "https://bahunkokhasi.com" }
+      ]
+    },
+    {
+      "category": "Coffee & Training",
+      "items": [
+        { "name": "JNB Coffee", "url": "https://jnbcoffee.com.np" },
+        { "name": "J&B Barista Academy", "url": "https://jandbbaristaacademy.edu.np" }
+      ]
+    },
+    {
+      "category": "Business & Corporate",
+      "items": [
+        { "name": "GITA Nepal", "url": "https://www.gitanepal.com.np" },
+        { "name": "Tax Care Nepal", "url": "https://taxcare.com.np" },
+        { "name": "Trailokya Builders", "url": "https://trailokyabuilders.com" },
+        { "name": "Trailokya Builders Nepal", "url": "https://trailokyabuilders.com.np" },
+        { "name": "Hetaudacity", "url": "https://hetaudacity.com" },
+        { "name": "SFM Fresh Masala", "url": "https://sfmfreshmasala.com" }
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Co-Founder",
+      "organization": "DEV Community Nepal",
+      "type": "Full-time",
+      "startDate": "Jul 2022",
+      "endDate": "Present",
+      "duration": "4 yrs",
+      "location": "Nepal (On-site)",
+      "summary": "Supporting developers and tech enthusiasts by building inclusive and connected tech communities across Nepal.",
+      "responsibilities": [
+        "Organize meetups, tech conclaves, and bootcamp sessions",
+        "Connect rural tech communities with central tech ecosystems",
+        "Promote collaboration, networking, and knowledge sharing"
+      ],
+      "impact": [
+        "Organized and supported 100+ virtual events and 10+ physical events",
+        "Acted as a community partner to help execute tech programs and initiatives",
+        "Helped bridge the gap between local talent and national innovation platforms",
+        "Contributed to building a more inclusive and accessible tech ecosystem in Nepal"
+      ],
+      "skills": ["Community Building"]
+    },
+    {
+      "role": "Founder",
+      "organization": "Himalaya Krishi",
+      "type": "Self-employed",
+      "startDate": "Jan 2015",
+      "endDate": "May 2026",
+      "duration": "11 yrs 5 mos",
+      "location": "Manahari 5 (On-site)",
+      "summary": "Building an agritech-driven agricultural enterprise focused on livestock farming, dairy production, and sustainable rural development.",
+      "responsibilities": [
+        "Lead Murrah buffalo breeding, feed management, and agricultural planning",
+        "Digitalize farm operations through record systems and data tracking",
+        "Manage financial systems, compliance, and operational workflows",
+        "Build brand presence and promote agritech adoption"
+      ],
+      "impact": [
+        "Scaled livestock capacity from 25 to 220+",
+        "Implemented proper documentation and digital record systems",
+        "Improved operational efficiency and farm management processes",
+        "Represented the farm and agritech ideas at different events and platforms"
+      ],
+      "skills": ["Agritech Innovation"]
+    },
+    {
+      "role": "Founder",
+      "organization": "Hashtag Web Solutions",
+      "type": "Full-time",
+      "startDate": "Oct 2024",
+      "endDate": "Mar 2026",
+      "duration": "1 yr 6 mos",
+      "location": "Nepal (On-site)",
+      "summary": "Helping businesses move from low visibility to scalable digital growth across Nepal and international markets.",
+      "responsibilities": [
+        "SEO strategy and technical audits",
+        "Digital growth systems and automation",
+        "AI powered tools and workflow optimization"
+      ],
+      "impact": [
+        "Generated 5+ international inbound inquiries through SEO improvements",
+        "Led brand transformation for Fresh Masala including packaging redesign, PR campaigns, and social media strategy",
+        "Built AI Agentic IDE improving development and content workflow efficiency by up to 3x",
+        "Created and maintained 100+ SEO tools for keyword research, technical audits, content optimization, and ranking analysis",
+        "Managed 10+ clients from onboarding to strategy, execution, and delivery"
+      ],
+      "skills": ["SEO Audits"]
+    },
+    {
+      "role": "Business Development Manager",
+      "organization": "Aayo Rides Nepal",
+      "type": "Full-time",
+      "startDate": "Nov 2024",
+      "endDate": "Jun 2025",
+      "duration": "8 mos",
+      "location": "Hybrid",
+      "summary": "Led branch operations and expansion of the ride-sharing network.",
+      "responsibilities": [
+        "Managed daily operations and coordinated driver onboarding",
+        "Supported driver partners and ensured service quality",
+        "Built partnerships with local stakeholders and businesses",
+        "Worked on expanding service coverage to new regions"
+      ],
+      "impact": [
+        "Expanded operations by contributing to launch of 4 new outlets in Chitwan, Dang, and Butwal",
+        "Increased driver network and service availability across locations",
+        "Improved operational coordination and service delivery",
+        "Strengthened local market presence through partnerships and outreach"
+      ],
+      "skills": ["Business Development"]
+    },
+    {
+      "role": "Branch Manager",
+      "organization": "Aayo Rides Nepal",
+      "type": "Full-time",
+      "startDate": "Feb 2024",
+      "endDate": "Dec 2024",
+      "duration": "11 mos",
+      "location": "Hetauda, Narayani, Nepal (Hybrid)",
+      "summary": "Led branch operations and local expansion of the ride-sharing network.",
+      "responsibilities": [
+        "Managed daily operations, driver onboarding, and service quality",
+        "Built partnerships with local stakeholders and businesses",
+        "Led market expansion and promoted digital mobility adoption",
+        "Integrated traditional transportation providers into the platform"
+      ],
+      "impact": [
+        "Established and operationalized a new branch in Hetauda",
+        "Hired and managed a team of 5 employees",
+        "Onboarded 200+ riders through targeted ad campaigns and community outreach",
+        "Expanded local network coverage and improved service availability"
+      ]
+    },
+    {
+      "role": "Marketing Manager",
+      "organization": "Aayo Rides Nepal",
+      "type": "Full-time",
+      "startDate": "Jan 2024",
+      "endDate": "Feb 2024",
+      "duration": "2 mos",
+      "location": "Hetauda, Narayani, Nepal (On-site)",
+      "summary": "Led early-stage marketing initiatives to drive brand awareness and user adoption.",
+      "responsibilities": [
+        "Executed promotional campaigns and community outreach",
+        "Leveraged local social media pages for targeted marketing",
+        "Built partnerships with local stakeholders and businesses",
+        "Supported driver and passenger acquisition strategies"
+      ],
+      "impact": [
+        "Launched Rs 10 for 5 km campaign, driving rapid user adoption",
+        "Contributed to ~20,000 app downloads in Hetauda",
+        "Attracted early-stage riders and improved platform activity",
+        "Strengthened local brand visibility through community-driven marketing"
+      ],
+      "skills": ["Brand Promotion"]
+    },
+    {
+      "role": "Deputy Manager",
+      "organization": "IT Club of HSMSS",
+      "type": "Apprenticeship",
+      "startDate": "Feb 2024",
+      "endDate": "Mar 2025",
+      "duration": "1 yr 2 mos",
+      "location": "Nepal (On-site)",
+      "summary": "Supported and led initiatives to strengthen student tech engagement and skill development.",
+      "responsibilities": [
+        "Coordinated technology-related activities, student projects, and learning programs",
+        "Organized workshops, events, and collaborative sessions",
+        "Worked on expanding club participation and engagement"
+      ],
+      "impact": [
+        "Proposed and helped execute 5+ tech events and workshops",
+        "Increased student participation by onboarding new members into the club",
+        "Built collaboration with external parties for upskilling and knowledge sharing"
+      ],
+      "skills": ["Event Coordination"]
+    },
+    {
+      "role": "Deputy Minuting Manager",
+      "organization": "IT Club of HSMSS",
+      "type": "Internship",
+      "startDate": "Jan 2021",
+      "endDate": "Feb 2024",
+      "duration": "3 yrs 2 mos",
+      "location": "Nepal (On-site)",
+      "summary": "Developed strong foundations in professional writing, structured planning, and reporting.",
+      "responsibilities": [
+        "Recorded and maintained official meeting minutes and event reports",
+        "Documented key discussions, decisions, and action items",
+        "Assisted in planning, organizing, and tracking club activities",
+        "Supported internal communication and coordination across teams"
+      ],
+      "impact": [
+        "Established clear documentation and reporting practices within the club",
+        "Improved planning and execution through organized tracking",
+        "Strengthened communication flow and accountability among team members"
+      ],
+      "skills": ["Organization Skills"]
+    },
+    {
+      "role": "Product Designer",
+      "organization": "Sajilo Patro",
+      "type": "Freelance",
+      "startDate": "May 2022",
+      "endDate": "Apr 2023",
+      "duration": "1 yr",
+      "location": "Nepal (On-site)",
+      "summary": "Contributed to product design and feature development to improve user experience and platform efficiency.",
+      "responsibilities": [
+        "Designed user interfaces, workflows, and product features",
+        "Improved user experience through intuitive layouts",
+        "Supported front-end development and implementation of design components",
+        "Collaborated with developers to translate ideas into functional solutions"
+      ],
+      "impact": [
+        "Improved usability and navigation across key product features",
+        "Enhanced overall product experience through structured design approach",
+        "Supported delivery of user-focused digital solutions"
+      ]
+    },
+    {
+      "role": "UI/UX Designer",
+      "organization": "Kisan Care",
+      "type": "Contract",
+      "startDate": "Aug 2022",
+      "endDate": "Jan 2023",
+      "duration": "6 mos",
+      "location": "Nepal (Remote)",
+      "summary": "Designed user-friendly digital experiences for agricultural service users, focusing on accessibility and usability for farmers.",
+      "responsibilities": [
+        "Created wireframes, user flows, and intuitive interface layouts",
+        "Designed responsive and easy-to-use UI for web and mobile platforms",
+        "Collaborated with developers and product teams",
+        "Focused on simplifying complex processes for non-technical users"
+      ],
+      "impact": [
+        "Improved usability and accessibility for farmers using digital platforms",
+        "Enhanced overall user experience through clean and intuitive design",
+        "Contributed to building a more user-centric agritech platform"
+      ],
+      "skills": ["Design Thinking"]
+    },
+    {
+      "role": "Content Writer",
+      "organization": "Menzz",
+      "type": "Internship",
+      "startDate": "Jan 2022",
+      "endDate": "Jun 2022",
+      "duration": "6 mos",
+      "location": "Nepal (Remote)",
+      "summary": "Created engaging and SEO-focused content to support digital marketing and brand communication.",
+      "responsibilities": [
+        "Wrote web content, articles, and marketing copy",
+        "Produced SEO-friendly content to improve search visibility",
+        "Researched topics and keywords to align with content strategy",
+        "Supported content planning and publishing workflows"
+      ],
+      "impact": [
+        "Improved content quality and consistency across platforms",
+        "Supported brand visibility through optimized and engaging writing",
+        "Contributed to stronger online presence and audience engagement"
+      ]
+    }
+  ],
+
+  "volunteering": [
+    {
+      "role": "Lead Organizer & Speaker",
+      "organization": "AWS Cloud Innovation Day – Hetauda 2026",
+      "date": "Feb 2026",
+      "duration": "1 mo",
+      "category": "Education",
+      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day – Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning."
+    },
+    {
+      "role": "Panelist",
+      "organization": "Hult Prize IOF Hetauda",
+      "date": "Dec 2025",
+      "duration": "1 mo",
+      "category": "Science and Technology",
+      "summary": "Invited as a panelist to share insights on startups, agritech, and youth innovation in Nepal.",
+      "responsibilities": [
+        "Spoke on Nepal's startup ecosystem and emerging opportunities in agritech",
+        "Shared practical insights on idea validation, market understanding, and execution",
+        "Engaged with students and aspiring entrepreneurs through Q&A"
+      ],
+      "impact": [
+        "Contributed to student awareness on entrepreneurship and innovation pathways",
+        "Inspired participants to explore startup ideas and real-world problem solving"
+      ]
+    },
+    {
+      "role": "Guest Lecturer / Arduino Instructor",
+      "organization": "Navodaya Shishu Sadan English Secondary School",
+      "date": "Aug 2024",
+      "duration": "1 mo",
+      "category": "Science and Technology",
+      "summary": "Delivered an introductory hands-on training session on Arduino programming and basic robotics.",
+      "responsibilities": [
+        "Taught Arduino fundamentals including hardware components and programming logic",
+        "Introduced sensors, inputs/outputs, and basic robotics applications",
+        "Conducted live demonstrations and guided hands-on exercises"
+      ],
+      "impact": [
+        "Helped participants understand core concepts of Arduino and robotics",
+        "Encouraged interest in embedded systems and technology-driven problem solving",
+        "Supported early-stage skill development in robotics and electronics"
+      ]
+    },
+    {
+      "role": "Mentor",
+      "organization": "Code for Change Chitwan",
+      "date": "Jul 2024",
+      "duration": "1 mo",
+      "category": "Education",
+      "summary": "Mentored participants in a 3-Day Figma UI/UX Workshop.",
+      "responsibilities": [
+        "Guided participants through Figma, interface design, and user experience principles",
+        "Taught layout structure, design thinking, and collaborative design workflows",
+        "Supported practical exercises and provided feedback on design work"
+      ],
+      "impact": [
+        "Helped beginners understand real-world UI/UX processes and tools",
+        "Improved participant confidence in designing digital products",
+        "Contributed to skill development within the local tech and design community"
+      ]
+    },
+    {
+      "role": "Mentor",
+      "organization": "Code for Change",
+      "date": "Apr 2024",
+      "duration": "1 mo",
+      "category": "Education",
+      "summary": "Mentored participants on UI/UX design fundamentals and practical product design workflows.",
+      "responsibilities": [
+        "Guided participants through Figma, interface design, and user experience principles",
+        "Explained design thinking, layout structure, and collaborative design practices",
+        "Supported hands-on learning through real design exercises and feedback"
+      ],
+      "impact": [
+        "Helped students and beginners understand practical UI/UX workflows",
+        "Encouraged creativity and confidence in digital product design",
+        "Contributed to skill development within the local tech and design community"
+      ]
+    },
+    {
+      "role": "Innovation Pavilion Supervisor",
+      "organization": "Hetauda School of Management and Social Sciences (HSMSS)",
+      "date": "Feb 2024",
+      "duration": "1 mo",
+      "category": "Education",
+      "summary": "Supported coordination and execution of innovation-focused activities during a school event / Capacity Development Conference.",
+      "responsibilities": [
+        "Supervised innovation pavilion activities and ensured smooth operations",
+        "Assisted participants and guided visitors through project displays",
+        "Coordinated with teams to manage event flow and logistics"
+      ],
+      "impact": [
+        "Enabled a structured and engaging environment for innovation showcase",
+        "Encouraged student participation in creativity and technology initiatives"
+      ]
+    },
+    {
+      "role": "Deputy Communications Builder",
+      "organization": "Coding Olympics Nepal",
+      "startDate": "Mar 2023",
+      "endDate": "Dec 2023",
+      "duration": "10 mos",
+      "category": "Education",
+      "summary": "Supported communication, outreach, and coordination to promote coding and technology initiatives among students.",
+      "responsibilities": [
+        "Assisted in sharing event information and coordinating with student communities",
+        "Promoted coding programs and digital learning initiatives across schools and colleges",
+        "Conducted outreach visits to schools and boarding institutions"
+      ],
+      "impact": [
+        "Reached and created awareness in 16+ colleges across Hetauda",
+        "Extended outreach across 2 municipalities through school and community visits",
+        "Onboarded 2 colleges to actively participate in Coding Olympics Nepal",
+        "Increased student engagement in coding, technology, and collaborative learning"
+      ]
+    },
+    {
+      "role": "Tech Meetup Volunteer & Community Contributor",
+      "organization": "DEV Community Nepal",
+      "date": "Jan 2023",
+      "duration": "1 mo",
+      "category": "Science and Technology",
+      "summary": "Contributed to the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'. Received Certificate of Appreciation from DEV Community Nepal."
+    },
+    {
+      "role": "UI/UX & Figma Workshop Mentor",
+      "organization": "Sharing Mentorship – Kathmandu Chapter",
+      "date": "Dec 2022",
+      "duration": "1 mo",
+      "category": "Education",
+      "summary": "Mentored participants in a 3-Day Figma Crash Course, guiding students through UI/UX design fundamentals and collaborative design."
+    },
+    {
+      "role": "UI/UX Design Mentor / Guest Instructor",
+      "organization": "DEV Community Nepal",
+      "date": "Nov 2022",
+      "duration": "1 mo",
+      "category": "Science and Technology",
+      "summary": "Mentored participants in an intensive 18-day UI/UX design program, focusing on practical workflows and real-world product thinking.",
+      "responsibilities": [
+        "Taught UI/UX fundamentals including interface design and user experience principles",
+        "Guided participants through structured day-by-day learning and design exercises",
+        "Provided continuous feedback and mentorship throughout the 18-day session"
+      ],
+      "impact": [
+        "Helped participants build strong foundations in UI/UX design",
+        "Supported consistent learning and engagement over an extended 18-day program"
+      ]
+    },
+    {
+      "role": "Member",
+      "organization": "Nepal Scouts – Manahari Municipality Committee",
+      "category": "Social Services",
+      "summary": "Contributed to community development initiatives and youth engagement through scouting activities.",
+      "responsibilities": [
+        "Explored and supported local funding processes within the municipality",
+        "Engaged students to participate in scouting and community service programs",
+        "Promoted teamwork, leadership, and community responsibility among youth"
+      ],
+      "impact": [
+        "Increased student participation in scouting and community initiatives",
+        "Contributed to building a more active and engaged youth community"
+      ]
+    },
+    {
+      "role": "College Technology Stall Representative",
+      "organization": "Hetauda School of Management and Social Sciences (HSMSS)",
+      "category": "Technology",
+      "summary": "Collaborated with a college team to develop and demonstrate multiple technology projects.",
+      "projects": [
+        "WhatsApp Automation Bot",
+        "College Portfolio UI System",
+        "Custom Game Prototype"
+      ],
+      "impact": [
+        "Gained hands-on experience with real-world digital tools and collaborative development",
+        "Improved ability to communicate technical concepts to non-technical audiences",
+        "Strengthened skills in automation, UI/UX design, and problem solving"
+      ]
+    }
+  ],
+
+  "featuredHighlights": [
+    "Lead Organizer at HRIC STEAM Program 2025, Hetauda",
+    "Facilitated an AI & Digital Literacy Workshop at Nirmal Secondary School",
+    "Listed as a top 10 contributor – 3 Hours of Prompt Engineering roadmap in Hetauda",
+    "Project 100 Minds by DEV Community Nepal",
+    "100 SEO Tools",
+    "Facilitated at AWS Cloud event at Hetauda (single-handedly, no volunteer)",
+    "Panelist at Hult Prize IOF Hetauda",
+    "Mentor at Hetauda School of Management – 10 Days UI/UX Session",
+    "Mentor at Code for Change Chitwan – 3 Days UI/UX Session",
+    "Latarambeshwor Hike",
+    "Innovation Pavilion Supervisor at Capacity Development Conference",
+    "Deputy Community Builder for Coding Olympics Nepal (2079-80)",
+    "DEV Community Nepal – Organized a meetup in Hetauda",
+    "Tech Meetup at Chiyaghar, Chitwan by DEV Community Nepal",
+    "Google Professional Certificate",
+    "Published blog on TechSathi – The Ultimate Guide to Future Design Perfection",
+    "Lead Organizer Certificate of Appreciation",
+    "Sharing Mentorship Figma Crash Course – 3 Days"
+  ],
+
+  "recommendations": [
+    {
+      "name": "Er. Himal Rawal",
+      "title": "EdTech Founder Building Nepal's IT Talent Pipeline | Sipalaya InfoTech | CareerJudge",
+      "relationship": "Mentor",
+      "date": "May 24, 2026",
+      "excerpt": "Abhishek has strong knowledge of AI, agritech, and startup development, but what stands out most is his community-focused mindset. His combination of technical curiosity, communication skills, and passion for community building makes him a valuable person to work with."
+    },
+    {
+      "name": "Tanka Bhattarai",
+      "title": "HR & OD Consultant | Human Capital Strategist",
+      "relationship": "Mentor",
+      "date": "May 13, 2026",
+      "excerpt": "Abhishek Adhikari has a highly energetic and innovation-driven profile with a strong entrepreneurial mindset, digital capability, and self-learning attitude."
+    },
+    {
+      "name": "Ramesh Shrestha",
+      "title": "Technical Project Manager / Senior Software Engineer / PM / Business Development Manager",
+      "relationship": "Mentor",
+      "date": "April 11, 2026",
+      "excerpt": "An enthusiastic and collaborative professional who actively contributes to agritech and community building initiatives. His approach is grounded in execution, continuous learning, and real-world impact."
+    },
+    {
+      "name": "Er. Shreeraj Khatiwada",
+      "title": "President – CAN Makawanpur | IT Lecturer | AI & Digital Transformation Advocate",
+      "relationship": "Teacher",
+      "date": "March 12, 2026",
+      "excerpt": "Abhishek Adhikari is a forward-thinking innovator with strong expertise in agritech, modern technology, and emerging fields like AI. His curiosity, technical capability, and entrepreneurial mindset make him a valuable asset."
+    },
+    {
+      "name": "Lava Kafle",
+      "title": "Cybersecurity | AI | ML | DL | Software Solutions Architect",
+      "relationship": "Colleague (different companies)",
+      "date": "March 10, 2026",
+      "excerpt": "Awesome technology agritech agriculture and IT/ICT software enabling people, society, and country via modern logic and adaptive thinking."
+    },
+    {
+      "name": "Jagadish Bidari",
+      "title": "Founder & CEO – J&B Group | Former Qatar Airways Airport Operations",
+      "relationship": "Mentor",
+      "date": "March 4, 2026",
+      "excerpt": "Over five years, I have closely observed Abhishek's consistent contribution to building a technology-oriented professional community in Hetauda. He brings nearly a decade of experience in agritech entrepreneurship through Himalaya Krishi."
+    },
+    {
+      "name": "Upendra Prasad Neupane",
+      "title": "Building value from void",
+      "relationship": "Colleague (different companies)",
+      "date": "February 21, 2026",
+      "excerpt": "Abhishek is an excellent design thinker and an active community builder who has been contributing to the tech ecosystem for more than five years. His work in AgriTech stands out and brings a unique perspective."
+    },
+    {
+      "name": "Sushovan Paudyal",
+      "title": "Tech and business",
+      "relationship": "Same team",
+      "date": "February 21, 2026",
+      "excerpt": "Abhishek is an amazing personality to work with. His vision, networking, planning and implementation are top notch."
+    },
+    {
+      "name": "Rajiv Raman Neupane",
+      "title": "Founder & CEO of Kisan Care | Agronomist | Regenerative Agriculture",
+      "relationship": "Client",
+      "date": "April 22, 2024",
+      "excerpt": "I am thrilled to recommend Abhishek Adhikari for his exceptional UX design abilities. His dedication to giving 100% to every aspect of product designing and collaboration is evident in the quality of his work."
+    },
+    {
+      "name": "SUMAN POUDEL",
+      "title": "Graduate Research Assistant | Chi Epsilon",
+      "relationship": "Direct manager",
+      "date": "April 27, 2023",
+      "excerpt": "You handled your task effortlessly without any supervision and actually led the entire content team. From the get-go, you instinctively knew how to write good content and capture the audience's attention."
+    },
+    {
+      "name": "Ishwor Sapkota",
+      "title": "Chief Executive Officer @ DigiPrabhat | Computer Science",
+      "relationship": "Colleague (different teams)",
+      "date": "April 23, 2023",
+      "excerpt": "Abhishek consistently demonstrated exceptional organizational skills and strong attention to detail. Their positive attitude and willingness to go above and beyond their duties made them a valuable asset."
+    }
+  ]
+}
