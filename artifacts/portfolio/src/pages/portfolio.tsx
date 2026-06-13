@@ -83,6 +83,99 @@ function ShowMoreButton({
   );
 }
 
+const MEDIUM_FEED = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abhishekadhikari1254";
+
+function stripHtml(html: string) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return (div.textContent || div.innerText || "").trim();
+}
+
+function cleanMediumUrl(url: string) {
+  return url.replace(/\?source=rss.*/, "");
+}
+
+function formatDate(pubDate: string) {
+  const d = new Date(pubDate);
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short" });
+}
+
+function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReducedMotion: boolean | null }) {
+  const [posts, setPosts] = useState<any[] | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(MEDIUM_FEED)
+      .then((r) => r.json())
+      .then((data) => {
+        if (cancelled) return;
+        if (data?.status === "ok" && data.items?.length) {
+          setPosts(data.items.map((item: any) => ({
+            title: item.title,
+            publication: "Medium",
+            date: formatDate(item.pubDate),
+            url: cleanMediumUrl(item.link),
+            summary: stripHtml(item.description).slice(0, 200),
+            tags: item.categories ?? [],
+            coverImage: item.thumbnail || null,
+          })));
+        } else {
+          setPosts([]);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setError(true);
+      });
+    return () => { cancelled = true; };
+  }, []);
+
+  if (error) return <EmptyState message="Could not load blog posts. Visit medium.com/@abhishekadhikari1254" />;
+  if (posts === null) return <div className="flex items-center justify-center py-16"><span className="inline-block w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" /></div>;
+  if (posts.length === 0) return <EmptyState message="Nothing to show yet. Check back soon." />;
+
+  return (
+    <div className="space-y-4">
+      {posts.map((post, i) => (
+        <motion.a
+          key={post.url}
+          href={post.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.06, duration: 0.4, ...spring }}
+          whileHover={{ y: -3 }}
+          className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
+        >
+          <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+            {post.coverImage ? (
+              <ImageWithSkeleton src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on Medium`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
+            ) : (
+              <FileImage size={28} className="text-primary/30" />
+            )}
+          </div>
+          <div className="flex-1 space-y-2 min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
+              <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{post.publication}</span>
+            </div>
+            <h3 className="font-bold text-base group-hover:text-primary transition-colors">{post.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{post.summary}</p>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {post.tags.map((tag: string, t: number) => (
+                <span key={t} className="text-xs px-2 py-0.5 bg-muted rounded-full text-muted-foreground">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <ExternalLink size={16} className="shrink-0 self-center text-muted-foreground group-hover:text-primary transition-colors" />
+        </motion.a>
+      ))}
+    </div>
+  );
+}
+
 export default function Portfolio() {
   const [isDark, setIsDark] = useState(false);
   const [showTop, setShowTop] = useState(false);
@@ -775,53 +868,8 @@ export default function Portfolio() {
         {/* Blog */}
         <ErrorBoundary section="Blog">
         <section id="blog">
-          <SectionHeader label="Blog" title="What I write about" />
-          {(profileData as any).blog?.length > 0 ? (
-          <div className="space-y-4">
-            {(profileData as any).blog.map((post: any, i: number) => (
-              <motion.a
-                key={i}
-                href={post.url || "#"}
-                target={post.url ? "_blank" : undefined}
-                rel={post.url ? "noopener noreferrer" : undefined}
-                onClick={post.url ? undefined : (e) => e.preventDefault()}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06, duration: 0.4, ...spring }}
-                whileHover={{ y: -3 }}
-                className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
-              >
-                {/* Cover image */}
-                <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                  {post.coverImage ? (
-                    <ImageWithSkeleton src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on ${post.publication}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
-                  ) : (
-                    <FileImage size={28} className="text-primary/30" />
-                  )}
-                </div>
-                <div className="flex-1 space-y-2 min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
-                    <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{post.publication}</span>
-                  </div>
-                  <h3 className="font-bold text-base group-hover:text-primary transition-colors">{post.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{post.summary}</p>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {post.tags?.map((tag: string, t: number) => (
-                      <span key={t} className="text-xs px-2 py-0.5 bg-muted rounded-full text-muted-foreground">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                {post.url && (
-                  <ExternalLink size={16} className="shrink-0 self-center text-muted-foreground group-hover:text-primary transition-colors" />
-                )}
-              </motion.a>
-            ))}
-          </div>
-        ) : (
-          <EmptyState message="Nothing to show yet. Check back soon." />
-        )}
+          <SectionHeader label="Blog" title="What I write on Medium" summary="Real posts from medium.com/@abhishekadhikari1254" />
+          <BlogPosts spring={spring} prefersReducedMotion={prefersReducedMotion} />
         </section>
         </ErrorBoundary>
 
