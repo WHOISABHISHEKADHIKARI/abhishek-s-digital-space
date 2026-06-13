@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin, Camera, Award, FileImage, Image, ArrowUp, Send, Calendar, ShieldCheck, Zap } from "lucide-react";
 import profileData from "../../../../abhishek_profile.json";
 import ImagePreview from "../components/image-preview";
+import ImageWithSkeleton from "../components/image-with-skeleton";
 import { Card, CardContent, CardFooter } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 
@@ -360,7 +361,7 @@ export default function Portfolio() {
                     {/* Logo tile — sits on the timeline */}
                     <div className={`hidden md:flex absolute left-0 top-0 w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
                       {exp.logoUrl && !logoErrored ? (
-                        <img src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" onError={() => markErrored(`exp-logo-${i}`)} />
+                        <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
                       ) : (
                         orgInitials || exp.organization.slice(0, 2).toUpperCase()
                       )}
@@ -372,7 +373,7 @@ export default function Portfolio() {
                       <div className="flex items-start gap-3 mb-3">
                         <div className={`flex md:hidden w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
                           {exp.logoUrl && !logoErrored ? (
-                            <img src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" onError={() => markErrored(`exp-logo-${i}`)} />
+                            <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
                           ) : (
                             orgInitials || exp.organization.slice(0, 2).toUpperCase()
                           )}
@@ -452,12 +453,13 @@ export default function Portfolio() {
                         <span className="text-5xl font-bold text-primary/30">{item.name.charAt(0).toUpperCase()}</span>
                       </div>
                     ) : (
-                      <img
+                        <ImageWithSkeleton
                         src={screenshotUrl}
                         alt={`${item.name} — ${item.category} website project built by Abhishek Adhikari`}
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        wrapperClassName="absolute inset-0"
                         onError={() => markErrored(`project-${i}`)}
                       />
                     )}
@@ -535,12 +537,13 @@ export default function Portfolio() {
                       {cfg.icon}
                       <span className="text-xs font-semibold tracking-widest uppercase opacity-60">{cfg.label}</span>
                       {img.imageUrl && (
-                        <img
+                        <ImageWithSkeleton
                           src={img.imageUrl}
                           alt={img.caption ? `${img.caption} — ${vol.role} at ${vol.organization}, Abhishek Adhikari volunteering (${vol.date || vol.startDate})` : `${vol.role} at ${vol.organization} — volunteer work by Abhishek Adhikari`}
                           loading="lazy"
                           decoding="async"
                           className="absolute inset-0 w-full h-full object-cover"
+                          wrapperClassName="absolute inset-0"
                         />
                       )}
                       {img.caption && (
@@ -607,12 +610,13 @@ export default function Portfolio() {
                         onClick={() => setPreview({ src: cert.imageUrl, alt: cert.title })}
                       >
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <img
+                        <ImageWithSkeleton
                           src={cert.imageUrl}
                           alt={`${cert.title} — ${cert.issuer} professional certification credential, Abhishek Adhikari earned ${cert.date}`}
                           loading="lazy"
                           decoding="async"
                           className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                          wrapperClassName="absolute inset-0"
                         />
                         <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <div className="bg-background/90 rounded-full p-2.5 shadow-lg backdrop-blur-sm">
@@ -709,7 +713,7 @@ export default function Portfolio() {
                 {/* Cover image - drop in public/sections/blog/images/ */}
                 {post.coverImage && (
                   <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-muted">
-                    <img src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on ${post.publication}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    <ImageWithSkeleton src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on ${post.publication}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
                   </div>
                 )}
                 <div className="flex-1 space-y-2 min-w-0">
@@ -772,7 +776,7 @@ export default function Portfolio() {
                     {item.imageUrl && (
                       <div className="w-full h-36 bg-muted cursor-pointer"
                         onClick={() => setPreview({ src: item.imageUrl, alt: item.title })}>
-                        <img src={item.imageUrl} alt={`${item.title} — ${item.source} news coverage featuring Abhishek Adhikari agritech entrepreneur Nepal ${item.date}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                        <ImageWithSkeleton src={item.imageUrl} alt={`${item.title} — ${item.source} news coverage featuring Abhishek Adhikari agritech entrepreneur Nepal ${item.date}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
                       </div>
                     )}
                     <div className="p-5 flex flex-col gap-3 flex-1">
@@ -843,7 +847,7 @@ export default function Portfolio() {
                   <div className="flex items-center gap-3 pt-2 border-t border-muted">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${colorClass}`}>
                       {rec.imageUrl && !avatarErrored ? (
-                        <img src={rec.imageUrl} alt={`${rec.name}, ${rec.title} — LinkedIn recommendation for Abhishek Adhikari`} loading="lazy" decoding="async" className="h-full w-full rounded-full object-cover" onError={() => markErrored(`rec-avatar-${i}`)} />
+                        <ImageWithSkeleton src={rec.imageUrl} alt={`${rec.name}, ${rec.title} — LinkedIn recommendation for Abhishek Adhikari`} loading="lazy" decoding="async" className="h-full w-full rounded-full object-cover" wrapperClassName="h-full w-full" onError={() => markErrored(`rec-avatar-${i}`)} />
                       ) : (
                         initials
                       )}
