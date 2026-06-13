@@ -256,15 +256,46 @@ export default function Portfolio() {
         <section id="recommendations">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Recommendations</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {profileData.recommendations.map((rec: any, i: number) => (
-              <div key={i} className="p-6 rounded-2xl bg-muted/30 border border-muted">
-                <p className="italic text-sm text-foreground/80 mb-6">"{rec.excerpt}"</p>
-                <div>
-                  <div className="font-bold text-sm">{rec.name}</div>
-                  <div className="text-xs text-muted-foreground mt-1 line-clamp-1">{rec.title}</div>
-                </div>
-              </div>
-            ))}
+            {profileData.recommendations.map((rec: any, i: number) => {
+              const avatarColors = [
+                "bg-emerald-700 text-white",
+                "bg-slate-700 text-white",
+                "bg-amber-700 text-white",
+                "bg-teal-700 text-white",
+                "bg-indigo-700 text-white",
+                "bg-rose-700 text-white",
+                "bg-lime-700 text-white",
+                "bg-cyan-700 text-white",
+              ];
+              const initials = rec.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("").toUpperCase();
+              const colorClass = avatarColors[i % avatarColors.length];
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04, duration: 0.4 }}
+                  className="p-6 rounded-2xl bg-muted/30 border border-muted flex flex-col gap-4"
+                  data-testid={`card-recommendation-${i}`}
+                >
+                  <p className="italic text-sm text-foreground/80 leading-relaxed flex-1">"{rec.excerpt}"</p>
+                  <div className="flex items-center gap-3 pt-2 border-t border-muted">
+                    {/* Avatar placeholder */}
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${colorClass}`}>
+                      {initials}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-bold text-sm">{rec.name}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5 line-clamp-1">{rec.title}</div>
+                      {rec.relationship && (
+                        <div className="text-xs text-primary/70 mt-0.5">{rec.relationship}</div>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </section>
 
