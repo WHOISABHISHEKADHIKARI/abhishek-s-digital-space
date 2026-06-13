@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, MapPin, Camera, Award, FileImage, Image, ArrowUp, Send, Calendar, ShieldCheck, Zap } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, Zap } from "lucide-react";
 import profileData from "../../../../abhishek_profile.json";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
-import { Card, CardContent, CardFooter } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
 
 const sectionLimits = {
   experience: 5,
@@ -208,10 +206,10 @@ export default function Portfolio() {
                 {profileData.profile.name}
               </h1>
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepal's emerging tech ecosystem.
+                I help agribusinesses scale 10x through digital systems, build tech communities that outlive events, and craft SEO strategies that turn websites into revenue assets.
               </p>
               <p className="mt-3 text-sm text-muted-foreground/70 leading-relaxed max-w-xl">
-                Abhishek Adhikari is an agritech entrepreneur based in Hetauda, Nepal who scales livestock operations, facilitates technology education, and builds digital products connecting rural Nepal to global markets.
+                Founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and consulted 10+ clients on technical SEO and digital growth from Hetauda, Nepal.
               </p>
             </motion.div>
 
@@ -298,11 +296,11 @@ export default function Portfolio() {
         <section id="about" className="-mt-8">
           <SectionHeader
             label="About"
-            title="Rural roots, practical technology, community scale."
-            summary="A concise view of the work: agriculture, digital growth, and learning communities."
+            title="Rural roots. Practical technology. Community scale."
+            summary="Three businesses, 100+ events, 10+ clients — and a track record of turning small experiments into real impact."
           />
           <p className="text-base md:text-lg leading-relaxed text-foreground/90 max-w-3xl">
-            I build at the intersection of agritech, SEO-led business growth, and youth technology communities in Nepal.
+            I started in agriculture at 14 — managing a family buffalo farm that grew from 25 to 220+ head through systematic feeding, digital record-keeping, and market linkage. That same mindset now drives everything I do: build systems that scale, teach what you know, and invest in communities that outlast any single project.
           </p>
           <div className="mt-6 grid sm:grid-cols-3 gap-3">
             {[
