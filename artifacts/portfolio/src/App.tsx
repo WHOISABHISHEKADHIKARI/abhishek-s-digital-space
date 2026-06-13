@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Portfolio from "@/pages/portfolio";
-import Admin from "@/pages/admin";
 
 const queryClient = new QueryClient();
 
@@ -12,7 +11,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Portfolio} />
-      <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>
   );
