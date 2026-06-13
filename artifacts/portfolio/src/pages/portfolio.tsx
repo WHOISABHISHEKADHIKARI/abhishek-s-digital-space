@@ -4,6 +4,7 @@ import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileIma
 import profileData from "../../../../abhishek_profile.json";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
+import ErrorBoundary from "../components/error-boundary";
 
 const sectionLimits = {
   experience: 5,
@@ -193,6 +194,7 @@ export default function Portfolio() {
       <main id="main-content" className="max-w-5xl mx-auto px-6 pt-28 pb-24 space-y-24">
         
         {/* Hero */}
+        <ErrorBoundary section="Hero">
         <section id="hero" className="space-y-6 pt-8">
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
             <motion.div
@@ -231,8 +233,10 @@ export default function Portfolio() {
             </a>
           </motion.div>
         </section>
+        </ErrorBoundary>
 
         {/* Antigravity Skills */}
+        <ErrorBoundary section="AI Skills">
         <section id="skills">
           <SectionHeader
             label="AI Skills"
@@ -291,8 +295,10 @@ export default function Portfolio() {
             </a>
           </div>
         </section>
+        </ErrorBoundary>
 
         {/* About */}
+        <ErrorBoundary section="About">
         <section id="about" className="-mt-8">
           <SectionHeader
             label="About"
@@ -315,8 +321,10 @@ export default function Portfolio() {
             ))}
           </div>
         </section>
+        </ErrorBoundary>
 
         {/* Experience */}
+        <ErrorBoundary section="Experience">
         <section id="experience">
           <SectionHeader
             label="Experience"
@@ -411,8 +419,10 @@ export default function Portfolio() {
             onClick={() => toggleSection("experience")}
           />
         </section>
+        </ErrorBoundary>
 
         {/* Projects */}
+        <ErrorBoundary section="Projects">
         <section id="projects">
           <SectionHeader
             label="Projects"
@@ -486,8 +496,10 @@ export default function Portfolio() {
             onClick={() => toggleSection("projects")}
           />
         </section>
+        </ErrorBoundary>
 
         {/* Volunteering */}
+        <ErrorBoundary section="Volunteering">
         <section id="volunteering">
           <SectionHeader
             label="Leadership"
@@ -568,9 +580,10 @@ export default function Portfolio() {
             onClick={() => toggleSection("volunteering")}
           />
         </section>
-
+        </ErrorBoundary>
 
         {/* Certifications */}
+        <ErrorBoundary section="Certifications">
         <section id="certifications">
           <SectionHeader
             label="Certificates"
@@ -689,8 +702,10 @@ export default function Portfolio() {
           <EmptyState message="No certificates listed yet." />
         )}
         </section>
+        </ErrorBoundary>
 
         {/* Blog */}
+        <ErrorBoundary section="Blog">
         <section id="blog">
           <SectionHeader label="Blog" title="What I write about" />
           {(profileData as any).blog?.length > 0 ? (
@@ -737,8 +752,10 @@ export default function Portfolio() {
           <EmptyState message="Nothing to show yet. Check back soon." />
         )}
         </section>
+        </ErrorBoundary>
 
         {/* News & Media */}
+        <ErrorBoundary section="News">
         <section id="news">
           <SectionHeader
             label="Recognition"
@@ -808,8 +825,10 @@ export default function Portfolio() {
           <EmptyState message="Nothing to show yet." />
         )}
         </section>
+        </ErrorBoundary>
 
         {/* Recommendations */}
+        <ErrorBoundary section="Recommendations">
         <section id="recommendations">
           <SectionHeader
             label="Recommendations"
@@ -868,8 +887,10 @@ export default function Portfolio() {
             onClick={() => toggleSection("recommendations")}
           />
         </section>
+        </ErrorBoundary>
 
         {/* Contact */}
+        <ErrorBoundary section="Contact">
         <section id="contact">
           <SectionHeader
             label="Contact"
@@ -952,6 +973,7 @@ export default function Portfolio() {
             </motion.form>
           </div>
         </section>
+        </ErrorBoundary>
 
       </main>
 
