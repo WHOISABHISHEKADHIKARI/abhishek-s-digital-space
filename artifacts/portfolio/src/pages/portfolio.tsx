@@ -847,14 +847,6 @@ export default function Portfolio() {
         </section>
         </ErrorBoundary>
 
-        {/* Blog */}
-        <ErrorBoundary section="Blog">
-        <section id="blog">
-          <SectionHeader label="Blog" title="What I write on Medium" summary="Real posts from medium.com/@abhishekadhikari1254" />
-          <BlogPosts spring={spring} prefersReducedMotion={prefersReducedMotion} />
-        </section>
-        </ErrorBoundary>
-
         {/* News & Media */}
         <ErrorBoundary section="News">
         <section id="news">
@@ -925,6 +917,14 @@ export default function Portfolio() {
         ) : (
           <EmptyState message="Nothing to show yet." />
         )}
+        </section>
+        </ErrorBoundary>
+
+        {/* Blog */}
+        <ErrorBoundary section="Blog">
+        <section id="blog">
+          <SectionHeader label="Blog" title="What I write on Medium" summary="Real posts from medium.com/@abhishekadhikari1254" />
+          <BlogPosts spring={spring} prefersReducedMotion={prefersReducedMotion} />
         </section>
         </ErrorBoundary>
 
