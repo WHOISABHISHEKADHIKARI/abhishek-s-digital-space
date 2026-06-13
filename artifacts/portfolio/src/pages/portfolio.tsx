@@ -108,20 +108,69 @@ export default function Portfolio() {
         {/* Projects */}
         <section id="projects">
           <h2 className="text-sm font-bold tracking-widest uppercase text-primary mb-8">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {profileData.projects.map((cat: any, i: number) => (
-              <div key={i} className="p-6 rounded-2xl bg-card border shadow-sm">
-                <h3 className="font-bold text-lg mb-4 text-foreground">{cat.category}</h3>
-                <div className="space-y-3">
-                  {cat.items.map((item: any, j: number) => (
-                    <a key={j} href={item.url} target="_blank" rel="noreferrer" className="flex items-center justify-between group p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                      <span className="font-medium">{item.name}</span>
-                      <ExternalLink size={16} className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {profileData.projects.flatMap((cat: any) =>
+              cat.items.map((item: any) => ({ ...item, category: cat.category }))
+            ).map((item: any, i: number) => {
+              const screenshotUrl = `https://api.microlink.io/?url=${encodeURIComponent(item.url)}&screenshot=true&meta=false&embed=screenshot.url`;
+              const categoryColors: Record<string, string> = {
+                "Personal Brand": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
+                "SEO & Tools": "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
+                "Agriculture": "bg-lime-100 text-lime-800 dark:bg-lime-900/40 dark:text-lime-300",
+                "Coffee & Training": "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
+                "Business & Corporate": "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300",
+              };
+              const badgeClass = categoryColors[item.category] ?? "bg-muted text-muted-foreground";
+              return (
+                <motion.a
+                  key={i}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-testid={`card-project-${i}`}
+                  className="group relative flex flex-col rounded-2xl overflow-hidden border bg-card shadow-sm hover:shadow-lg transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.04, duration: 0.4 }}
+                >
+                  {/* Screenshot image */}
+                  <div className="relative w-full aspect-[16/9] bg-muted overflow-hidden">
+                    <img
+                      src={screenshotUrl}
+                      alt={item.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        const el = e.currentTarget as HTMLImageElement;
+                        el.style.display = "none";
+                        const parent = el.parentElement;
+                        if (parent) {
+                          parent.style.background = "linear-gradient(135deg, hsl(var(--primary)/0.15), hsl(var(--primary)/0.05))";
+                          const initials = document.createElement("span");
+                          initials.textContent = item.name.charAt(0).toUpperCase();
+                          initials.className = "absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary/40";
+                          parent.appendChild(initials);
+                        }
+                      }}
+                    />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/90 rounded-full p-3 shadow-lg">
+                        <ExternalLink size={20} className="text-foreground" />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Card body */}
+                  <div className="flex flex-col gap-2 p-4">
+                    <span className={`self-start text-xs font-semibold px-2.5 py-0.5 rounded-full ${badgeClass}`}>
+                      {item.category}
+                    </span>
+                    <span className="font-semibold text-base text-foreground leading-tight">{item.name}</span>
+                    <span className="text-xs text-muted-foreground truncate">{item.url.replace(/^https?:\/\//, "")}</span>
+                  </div>
+                </motion.a>
+              );
+            })}
           </div>
         </section>
 
