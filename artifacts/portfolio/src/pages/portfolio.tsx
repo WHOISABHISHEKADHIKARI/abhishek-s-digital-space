@@ -56,18 +56,46 @@ export default function Portfolio() {
         
         {/* Hero */}
         <section id="hero" className="space-y-6 pt-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary">
-              {profileData.profile.name}
-            </h1>
-            <p className="mt-6 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
-              Agritech Entrepreneur, Community Builder, and SEO Expert building the intersection of rural roots and digital ecosystems in Nepal.
-            </p>
-          </motion.div>
+          <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex-1"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-primary">
+                {profileData.profile.name}
+              </h1>
+              <p className="mt-6 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+                Agritech Entrepreneur, Community Builder, and SEO Expert building the intersection of rural roots and digital ecosystems in Nepal.
+              </p>
+            </motion.div>
+
+            {/* Profile photo — drop photo.jpg in public/sections/about/ to activate */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="shrink-0"
+            >
+              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-primary/20 bg-muted flex items-center justify-center">
+                <img
+                  src="/sections/about/photo.jpg"
+                  alt={profileData.profile.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const fallback = target.nextElementSibling as HTMLElement | null;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <span className="hidden w-full h-full items-center justify-center text-3xl font-bold text-primary/60">
+                  {profileData.profile.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")}
+                </span>
+              </div>
+            </motion.div>
+          </div>
           
           <motion.div 
             className="flex gap-4 pt-4"
@@ -331,9 +359,15 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06, duration: 0.4 }}
-                className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
+                className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
               >
-                <div className="flex-1 space-y-2">
+                {/* Cover image — drop in public/sections/blog/ */}
+                {post.coverImage && (
+                  <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-muted">
+                    <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                <div className="flex-1 space-y-2 min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
                     <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{post.publication}</span>
@@ -347,7 +381,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 {post.url && (
-                  <ExternalLink size={16} className="shrink-0 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <ExternalLink size={16} className="shrink-0 self-center text-muted-foreground group-hover:text-primary transition-colors" />
                 )}
               </motion.a>
             ))}
@@ -378,23 +412,31 @@ export default function Portfolio() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.06, duration: 0.4 }}
-                  className="p-5 rounded-2xl bg-muted/30 border border-muted flex flex-col gap-3"
+                  className="rounded-2xl bg-muted/30 border border-muted flex flex-col overflow-hidden"
                 >
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${typeColors[item.type] ?? typeColors.press}`}>
-                      {typeLabel[item.type] ?? item.type}
-                    </span>
-                    <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
-                  </div>
-                  <h3 className="font-bold text-sm leading-snug">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                  <div className="text-xs text-primary/70 font-medium">{item.source}</div>
-                  {item.url && (
-                    <a href={item.url} target="_blank" rel="noopener noreferrer"
-                      className="text-xs text-primary hover:underline flex items-center gap-1 w-fit">
-                      <ExternalLink size={12} /> View coverage
-                    </a>
+                  {/* Image — drop in public/sections/news/ and set imageUrl in JSON */}
+                  {item.imageUrl && (
+                    <div className="w-full h-36 bg-muted">
+                      <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover" />
+                    </div>
                   )}
+                  <div className="p-5 flex flex-col gap-3 flex-1">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${typeColors[item.type] ?? typeColors.press}`}>
+                        {typeLabel[item.type] ?? item.type}
+                      </span>
+                      <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
+                    </div>
+                    <h3 className="font-bold text-sm leading-snug">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <div className="text-xs text-primary/70 font-medium">{item.source}</div>
+                    {item.url && (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer"
+                        className="text-xs text-primary hover:underline flex items-center gap-1 w-fit">
+                        <ExternalLink size={12} /> View coverage
+                      </a>
+                    )}
+                  </div>
                 </motion.div>
               );
             })}
