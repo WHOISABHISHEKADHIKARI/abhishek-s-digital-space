@@ -225,8 +225,8 @@ export default function Portfolio() {
             >
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
-                  src="/abhishek-adhikari-opengraph.jpg"
-                  alt="Abhishek Adhikari — Agritech entrepreneur and community builder from Hetauda, Nepal"
+                  src="/abhishek-adhikari-profile.png"
+                  alt="Abhishek Adhikari — Lead Organizer & Speaker"
                   className="w-full h-full object-cover"
                   wrapperClassName="w-full h-full"
                 />
