@@ -195,7 +195,9 @@ export default function Portfolio() {
         
         {/* Hero */}
         <ErrorBoundary section="Hero">
-        <section id="hero" className="space-y-6 pt-8">
+        <section id="hero" className="space-y-6 pt-8 relative">
+          <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+          <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-decorative-3/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
             <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -215,6 +217,21 @@ export default function Portfolio() {
               </p>
             </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2, ...spring }}
+              className="shrink-0"
+            >
+              <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
+                <ImageWithSkeleton
+                  src="/abhishek-adhikari-opengraph.jpg"
+                  alt="Abhishek Adhikari — Agritech entrepreneur and community builder from Hetauda, Nepal"
+                  className="w-full h-full object-cover"
+                  wrapperClassName="w-full h-full"
+                />
+              </div>
+            </motion.div>
 
           </div>
           
@@ -234,6 +251,35 @@ export default function Portfolio() {
           </motion.div>
         </section>
         </ErrorBoundary>
+
+        {/* Stats Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, ...spring }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden border bg-border"
+        >
+          {[
+            ["220+", "Livestock capacity"],
+            ["100+", "Community events"],
+            ["10+", "SEO clients"],
+            ["12", "AI skills built"],
+          ].map(([value, label]) => (
+            <div key={label} className="bg-card px-6 py-8 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary">{value}</div>
+              <div className="mt-1.5 text-sm text-muted-foreground">{label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Divider */}
+        <div className="relative py-4">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-border/60" />
+          <div className="relative flex justify-center">
+            <span className="bg-background px-4 text-xs text-muted-foreground/40 uppercase tracking-widest font-medium">What I do</span>
+          </div>
+        </div>
 
         {/* Antigravity Skills */}
         <ErrorBoundary section="AI Skills">
@@ -297,9 +343,61 @@ export default function Portfolio() {
         </section>
         </ErrorBoundary>
 
+        {/* Divider */}
+        <div className="relative py-4">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-border/60" />
+          <div className="relative flex justify-center">
+            <span className="bg-background px-4 text-xs text-muted-foreground/40 uppercase tracking-widest font-medium">Expertise</span>
+          </div>
+        </div>
+
+        {/* Core Skills */}
+        <ErrorBoundary section="Core Skills">
+        <section id="core-skills">
+          <SectionHeader
+            label="Skills"
+            title="What I bring"
+            summary="Core competencies built across agritech, SEO, design, community leadership, and AI — with proficiency levels."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(profileData.skills ?? []).map((group: any, gi: number) => (
+              <motion.div
+                key={group.category}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: gi * 0.06, duration: 0.4, ...spring }}
+                className="rounded-xl border bg-card p-5"
+              >
+                <h3 className="text-sm font-semibold text-foreground mb-4">{group.category}</h3>
+                <div className="space-y-3">
+                  {group.items.map((skill: any, si: number) => (
+                    <div key={skill.name}>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs text-muted-foreground">{skill.name}</span>
+                        <span className="text-[11px] font-mono text-muted-foreground/60">{skill.level}/5</span>
+                      </div>
+                      <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${(skill.level / 5) * 100}%` }}
+                          viewport={{ once: true }}
+                          transition={{ delay: gi * 0.06 + si * 0.04, duration: 0.6, ease: "easeOut" }}
+                          className="h-full rounded-full bg-primary"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+        </ErrorBoundary>
+
         {/* About */}
         <ErrorBoundary section="About">
-        <section id="about" className="-mt-8">
+        <section id="about">
           <SectionHeader
             label="About"
             title="Rural roots. Practical technology. Community scale."
@@ -724,12 +822,14 @@ export default function Portfolio() {
                 whileHover={{ y: -3 }}
                 className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
               >
-                {/* Cover image - drop in public/sections/blog/images/ */}
-                {post.coverImage && (
-                  <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-muted">
+                {/* Cover image */}
+                <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                  {post.coverImage ? (
                     <ImageWithSkeleton src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on ${post.publication}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
-                  </div>
-                )}
+                  ) : (
+                    <FileImage size={28} className="text-primary/30" />
+                  )}
+                </div>
                 <div className="flex-1 space-y-2 min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
