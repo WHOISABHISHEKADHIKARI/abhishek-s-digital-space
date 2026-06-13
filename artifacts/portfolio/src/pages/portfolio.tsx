@@ -52,10 +52,12 @@ function EmptyState({ message }: { message: string }) {
 function ShowMoreButton({
   expanded,
   hiddenCount,
+  loading,
   onClick,
 }: {
   expanded: boolean;
   hiddenCount: number;
+  loading?: boolean;
   onClick: () => void;
 }) {
   if (hiddenCount <= 0) return null;
@@ -64,9 +66,19 @@ function ShowMoreButton({
     <button
       type="button"
       onClick={onClick}
-      className="mt-6 rounded-lg border px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted active:scale-[0.97] transition-all duration-200 min-h-11"
+      disabled={loading}
+      className="mt-6 rounded-lg border px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted active:scale-[0.97] transition-all duration-200 min-h-11 disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      {expanded ? "Show less" : `Show ${hiddenCount} more`}
+      {loading ? (
+        <span className="flex items-center gap-2">
+          <span className="inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+          Loading in 10s…
+        </span>
+      ) : expanded ? (
+        "Show less"
+      ) : (
+        `Show ${hiddenCount} more`
+      )}
     </button>
   );
 }
@@ -78,6 +90,7 @@ export default function Portfolio() {
   const [sent, setSent] = useState(false);
   const [formErrors, setFormErrors] = useState<{ name?: string; email?: string; message?: string }>({});
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+  const [loadingSections, setLoadingSections] = useState<Record<string, boolean>>({});
   const [sending, setSending] = useState(false);
   const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null);
   const [erroredImages, setErroredImages] = useState<Set<string>>(new Set());
@@ -135,10 +148,15 @@ export default function Portfolio() {
   };
 
   const toggleSection = (section: string) => {
-    setExpandedSections((current) => ({
-      ...current,
-      [section]: !current[section],
-    }));
+    if (expandedSections[section]) {
+      setExpandedSections((current) => ({ ...current, [section]: false }));
+      return;
+    }
+    setLoadingSections((current) => ({ ...current, [section]: true }));
+    setTimeout(() => {
+      setLoadingSections((current) => ({ ...current, [section]: false }));
+      setExpandedSections((current) => ({ ...current, [section]: true }));
+    }, 10000);
   };
 
   const visibleItems = <T,>(section: keyof typeof sectionLimits, items: T[]) =>
@@ -343,58 +361,6 @@ export default function Portfolio() {
         </section>
         </ErrorBoundary>
 
-        {/* Divider */}
-        <div className="relative py-4">
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-border/60" />
-          <div className="relative flex justify-center">
-            <span className="bg-background px-4 text-xs text-muted-foreground/40 uppercase tracking-widest font-medium">Expertise</span>
-          </div>
-        </div>
-
-        {/* Core Skills */}
-        <ErrorBoundary section="Core Skills">
-        <section id="core-skills">
-          <SectionHeader
-            label="Skills"
-            title="What I bring"
-            summary="Core competencies built across agritech, SEO, design, community leadership, and AI — with proficiency levels."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(profileData.skills ?? []).map((group: any, gi: number) => (
-              <motion.div
-                key={group.category}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: gi * 0.06, duration: 0.4, ...spring }}
-                className="rounded-xl border bg-card p-5"
-              >
-                <h3 className="text-sm font-semibold text-foreground mb-4">{group.category}</h3>
-                <div className="space-y-3">
-                  {group.items.map((skill: any, si: number) => (
-                    <div key={skill.name}>
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs text-muted-foreground">{skill.name}</span>
-                        <span className="text-[11px] font-mono text-muted-foreground/60">{skill.level}/5</span>
-                      </div>
-                      <div className="h-1.5 rounded-full bg-muted overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${(skill.level / 5) * 100}%` }}
-                          viewport={{ once: true }}
-                          transition={{ delay: gi * 0.06 + si * 0.04, duration: 0.6, ease: "easeOut" }}
-                          className="h-full rounded-full bg-primary"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-        </ErrorBoundary>
-
         {/* About */}
         <ErrorBoundary section="About">
         <section id="about">
@@ -514,6 +480,7 @@ export default function Portfolio() {
           <ShowMoreButton
             expanded={Boolean(expandedSections.experience)}
             hiddenCount={profileData.experience.length - sectionLimits.experience}
+            loading={loadingSections.experience}
             onClick={() => toggleSection("experience")}
           />
         </section>
@@ -591,6 +558,7 @@ export default function Portfolio() {
           <ShowMoreButton
             expanded={Boolean(expandedSections.projects)}
             hiddenCount={projects.length - sectionLimits.projects}
+            loading={loadingSections.projects}
             onClick={() => toggleSection("projects")}
           />
         </section>
@@ -675,6 +643,7 @@ export default function Portfolio() {
           <ShowMoreButton
             expanded={Boolean(expandedSections.volunteering)}
             hiddenCount={profileData.volunteering.length - sectionLimits.volunteering}
+            loading={loadingSections.volunteering}
             onClick={() => toggleSection("volunteering")}
           />
         </section>
@@ -793,6 +762,7 @@ export default function Portfolio() {
             <ShowMoreButton
               expanded={Boolean(expandedSections.certifications)}
               hiddenCount={((profileData as any).certifications ?? []).length - sectionLimits.certifications}
+              loading={loadingSections.certifications}
               onClick={() => toggleSection("certifications")}
             />
           </>
@@ -919,6 +889,7 @@ export default function Portfolio() {
             <ShowMoreButton
               expanded={Boolean(expandedSections.news)}
               hiddenCount={((profileData as any).newsMedia ?? []).length - sectionLimits.news}
+              loading={loadingSections.news}
               onClick={() => toggleSection("news")}
             />
           </>
@@ -985,6 +956,7 @@ export default function Portfolio() {
           <ShowMoreButton
             expanded={Boolean(expandedSections.recommendations)}
             hiddenCount={profileData.recommendations.length - sectionLimits.recommendations}
+            loading={loadingSections.recommendations}
             onClick={() => toggleSection("recommendations")}
           />
         </section>
