@@ -322,8 +322,11 @@ export default function Portfolio() {
             >
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
-                  src="/abhishek-adhikari-profile.png"
+                  src="/abhishek-adhikari-profile.jpg"
                   alt="Abhishek Adhikari — Lead Organizer & Speaker"
+                  width={208}
+                  height={208}
+                  fetchPriority="high"
                   className="w-full h-full object-cover"
                   wrapperClassName="w-full h-full"
                 />
