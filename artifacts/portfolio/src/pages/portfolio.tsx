@@ -332,7 +332,7 @@ export default function Portfolio() {
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 I help agribusinesses scale 10x through digital systems, build tech communities that outlive events, and craft SEO strategies that turn websites into revenue assets.
               </p>
-              <p className="mt-3 text-sm text-muted-foreground/70 leading-relaxed max-w-xl">
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
                 Founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and consulted 10+ clients on technical SEO and digital growth from Hetauda, Nepal.
               </p>
             </motion.div>
@@ -400,7 +400,7 @@ export default function Portfolio() {
         <div className="relative py-4">
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-border/60" />
           <div className="relative flex justify-center">
-            <span className="bg-background px-4 text-xs text-muted-foreground/40 uppercase tracking-widest font-medium">What I do</span>
+            <span className="bg-background px-4 text-xs text-muted-foreground uppercase tracking-widest font-medium">What I do</span>
           </div>
         </div>
 
