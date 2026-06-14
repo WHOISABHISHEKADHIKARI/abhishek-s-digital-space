@@ -137,12 +137,8 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
           whileHover={{ y: -3 }}
           className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
         >
-          <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-            {post.coverImage ? (
-              <ImageWithSkeleton src={post.coverImage} alt={`${post.title} — blog post by Abhishek Adhikari on Medium`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
-            ) : (
-              <FileImage size={28} className="text-primary/30" />
-            )}
+          <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center">
+            <span className="text-2xl font-bold text-primary/20 select-none" aria-hidden="true">{post.title.charAt(0)}</span>
           </div>
           <div className="flex-1 space-y-2 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
