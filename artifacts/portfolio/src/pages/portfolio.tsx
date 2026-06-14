@@ -173,7 +173,7 @@ export default function Portfolio() {
   const spring = useMemo(() => prefersReducedMotion ? { duration: 0 } : { ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }, [prefersReducedMotion]);
 
   useEffect(() => {
-    import("../../../../abhishek_profile.json").then(m => setProfileData(m.default || m));
+    fetch("/abhishek_profile.json").then(r => r.json()).then(setProfileData);
   }, []);
 
   useEffect(() => {

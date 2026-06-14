@@ -20,7 +20,8 @@
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-    <!-- Preload hero image -->
+    <!-- Preload critical assets -->
+    <link rel="preload" as="fetch" crossorigin="anonymous" href="/abhishek_profile.json" />
     <link rel="preload" as="image" href="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
@@ -634,8 +635,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="dns-prefetch" href="https://api.rss2json.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="preconnect" href="https://api.rss2json.com" />
   </head>
   <body>
     <div id="root" class="noise-overlay">
