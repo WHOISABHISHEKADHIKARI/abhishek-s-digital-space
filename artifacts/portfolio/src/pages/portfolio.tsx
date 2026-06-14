@@ -74,9 +74,7 @@ function ShowMoreButton({
 const MEDIUM_FEED = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abhishekadhikari1254";
 
 function stripHtml(html: string) {
-  const div = document.createElement("div");
-  div.innerHTML = html;
-  return (div.textContent || div.innerText || "").trim();
+  return html.replace(/<[^>]*>/g, "").trim();
 }
 
 function cleanMediumUrl(url: string) {
