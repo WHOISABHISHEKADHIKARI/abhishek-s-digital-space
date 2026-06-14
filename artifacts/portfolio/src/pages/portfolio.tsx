@@ -322,8 +322,8 @@ export default function Portfolio() {
             >
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
-                  src="/abhishek-adhikari-profile.jpg"
-                  alt="Abhishek Adhikari — Lead Organizer & Speaker"
+                  src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
+                  alt="Abhishek Adhikari — Lead Organizer & Speaker at AWS Cloud Innovation Day Hetauda 2026"
                   width={208}
                   height={208}
                   fetchPriority="high"
