@@ -4,7 +4,12 @@
 ## Core pages
 - https://abhishekadhikari.com/ — Home: portfolio overview, key metrics, skills, experience, projects, certifications, blog, recommendations, contact
 - https://abhishekadhikari.com/about — About: background in agritech, community building, and digital growth
-- https://abhishekadhikari.com/work — Projects: 12 digital products built across agriculture, SEO, coffee, and business sectors
+- https://abhishekadhikari.com/experience — Experience: 11 roles across agritech, tech communities, design, and consulting
+- https://abhishekadhikari.com/work — Projects: 15 digital products built across agriculture, SEO, coffee, and business sectors
+- https://abhishekadhikari.com/volunteering — Volunteering: 15 community leadership and mentorship activities
+- https://abhishekadhikari.com/certifications — Certifications: 10 professional credentials
+- https://abhishekadhikari.com/news — News & Media: 7 media mentions and public recognition
+- https://abhishekadhikari.com/recommendations — Recommendations: 11 LinkedIn recommendations
 - https://abhishekadhikari.com/blog — Blog: articles on design trends, agritech Nepal, React performance, content strategy, user research, no-code development
 - https://abhishekadhikari.com/contact — Contact form and social links
 
@@ -13,15 +18,45 @@
 - Co-founded DEV Community Nepal: organized 100+ virtual events and 10+ physical meetups
 - Built Hashtag Web Solutions: SEO consulting for 10+ clients, built 100+ SEO tools
 - Deputy Community Builder at Coding Olympics Nepal: reached 16+ colleges
-- Contributed 12 agentic skills to Antigravity Awesome Skills (40k+ stars, 1,541+ skills)
+- Contributed 12 agentic skills to Antigravity Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor in the world-famous open-source agentic skills repository
 - Google UX Design Professional Certificate holder
 - Google Digital Marketing certified
+- Worked as Business Development Manager, Branch Manager, and Marketing Manager at Aayo Rides Nepal
+- Product Designer at Sajilo Patro, UI/UX Designer at Kisan Care
+- UI/UX mentor for 18 Days UI/UX Designing Program, Figma Crash Course, and Code for Change workshops
+- Lead Organizer of AWS Cloud Innovation Day Hetauda 2026, HRIC STEAM Program 2025, Krishi Pradarshani 2083
+- Panelist at Hult Prize IOF Hetauda
+- Ranked global top 10 contributor in Antigravity Awesome Skills (41k+ stars) — a world-famous open-source library of 1,541+ agentic skills for AI coding tools
 - Based in Hetauda, Bagmati Province, Nepal
 
-## Certifications
-- Google UX Design Professional Certificate (Coursera)
-- Google Digital Garage Certificate (2022)
-- CalArts Fundamentals of Graphic Design (Coursera)
+## Certifications (all 10)
+- Google UX Design Professional Certificate (Coursera, 2024) — certified URL: https://coursera.org/verify/professional-cert/PTDVQ2Y782T8
+- Google Digital Garage Certificate — The Fundamentals of Digital Marketing (2022)
+- Fundamentals of Graphic Design — California Institute of the Arts (Coursera, 2024)
+- Special Recognition — 4 Week IoT Internship Program — enCypher Technologies Pvt. Ltd. (2023)
+- Token of Love — 5 Days Figma Course — Code for Change Dang (2024)
+- Certificate of Appreciation — Deputy Community Builder — Coding Olympics Nepal (2023)
+- Certificate of Appreciation — Flutter Yoddha 1.0 Facilitator — DEV Community Nepal (2022)
+- Certificate of Appreciation — 18 Days UI/UX Designing Trainer — DEV Community Nepal (2022)
+- Certificate of Appreciation — Figma Crash Course — Sharing Mentorship Kathmandu Chapter (2022)
+- Certificate of Internship — Content Writer — Menzz (2021)
+
+## Volunteering (15 activities)
+- Lead Organizer — AWS Cloud Innovation Day Hetauda 2026
+- Panelist — Hult Prize IOF Hetauda
+- Guest Lecturer / Arduino Instructor — Navodaya Shishu Sadan English Secondary School
+- Mentor — Code for Change Chitwan (Figma UI/UX Workshop)
+- Mentor — Code for Change Dang (5 Days Figma Course)
+- Innovation Pavilion Supervisor — HSMSS Capacity Development Conference
+- Deputy Communications Builder — Coding Olympics Nepal
+- Tech Meetup Volunteer & Community Contributor — DEV Community Nepal
+- UI/UX & Figma Workshop Mentor — Sharing Mentorship Kathmandu Chapter
+- UI/UX Design Mentor / Guest Instructor — DEV Community Nepal (18 Days UI/UX Program)
+- UI/UX Mentor — HSMSS (10 Day UX Bootcamp)
+- Tech Meetup Participant — DEV Community Nepal Chitwan
+- Tech Meetup Organizer — DEV Community Hetauda
+- Prompt Engineering Facilitator — J&B Coffee Hetauda
+- Organizer & Key Speaker — Krishi Pradarshani 2083
 
 ## Contact
 - Email: abhishek@abhishekadhikari.com
@@ -30,7 +65,7 @@
 - Preferred contact: LinkedIn DM or email
 
 ## Sitemaps
-- https://abhishekadhikari.com/sitemap.xml — All 23 site URLs with 53 images
+- https://abhishekadhikari.com/sitemap.xml — All 31 site URLs with 53 images
 
 ## Topics
-agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership
+agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing

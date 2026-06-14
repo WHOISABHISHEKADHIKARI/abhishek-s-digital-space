@@ -42,7 +42,7 @@
     </image:image>
     <image:image>
       <image:loc>https://abhishekadhikari.com/sections/experience/images/abhishek-adhikari--it-club-hsmss-logo.jpeg</image:loc>
-      <image:caption>IT Club of HSMSS logo — Deputy Manager, Abhishek Adhikari work experience</image:caption>
+      <image:caption>IT Club of HSMSS logo — Minuting Manager, Abhishek Adhikari work experience</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://abhishekadhikari.com/sections/experience/images/abhishek-adhikari--it-club-hsmss-logo.jpeg</image:loc>
@@ -202,7 +202,7 @@
     </image:image>
     <image:image>
       <image:loc>https://abhishekadhikari.com/sections/news/images/abhishek-adhikari--top-10-contributor-prompt-engineering-roadmap.jpg</image:loc>
-      <image:caption>Top 10 Contributor – Prompt Engineering Roadmap — 3 Hours of Prompt Engineering coverage featuring Abhishek Adhikari</image:caption>
+      <image:caption>Top 10 Contributor – 3 Hours of Prompt Engineering Roadmap Hetauda — Abhishek Adhikari AI prompt engineering workshop recognition Nepal</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://abhishekadhikari.com/sections/news/images/abhishek-adhikari--hric-steam-program-2025-hetauda.jpeg</image:loc>
@@ -316,6 +316,56 @@
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/work/jb-barista-academy</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/work/tax-care-nepal</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/work/hetaudacity</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Pages -->
+  <url>
+    <loc>https://abhishekadhikari.com/experience</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/volunteering</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/certifications</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/news</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abhishekadhikari.com/recommendations</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Blog Posts -->

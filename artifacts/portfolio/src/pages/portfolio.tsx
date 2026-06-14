@@ -383,7 +383,7 @@ export default function Portfolio() {
           <SectionHeader
             label="AI Skills"
             title="Skills I contributed to Antigravity"
-            summary="Agentic skills published in the Antigravity Awesome Skills library (1,541+ skills, 40k+ stars) — available for Claude Code, Cursor, Gemini CLI, Copilot, and more."
+            summary="12 agentic skills contributed to the world-famous Antigravity Awesome Skills repo (1,541+ skills, 41k+ GitHub stars) — ranked global top 10 contributor. Skills available for Claude Code, Cursor, Gemini CLI, GitHub Copilot, and more."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -625,7 +625,7 @@ export default function Portfolio() {
                     <span className={`self-start text-xs font-semibold px-2.5 py-0.5 rounded-full ${badgeClass}`}>
                       {item.category}
                     </span>
-                    <span className="font-semibold text-base text-foreground leading-tight">{item.name}</span>
+                    <h3 className="font-semibold text-base text-foreground leading-tight">{item.name}</h3>
                     <span className="text-xs text-muted-foreground truncate">{item.url.replace(/^https?:\/\//, "")}</span>
                   </div>
                 </motion.a>
@@ -970,7 +970,7 @@ export default function Portfolio() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <div className="font-bold text-sm">{rec.name}</div>
+                      <h3 className="font-bold text-sm">{rec.name}</h3>
                       <div className="text-xs text-muted-foreground mt-0.5 line-clamp-1">{rec.title}</div>
                       {rec.relationship && (
                         <div className="text-xs text-primary/70 mt-0.5">{rec.relationship}</div>
