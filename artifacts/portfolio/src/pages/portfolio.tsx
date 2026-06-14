@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, Zap } from "lucide-react";
-import profileData from "../../../../abhishek_profile.json";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
 import ErrorBoundary from "../components/error-boundary";
@@ -168,9 +167,14 @@ export default function Portfolio() {
   const [sending, setSending] = useState(false);
   const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null);
   const [erroredImages, setErroredImages] = useState<Set<string>>(new Set());
+  const [profileData, setProfileData] = useState<any>(null);
   const markErrored = (key: string) => setErroredImages((prev) => new Set(prev).add(key));
   const prefersReducedMotion = useReducedMotion();
   const spring = useMemo(() => prefersReducedMotion ? { duration: 0 } : { ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }, [prefersReducedMotion]);
+
+  useEffect(() => {
+    import("../../../../abhishek_profile.json").then(m => setProfileData(m.default || m));
+  }, []);
 
   useEffect(() => {
     if (isDark) {
@@ -254,6 +258,12 @@ export default function Portfolio() {
   const visibleItems = <T,>(section: keyof typeof sectionLimits, items: T[]) =>
     expandedSections[section] ? items : items.slice(0, sectionLimits[section]);
 
+  if (!profileData) return (
+    <div className="min-h-screen flex items-center justify-center" role="status" aria-label="Loading">
+      <span className="inline-block w-8 h-8 border-[3px] border-primary border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+
   const projects = profileData.projects.flatMap((cat: any) =>
     cat.items.map((item: any) => ({ ...item, category: cat.category })),
   );
@@ -262,7 +272,7 @@ export default function Portfolio() {
   const volunteering = visibleItems("volunteering", profileData.volunteering);
   const certifications = visibleItems("certifications", (profileData as any).certifications ?? []);
   const newsMedia = visibleItems("news", (profileData as any).newsMedia ?? []);
-  const recommendations = visibleItems("recommendations", profileData.recommendations);
+  const recommendations = visibleItems("recommendations", profileData?.recommendations ?? []);
 
   return (
     <div className="min-h-screen font-sans">
