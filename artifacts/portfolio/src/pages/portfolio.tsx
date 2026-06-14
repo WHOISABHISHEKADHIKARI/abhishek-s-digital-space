@@ -1092,9 +1092,8 @@ export default function Portfolio() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: showTop ? 1 : 0, scale: showTop ? 1 : 0.8, pointerEvents: showTop ? "auto" : "none" }}
         transition={{ duration: prefersReducedMotion ? 0 : 0.2 }}
-        style={{ willChange: "transform, opacity" }}
         data-testid="button-back-to-top"
-        className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 active:scale-90 transition-all duration-200"
+        className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 w-10 md:w-11 h-10 md:h-11 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 active:scale-90 transition-all duration-200"
         aria-label="Back to top"
       >
         <ArrowUp size={18} />
