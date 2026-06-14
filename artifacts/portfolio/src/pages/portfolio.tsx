@@ -234,6 +234,25 @@ export default function Portfolio() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const path = window.location.pathname.replace(/\/$/, "") || "/";
+    const pageTitles: Record<string, string> = {
+      "/": "Abhishek Adhikari – Agritech Entrepreneur &amp; Community Builder | Nepal",
+      "/about": "About – Abhishek Adhikari | Agritech Entrepreneur Nepal",
+      "/experience": "Experience – Abhishek Adhikari | Work History Nepal",
+      "/work": "Projects – Abhishek Adhikari | Digital Products Portfolio",
+      "/volunteering": "Volunteering – Abhishek Adhikari | Community Work Nepal",
+      "/certifications": "Certifications – Abhishek Adhikari | Professional Credentials",
+      "/news": "News &amp; Media – Abhishek Adhikari | Coverage &amp; Recognition",
+      "/recommendations": "Recommendations – Abhishek Adhikari | LinkedIn Endorsements",
+      "/blog": "Blog – Abhishek Adhikari | Articles on Design, Tech &amp; Agritech",
+      "/contact": "Contact – Abhishek Adhikari | Get in Touch",
+    };
+    document.title = pageTitles[path] || pageTitles["/"];
+    let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (link) link.href = `https://abhishekadhikari.com${path}`;
+  }, []);
+
   const visibleItems = <T,>(section: keyof typeof sectionLimits, items: T[]) =>
     expandedSections[section] ? items : items.slice(0, sectionLimits[section]);
 

@@ -65,7 +65,7 @@
 - Preferred contact: LinkedIn DM or email
 
 ## Sitemaps
-- https://abhishekadhikari.com/sitemap.xml — All 31 site URLs with 53 images
+- https://abhishekadhikari.com/sitemap.xml — All 10 site URLs with 53 images
 
 ## Topics
 agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing
