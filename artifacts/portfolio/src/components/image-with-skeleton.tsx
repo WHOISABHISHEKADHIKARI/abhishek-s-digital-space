@@ -29,10 +29,10 @@ export default function ImageWithSkeleton({
           src={src}
           alt={alt ?? ""}
           className={cn(
-            "w-full h-full transition-all duration-700 will-change-transform",
+            "w-full h-full transition-all duration-500",
             loaded
-              ? "opacity-100 blur-0 scale-100"
-              : "opacity-100 blur-xl scale-105",
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-105",
             className,
           )}
           onLoad={() => setLoaded(true)}
