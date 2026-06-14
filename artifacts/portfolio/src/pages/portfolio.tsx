@@ -288,13 +288,13 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main id="main-content" className="max-w-5xl mx-auto px-6 pt-28 pb-24 space-y-24">
+      <main id="main-content" className="max-w-5xl mx-auto px-6 pt-28 pb-24 space-y-16 md:space-y-24 overflow-x-hidden">
         
         {/* Hero */}
         <ErrorBoundary section="Hero">
         <section id="hero" className="space-y-6 pt-8 relative">
-          <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-          <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-decorative-3/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+          <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none hidden sm:block" aria-hidden="true" />
+          <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-decorative-3/10 rounded-full blur-3xl pointer-events-none hidden sm:block" aria-hidden="true" />
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
             <motion.div
       initial={{ opacity: 0, y: 20 }}
