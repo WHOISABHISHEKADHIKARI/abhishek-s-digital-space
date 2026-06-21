@@ -17,6 +17,12 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a" />
     <meta name="google-site-verification" content="verification-code-here" />
 
+    <!-- Geo / Location SEO -->
+    <meta name="geo.region" content="NP-P3" />
+    <meta name="geo.placename" content="Hetauda" />
+    <meta name="geo.position" content="27.425;85.0333" />
+    <meta name="ICBM" content="27.425, 85.0333" />
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
@@ -102,7 +108,9 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Hetauda",
-        "addressCountry": "NP"
+        "addressRegion": "Bagmati",
+        "addressCountry": "NP",
+        "postalCode": "44100"
       }
     }
     </script>
@@ -319,24 +327,57 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "@id": "https://krishihimalaya.com",
       "name": "Himalaya Krishi",
       "description": "Agritech venture scaling Murrah buffalo livestock from 25 to 220+ head through digital farm record systems and sustainable agriculture practices in Manahari, Nepal.",
       "url": "https://krishihimalaya.com",
       "founder": { "@type": "Person", "name": "Abhishek Adhikari" },
       "foundingDate": "2015",
-      "address": { "@type": "PostalAddress", "addressLocality": "Manahari", "addressCountry": "NP" }
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Manahari",
+        "addressRegion": "Bagmati",
+        "addressCountry": "NP",
+        "postalCode": "44105"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.4667,
+        "longitude": 84.8833
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Manahari" },
+        { "@type": "Country", "name": "NP" }
+      ]
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "@id": "https://hetaudacity.com",
       "name": "Hashtag Web Solutions",
       "description": "SEO and digital growth consulting agency providing technical SEO audits, keyword research, content strategy, AI-assisted marketing workflows, and brand transformation.",
       "url": "https://hetaudacity.com",
       "founder": { "@type": "Person", "name": "Abhishek Adhikari" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Hetauda", "addressCountry": "NP" }
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hetauda",
+        "addressRegion": "Bagmati",
+        "addressCountry": "NP",
+        "postalCode": "44100"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.425,
+        "longitude": 85.0333
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Hetauda" },
+        { "@type": "City", "name": "Kathmandu" },
+        { "@type": "Country", "name": "NP" }
+      ]
     }
     </script>
     <script type="application/ld+json">
@@ -345,11 +386,17 @@
       "@type": "Service",
       "name": "SEO Consulting & Digital Growth",
       "provider": { "@type": "Person", "name": "Abhishek Adhikari" },
-      "description": "Technical SEO audits, keyword research, content strategy, AI-assisted marketing workflows, and brand transformation for 10+ clients.",
+      "providerMobility": "online",
+      "description": "Technical SEO audits, keyword research, content strategy, AI-assisted marketing workflows, and brand transformation for 10+ clients across Nepal and globally.",
       "areaServed": [
         { "@type": "City", "name": "Hetauda" },
+        { "@type": "City", "name": "Kathmandu" },
         { "@type": "Country", "name": "NP" }
-      ]
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "availableLanguage": ["English", "Nepali", "Hindi"]
+      }
     }
     </script>
     <script type="application/ld+json">

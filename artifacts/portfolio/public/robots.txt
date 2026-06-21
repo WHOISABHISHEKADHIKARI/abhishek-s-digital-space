@@ -1,7 +1,6 @@
 # Allow all standard crawlers
 User-agent: *
 Allow: /
-Disallow:
 
 # Allow AI crawlers explicitly
 User-agent: GPTBot

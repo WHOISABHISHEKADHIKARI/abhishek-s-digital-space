@@ -1,9 +1,19 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, Zap } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, Zap, MapPin } from "lucide-react";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
 import ErrorBoundary from "../components/error-boundary";
+
+function injectStructuredData(id: string, data: Record<string, unknown>) {
+  const existing = document.querySelector(`script[data-dynamic-ld="${id}"]`);
+  if (existing) existing.remove();
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.setAttribute("data-dynamic-ld", id);
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
+}
 
 const sectionLimits = {
   experience: 5,
@@ -135,7 +145,18 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
           className="group flex flex-col sm:flex-row gap-5 p-6 rounded-2xl bg-muted/30 border border-muted hover:border-primary/40 hover:bg-muted/50 transition-all"
         >
           <div className="sm:w-36 sm:h-24 w-full h-40 rounded-xl overflow-hidden shrink-0 bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary/20 select-none" aria-hidden="true">{post.title.charAt(0)}</span>
+            {post.coverImage ? (
+              <ImageWithSkeleton
+                src={post.coverImage}
+                alt={`${post.title} — blog article by Abhishek Adhikari published on Medium ${post.date}`}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+                wrapperClassName="w-full h-full"
+              />
+            ) : (
+              <span className="text-2xl font-bold text-primary/20 select-none" aria-hidden="true">{post.title.charAt(0)}</span>
+            )}
           </div>
           <div className="flex-1 space-y-2 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
@@ -175,6 +196,224 @@ export default function Portfolio() {
   useEffect(() => {
     fetch("/abhishek_profile.json").then(r => r.json()).then(setProfileData);
   }, []);
+
+  useEffect(() => {
+    if (!profileData) return;
+
+    const name = profileData.profile.name;
+
+    // Projects ItemList
+    if (profileData.projects?.length) {
+      let pos = 0;
+      const items = profileData.projects.flatMap((cat: any) =>
+        cat.items.map((item: any) => {
+          pos++;
+          return {
+            "@type": "ListItem",
+            position: pos,
+            item: {
+              "@type": "SoftwareApplication",
+              name: item.name,
+              url: item.url,
+              applicationCategory: cat.category,
+              author: { "@type": "Person", name },
+            },
+          };
+        }),
+      );
+      injectStructuredData("projects", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${name} Projects`,
+        description: "Digital products and platforms built by Abhishek Adhikari",
+        itemListElement: items,
+      });
+    }
+
+    // Volunteering ItemList
+    if (profileData.volunteering?.length) {
+      injectStructuredData("volunteering", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${name} Volunteering & Community Work`,
+        description: "Community service, teaching, and leadership roles by Abhishek Adhikari",
+        itemListElement: profileData.volunteering.map((v: any, i: number) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "VolunteerAction",
+            name: v.role,
+            description: v.summary?.slice(0, 200) || "",
+            agent: { "@type": "Person", name },
+            participant: v.organization,
+            startDate: v.date || v.startDate,
+          },
+        })),
+      });
+    }
+
+    // Certifications ItemList
+    if ((profileData as any).certifications?.length) {
+      injectStructuredData("certifications", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${name} Certifications`,
+        description: "Professional certifications and credentials held by Abhishek Adhikari",
+        itemListElement: (profileData as any).certifications.map((c: any, i: number) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "EducationalOccupationalCredential",
+            name: c.title,
+            description: `${c.issuer} — ${c.platform || ""}`.trim(),
+            url: c.url || "",
+            author: { "@type": "Organization", name: c.issuer },
+            dateCreated: c.date,
+          },
+        })),
+      });
+    }
+
+    // NewsMedia ItemList
+    if ((profileData as any).newsMedia?.length) {
+      injectStructuredData("news", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${name} News & Media Coverage`,
+        description: "News articles, media coverage, and public recognition featuring Abhishek Adhikari",
+        itemListElement: (profileData as any).newsMedia.map((n: any, i: number) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "NewsArticle",
+            headline: n.title,
+            description: n.description?.slice(0, 200) || "",
+            author: { "@type": "Person", name },
+            publisher: n.source,
+            datePublished: n.date,
+          },
+        })),
+      });
+    }
+
+    // Recommendations ItemList
+    if (profileData.recommendations?.length) {
+      injectStructuredData("recommendations", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: `${name} Recommendations`,
+        description: "LinkedIn recommendations from industry professionals and community leaders",
+        itemListElement: profileData.recommendations.map((r: any, i: number) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Review",
+            author: { "@type": "Person", name: r.name },
+            reviewBody: r.excerpt?.slice(0, 200) || "",
+            itemReviewed: { "@type": "Person", name },
+          },
+        })),
+      });
+    }
+
+    // Skills ItemList
+    if (profileData.skills?.length) {
+      let skillPos = 0;
+      const skillItems = profileData.skills.flatMap((cat: any) =>
+        cat.items.map((s: any) => {
+          skillPos++;
+          return {
+            "@type": "ListItem",
+            position: skillPos,
+            item: {
+              "@type": "DefinedTerm",
+              name: s.name,
+              inDefinedTermSet: cat.category,
+            },
+          };
+        }),
+      );
+      if (skillItems.length) {
+        injectStructuredData("skills", {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: `${name} Skills`,
+          description: "Professional skills across agritech, digital marketing, design, and community building",
+          itemListElement: skillItems,
+        });
+      }
+    }
+
+    // LocalBusiness (for personal brand / consulting)
+    const profile = profileData.profile;
+    if (profile.address) {
+      injectStructuredData("localbusiness", {
+        "@context": "https://schema.org",
+        "@type": ["Person", "LocalBusiness"],
+        "@id": "https://abhishekadhikari.com",
+        name: profile.name,
+        url: profile.website,
+        email: profile.email,
+        image: "https://abhishekadhikari.com/abhishek-adhikari-social.jpg",
+        sameAs: [profile.linkedin, profile.github].filter(Boolean),
+        description: "Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepal's emerging tech ecosystem.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: profile.address.locality,
+          addressRegion: profile.address.region,
+          addressCountry: profile.address.countryCode,
+          postalCode: profile.address.postalCode,
+        },
+        geo: profile.geo ? {
+          "@type": "GeoCoordinates",
+          latitude: profile.geo.latitude,
+          longitude: profile.geo.longitude,
+        } : undefined,
+        areaServed: [
+          { "@type": "City", name: "Hetauda" },
+          { "@type": "Country", name: "NP" },
+        ],
+      });
+
+      // Event schemas for volunteering items that have dates
+      if (profileData.volunteering?.length) {
+        const events = profileData.volunteering
+          .filter((v: any) => v.date || v.startDate)
+          .slice(0, 10)
+          .map((v: any, i: number) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Event",
+              name: v.role,
+              description: v.summary?.slice(0, 200) || "",
+              organizer: v.organization,
+              location: {
+                "@type": "Place",
+                name: profile.address.locality,
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: profile.address.locality,
+                  addressRegion: profile.address.region,
+                  addressCountry: profile.address.countryCode,
+                },
+              },
+              ...(v.date ? { startDate: v.date } : {}),
+              ...(v.startDate ? { startDate: v.startDate } : {}),
+            },
+          }));
+        if (events.length) {
+          injectStructuredData("events", {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: `${name} Events & Community Work`,
+            description: "Community events, workshops, and speaking engagements organized by Abhishek Adhikari",
+            itemListElement: events,
+          });
+        }
+      }
+    }
+  }, [profileData]);
 
   useEffect(() => {
     if (isDark) {
@@ -237,6 +476,87 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => {
+    const sectionMeta: Record<string, { title: string; description: string }> = {
+      about: {
+        title: "About – Abhishek Adhikari | Agritech Entrepreneur Nepal",
+        description: "Rural roots. Practical technology. Community scale. Abhishek Adhikari founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and consulted 10+ clients on SEO.",
+      },
+      experience: {
+        title: "Experience – Abhishek Adhikari | Work History Nepal",
+        description: "Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro — full career timeline from Hetauda, Nepal.",
+      },
+      projects: {
+        title: "Projects – Abhishek Adhikari | Digital Products Portfolio",
+        description: "Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity — digital products built by Abhishek Adhikari across agritech, SEO, and branding.",
+      },
+      skills: {
+        title: "AI Skills – Abhishek Adhikari | Antigravity Contributor",
+        description: "12 agentic skills contributed to Antigravity Awesome Skills (41k+ GitHub stars) — ranked global top 10 contributor. SEO, WordPress, LinkedIn optimization skills.",
+      },
+      volunteering: {
+        title: "Volunteering – Abhishek Adhikari | Community Work Nepal",
+        description: "Lead Organizer AWS Cloud Innovation Day Hetauda 2026, Panelist Hult Prize, Mentor Code for Change, Arduino Instructor, Prompt Engineering Facilitator — 15+ community roles.",
+      },
+      certifications: {
+        title: "Certifications – Abhishek Adhikari | Professional Credentials",
+        description: "Google UX Design, Google Digital Garage, CalArts Graphic Design, IoT Internship enCypher, Figma courses, Community Builder awards — 10+ professional certifications.",
+      },
+      news: {
+        title: "News & Media – Abhishek Adhikari | Coverage & Recognition",
+        description: "Top 10 Contributor Prompt Engineering Roadmap, HRIC STEAM Lead Organizer, Hult Prize Panelist, AWS Cloud Innovation Day, Krishi Pradarshani Key Speaker — latest news coverage.",
+      },
+      blog: {
+        title: "Blog – Abhishek Adhikari | Articles on Design, Tech & Agritech",
+        description: "Articles on UI/UX design trends, agritech in Nepal, React best practices, content strategy, user research methods, and no-code development by Abhishek Adhikari.",
+      },
+      recommendations: {
+        title: "Recommendations – Abhishek Adhikari | LinkedIn Endorsements",
+        description: "LinkedIn recommendations from Er. Himal Rawal, Tanka Bhattarai, Ramesh Shrestha, Lava Kafle, Rajiv Raman Neupane, and other industry professionals endorsing Abhishek Adhikari.",
+      },
+      contact: {
+        title: "Contact – Abhishek Adhikari | Get in Touch",
+        description: "Contact Abhishek Adhikari via email at abhishek@abhishekadhikari.com, LinkedIn, or the contact form for collaborations in agritech, SEO, design, and community building.",
+      },
+    };
+
+    function applyMeta(hash: string) {
+      const meta = sectionMeta[hash];
+      if (!meta) return;
+      document.title = meta.title;
+      const desc = document.querySelector("meta[name='description']");
+      if (desc) desc.setAttribute("content", meta.description);
+      const ogTitle = document.querySelector("meta[property='og:title']");
+      if (ogTitle) ogTitle.setAttribute("content", meta.title);
+      const ogDesc = document.querySelector("meta[property='og:description']");
+      if (ogDesc) ogDesc.setAttribute("content", meta.description);
+      const twitterTitle = document.querySelector("meta[name='twitter:title']");
+      if (twitterTitle) twitterTitle.setAttribute("content", meta.title);
+      const twitterDesc = document.querySelector("meta[name='twitter:description']");
+      if (twitterDesc) twitterDesc.setAttribute("content", meta.description);
+    }
+
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        applyMeta(hash);
+      }
+    };
+
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      applyMeta(hash);
+    }
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) return;
     const path = window.location.pathname.replace(/\/$/, "") || "/";
     const pageTitles: Record<string, string> = {
       "/": "Abhishek Adhikari – Agritech Entrepreneur &amp; Community Builder | Nepal",
@@ -1029,6 +1349,16 @@ export default function Portfolio() {
                 Whether you have a collaboration in mind, want to discuss agritech, or just want to say hello — my inbox is open.
               </p>
               <div className="space-y-3 pt-2">
+                {profileData.profile.address && (
+                  <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <MapPin size={16} className="mt-0.5 shrink-0" />
+                    <span>
+                      {profileData.profile.address.locality}
+                      {profileData.profile.address.region ? `, ${profileData.profile.address.region}` : ""}
+                      , {profileData.profile.address.country}
+                    </span>
+                  </div>
+                )}
                 <a href={`mailto:${profileData.profile.email ?? "abhishek@abhishekadhikari.com"}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={16} /> {profileData.profile.email ?? "abhishek@abhishekadhikari.com"}
                 </a>

@@ -5,7 +5,18 @@
     "github": "https://github.com/WHOISABHISHEKADHIKARI",
     "email": "abhishek@abhishekadhikari.com",
     "website": "https://abhishekadhikari.com",
-    "redesignProfile": "https://www.redesignprofile.com"
+    "redesignProfile": "https://www.redesignprofile.com",
+    "address": {
+      "locality": "Hetauda",
+      "region": "Bagmati",
+      "country": "Nepal",
+      "countryCode": "NP",
+      "postalCode": "44100"
+    },
+    "geo": {
+      "latitude": 27.425,
+      "longitude": 85.0333
+    }
   },
   "projects": [
     {
@@ -370,15 +381,15 @@
   "volunteering": [
     {
       "role": "Lead Organizer & Speaker",
-      "organization": "AWS Cloud Innovation Day \u2013 Hetauda 2026",
+      "organization": "AWS Cloud Innovation Day – Hetauda 2026",
       "date": "Feb 2026",
       "duration": "1 mo",
       "category": "Education",
-      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day \u2013 Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning.",
+      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day – Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning.",
       "images": [
         {
           "type": "event_photo",
-          "caption": "AWS Cloud Innovation Day Hetauda 2026 \u2014 Abhishek Adhikari leading cloud technology event in Nepal",
+          "caption": "AWS Cloud Innovation Day Hetauda 2026 — Abhishek Adhikari leading cloud technology event in Nepal",
           "description": "Speaking at AWS Cloud Innovation Day in Hetauda as Lead Organizer, where developers, students, and tech enthusiasts gathered to explore cloud technologies through workshops, demonstrations, and discussions.",
           "pdfLine": 222,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
@@ -404,7 +415,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "Hult Prize IOF Hetauda panel discussion \u2014 Abhishek Adhikari agritech entrepreneur sharing startup insights Nepal",
+          "caption": "Hult Prize IOF Hetauda panel discussion — Abhishek Adhikari agritech entrepreneur sharing startup insights Nepal",
           "description": "Participating as a panelist during the Hult Prize program at the Institute of Forestry (IOF), Tribhuvan University Hetauda. Discussion focused on Nepal's startup ecosystem, youth innovation, entrepreneurship, and agritech.",
           "pdfLine": 65,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg"
@@ -431,7 +442,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "Arduino robotics training workshop \u2014 Abhishek Adhikari teaching embedded systems at Navodaya School Nepal",
+          "caption": "Arduino robotics training workshop — Abhishek Adhikari teaching embedded systems at Navodaya School Nepal",
           "description": "Delivered a guest lecture on Arduino programming and basic robotics concepts during the Junior Scientist Robotics Workshop.",
           "pdfLine": 247,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--arduino-robotics-workshop-trainer.jpeg"
@@ -458,7 +469,7 @@
       "images": [
         {
           "type": "event_poster",
-          "caption": "Code for Change Chitwan Figma UI UX workshop \u2014 Abhishek Adhikari mentoring design in Nepal",
+          "caption": "Code for Change Chitwan Figma UI UX workshop — Abhishek Adhikari mentoring design in Nepal",
           "description": "Poster for a 3-Day Figma UI/UX Workshop organized by Code for Change Chitwan featuring mentor Abhishek Adhikari.",
           "pdfLine": 138,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--code-for-change-chitwan-figma-workshop.jpeg"
@@ -486,7 +497,7 @@
         {
           "type": "certificate",
           "filename": "CRTFCT.jpg",
-          "caption": "Code for Change Dang Figma course token of love \u2014 Abhishek Adhikari UI UX mentorship Nepal",
+          "caption": "Code for Change Dang Figma course token of love — Abhishek Adhikari UI UX mentorship Nepal",
           "description": "Certificate received for mentoring participants at Code for Change Dang on UI/UX design and Figma.",
           "pdfLine": 90,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--code-for-change-dang-token-of-love.jpeg"
@@ -512,7 +523,7 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "Innovation Pavilion Supervisor appreciation \u2014 Abhishek Adhikari capacity development conference Nepal",
+          "caption": "Innovation Pavilion Supervisor appreciation — Abhishek Adhikari capacity development conference Nepal",
           "description": "Letter of Appreciation received for contributing to the International Conference on Capacity Development as Innovation Pavilion Supervisor.",
           "pdfLine": 114,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--capacity-development-ivp-letter.jpeg"
@@ -541,7 +552,7 @@
       "images": [
         {
           "type": "group_photo",
-          "caption": "Coding Olympics Nepal outreach team \u2014 Abhishek Adhikari deputy community builder 2079-2080",
+          "caption": "Coding Olympics Nepal outreach team — Abhishek Adhikari deputy community builder 2079-2080",
           "description": "Group photo from Coding Olympics Nepal activities and outreach work.",
           "pdfLine": 166,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--coding-olympics-certificate.jpeg"
@@ -554,12 +565,12 @@
       "date": "Jan 2023",
       "duration": "1 mo",
       "category": "Science and Technology",
-      "summary": "Contributed to the Tech Meetup 'Tech Disrupters 2023 \u2013 Exploring Future Tech in Nepal'. Received Certificate of Appreciation from DEV Community Nepal.",
+      "summary": "Contributed to the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'. Received Certificate of Appreciation from DEV Community Nepal.",
       "images": [
         {
           "type": "certificate",
-          "caption": "Tech Disrupters 2023 DEV Community Nepal \u2014 Abhishek Adhikari tech meetup appreciation certificate",
-          "description": "Certificate of Appreciation from DEV Community Nepal for supporting the Tech Meetup 'Tech Disrupters 2023 \u2013 Exploring Future Tech in Nepal'.",
+          "caption": "Tech Disrupters 2023 DEV Community Nepal — Abhishek Adhikari tech meetup appreciation certificate",
+          "description": "Certificate of Appreciation from DEV Community Nepal for supporting the Tech Meetup 'Tech Disrupters 2023 – Exploring Future Tech in Nepal'.",
           "pdfLine": 182,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-tech-disrupters-certificate.jpeg"
         }
@@ -567,7 +578,7 @@
     },
     {
       "role": "UI/UX & Figma Workshop Mentor",
-      "organization": "Sharing Mentorship \u2013 Kathmandu Chapter",
+      "organization": "Sharing Mentorship – Kathmandu Chapter",
       "date": "Dec 2022",
       "duration": "1 mo",
       "category": "Education",
@@ -575,7 +586,7 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "Sharing Mentorship Kathmandu Figma crash course \u2014 Abhishek Adhikari UI UX workshop mentor Nepal",
+          "caption": "Sharing Mentorship Kathmandu Figma crash course — Abhishek Adhikari UI UX workshop mentor Nepal",
           "description": "Recognized by Sharing Mentorship Kathmandu Chapter for mentoring participants during a 3-Day Figma Crash Course, sharing practical insights on UI/UX design, interface layout, and collaborative design using Figma.",
           "pdfLine": 205,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--sharing-mentorship-figma-crash-course.jpeg"
@@ -601,7 +612,7 @@
       "images": [
         {
           "type": "certificate",
-          "caption": "18 Days UI UX Designing trainer DEV Community Nepal \u2014 Abhishek Adhikari mentorship certificate",
+          "caption": "18 Days UI UX Designing trainer DEV Community Nepal — Abhishek Adhikari mentorship certificate",
           "description": "Recognition from DEV Community Nepal for sharing knowledge and mentoring participants during an 18-day UI/UX Designing session.",
           "pdfLine": 277,
           "imageUrl": "/sections/certifications/images/abhishek-adhikari--dev-community-18-days-uiux-trainer.jpg"
@@ -643,7 +654,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "10 Day UI UX training HSMSS Hetauda \u2014 Abhishek Adhikari Figma design bootcamp instructor Nepal",
+          "caption": "10 Day UI UX training HSMSS Hetauda — Abhishek Adhikari Figma design bootcamp instructor Nepal",
           "description": "10-day intensive UI/UX training session at Hetauda School of Management and Social Sciences.",
           "pdfLine": null,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--hsmss-10-days-ux-bootcamp.jpeg"
@@ -660,7 +671,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "DEV Community Nepal tech meetup Chitwan \u2014 Abhishek Adhikari community contributor Nepal",
+          "caption": "DEV Community Nepal tech meetup Chitwan — Abhishek Adhikari community contributor Nepal",
           "description": "Group photo from the DEV Community Nepal tech meetup in Chitwan.",
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-chitwan-tech-meetup.jpeg"
         }
@@ -676,7 +687,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "DEV Community Hetauda second tech meetup \u2014 Abhishek Adhikari organizer Nepal",
+          "caption": "DEV Community Hetauda second tech meetup — Abhishek Adhikari organizer Nepal",
           "description": "Group photo from the second DEV Community Hetauda tech meetup.",
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-hetauda-tech-meetup.jpeg"
         }
@@ -692,7 +703,7 @@
       "images": [
         {
           "type": "event_photo",
-          "caption": "Prompt engineering workshop J&B Coffee Hetauda \u2014 Abhishek Adhikari AI facilitator Nepal",
+          "caption": "Prompt engineering workshop J&B Coffee Hetauda — Abhishek Adhikari AI facilitator Nepal",
           "description": "Teaching prompt engineering concepts during a session at J&B Coffee.",
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--prompt-engineering-jb-coffee.jpg"
         }
@@ -702,21 +713,21 @@
   "featuredHighlights": [
     "Lead Organizer at HRIC STEAM Program 2025, Hetauda",
     "Facilitated an AI & Digital Literacy Workshop at Nirmal Secondary School",
-    "Listed as a top 10 contributor \u2013 3 Hours of Prompt Engineering roadmap in Hetauda",
+    "Listed as a top 10 contributor – 3 Hours of Prompt Engineering roadmap in Hetauda",
     "Project 100 Minds by DEV Community Nepal",
     "100 SEO Tools",
     "Facilitated at AWS Cloud event at Hetauda (single-handedly, no volunteer)",
     "Panelist at Hult Prize IOF Hetauda",
-    "Mentor at Hetauda School of Management \u2013 10 Days UI/UX Session",
-    "Mentor at Code for Change Chitwan \u2013 3 Days UI/UX Session",
+    "Mentor at Hetauda School of Management – 10 Days UI/UX Session",
+    "Mentor at Code for Change Chitwan – 3 Days UI/UX Session",
     "Latarambeshwor Hike",
     "Innovation Pavilion Supervisor at Capacity Development Conference",
     "Deputy Community Builder for Coding Olympics Nepal (2079-80)",
-    "DEV Community Nepal \u2013 Organized a meetup in Hetauda",
+    "DEV Community Nepal – Organized a meetup in Hetauda",
     "Tech Meetup at Chiyaghar, Chitwan by DEV Community Nepal",
-    "Published blog on TechSathi \u2013 The Ultimate Guide to Future Design Perfection",
+    "Published blog on TechSathi – The Ultimate Guide to Future Design Perfection",
     "Lead Organizer Certificate of Appreciation",
-    "Sharing Mentorship Figma Crash Course \u2013 3 Days"
+    "Sharing Mentorship Figma Crash Course – 3 Days"
   ],
   "skills": [
     {
@@ -999,7 +1010,7 @@
     },
     {
       "name": "Er. Shreeraj Khatiwada",
-      "title": "President \u2013 CAN Makawanpur | IT Lecturer | AI & Digital Transformation Advocate",
+      "title": "President – CAN Makawanpur | IT Lecturer | AI & Digital Transformation Advocate",
       "relationship": "Teacher",
       "date": "March 12, 2026",
       "excerpt": "Abhishek Adhikari is a forward-thinking innovator with strong expertise in agritech, modern technology, and emerging fields like AI. His curiosity, technical capability, and entrepreneurial mindset make him a valuable asset.",
@@ -1015,7 +1026,7 @@
     },
     {
       "name": "Jagadish Bidari",
-      "title": "Founder & CEO \u2013 J&B Group | Former Qatar Airways Airport Operations",
+      "title": "Founder & CEO – J&B Group | Former Qatar Airways Airport Operations",
       "relationship": "Mentor",
       "date": "March 4, 2026",
       "excerpt": "Over five years, I have closely observed Abhishek's consistent contribution to building a technology-oriented professional community in Hetauda. He brings nearly a decade of experience in agritech entrepreneurship through Himalaya Krishi.",
@@ -1151,46 +1162,46 @@
   "newsMedia": [
     {
       "type": "recognition",
-      "title": "Top 10 Contributor \u2013 Prompt Engineering Roadmap",
+      "title": "Top 10 Contributor – Prompt Engineering Roadmap",
       "source": "3 Hours of Prompt Engineering",
       "date": "2024",
-      "description": "Top 10 key knowledge contributor at the 3 Hours of Prompt Engineering roadmap workshop in Hetauda, Nepal \u2014 recognized for AI prompt engineering expertise and community knowledge sharing",
+      "description": "Top 10 key knowledge contributor at the 3 Hours of Prompt Engineering roadmap workshop in Hetauda, Nepal — recognized for AI prompt engineering expertise and community knowledge sharing",
       "url": null,
       "imageUrl": "/sections/news/images/abhishek-adhikari--top-10-contributor-prompt-engineering-roadmap.jpg"
     },
     {
       "type": "event_coverage",
-      "title": "Lead Organizer \u2013 HRIC STEAM Program 2025",
+      "title": "Lead Organizer – HRIC STEAM Program 2025",
       "source": "HRIC Hetauda",
       "date": "2025",
-      "description": "Lead Organizer at HRIC STEAM Program 2025 Hetauda Nepal \u2014 Abhishek Adhikari coordinated speakers, logistics, and student engagement for this science technology engineering arts mathematics event",
+      "description": "Lead Organizer at HRIC STEAM Program 2025 Hetauda Nepal — Abhishek Adhikari coordinated speakers, logistics, and student engagement for this science technology engineering arts mathematics event",
       "url": null,
       "imageUrl": "/sections/news/images/abhishek-adhikari--hric-steam-program-2025-hetauda.jpeg"
     },
     {
       "type": "speaking",
-      "title": "Panelist \u2013 Hult Prize IOF Hetauda",
+      "title": "Panelist – Hult Prize IOF Hetauda",
       "source": "Hult Prize",
       "date": "Dec 2025",
-      "description": "Panelist at Hult Prize IOF Hetauda Nepal \u2014 Abhishek Adhikari agritech entrepreneur shared startup ecosystem and youth innovation insights with students at Institute of Forestry Tribhuvan University",
+      "description": "Panelist at Hult Prize IOF Hetauda Nepal — Abhishek Adhikari agritech entrepreneur shared startup ecosystem and youth innovation insights with students at Institute of Forestry Tribhuvan University",
       "url": null,
       "imageUrl": "/sections/news/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg"
     },
     {
       "type": "event_coverage",
-      "title": "Project 100 Minds \u2013 Bagmati Province Cohort",
+      "title": "Project 100 Minds – Bagmati Province Cohort",
       "source": "DEV Community Nepal",
       "date": "2026",
-      "description": "Project 100 Minds Cohort I Bagmati Province by DEV Community Nepal \u2014 Abhishek Adhikari contributing to youth technology capacity building initiative",
+      "description": "Project 100 Minds Cohort I Bagmati Province by DEV Community Nepal — Abhishek Adhikari contributing to youth technology capacity building initiative",
       "imageUrl": "/sections/volunteering/images/abhishek-adhikari--dev-community-project-100-bagamati.jpeg",
       "url": null
     },
     {
       "type": "speaking",
-      "title": "Organizer & Key Speaker \u2013 Krishi Pradarshani 2083",
+      "title": "Organizer & Key Speaker – Krishi Pradarshani 2083",
       "source": "Krishi Pradarshani 2083",
       "date": "2083 BS",
-      "description": "Organizer and key speaker at Krishi Pradarshani 2083 Nepal \u2014 Abhishek Adhikari sharing agritech entrepreneurship and sustainable farming insights at agricultural exhibition",
+      "description": "Organizer and key speaker at Krishi Pradarshani 2083 Nepal — Abhishek Adhikari sharing agritech entrepreneurship and sustainable farming insights at agricultural exhibition",
       "imageUrl": "/sections/news/images/abhishek-adhikari--krishi-pradarshani-2083-speaker.jpeg",
       "url": null
     },
@@ -1199,13 +1210,13 @@
       "title": "Global Top 10 Contributor — Antigravity Awesome Skills (41k+ stars)",
       "source": "ICT Frame",
       "date": "Jun 2026",
-      "description": "Hetauda Nepal Abhishek Adhikari ranked global top 10 contributor to the Antigravity Awesome Skills repository (41k+ GitHub stars) \u2014 world-famous open-source library of 1,541+ agentic skills for Claude Code, Cursor, Gemini CLI, and GitHub Copilot",
+      "description": "Hetauda Nepal Abhishek Adhikari ranked global top 10 contributor to the Antigravity Awesome Skills repository (41k+ GitHub stars) — world-famous open-source library of 1,541+ agentic skills for Claude Code, Cursor, Gemini CLI, and GitHub Copilot",
       "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
       "imageUrl": null
     },
     {
       "type": "recognition",
-      "title": "Proud Achievement \u2013 Agritech Entrepreneurship",
+      "title": "Proud Achievement – Agritech Entrepreneurship",
       "source": "RON Education",
       "date": "2026",
       "description": "RON Education recognizes Abhishek Adhikari agritech entrepreneur founder of Himalaya Krishi for community building and agricultural technology contributions in Nepal",
