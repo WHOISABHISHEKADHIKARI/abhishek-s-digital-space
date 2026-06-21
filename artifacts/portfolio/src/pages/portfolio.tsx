@@ -347,6 +347,9 @@ export default function Portfolio() {
     // LocalBusiness (for personal brand / consulting)
     const profile = profileData.profile;
     if (profile.address) {
+      const imageUrl = profile.image
+        ? `https://abhishekadhikari.com${profile.image.startsWith("/") ? profile.image : "/" + profile.image}`
+        : "https://abhishekadhikari.com/abhishek-adhikari-social.jpg";
       injectStructuredData("localbusiness", {
         "@context": "https://schema.org",
         "@type": ["Person", "LocalBusiness"],
@@ -354,9 +357,10 @@ export default function Portfolio() {
         name: profile.name,
         url: profile.website,
         email: profile.email,
-        image: "https://abhishekadhikari.com/abhishek-adhikari-social.jpg",
-        sameAs: [profile.linkedin, profile.github].filter(Boolean),
-        description: "Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepal's emerging tech ecosystem.",
+        image: imageUrl,
+        sameAs: (profile.sameAs || [profile.linkedin, profile.github]).filter(Boolean),
+        description: profile.description || "Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepal's emerging tech ecosystem.",
+        knowsLanguage: profile.knowsLanguage || ["English", "Nepali", "Hindi"],
         address: {
           "@type": "PostalAddress",
           addressLocality: profile.address.locality,
@@ -573,15 +577,35 @@ export default function Portfolio() {
     document.title = pageTitles[path] || pageTitles["/"];
     let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
     if (link) link.href = `https://abhishekadhikari.com${path}`;
+    const pathToSection: Record<string, string> = {
+      "/about": "about",
+      "/experience": "experience",
+      "/work": "projects",
+      "/volunteering": "volunteering",
+      "/certifications": "certifications",
+      "/news": "news",
+      "/recommendations": "recommendations",
+      "/blog": "blog",
+      "/contact": "contact",
+    };
+    const sectionId = pathToSection[path];
+    if (sectionId) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }, []);
 
   const visibleItems = <T,>(section: keyof typeof sectionLimits, items: T[]) =>
     expandedSections[section] ? items : items.slice(0, sectionLimits[section]);
 
   if (!profileData) return (
+    <ErrorBoundary section="Loading">
     <div className="min-h-screen flex items-center justify-center" role="status" aria-label="Loading">
       <span className="inline-block w-8 h-8 border-[3px] border-primary border-t-transparent rounded-full animate-spin" />
     </div>
+    </ErrorBoundary>
   );
 
   const projects = profileData.projects.flatMap((cat: any) =>
@@ -605,6 +629,7 @@ export default function Portfolio() {
       </a>
 
       {/* Navbar */}
+      <ErrorBoundary section="Navbar">
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
@@ -629,6 +654,7 @@ export default function Portfolio() {
           </div>
         </div>
       </nav>
+      </ErrorBoundary>
 
       {/* Main Content */}
       <main id="main-content" className="max-w-5xl mx-auto px-6 pt-28 pb-24 space-y-16 md:space-y-24 overflow-x-hidden">
@@ -1435,14 +1461,17 @@ export default function Portfolio() {
       </main>
 
       {/* Image preview lightbox */}
+      <ErrorBoundary section="ImagePreview">
       <ImagePreview
         src={preview?.src ?? ""}
         alt={preview?.alt ?? ""}
         open={preview !== null}
         onClose={() => setPreview(null)}
       />
+      </ErrorBoundary>
 
       {/* Back to top */}
+      <ErrorBoundary section="BackToTop">
       <motion.button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         initial={{ opacity: 0, scale: 0.8 }}
@@ -1454,8 +1483,10 @@ export default function Portfolio() {
       >
         <ArrowUp size={18} />
       </motion.button>
+      </ErrorBoundary>
 
       {/* Footer */}
+      <ErrorBoundary section="Footer">
       <footer className="border-t bg-card py-12">
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
@@ -1469,6 +1500,7 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
+      </ErrorBoundary>
     </div>
   );
 }

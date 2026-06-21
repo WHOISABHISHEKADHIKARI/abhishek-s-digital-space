@@ -16,7 +16,22 @@
     "geo": {
       "latitude": 27.425,
       "longitude": 85.0333
-    }
+    },
+    "image": "/abhishek-adhikari-social.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/whoisabhishekadhikari/",
+      "https://github.com/WHOISABHISHEKADHIKARI",
+      "https://krishihimalaya.com",
+      "https://hetaudacity.com",
+      "https://devcommunitynepal.org"
+    ],
+    "description": "Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepals emerging tech ecosystem. 220+ livestock capacity scaled, 100+ community events, 10+ clients managed.",
+    "jobTitle": "Agritech Entrepreneur & Community Builder",
+    "knowsLanguage": [
+      "English",
+      "Nepali",
+      "Hindi"
+    ]
   },
   "projects": [
     {

@@ -18,7 +18,7 @@
 - Co-founded DEV Community Nepal: organized 100+ virtual events and 10+ physical meetups
 - Built Hashtag Web Solutions: SEO consulting for 10+ clients, built 100+ SEO tools
 - Deputy Community Builder at Coding Olympics Nepal: reached 16+ colleges
-- Contributed 12 agentic skills to Antigravity Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor in the world-famous open-source agentic skills repository
+- Contributed 12 agentic skills to Antigravity Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor
 - Google UX Design Professional Certificate holder
 - Google Digital Marketing certified
 - Worked as Business Development Manager, Branch Manager, and Marketing Manager at Aayo Rides Nepal
@@ -26,46 +26,61 @@
 - UI/UX mentor for 18 Days UI/UX Designing Program, Figma Crash Course, and Code for Change workshops
 - Lead Organizer of AWS Cloud Innovation Day Hetauda 2026, HRIC STEAM Program 2025, Krishi Pradarshani 2083
 - Panelist at Hult Prize IOF Hetauda
-- Ranked global top 10 contributor in Antigravity Awesome Skills (41k+ stars) — a world-famous open-source library of 1,541+ agentic skills for AI coding tools
-- Based in Hetauda, Bagmati Province, Nepal
+- Based in Hetauda, Bagmati Province, Nepal (geo: 27.425, 85.0333)
 
-## Certifications (all 10)
-- Google UX Design Professional Certificate (Coursera, 2024) — certified URL: https://coursera.org/verify/professional-cert/PTDVQ2Y782T8
-- Google Digital Garage Certificate — The Fundamentals of Digital Marketing (2022)
-- Fundamentals of Graphic Design — California Institute of the Arts (Coursera, 2024)
-- Special Recognition — 4 Week IoT Internship Program — enCypher Technologies Pvt. Ltd. (2023)
-- Token of Love — 5 Days Figma Course — Code for Change Dang (2024)
-- Certificate of Appreciation — Deputy Community Builder — Coding Olympics Nepal (2023)
-- Certificate of Appreciation — Flutter Yoddha 1.0 Facilitator — DEV Community Nepal (2022)
-- Certificate of Appreciation — 18 Days UI/UX Designing Trainer — DEV Community Nepal (2022)
-- Certificate of Appreciation — Figma Crash Course — Sharing Mentorship Kathmandu Chapter (2022)
-- Certificate of Internship — Content Writer — Menzz (2021)
+## Metrics
+- 220+ livestock capacity scaled (Murrah buffalo)
+- 100+ virtual community events organized
+- 10+ SEO and digital growth clients managed
+- 12 agentic AI skills contributed to open-source
+- 11+ years agritech experience
+- 15 digital products built
+- 10 professional certifications earned
+- 11 LinkedIn recommendations
 
-## Volunteering (15 activities)
-- Lead Organizer — AWS Cloud Innovation Day Hetauda 2026
-- Panelist — Hult Prize IOF Hetauda
-- Guest Lecturer / Arduino Instructor — Navodaya Shishu Sadan English Secondary School
-- Mentor — Code for Change Chitwan (Figma UI/UX Workshop)
-- Mentor — Code for Change Dang (5 Days Figma Course)
-- Innovation Pavilion Supervisor — HSMSS Capacity Development Conference
-- Deputy Communications Builder — Coding Olympics Nepal
-- Tech Meetup Volunteer & Community Contributor — DEV Community Nepal
-- UI/UX & Figma Workshop Mentor — Sharing Mentorship Kathmandu Chapter
-- UI/UX Design Mentor / Guest Instructor — DEV Community Nepal (18 Days UI/UX Program)
-- UI/UX Mentor — HSMSS (10 Day UX Bootcamp)
-- Tech Meetup Participant — DEV Community Nepal Chitwan
-- Tech Meetup Organizer — DEV Community Hetauda
-- Prompt Engineering Facilitator — J&B Coffee Hetauda
-- Organizer & Key Speaker — Krishi Pradarshani 2083
+## Structured data (JSON-LD schemas available)
+- Person (Abhishek Adhikari) — full profile with address, sameAs, occupations
+- LocalBusiness — Himalaya Krishi (agritech, Manahari, geo: 27.4667, 84.8833)
+- LocalBusiness — Hashtag Web Solutions (SEO consulting, Hetauda, geo: 27.425, 85.0333)
+- WebSite — portfolio site metadata
+- WebPage — with speakable CSS selectors for AI extraction
+- FAQPage — 13 Q&A entries about Abhishek Adhikari
+- ItemList — Projects (15 items), Experience (11 roles), Volunteering (15 activities), Certifications (10), News (7), Recommendations (11), Skills (21)
+- Event — volunteering items with dates and locations
+- Article — 7 blog articles
+- Service — SEO Consulting & Digital Growth
+- BreadcrumbList — all 10 site sections
+- ContactPoint — email and social contact
+
+## FAQ (for AI answer extraction)
+- Who is Abhishek Adhikari? Agritech entrepreneur and community builder from Hetauda, Nepal who works at the intersection of agriculture technology, SEO-led business growth, and youth technology communities.
+- What does Abhishek do? Builds and scales agritech platforms, consults on SEO and digital growth, facilitates technology workshops, and organizes community events across Nepal.
+- Where is he based? Hetauda, Bagmati Province, Nepal.
+- What projects has he built? Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, and more across agriculture, SEO, coffee training, and personal branding.
+- How to contact? Email: abhishek@abhishekadhikari.com, LinkedIn: linkedin.com/in/whoisabhishekadhikari
+- What certifications does he hold? Google UX Design, Google Digital Marketing, CalArts Graphic Design, IoT enCypher, and multiple community builder awards.
+- What is his agritech experience? 11+ years as Founder of Himalaya Krishi, scaling livestock from 25 to 220+ Murrah buffalo with digital farm systems.
+
+## Image inventory (53+ images across site)
+- Profile image: /abhishek-adhikari-social.jpg (1200x862, JPEG)
+- Favicon: /abhishek-adhikari-favicon.svg, /abhishek-adhikari-favicon.png
+- Experience logos: DEV Community Nepal, Himalaya Krishi, Hashtag Web Solutions, Aayo Rides Nepal (3 roles), IT Club HSMSS (2 roles), Sajilo Patro, Kisan Care, Menzz
+- Volunteering photos: AWS Cloud Innovation Day, Hult Prize, Arduino Workshop, Code for Change (2), HSMSS, Coding Olympics, DEV Community (4), Sharing Mentorship, Prompt Engineering, Krishi Pradarshani
+- Certification images: 10 certificate images from Google, Coursera, enCypher, Coding Olympics, DEV Community, Sharing Mentorship, Menzz
+- Recommendation avatars: 11 LinkedIn recommendation profile photos
+- News images: 5 news coverage images
+- Project screenshots: 15 project website screenshots (via Microlink API)
+- Blog thumbnails: Medium RSS cover images
 
 ## Contact
 - Email: abhishek@abhishekadhikari.com
 - LinkedIn: https://www.linkedin.com/in/whoisabhishekadhikari/
 - GitHub: https://github.com/WHOISABHISHEKADHIKARI
+- Website: https://abhishekadhikari.com
 - Preferred contact: LinkedIn DM or email
 
 ## Sitemaps
 - https://abhishekadhikari.com/sitemap.xml — All 10 site URLs with 53 images
 
 ## Topics
-agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing
+agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing, Hetauda, Bagmati, Nepal, entrepreneurship, open source, Antigravity Awesome Skills
