@@ -21,6 +21,7 @@ const sectionLimits = {
   volunteering: 6,
   certifications: 6,
   news: 4,
+  media: 4,
   recommendations: 4,
 };
 
@@ -474,7 +475,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setExpandedSections({ experience: true, projects: true, volunteering: true, certifications: true, news: true, recommendations: true });
+      setExpandedSections({ experience: true, projects: true, volunteering: true, certifications: true, news: true, media: true, recommendations: true });
     }, 10000);
     return () => clearTimeout(timer);
   }, []);
@@ -494,12 +495,12 @@ export default function Portfolio() {
         description: "Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity — digital products built by Abhishek Adhikari across agritech, SEO, and branding.",
       },
       skills: {
-        title: "AI Skills – Abhishek Adhikari | Antigravity Contributor",
-        description: "12 agentic skills contributed to Antigravity Awesome Skills (41k+ GitHub stars) — ranked global top 10 contributor. SEO, WordPress, LinkedIn optimization skills.",
+        title: "AI Skills – Abhishek Adhikari | Agentic Awesome Skills Contributor",
+        description: "14 named skills and 13 pull requests contributed to Agentic Awesome Skills (41k+ GitHub stars) — ranked global top 10 contributor. SEO, WordPress, LinkedIn optimization skills.",
       },
       volunteering: {
         title: "Volunteering – Abhishek Adhikari | Community Work Nepal",
-        description: "Lead Organizer AWS Cloud Innovation Day Hetauda 2026, Panelist Hult Prize, Mentor Code for Change, Arduino Instructor, Prompt Engineering Facilitator — 15+ community roles.",
+        description: "Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, and Prompt Engineering Facilitator — 15+ community roles.",
       },
       certifications: {
         title: "Certifications – Abhishek Adhikari | Professional Credentials",
@@ -507,7 +508,11 @@ export default function Portfolio() {
       },
       news: {
         title: "News & Media – Abhishek Adhikari | Coverage & Recognition",
-        description: "Top 10 Contributor Prompt Engineering Roadmap, HRIC STEAM Lead Organizer, Hult Prize Panelist, AWS Cloud Innovation Day, Krishi Pradarshani Key Speaker — latest news coverage.",
+        description: "ICT Frame global top-10 coverage, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, and Krishi Pradarshani speaking — latest news coverage.",
+      },
+      media: {
+        title: "Interviews & Features – Abhishek Adhikari | Media Appearances",
+        description: "Interviews, feature stories, published analysis, and public speaking appearances by Abhishek Adhikari on agritech, AI, open source, and digital innovation in Nepal.",
       },
       blog: {
         title: "Blog – Abhishek Adhikari | Articles on Design, Tech & Agritech",
@@ -570,13 +575,17 @@ export default function Portfolio() {
       "/volunteering": "Volunteering – Abhishek Adhikari | Community Work Nepal",
       "/certifications": "Certifications – Abhishek Adhikari | Professional Credentials",
       "/news": "News &amp; Media – Abhishek Adhikari | Coverage &amp; Recognition",
+      "/media": "Interviews &amp; Features – Abhishek Adhikari | Media Appearances",
       "/recommendations": "Recommendations – Abhishek Adhikari | LinkedIn Endorsements",
       "/blog": "Blog – Abhishek Adhikari | Articles on Design, Tech &amp; Agritech",
       "/contact": "Contact – Abhishek Adhikari | Get in Touch",
     };
     document.title = pageTitles[path] || pageTitles["/"];
     let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
-    if (link) link.href = `https://abhishekadhikari.com${path}`;
+    // This is a single-page portfolio. Section URLs are convenience entry
+    // points, not separate documents, so consolidate their indexing signals
+    // on the one canonical portfolio URL.
+    if (link) link.href = "https://abhishekadhikari.com/";
     const pathToSection: Record<string, string> = {
       "/about": "about",
       "/experience": "experience",
@@ -584,6 +593,7 @@ export default function Portfolio() {
       "/volunteering": "volunteering",
       "/certifications": "certifications",
       "/news": "news",
+      "/media": "media",
       "/recommendations": "recommendations",
       "/blog": "blog",
       "/contact": "contact",
@@ -616,6 +626,7 @@ export default function Portfolio() {
   const volunteering = visibleItems("volunteering", profileData.volunteering);
   const certifications = visibleItems("certifications", (profileData as any).certifications ?? []);
   const newsMedia = visibleItems("news", (profileData as any).newsMedia ?? []);
+  const mediaAppearances = visibleItems("media", (profileData as any).mediaAppearances ?? []);
   const recommendations = visibleItems("recommendations", profileData?.recommendations ?? []);
 
   return (
@@ -634,7 +645,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
-            {["about", "experience", "projects", "certifications", "blog", "contact"].map((section) => (
+            {["about", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
@@ -692,7 +703,7 @@ export default function Portfolio() {
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
                   src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
-                  alt="Abhishek Adhikari — Lead Organizer & Speaker at AWS Cloud Innovation Day Hetauda 2026"
+                  alt="Abhishek Adhikari — Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda"
                   width={208}
                   height={208}
                   fetchPriority="high"
@@ -733,7 +744,7 @@ export default function Portfolio() {
             ["220+", "Livestock capacity"],
             ["100+", "Community events"],
             ["10+", "SEO clients"],
-            ["12", "AI skills built"],
+            ["14", "AI skills contributed"],
           ].map(([value, label]) => (
             <div key={label} className="bg-card px-6 py-8 text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary">{value}</div>
@@ -750,13 +761,13 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Antigravity Skills */}
+        {/* Agentic Awesome Skills */}
         <ErrorBoundary section="AI Skills">
         <section id="skills">
           <SectionHeader
             label="AI Skills"
-            title="Skills I contributed to Antigravity"
-            summary="12 agentic skills contributed to the world-famous Antigravity Awesome Skills repo (1,541+ skills, 41k+ GitHub stars) — ranked global top 10 contributor. Skills available for Claude Code, Cursor, Gemini CLI, GitHub Copilot, and more."
+            title="Skills I contributed to Agentic Awesome Skills"
+            summary="14 named skills and 13 pull requests contributed to Agentic Awesome Skills (1,541+ skills, 41k+ GitHub stars) — ranked global top 10 contributor. Skills available for Claude Code, Cursor, Gemini CLI, GitHub Copilot, and more."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -775,7 +786,7 @@ export default function Portfolio() {
             ].map((skill, i) => (
               <motion.a
                 key={skill.id}
-                href={`https://github.com/sickn33/antigravity-awesome-skills/blob/main/skills/${skill.id}/SKILL.md`}
+                href={`https://github.com/sickn33/agentic-awesome-skills/blob/main/skills/${skill.id}/SKILL.md`}
                 target="_blank"
                 rel="noreferrer"
                 initial={{ opacity: 0, y: 16 }}
@@ -800,13 +811,13 @@ export default function Portfolio() {
           </div>
           <div className="mt-6 text-center">
             <a
-              href="https://github.com/sickn33/antigravity-awesome-skills"
+              href="https://github.com/sickn33/agentic-awesome-skills"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ExternalLink size={14} />
-              Browse the full Antigravity Awesome Skills library
+              Browse the full Agentic Awesome Skills library
             </a>
           </div>
         </section>
@@ -1289,6 +1300,57 @@ export default function Portfolio() {
         ) : (
           <EmptyState message="Nothing to show yet." />
         )}
+        </section>
+        </ErrorBoundary>
+
+        {/* Interviews & Features */}
+        <ErrorBoundary section="Interviews and Features">
+        <section id="media">
+          <SectionHeader
+            label="Media appearances"
+            title="Interviews and features"
+            summary="Selected conversations, bylines, and independently published profiles that document my work across agritech, AI, open source, and digital innovation."
+          />
+          {mediaAppearances.length > 0 ? (
+          <>
+            <div className="grid md:grid-cols-2 gap-4">
+              {mediaAppearances.map((item: any, i: number) => (
+                <motion.article
+                  key={item.url ?? `${item.title}-${i}`}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06, duration: 0.4, ...spring }}
+                  whileHover={{ y: -4, boxShadow: "0 12px 40px hsla(40,20%,10%,0.08)" }}
+                  className="rounded-xl bg-muted/30 border border-muted p-5 flex flex-col gap-3"
+                >
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-primary/15 text-primary dark:bg-primary/20">
+                      {item.type}
+                    </span>
+                    <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
+                  </div>
+                  <h3 className="font-bold text-base leading-snug">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{item.description}</p>
+                  <div className="text-xs text-primary/70 font-medium">{item.outlet}</div>
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer"
+                      className="text-xs text-primary hover:underline flex items-center gap-1 w-fit">
+                      <ExternalLink size={12} /> Open source
+                    </a>
+                  )}
+                </motion.article>
+              ))}
+            </div>
+            <ShowMoreButton
+              expanded={Boolean(expandedSections.media)}
+              hiddenCount={((profileData as any).mediaAppearances ?? []).length - sectionLimits.media}
+              onClick={() => toggleSection("media")}
+            />
+          </>
+          ) : (
+            <EmptyState message="Media appearances will be added soon." />
+          )}
         </section>
         </ErrorBoundary>
 

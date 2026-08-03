@@ -18,7 +18,7 @@
 - Co-founded DEV Community Nepal: organized 100+ virtual events and 10+ physical meetups
 - Built Hashtag Web Solutions: SEO consulting for 10+ clients, built 100+ SEO tools
 - Deputy Community Builder at Coding Olympics Nepal: reached 16+ colleges
-- Contributed 12 agentic skills to Antigravity Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor
+- Contributed 14 named skills and 13 pull requests to Agentic Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor
 - Google UX Design Professional Certificate holder
 - Google Digital Marketing certified
 - Worked as Business Development Manager, Branch Manager, and Marketing Manager at Aayo Rides Nepal
@@ -83,4 +83,4 @@
 - https://abhishekadhikari.com/sitemap.xml — All 10 site URLs with 53 images
 
 ## Topics
-agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing, Hetauda, Bagmati, Nepal, entrepreneurship, open source, Antigravity Awesome Skills
+agritech, SEO, digital marketing, community building, UI/UX design, prompt engineering, Nepal technology ecosystem, livestock management, digital agriculture, leadership, IoT, Flutter, robotics, education, content writing, Hetauda, Bagmati, Nepal, entrepreneurship, open source, Agentic Awesome Skills

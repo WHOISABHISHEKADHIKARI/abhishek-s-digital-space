@@ -3,7 +3,13 @@
   "buildCommand": "pnpm --filter @workspace/portfolio run build",
   "outputDirectory": "artifacts/portfolio/dist/public",
   "installCommand": "pnpm install --no-frozen-lockfile",
+  "redirects": [
+    { "source": "/projects", "destination": "/work", "permanent": true },
+    { "source": "/services", "destination": "/contact", "permanent": true },
+    { "source": "/work/:path*", "destination": "/work", "permanent": true },
+    { "source": "/blog/:path*", "destination": "/blog", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/((?!api/|assets/|sections/|abhishek-adhikari-|favicon\\.|sitemap\\.xml|robots\\.txt|llms\\.txt).*)", "destination": "/index.html" }
+    { "source": "/(about|experience|work|volunteering|certifications|news|media|recommendations|blog|contact)", "destination": "/index.html" }
   ]
 }

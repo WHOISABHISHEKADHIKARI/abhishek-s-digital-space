@@ -395,17 +395,17 @@
   ],
   "volunteering": [
     {
-      "role": "Lead Organizer & Speaker",
-      "organization": "AWS Cloud Innovation Day – Hetauda 2026",
+      "role": "Co-organizer",
+      "organization": "AWS Cloud Technology Conference 2026 – Hetauda",
       "date": "Feb 2026",
       "duration": "1 mo",
       "category": "Education",
-      "summary": "Lead Organizer and speaker at AWS Cloud Innovation Day – Hetauda 2026, bringing together 80+ developers and students for hands-on workshops, cloud discussions, and community learning.",
+      "summary": "Co-organized the AWS Cloud Technology Conference 2026 in Hetauda alongside local technology-community leaders, connecting developers, entrepreneurs, and students around cloud innovation.",
       "images": [
         {
           "type": "event_photo",
-          "caption": "AWS Cloud Innovation Day Hetauda 2026 — Abhishek Adhikari leading cloud technology event in Nepal",
-          "description": "Speaking at AWS Cloud Innovation Day in Hetauda as Lead Organizer, where developers, students, and tech enthusiasts gathered to explore cloud technologies through workshops, demonstrations, and discussions.",
+          "caption": "AWS Cloud Technology Conference 2026, Hetauda — Abhishek Adhikari co-organizer",
+          "description": "Co-organizing the AWS Cloud Technology Conference in Hetauda, which brought together developers, students, entrepreneurs, and cloud-technology practitioners.",
           "pdfLine": 222,
           "imageUrl": "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
         }
@@ -731,7 +731,7 @@
     "Listed as a top 10 contributor – 3 Hours of Prompt Engineering roadmap in Hetauda",
     "Project 100 Minds by DEV Community Nepal",
     "100 SEO Tools",
-    "Facilitated at AWS Cloud event at Hetauda (single-handedly, no volunteer)",
+    "Co-organized the AWS Cloud Technology Conference 2026 in Hetauda",
     "Panelist at Hult Prize IOF Hetauda",
     "Mentor at Hetauda School of Management – 10 Days UI/UX Session",
     "Mentor at Code for Change Chitwan – 3 Days UI/UX Session",
@@ -1222,10 +1222,10 @@
     },
     {
       "type": "recognition",
-      "title": "Global Top 10 Contributor — Antigravity Awesome Skills (41k+ stars)",
+      "title": "Global Top 10 Contributor — Agentic Awesome Skills (41k+ stars)",
       "source": "ICT Frame",
       "date": "Jun 2026",
-      "description": "Hetauda Nepal Abhishek Adhikari ranked global top 10 contributor to the Antigravity Awesome Skills repository (41k+ GitHub stars) — world-famous open-source library of 1,541+ agentic skills for Claude Code, Cursor, Gemini CLI, and GitHub Copilot",
+      "description": "Hetauda Nepal Abhishek Adhikari ranked global top 10 contributor to the Agentic Awesome Skills repository (41k+ GitHub stars) — open-source library of 1,541+ agentic skills for Claude Code, Cursor, Gemini CLI, and GitHub Copilot",
       "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
       "imageUrl": null
     },
@@ -1237,6 +1237,67 @@
       "description": "RON Education recognizes Abhishek Adhikari agritech entrepreneur founder of Himalaya Krishi for community building and agricultural technology contributions in Nepal",
       "url": "https://www.facebook.com/officialronbeducation/photos/proud-achievement-abhishek-adhikari-founder-of-himalaya-krishi-and-an-agritech-e/1048115057724349/",
       "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Hetauda entrepreneur earns global top-10 recognition for open-source work",
+      "source": "ICT Frame",
+      "date": "Jun 2026",
+      "description": "ICT Frame reported Abhishek Adhikari's #10 global ranking for 11 contributions totaling 3,701+ lines to Agentic Awesome Skills.",
+      "url": "https://np.ictframe.com/hetaudas-abhishek-secures-spot-in-global/",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Organic farming and technology feature",
+      "source": "Nawalpur Online",
+      "date": "May 2025",
+      "description": "A reported profile on technology-led, organic dairy farming at Himalaya Krishi in Manahari, Makwanpur.",
+      "url": "https://www.nawalpuronline.com/2025/05/26329",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "National Paddy Day 2083 at Manahari-5",
+      "source": "YouthBrain",
+      "date": "Jul 2026",
+      "description": "Coverage of National Paddy Day 2083 in Manahari-5, which names Abhishek Adhikari and Himalaya Krishi among active agricultural entrepreneurs.",
+      "url": "https://youthbrain.com.np/article/manahari-dhandibas-2083/",
+      "imageUrl": null
+    }
+  ],
+  "mediaAppearances": [
+    {
+      "type": "Long-form interview",
+      "title": "Can AI Build Nepal's Future?",
+      "outlet": "ITRocks Podcast",
+      "date": "Jul 2026",
+      "description": "A 60+ minute conversation on agritech, AI, open source, SEO, community building, and digital transformation in Nepal.",
+      "url": "https://www.youtube.com/watch?v=INXrMHndbcI"
+    },
+    {
+      "type": "Bylined analysis",
+      "title": "The dream of a data center in Nepal — thirteen risks",
+      "outlet": "Daman Post",
+      "date": "Jul 2026",
+      "description": "A bylined Nepali-language analysis on the infrastructure, environmental, governance, and equity risks of data-center development.",
+      "url": "https://damanpost.com/2026/07/11/518/"
+    },
+    {
+      "type": "Feature story",
+      "title": "The young techie behind a 400-liter-per-day organic milk farm",
+      "outlet": "The Hamro",
+      "date": "May 2025",
+      "description": "An English-language profile of Himalaya Krishi's technology-enabled, organic dairy model and its local employment impact.",
+      "url": "https://thehamro.com/abhishek-adhikari-meet-the-young-techie-behind-a-400-liter-per-day-organic-milk-farm/"
+    },
+    {
+      "type": "Official speaker listing",
+      "title": "Prompt Smarter, Not Harder",
+      "outlet": "WordCamp Kathmandu 2026",
+      "date": "Sep 2026",
+      "description": "Officially listed speaker for WordCamp Kathmandu 2026, presenting a session on practical prompting.",
+      "url": "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/"
     }
   ]
 }

@@ -8,7 +8,7 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-const sectionPaths = ["/about", "/experience", "/work", "/volunteering", "/certifications", "/news", "/recommendations", "/blog", "/contact"];
+const sectionPaths = ["/about", "/experience", "/work", "/volunteering", "/certifications", "/news", "/media", "/recommendations", "/blog", "/contact"];
 
 function App() {
   return (
