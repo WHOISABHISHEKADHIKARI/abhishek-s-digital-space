@@ -26,8 +26,7 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
     <!-- Preload critical assets -->
-    <link rel="preload" as="fetch" crossorigin="anonymous" href="/abhishek_profile.json" />
-    <link rel="preload" as="image" href="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp" />
+    <link rel="preload" as="image" href="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp" fetchpriority="high" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
@@ -667,6 +666,26 @@
   </head>
   <body>
     <div id="root" class="noise-overlay">
+      <main class="max-w-5xl mx-auto px-6 pt-28 pb-24 overflow-x-hidden font-sans">
+        <section class="space-y-6 pt-8 relative">
+          <div class="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
+            <div class="flex-1">
+              <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-primary">Abhishek Adhikari</h1>
+              <p class="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.</p>
+              <p class="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.</p>
+            </div>
+            <div class="shrink-0">
+              <div class="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
+                <img src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp" alt="Abhishek Adhikari — AI Trainer Nepal, Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda" width="208" height="208" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 pt-4">
+            <a href="https://www.linkedin.com/in/whoisabhishekadhikari/" target="_blank" rel="me noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 shadow-sm">LinkedIn</a>
+            <a href="https://github.com/WHOISABHISHEKADHIKARI" target="_blank" rel="me noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 shadow-sm">GitHub</a>
+          </div>
+        </section>
+      </main>
       <noscript>
         <div style="padding: 2rem; max-width: 48rem; margin: 0 auto; font-family: system-ui, sans-serif;">
           <h1 style="font-size: 2rem; font-weight: 700;">Abhishek Adhikari — AI Trainer Nepal</h1>

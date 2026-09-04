@@ -1,11 +1,28 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import { readFileSync } from "fs";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 const port = Number(process.env.PORT) || 8080;
 const basePath = process.env.BASE_PATH || "/";
+
+function inlineProfileData(): Plugin {
+  return {
+    name: "inline-profile-data",
+    apply: "build",
+    transformIndexHtml(html) {
+      const data = readFileSync(
+        path.resolve(import.meta.dirname, "public/abhishek_profile.json"),
+        "utf8",
+      );
+      const escaped = data.replace(/</g, "\\u003c");
+      const script = `    <script id="profile-data" type="application/json">${escaped}</script>\n`;
+      return html.replace("</head>", `${script}  </head>`);
+    },
+  };
+}
 
 export default defineConfig({
   base: basePath,
@@ -13,6 +30,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
+    inlineProfileData(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, MapPin } from "lucide-react";
 import ImagePreview from "../components/image-preview";
@@ -99,39 +99,59 @@ function formatDate(pubDate: string) {
 function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReducedMotion: boolean | null }) {
   const [posts, setPosts] = useState<any[] | null>(null);
   const [error, setError] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let cancelled = false;
-    fetch(MEDIUM_FEED, { priority: "low" } as RequestInit)
-      .then((r) => r.json())
-      .then((data) => {
-        if (cancelled) return;
-        if (data?.status === "ok" && data.items?.length) {
-          setPosts(data.items.map((item: any) => ({
-            title: item.title,
-            publication: "Medium",
-            date: formatDate(item.pubDate),
-            url: cleanMediumUrl(item.link),
-            summary: stripHtml(item.description).slice(0, 200),
-            tags: item.categories ?? [],
-            coverImage: item.thumbnail || null,
-          })));
-        } else {
-          setPosts([]);
+    const load = () => {
+      fetch(MEDIUM_FEED, { priority: "low" } as RequestInit)
+        .then((r) => r.json())
+        .then((data) => {
+          if (cancelled) return;
+          if (data?.status === "ok" && data.items?.length) {
+            setPosts(data.items.map((item: any) => ({
+              title: item.title,
+              publication: "Medium",
+              date: formatDate(item.pubDate),
+              url: cleanMediumUrl(item.link),
+              summary: stripHtml(item.description).slice(0, 200),
+              tags: item.categories ?? [],
+              coverImage: item.thumbnail || null,
+            })));
+          } else {
+            setPosts([]);
+          }
+        })
+        .catch(() => {
+          if (!cancelled) setError(true);
+        });
+    };
+
+    const el = trackRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      load();
+      return () => { cancelled = true; };
+    }
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          load();
+          obs.disconnect();
         }
-      })
-      .catch(() => {
-        if (!cancelled) setError(true);
-      });
-    return () => { cancelled = true; };
+      },
+      { rootMargin: "600px" },
+    );
+    obs.observe(el);
+    return () => { cancelled = true; obs.disconnect(); };
   }, []);
 
   if (error) return <EmptyState message="Could not load blog posts. Visit medium.com/@abhishekadhikari1254" />;
-  if (posts === null) return <div className="flex items-center justify-center py-16"><span className="inline-block w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" /></div>;
+  if (posts === null) return <div ref={trackRef} className="flex items-center justify-center py-16"><span className="inline-block w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" /></div>;
   if (posts.length === 0) return <EmptyState message="Nothing to show yet. Check back soon." />;
 
   return (
-    <div className="space-y-4">
+    <div ref={trackRef} className="space-y-4">
       {posts.map((post, i) => (
         <motion.a
           key={post.url}
@@ -191,14 +211,26 @@ export default function Portfolio() {
   const [sending, setSending] = useState(false);
   const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null);
   const [erroredImages, setErroredImages] = useState<Set<string>>(new Set());
-  const [profileData, setProfileData] = useState<any>(null);
+  const [profileData, setProfileData] = useState<any>(() => {
+    if (typeof document === "undefined") return null;
+    const el = document.getElementById("profile-data") as HTMLScriptElement | null;
+    if (el?.textContent) {
+      try {
+        return JSON.parse(el.textContent);
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  });
   const markErrored = (key: string) => setErroredImages((prev) => new Set(prev).add(key));
   const prefersReducedMotion = useReducedMotion();
   const spring = useMemo(() => prefersReducedMotion ? { duration: 0 } : { ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }, [prefersReducedMotion]);
 
   useEffect(() => {
+    if (profileData) return;
     fetch("/abhishek_profile.json").then(r => r.json()).then(setProfileData);
-  }, []);
+  }, [profileData]);
 
   useEffect(() => {
     if (!profileData) return;
@@ -703,13 +735,7 @@ export default function Portfolio() {
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none hidden sm:block" aria-hidden="true" />
           <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-decorative-3/10 rounded-full blur-3xl pointer-events-none hidden sm:block" aria-hidden="true" />
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
-            <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ...spring }}
-              className="flex-1"
-              style={{ willChange: "transform, opacity" }}
-            >
+            <div className="flex-1">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-primary">
                 {profileData.profile.name}
               </h1>
@@ -719,14 +745,9 @@ export default function Portfolio() {
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
                 1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2, ...spring }}
-              className="shrink-0"
-            >
+            <div className="shrink-0">
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
                   src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp"
@@ -738,24 +759,18 @@ export default function Portfolio() {
                   wrapperClassName="w-full h-full"
                 />
               </div>
-            </motion.div>
+            </div>
 
           </div>
           
-          <motion.div 
-            className="flex gap-4 pt-4"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: 0.2, ...spring }}
-            style={{ willChange: "transform, opacity" }}
-          >
+          <div className="flex gap-4 pt-4">
             <a href={profileData.profile.linkedin} target="_blank" rel="me noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 active:scale-[0.97] transition-all duration-200 shadow-sm">
               <Linkedin size={18} /> LinkedIn
             </a>
             <a href={profileData.profile.github} target="_blank" rel="me noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 active:scale-[0.97] transition-all duration-200 shadow-sm">
               <Github size={18} /> GitHub
             </a>
-          </motion.div>
+          </div>
         </section>
         </ErrorBoundary>
 
