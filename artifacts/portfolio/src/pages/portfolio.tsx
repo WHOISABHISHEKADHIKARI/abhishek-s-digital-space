@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, Zap, MapPin } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, MapPin } from "lucide-react";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
 import ErrorBoundary from "../components/error-boundary";
@@ -494,10 +494,6 @@ export default function Portfolio() {
         title: "Projects – Abhishek Adhikari | Digital Products Portfolio",
         description: "Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity — digital products built by Abhishek Adhikari across agritech, SEO, and branding.",
       },
-      skills: {
-        title: "AI Skills – Abhishek Adhikari | Agentic Awesome Skills Contributor",
-        description: "14 named skills and 13 pull requests contributed to Agentic Awesome Skills (41k+ GitHub stars) — ranked global top 10 contributor. SEO, WordPress, LinkedIn optimization skills.",
-      },
       volunteering: {
         title: "Volunteering – Abhishek Adhikari | Community Work Nepal",
         description: "Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, and Prompt Engineering Facilitator — 15+ community roles.",
@@ -765,67 +761,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Agentic Awesome Skills */}
-        <ErrorBoundary section="AI Skills">
-        <section id="skills">
-          <SectionHeader
-            label="AI Skills"
-            title="Skills I contributed to Agentic Awesome Skills"
-            summary="14 named skills and 13 pull requests contributed to Agentic Awesome Skills (1,541+ skills, 41k+ GitHub stars) — ranked global top 10 contributor. Skills available for Claude Code, Cursor, Gemini CLI, GitHub Copilot, and more."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { name: "WordPress Centric High SEO Optimized Blogwriting", id: "wordpress-centric-high-seo-optimized-blogwriting-skill", cat: "WordPress SEO", ver: "v9.13.0" },
-              { name: "Codebase to WordPress Converter", id: "codebase-to-wordpress-converter", cat: "WordPress Development", ver: "v9.13.0" },
-              { name: "LinkedIn Profile Optimizer", id: "linkedin-profile-optimizer", cat: "LinkedIn SEO", ver: "v10.0.0" },
-              { name: "Indexing Issue Auditor", id: "indexing-issue-auditor", cat: "Technical SEO", ver: "v10.0.0" },
-              { name: "Social Post Writer SEO", id: "social-post-writer-seo", cat: "Social SEO", ver: "v10.4.0" },
-              { name: "Next.js SEO Indexing", id: "nextjs-seo-indexing", cat: "Technical SEO", ver: "v11.10.0" },
-              { name: "Schema Markup Generator", id: "schema-markup-generator", cat: "Structured Data SEO", ver: "v11.10.0" },
-              { name: "Social Metadata Hardening", id: "social-metadata-hardening", cat: "Social Metadata SEO", ver: "v11.10.0" },
-              { name: "Vibe Code Cleanup", id: "vibe-code-cleanup", cat: "AI Code Quality", ver: "v11.10.0" },
-              { name: "VibeCode Production QA Validator", id: "vibecode-production-qa-validator", cat: "Production QA", ver: "v11.10.0" },
-              { name: "ExamPrep AI", id: "examprep-ai", cat: "Education AI", ver: "v12.1.0" },
-              { name: "CV Generator", id: "cv-generator", cat: "Career/CV AI", ver: "v12.2.0" },
-            ].map((skill, i) => (
-              <motion.a
-                key={skill.id}
-                href={`https://github.com/sickn33/agentic-awesome-skills/blob/main/skills/${skill.id}/SKILL.md`}
-                target="_blank"
-                rel="noreferrer"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.03, duration: 0.4, ...spring }}
-                whileHover={{ y: -4, boxShadow: "0 12px 40px hsla(40,20%,10%,0.08)" }}
-                className="flex items-start gap-3 p-4 rounded-xl border bg-card hover:bg-muted/40 transition-all duration-200"
-              >
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Zap size={16} className="text-primary" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="font-semibold text-sm leading-snug">{skill.name}</div>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs text-muted-foreground bg-muted px-1.5 py-0.5 rounded">{skill.cat}</span>
-                    <span className="text-xs text-muted-foreground/60 font-mono">{skill.ver}</span>
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-          <div className="mt-6 text-center">
-            <a
-              href="https://github.com/sickn33/agentic-awesome-skills"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ExternalLink size={14} />
-              Browse the full Agentic Awesome Skills library
-            </a>
-          </div>
-        </section>
-        </ErrorBoundary>
+
 
         {/* About */}
         <ErrorBoundary section="About">
