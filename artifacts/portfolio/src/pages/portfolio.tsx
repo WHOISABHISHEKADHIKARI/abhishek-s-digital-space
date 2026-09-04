@@ -737,7 +737,7 @@ export default function Portfolio() {
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
             <div className="flex-1">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-primary">
-                {profileData.profile.name}
+                {profileData.profile.name} — AI Trainer Nepal
               </h1>
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.
