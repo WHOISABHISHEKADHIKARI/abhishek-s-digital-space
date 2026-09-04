@@ -353,14 +353,13 @@ export default function Portfolio() {
         : "https://abhishekadhikari.com/abhishek-adhikari-social.webp";
       injectStructuredData("localbusiness", {
         "@context": "https://schema.org",
-        "@type": ["Person", "LocalBusiness"],
-        "@id": "https://abhishekadhikari.com",
-        name: profile.name,
+        "@type": "LocalBusiness",
+        "@id": "https://abhishekadhikari.com/#localbusiness",
+        name: "Abhishek Adhikari — AI Trainer Nepal Consulting",
         url: profile.website,
         email: profile.email,
         image: imageUrl,
-        sameAs: (profile.sameAs || [profile.linkedin, profile.github]).filter(Boolean),
-        description: profile.description || "Agritech entrepreneur and community builder connecting rural innovation, digital growth, and Nepal's emerging tech ecosystem.",
+        description: profile.description || "AI Trainer in Nepal offering prompt engineering workshops, AI literacy training, agritech consulting, and SEO digital growth services from Hetauda, Nepal.",
         knowsLanguage: profile.knowsLanguage || ["English", "Nepali", "Hindi"],
         address: {
           "@type": "PostalAddress",
@@ -486,37 +485,41 @@ export default function Portfolio() {
         title: "About – Abhishek Adhikari | AI Trainer Nepal",
         description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker, Global Top 10 AI skills contributor.",
       },
+      "ai-training": {
+        title: "AI Training – Abhishek Adhikari | AI Trainer Nepal",
+        description: "AI training workshops and prompt engineering sessions by an AI Trainer in Nepal. 1,500+ students trained on ChatGPT, Claude, Gemini, and AI literacy across schools, colleges, and community events.",
+      },
       experience: {
-        title: "Experience – Abhishek Adhikari | Work History Nepal",
-        description: "Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro — full career timeline from Hetauda, Nepal.",
+        title: "Experience – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Professional experience of an AI Trainer in Nepal — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro.",
       },
       projects: {
-        title: "Projects – Abhishek Adhikari | Digital Products Portfolio",
-        description: "Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity — digital products built by Abhishek Adhikari across agritech, SEO, and branding.",
+        title: "Projects – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Digital products built by an AI Trainer in Nepal — Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity across agritech, SEO, and branding.",
       },
       volunteering: {
-        title: "Volunteering – Abhishek Adhikari | Community Work Nepal",
-        description: "Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, and Prompt Engineering Facilitator — 15+ community roles.",
+        title: "Volunteering – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Community leadership by an AI Trainer in Nepal — Co-organizer of AWS Cloud Technology Conference 2026, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, and Prompt Engineering Facilitator.",
       },
       certifications: {
-        title: "Certifications – Abhishek Adhikari | Professional Credentials",
-        description: "Google UX Design, Google Digital Garage, CalArts Graphic Design, IoT Internship enCypher, Figma courses, Community Builder awards — 10+ professional certifications.",
+        title: "Certifications – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Professional certifications earned by an AI Trainer in Nepal — Google UX Design, Google Digital Garage, CalArts Graphic Design, IoT enCypher, and community builder awards.",
       },
       news: {
-        title: "News & Media – Abhishek Adhikari | Coverage & Recognition",
-        description: "ICT Frame global top-10 coverage, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, and Krishi Pradarshani speaking — latest news coverage.",
+        title: "News & Media – Abhishek Adhikari | AI Trainer Nepal",
+        description: "News coverage of an AI Trainer in Nepal — ICT Frame global top-10 coverage, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, and Krishi Pradarshani speaking.",
       },
       media: {
-        title: "Interviews & Features – Abhishek Adhikari | Media Appearances",
-        description: "Interviews, feature stories, published analysis, and public speaking appearances by Abhishek Adhikari on agritech, AI, open source, and digital innovation in Nepal.",
+        title: "Interviews & Features – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Interviews, feature stories, and public speaking appearances by an AI Trainer in Nepal on agritech, AI, open source, and digital innovation.",
       },
       blog: {
-        title: "Blog – Abhishek Adhikari | Articles on Design, Tech & Agritech",
-        description: "Articles on UI/UX design trends, agritech in Nepal, React best practices, content strategy, user research methods, and no-code development by Abhishek Adhikari.",
+        title: "Blog – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Articles by an AI Trainer in Nepal on UI/UX design trends, agritech in Nepal, React best practices, content strategy, user research methods, and no-code development.",
       },
       recommendations: {
-        title: "Recommendations – Abhishek Adhikari | LinkedIn Endorsements",
-        description: "LinkedIn recommendations from Er. Himal Rawal, Tanka Bhattarai, Ramesh Shrestha, Lava Kafle, Rajiv Raman Neupane, and other industry professionals endorsing Abhishek Adhikari.",
+        title: "Recommendations – Abhishek Adhikari | AI Trainer Nepal",
+        description: "LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — Er. Himal Rawal, Tanka Bhattarai, Ramesh Shrestha, Lava Kafle, and other industry professionals.",
       },
       contact: {
         title: "Contact – Abhishek Adhikari | AI Trainer Nepal",
@@ -566,15 +569,16 @@ export default function Portfolio() {
     const pageTitles: Record<string, string> = {
       "/": "AI Trainer Nepal | Abhishek Adhikari – Prompt Engineering, AI Literacy &amp; Digital Training",
       "/about": "About – Abhishek Adhikari | AI Trainer Nepal",
-      "/experience": "Experience – Abhishek Adhikari | Work History Nepal",
-      "/work": "Projects – Abhishek Adhikari | Digital Products Portfolio",
-      "/volunteering": "Volunteering – Abhishek Adhikari | Community Work Nepal",
-      "/certifications": "Certifications – Abhishek Adhikari | Professional Credentials",
-      "/news": "News &amp; Media – Abhishek Adhikari | Coverage &amp; Recognition",
-      "/media": "Interviews &amp; Features – Abhishek Adhikari | Media Appearances",
-      "/recommendations": "Recommendations – Abhishek Adhikari | LinkedIn Endorsements",
-      "/blog": "Blog – Abhishek Adhikari | Articles on Design, Tech &amp; Agritech",
-      "/contact": "Contact – Abhishek Adhikari | Get in Touch",
+      "/ai-training": "AI Training – Abhishek Adhikari | AI Trainer Nepal",
+      "/experience": "Experience – Abhishek Adhikari | AI Trainer Nepal",
+      "/work": "Projects – Abhishek Adhikari | AI Trainer Nepal",
+      "/volunteering": "Volunteering – Abhishek Adhikari | AI Trainer Nepal",
+      "/certifications": "Certifications – Abhishek Adhikari | AI Trainer Nepal",
+      "/news": "News &amp; Media – Abhishek Adhikari | AI Trainer Nepal",
+      "/media": "Interviews &amp; Features – Abhishek Adhikari | AI Trainer Nepal",
+      "/recommendations": "Recommendations – Abhishek Adhikari | AI Trainer Nepal",
+      "/blog": "Blog – Abhishek Adhikari | AI Trainer Nepal",
+      "/contact": "Contact – Abhishek Adhikari | AI Trainer Nepal",
     };
     document.title = pageTitles[path] || pageTitles["/"];
     let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
@@ -644,10 +648,11 @@ export default function Portfolio() {
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
             {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
+              const routePath = section === "projects" ? "/work" : `/${section}`;
               return (
               <a
                 key={section}
-                href={`#${section}`}
+                href={routePath}
                 className="px-3 py-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200"
               >
                 {label}
@@ -687,7 +692,7 @@ export default function Portfolio() {
                 {profileData.profile.name}
               </h1>
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                AI trainer and prompt engineering specialist from Nepal. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.
+                AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
                 1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
@@ -769,10 +774,10 @@ export default function Portfolio() {
           <SectionHeader
             label="About"
             title="Rural roots. Practical technology. Community scale."
-            summary="Three businesses, 100+ events, 10+ clients — and a track record of turning small experiments into real impact."
+            summary="Three businesses, 100+ events, 10+ clients — and a track record as an AI Trainer in Nepal turning small experiments into real impact."
           />
           <p className="text-base md:text-lg leading-relaxed text-foreground/90 max-w-3xl">
-            I train people on AI tools — prompt engineering, ChatGPT, Claude, Gemini, AI literacy — for students, teachers, and professionals who want to use AI without a technical background. 1,500+ students trained across schools, colleges, and community events in Nepal. I also founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and contributed 14 AI skills to a global open-source project with 41k+ GitHub stars. WordCamp Kathmandu 2026 speaker on prompt engineering.
+            I am an AI Trainer in Nepal — I train people on AI tools, prompt engineering, ChatGPT, Claude, Gemini, and AI literacy for students, teachers, and professionals who want to use AI without a technical background. 1,500+ students trained across schools, colleges, and community events. I also founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and contributed 14 AI skills to a global open-source project with 41k+ GitHub stars. WordCamp Kathmandu 2026 speaker on prompt engineering.
           </p>
           <div className="mt-6 grid sm:grid-cols-3 gap-3">
             {[
@@ -795,7 +800,7 @@ export default function Portfolio() {
           <SectionHeader
             label="AI Training"
             title="AI training workshops and prompt engineering sessions in Nepal"
-            summary="Practical AI literacy training for students, teachers, and professionals — no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
+            summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, and professionals — no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -838,7 +843,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Experience"
             title="Where I have worked"
-            summary="Showing the most relevant roles first. Expand for the full timeline."
+            summary="Professional experience across agritech, tech communities, design, and consulting — from an AI Trainer in Nepal to community builder and entrepreneur."
           />
           <div className="relative">
             {/* Vertical timeline line */}
@@ -936,7 +941,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Projects"
             title="What I have built"
-            summary="A shorter project wall keeps the page easier to scan while preserving every link."
+            summary="Digital products built by an AI Trainer in Nepal across agriculture, SEO, coffee, and business sectors."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {visibleProjects.map((item: any, i: number) => {
@@ -1013,7 +1018,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Leadership"
             title="Community and teaching moments"
-            summary="A curated first view of events, certificates, and facilitation work."
+            summary="Community leadership and volunteer work by an AI Trainer in Nepal — events, certificates, and facilitation across Hetauda and beyond."
           />
           <div className="grid md:grid-cols-2 gap-6">
             {volunteering.map((vol: any, i: number) => {
@@ -1097,7 +1102,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Certificates"
             title="Certifications I hold"
-            summary="Certificate previews are available without making this section a wall."
+            summary="Professional certifications earned by an AI Trainer in Nepal — Google UX, digital marketing, IoT, and community leadership credentials."
           />
           {certifications.length > 0 ? (
           <>
@@ -1219,6 +1224,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Recognition"
             title="News and public proof"
+            summary="News coverage, media mentions, and public recognition of an AI Trainer in Nepal — ICT Frame, HRIC, Hult Prize, AWS conferences, and more."
           />
           {newsMedia.length > 0 ? (
           <>
@@ -1292,7 +1298,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Media appearances"
             title="Interviews and features"
-            summary="Selected conversations, bylines, and independently published profiles that document my work across agritech, AI, open source, and digital innovation."
+            summary="Selected conversations, bylines, and independently published profiles documenting the work of an AI Trainer in Nepal across agritech, AI, open source, and digital innovation."
           />
           {mediaAppearances.length > 0 ? (
           <>
@@ -1348,7 +1354,7 @@ export default function Portfolio() {
         {/* Blog */}
         <ErrorBoundary section="Blog">
         <section id="blog">
-          <SectionHeader label="Blog" title="What I write on Medium" summary="Real posts from medium.com/@abhishekadhikari1254" />
+          <SectionHeader label="Blog" title="What I write on Medium" summary="Articles by an AI Trainer in Nepal on design trends, agritech, React performance, content strategy, and no-code development." />
           <BlogPosts spring={spring} prefersReducedMotion={prefersReducedMotion} />
         </section>
         </ErrorBoundary>
@@ -1359,6 +1365,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Recommendations"
             title="What people say"
+            summary="LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — community building, leadership, and technical expertise."
           />
           <div className="grid md:grid-cols-2 gap-6">
             {recommendations.map((rec: any, i: number) => {
@@ -1421,11 +1428,12 @@ export default function Portfolio() {
           <SectionHeader
             label="Contact"
             title="Get in touch"
+            summary="Book an AI training workshop in Nepal, discuss prompt engineering, or collaborate on agritech and community building."
           />
           <div className="grid md:grid-cols-2 gap-10">
             <div className="space-y-4">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Want to book an AI training workshop, discuss prompt engineering, or collaborate on agritech? My inbox is open.
+                Want to book an AI training workshop with an AI Trainer in Nepal, discuss prompt engineering, or collaborate on agritech? My inbox is open.
               </p>
               <div className="space-y-3 pt-2">
                 {profileData.profile.address && (
@@ -1544,7 +1552,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <div className="font-bold text-lg mb-1">{profileData.profile.name}</div>
-            <div className="text-sm text-muted-foreground">AI trainer, agritech entrepreneur, and community builder in Nepal.</div>
+            <div className="text-sm text-muted-foreground">AI Trainer Nepal — agritech entrepreneur and community builder.</div>
           </div>
           <div className="flex gap-4">
             <a href={profileData.profile.linkedin} aria-label="LinkedIn profile" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
