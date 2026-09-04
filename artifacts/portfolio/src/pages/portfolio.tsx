@@ -149,7 +149,7 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
             {post.coverImage ? (
               <ImageWithSkeleton
                 src={post.coverImage}
-                alt={`${post.title} — blog article by Abhishek Adhikari published on Medium ${post.date}`}
+                alt={`${post.title} — blog article by Abhishek Adhikari AI Trainer Nepal published on Medium ${post.date}`}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover"
@@ -475,7 +475,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setExpandedSections({ experience: true, projects: true, volunteering: true, certifications: true, news: true, media: true, recommendations: true });
+      setExpandedSections({ experience: true, projects: true, volunteering: true, certifications: true, news: true, media: true, recommendations: true, "ai-training": true });
     }, 10000);
     return () => clearTimeout(timer);
   }, []);
@@ -483,8 +483,8 @@ export default function Portfolio() {
   useEffect(() => {
     const sectionMeta: Record<string, { title: string; description: string }> = {
       about: {
-        title: "About – Abhishek Adhikari | Agritech Entrepreneur Nepal",
-        description: "Rural roots. Practical technology. Community scale. Abhishek Adhikari founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and consulted 10+ clients on SEO.",
+        title: "About – Abhishek Adhikari | AI Trainer Nepal",
+        description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker, Global Top 10 AI skills contributor.",
       },
       experience: {
         title: "Experience – Abhishek Adhikari | Work History Nepal",
@@ -523,8 +523,8 @@ export default function Portfolio() {
         description: "LinkedIn recommendations from Er. Himal Rawal, Tanka Bhattarai, Ramesh Shrestha, Lava Kafle, Rajiv Raman Neupane, and other industry professionals endorsing Abhishek Adhikari.",
       },
       contact: {
-        title: "Contact – Abhishek Adhikari | Get in Touch",
-        description: "Contact Abhishek Adhikari via email at abhishek@abhishekadhikari.com, LinkedIn, or the contact form for collaborations in agritech, SEO, design, and community building.",
+        title: "Contact – Abhishek Adhikari | AI Trainer Nepal",
+        description: "Book an AI training workshop, discuss prompt engineering, or collaborate on agritech. Contact Abhishek Adhikari via email, LinkedIn, or the contact form.",
       },
     };
 
@@ -568,8 +568,8 @@ export default function Portfolio() {
     if (hash) return;
     const path = window.location.pathname.replace(/\/$/, "") || "/";
     const pageTitles: Record<string, string> = {
-      "/": "Abhishek Adhikari – Agritech Entrepreneur &amp; Community Builder | Nepal",
-      "/about": "About – Abhishek Adhikari | Agritech Entrepreneur Nepal",
+      "/": "AI Trainer Nepal | Abhishek Adhikari – Prompt Engineering, AI Literacy &amp; Digital Training",
+      "/about": "About – Abhishek Adhikari | AI Trainer Nepal",
       "/experience": "Experience – Abhishek Adhikari | Work History Nepal",
       "/work": "Projects – Abhishek Adhikari | Digital Products Portfolio",
       "/volunteering": "Volunteering – Abhishek Adhikari | Community Work Nepal",
@@ -588,6 +588,7 @@ export default function Portfolio() {
     if (link) link.href = "https://abhishekadhikari.com/";
     const pathToSection: Record<string, string> = {
       "/about": "about",
+      "/ai-training": "ai-training",
       "/experience": "experience",
       "/work": "projects",
       "/volunteering": "volunteering",
@@ -645,15 +646,18 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
-            {["about", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => (
+            {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
+              const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
+              return (
               <a
                 key={section}
                 href={`#${section}`}
                 className="px-3 py-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200"
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {label}
               </a>
-            ))}
+              );
+            })}
             <span className="mx-1 w-px h-5 bg-border" />
             <button
               onClick={() => setIsDark(!isDark)}
@@ -687,10 +691,10 @@ export default function Portfolio() {
                 {profileData.profile.name}
               </h1>
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                I help agribusinesses scale 10x through digital systems, build tech communities that outlive events, and craft SEO strategies that turn websites into revenue assets.
+                AI trainer and prompt engineering specialist from Nepal. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
-                Founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and consulted 10+ clients on technical SEO and digital growth from Hetauda, Nepal.
+                1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
               </p>
             </motion.div>
 
@@ -703,7 +707,7 @@ export default function Portfolio() {
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
                   src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
-                  alt="Abhishek Adhikari — Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda"
+                  alt="Abhishek Adhikari — AI Trainer Nepal, Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda"
                   width={208}
                   height={208}
                   fetchPriority="high"
@@ -741,9 +745,9 @@ export default function Portfolio() {
           className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden border bg-border"
         >
           {[
+            ["1,500+", "Students trained"],
             ["220+", "Livestock capacity"],
             ["100+", "Community events"],
-            ["10+", "SEO clients"],
             ["14", "AI skills contributed"],
           ].map(([value, label]) => (
             <div key={label} className="bg-card px-6 py-8 text-center">
@@ -832,19 +836,62 @@ export default function Portfolio() {
             summary="Three businesses, 100+ events, 10+ clients — and a track record of turning small experiments into real impact."
           />
           <p className="text-base md:text-lg leading-relaxed text-foreground/90 max-w-3xl">
-            I started in agriculture at 14 — managing a family buffalo farm that grew from 25 to 220+ head through systematic feeding, digital record-keeping, and market linkage. That same mindset now drives everything I do: build systems that scale, teach what you know, and invest in communities that outlast any single project.
+            I train people on AI tools — prompt engineering, ChatGPT, Claude, Gemini, AI literacy — for students, teachers, and professionals who want to use AI without a technical background. 1,500+ students trained across schools, colleges, and community events in Nepal. I also founded Himalaya Krishi (220+ livestock), co-founded DEV Community Nepal (100+ events), and contributed 14 AI skills to a global open-source project with 41k+ GitHub stars. WordCamp Kathmandu 2026 speaker on prompt engineering.
           </p>
           <div className="mt-6 grid sm:grid-cols-3 gap-3">
             {[
+              ["1,500+", "students trained on AI literacy and prompt engineering"],
               ["220+", "livestock capacity scaled at Himalaya Krishi"],
               ["100+", "virtual community events supported"],
-              ["10+", "clients and growth projects managed"],
             ].map(([metric, text]) => (
               <div key={metric} className="rounded-xl border bg-muted/30 p-4">
                 <div className="text-2xl font-bold text-primary">{metric}</div>
                 <div className="mt-1 text-sm text-muted-foreground leading-snug">{text}</div>
               </div>
             ))}
+          </div>
+        </section>
+        </ErrorBoundary>
+
+        {/* AI Training */}
+        <ErrorBoundary section="AI Training">
+        <section id="ai-training">
+          <SectionHeader
+            label="AI Training"
+            title="AI training workshops and prompt engineering sessions in Nepal"
+            summary="Practical AI literacy training for students, teachers, and professionals — no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "Prompt Engineering Workshop", org: "J&B Coffee Hetauda", desc: "Hands-on prompt engineering session for local business community — writing effective prompts for ChatGPT and Claude.", type: "workshop" },
+              { title: "AI & Digital Literacy Workshop", org: "Nirmal Secondary School", desc: "Teacher training on AI tools, digital literacy, and integrating AI into classroom workflows.", type: "training" },
+              { title: "AI in Education Workshop", org: "Nirmal Secondary School", desc: "6-hour practical session on using AI tools for lesson planning, content creation, and student engagement.", type: "workshop" },
+              { title: "WordCamp Kathmandu 2026", org: "WordPress Community Nepal", desc: "Speaker — 'Prompt Smarter, Not Harder': practical prompt engineering strategies for content creators and developers.", type: "speaking" },
+              { title: "AI Skills Contributor", org: "Agentic Awesome Skills", desc: "14 named AI skills contributed to a global open-source project (41k+ GitHub stars) — ranked global top 10 contributor.", type: "open-source" },
+              { title: "10-Day UI/UX Training Bootcamp", org: "HSMSS Hetauda", desc: "UI/UX design training bootcamp covering Figma, wireframing, prototyping, and design thinking for students.", type: "training" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04, duration: 0.4, ...spring }}
+                whileHover={{ y: -4, boxShadow: "0 12px 40px hsla(40,20%,10%,0.08)" }}
+                className="rounded-xl border bg-card p-5 shadow-sm hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">{item.type}</span>
+                </div>
+                <h3 className="font-semibold text-base leading-tight">{item.title}</h3>
+                <div className="text-xs text-primary mt-1">{item.org}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-6 p-5 rounded-xl bg-muted/30 border">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">1,500+ students and professionals trained</strong> across Nepal on prompt engineering, AI literacy, ChatGPT, Claude, Gemini, and practical AI tools. Available for school workshops, college sessions, corporate training, and community events. Based in Hetauda, Bagmati Province, Nepal.
+            </p>
           </div>
         </section>
         </ErrorBoundary>
@@ -893,7 +940,7 @@ export default function Portfolio() {
                     {/* Logo tile — sits on the timeline */}
                     <div className={`hidden md:flex absolute left-0 top-0 w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
                       {exp.logoUrl && !logoErrored ? (
-                        <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
+                        <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari AI Trainer Nepal work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
                       ) : (
                         orgInitials || exp.organization.slice(0, 2).toUpperCase()
                       )}
@@ -905,7 +952,7 @@ export default function Portfolio() {
                       <div className="flex items-start gap-3 mb-3">
                         <div className={`flex md:hidden w-10 h-10 rounded-xl items-center justify-center text-xs font-bold shrink-0 shadow-sm ${colorClass}`}>
                           {exp.logoUrl && !logoErrored ? (
-                            <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
+                            <ImageWithSkeleton src={exp.logoUrl} alt={`${exp.organization} logo — ${exp.role} at ${exp.organization}, Abhishek Adhikari AI Trainer Nepal work experience ${exp.startDate}–${exp.endDate}`} className="w-full h-full object-cover rounded-xl" wrapperClassName="w-full h-full" onError={() => markErrored(`exp-logo-${i}`)} />
                           ) : (
                             orgInitials || exp.organization.slice(0, 2).toUpperCase()
                           )}
@@ -989,7 +1036,7 @@ export default function Portfolio() {
                     ) : (
                         <ImageWithSkeleton
                         src={screenshotUrl}
-                        alt={`${item.name} — ${item.category} website project built by Abhishek Adhikari`}
+                        alt={`${item.name} — ${item.category} website project by Abhishek Adhikari AI Trainer Nepal`}
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -1075,7 +1122,7 @@ export default function Portfolio() {
                       {img.imageUrl && (
                         <ImageWithSkeleton
                           src={img.imageUrl}
-                          alt={img.caption ? `${img.caption} — ${vol.role} at ${vol.organization}, Abhishek Adhikari volunteering (${vol.date || vol.startDate})` : `${vol.role} at ${vol.organization} — volunteer work by Abhishek Adhikari`}
+                           alt={img.caption ? `${img.caption} — ${vol.role} at ${vol.organization}, Abhishek Adhikari AI Trainer Nepal volunteering (${vol.date || vol.startDate})` : `${vol.role} at ${vol.organization} — volunteer work by Abhishek Adhikari AI Trainer Nepal`}
                           loading="lazy"
                           decoding="async"
                           className="absolute inset-0 w-full h-full object-cover"
@@ -1149,7 +1196,7 @@ export default function Portfolio() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         <ImageWithSkeleton
                           src={cert.imageUrl}
-                          alt={`${cert.title} — ${cert.issuer} professional certification credential, Abhishek Adhikari earned ${cert.date}`}
+                           alt={`${cert.title} — ${cert.issuer} professional certification credential, Abhishek Adhikari AI Trainer Nepal earned ${cert.date}`}
                           loading="lazy"
                           decoding="async"
                           className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
@@ -1267,7 +1314,7 @@ export default function Portfolio() {
                     {item.imageUrl && (
                       <div className="w-full h-36 bg-muted cursor-pointer"
                         onClick={() => setPreview({ src: item.imageUrl, alt: item.title })}>
-                        <ImageWithSkeleton src={item.imageUrl} alt={`${item.title} — ${item.source} news coverage featuring Abhishek Adhikari agritech entrepreneur Nepal ${item.date}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
+                         <ImageWithSkeleton src={item.imageUrl} alt={`${item.title} — ${item.source} news coverage featuring Abhishek Adhikari AI Trainer Nepal ${item.date}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
                       </div>
                     )}
                     <div className="p-5 flex flex-col gap-3 flex-1">
@@ -1322,8 +1369,15 @@ export default function Portfolio() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.06, duration: 0.4, ...spring }}
                   whileHover={{ y: -4, boxShadow: "0 12px 40px hsla(40,20%,10%,0.08)" }}
-                  className="rounded-xl bg-muted/30 border border-muted p-5 flex flex-col gap-3"
+                  className="rounded-xl bg-muted/30 border border-muted flex flex-col overflow-hidden"
                 >
+                  {item.imageUrl && (
+                    <div className="w-full h-36 bg-muted cursor-pointer"
+                      onClick={() => setPreview({ src: item.imageUrl, alt: item.title })}>
+                      <ImageWithSkeleton src={item.imageUrl} alt={`${item.title} — ${item.outlet} media feature with Abhishek Adhikari AI trainer Nepal ${item.date}`} loading="lazy" decoding="async" className="w-full h-full object-cover" wrapperClassName="w-full h-full" />
+                    </div>
+                  )}
+                  <div className="p-5 flex flex-col gap-3 flex-1">
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-primary/15 text-primary dark:bg-primary/20">
                       {item.type}
@@ -1339,6 +1393,7 @@ export default function Portfolio() {
                       <ExternalLink size={12} /> Open source
                     </a>
                   )}
+                  </div>
                 </motion.article>
               ))}
             </div>
@@ -1399,7 +1454,7 @@ export default function Portfolio() {
                   <div className="flex items-center gap-3 pt-2 border-t border-muted">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0 ${colorClass}`}>
                       {rec.imageUrl && !avatarErrored ? (
-                        <ImageWithSkeleton src={rec.imageUrl} alt={`${rec.name}, ${rec.title} — LinkedIn recommendation for Abhishek Adhikari`} loading="lazy" decoding="async" className="h-full w-full rounded-full object-cover" wrapperClassName="h-full w-full" onError={() => markErrored(`rec-avatar-${i}`)} />
+                         <ImageWithSkeleton src={rec.imageUrl} alt={`${rec.name}, ${rec.title} — LinkedIn recommendation for Abhishek Adhikari AI Trainer Nepal`} loading="lazy" decoding="async" className="h-full w-full rounded-full object-cover" wrapperClassName="h-full w-full" onError={() => markErrored(`rec-avatar-${i}`)} />
                       ) : (
                         initials
                       )}
@@ -1434,7 +1489,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10">
             <div className="space-y-4">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Whether you have a collaboration in mind, want to discuss agritech, or just want to say hello — my inbox is open.
+                Want to book an AI training workshop, discuss prompt engineering, or collaborate on agritech? My inbox is open.
               </p>
               <div className="space-y-3 pt-2">
                 {profileData.profile.address && (
@@ -1553,7 +1608,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <div className="font-bold text-lg mb-1">{profileData.profile.name}</div>
-            <div className="text-sm text-muted-foreground">Building the future of Nepal's tech and agriculture.</div>
+            <div className="text-sm text-muted-foreground">AI trainer, agritech entrepreneur, and community builder in Nepal.</div>
           </div>
           <div className="flex gap-4">
             <a href={profileData.profile.linkedin} aria-label="LinkedIn profile" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>

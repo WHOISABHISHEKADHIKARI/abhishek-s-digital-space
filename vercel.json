@@ -10,6 +10,6 @@
     { "source": "/blog/:path*", "destination": "/blog", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(about|experience|work|volunteering|certifications|news|media|recommendations|blog|contact)", "destination": "/index.html" }
+    { "source": "/(about|ai-training|experience|work|volunteering|certifications|news|media|recommendations|blog|contact)", "destination": "/index.html" }
   ]
 }
