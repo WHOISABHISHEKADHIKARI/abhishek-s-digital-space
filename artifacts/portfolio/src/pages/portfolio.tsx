@@ -152,6 +152,8 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
                 alt={`${post.title} — blog article by Abhishek Adhikari AI Trainer Nepal published on Medium ${post.date}`}
                 loading="lazy"
                 decoding="async"
+                width={144}
+                height={96}
                 className="w-full h-full object-cover"
                 wrapperClassName="w-full h-full"
               />
@@ -557,6 +559,13 @@ export default function Portfolio() {
     const hash = window.location.hash.substring(1);
     if (hash) {
       applyMeta(hash);
+    } else {
+      const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+      if (currentPath !== "/") {
+        const pathKey = currentPath.replace(/^\//, "");
+        const sectionKey = pathKey === "work" ? "projects" : pathKey;
+        if (sectionMeta[sectionKey]) applyMeta(sectionKey);
+      }
     }
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -582,10 +591,7 @@ export default function Portfolio() {
     };
     document.title = pageTitles[path] || pageTitles["/"];
     let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
-    // This is a single-page portfolio. Section URLs are convenience entry
-    // points, not separate documents, so consolidate their indexing signals
-    // on the one canonical portfolio URL.
-    if (link) link.href = "https://abhishekadhikari.com/";
+    if (link) link.href = `https://abhishekadhikari.com${path === "/" ? "" : path}`;
     const pathToSection: Record<string, string> = {
       "/about": "about",
       "/ai-training": "ai-training",
@@ -642,8 +648,8 @@ export default function Portfolio() {
 
       {/* Navbar */}
       <ErrorBoundary section="Navbar">
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b">
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
             {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
@@ -668,8 +674,8 @@ export default function Portfolio() {
               {isDark ? <Sun size={16} /> : <Moon size={16} />}
             </button>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
       </ErrorBoundary>
 
       {/* Main Content */}

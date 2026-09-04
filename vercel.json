@@ -18,9 +18,7 @@
   "redirects": [
     { "source": "/projects", "destination": "/work", "permanent": true },
     { "source": "/services", "destination": "/contact", "permanent": true },
-    { "source": "/skills", "destination": "/ai-training", "permanent": true },
-    { "source": "/work/:path*", "destination": "/work", "permanent": true },
-    { "source": "/blog/:path*", "destination": "/blog", "permanent": true }
+    { "source": "/skills", "destination": "/ai-training", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(about|ai-training|experience|work|volunteering|certifications|news|media|recommendations|blog|contact)", "destination": "/index.html" }
