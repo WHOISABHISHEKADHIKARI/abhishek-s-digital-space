@@ -350,7 +350,7 @@ export default function Portfolio() {
     if (profile.address) {
       const imageUrl = profile.image
         ? `https://abhishekadhikari.com${profile.image.startsWith("/") ? profile.image : "/" + profile.image}`
-        : "https://abhishekadhikari.com/abhishek-adhikari-social.jpg";
+        : "https://abhishekadhikari.com/abhishek-adhikari-social.webp";
       injectStructuredData("localbusiness", {
         "@context": "https://schema.org",
         "@type": ["Person", "LocalBusiness"],
