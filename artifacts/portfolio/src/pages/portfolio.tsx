@@ -664,7 +664,7 @@ export default function Portfolio() {
 
       {/* Navbar */}
       <ErrorBoundary section="Navbar">
-      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b">
+      <header className="fixed top-0 w-full z-nav bg-background/80 backdrop-blur-md border-b">
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">

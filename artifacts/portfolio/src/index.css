@@ -56,10 +56,10 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --z-nav: 50;
+  --z-nav: 1001;
   --z-preview: 100;
   --z-toast: 100;
-  --z-skip: 200;
+  --z-skip: 1002;
   --z-noise: 1000;
 }
 
@@ -180,6 +180,10 @@
 }
 
 @layer utilities {
+  .z-nav { z-index: var(--z-nav); }
+  .z-preview { z-index: var(--z-preview); }
+  .z-toast { z-index: var(--z-toast); }
+  .z-skip { z-index: var(--z-skip); }
   .noise-overlay::after {
     content: "";
     position: fixed;
