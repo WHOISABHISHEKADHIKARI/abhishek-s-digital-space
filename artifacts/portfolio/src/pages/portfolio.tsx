@@ -102,7 +102,7 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
 
   useEffect(() => {
     let cancelled = false;
-    fetch(MEDIUM_FEED)
+    fetch(MEDIUM_FEED, { priority: "low" } as RequestInit)
       .then((r) => r.json())
       .then((data) => {
         if (cancelled) return;
@@ -430,8 +430,16 @@ export default function Portfolio() {
   }, [isDark]);
 
   useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 400);
-    window.addEventListener("scroll", onScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setShowTop(window.scrollY > 400);
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -591,7 +599,15 @@ export default function Portfolio() {
     };
     document.title = pageTitles[path] || pageTitles["/"];
     let link = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
-    if (link) link.href = `https://abhishekadhikari.com${path === "/" ? "" : path}`;
+    const canonicalUrl = `https://abhishekadhikari.com${path === "/" ? "" : path}`;
+    if (link) {
+      link.href = canonicalUrl;
+    } else {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      link.href = canonicalUrl;
+      document.head.appendChild(link);
+    }
     const pathToSection: Record<string, string> = {
       "/about": "about",
       "/ai-training": "ai-training",
@@ -713,7 +729,7 @@ export default function Portfolio() {
             >
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
-                  src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg"
+                  src="/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp"
                   alt="Abhishek Adhikari — AI Trainer Nepal, Co-organizer of the AWS Cloud Technology Conference 2026 in Hetauda"
                   width={208}
                   height={208}

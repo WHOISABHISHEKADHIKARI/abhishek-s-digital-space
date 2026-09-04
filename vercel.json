@@ -4,6 +4,18 @@
   "outputDirectory": "artifacts/portfolio/dist/public",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "headers": [
+    { "source": "/", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/>; rel=\"canonical\"" }] },
+    { "source": "/about", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/about>; rel=\"canonical\"" }] },
+    { "source": "/ai-training", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training>; rel=\"canonical\"" }] },
+    { "source": "/experience", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/experience>; rel=\"canonical\"" }] },
+    { "source": "/work", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/work>; rel=\"canonical\"" }] },
+    { "source": "/volunteering", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/volunteering>; rel=\"canonical\"" }] },
+    { "source": "/certifications", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/certifications>; rel=\"canonical\"" }] },
+    { "source": "/news", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/news>; rel=\"canonical\"" }] },
+    { "source": "/media", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/media>; rel=\"canonical\"" }] },
+    { "source": "/recommendations", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/recommendations>; rel=\"canonical\"" }] },
+    { "source": "/blog", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/blog>; rel=\"canonical\"" }] },
+    { "source": "/contact", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/contact>; rel=\"canonical\"" }] },
     {
       "source": "/(.*)",
       "headers": [
