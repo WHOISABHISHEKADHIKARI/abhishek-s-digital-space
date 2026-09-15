@@ -57,6 +57,11 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
+    minify: "terser",
+    terserOptions: {
+      compress: { passes: 2 },
+      mangle: true,
+    },
   },
   server: {
     port,
