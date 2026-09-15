@@ -562,7 +562,7 @@ export default function Portfolio() {
       },
       recommendations: {
         title: "Recommendations – Abhishek Adhikari | AI Trainer in Nepal",
-        description: "LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — Er. Himal Rawal, Tanka Bhattarai, Ramesh Shrestha, Lava Kafle, and other industry professionals.",
+        description: "LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — Tanka Bhattarai, Lava Kafle, and other industry professionals.",
       },
       contact: {
         title: "Contact – Abhishek Adhikari | AI Trainer in Nepal",

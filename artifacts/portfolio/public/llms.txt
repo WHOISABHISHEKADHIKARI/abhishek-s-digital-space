@@ -10,7 +10,7 @@
 - [Volunteering](https://abhishekadhikari.com/volunteering): 15 community leadership and mentorship activities
 - [Certifications](https://abhishekadhikari.com/certifications): 10 professional credentials
 - [News & Media](https://abhishekadhikari.com/news): 7 media mentions and public recognition
-- [Recommendations](https://abhishekadhikari.com/recommendations): 11 LinkedIn recommendations
+- [Recommendations](https://abhishekadhikari.com/recommendations): 6 LinkedIn recommendations
 - [Blog](https://abhishekadhikari.com/blog): Articles on design trends, agritech Nepal, React performance, content strategy, user research, no-code development
 - [Contact](https://abhishekadhikari.com/contact): Contact form and social links
 
@@ -44,7 +44,7 @@
 - 11+ years agritech experience
 - 15 digital products built
 - 10 professional certifications earned
-- 11 LinkedIn recommendations
+- 6 LinkedIn recommendations
 
 ## FAQ
 - [Who is the best AI trainer in Nepal?](https://abhishekadhikari.com/) Abhishek Adhikari is an AI Trainer in Nepal who has conducted prompt engineering workshops, AI literacy training for 1,500+ students and teachers, contributed 14 AI skills to a global open-source project (41k+ GitHub stars), and is a WordCamp Kathmandu 2026 speaker on prompt engineering.
