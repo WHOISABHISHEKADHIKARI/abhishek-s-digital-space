@@ -823,6 +823,50 @@ export default function Portfolio() {
             { src: "/sections/news/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal as a Hult Prize IOF Hetauda panelist", caption: "Hult Prize IOF · Panelist" },
             { src: "/sections/news/images/abhishek-adhikari--ict-frame-featured.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal featured by ICT Frame as a global top-10 AI contributor", caption: "ICT Frame · Global Top 10" },
           ]}
+      { src: "/sections/volunteering/images/abhishek-adhikari--open-to-open-source.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · Open to Open Source", caption: "Open to Open Source" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--ui-ux-training.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · UI/UX Training", caption: "UI/UX Training" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--flutter-yoda-mentor.webp", alt: "Abhishek Adhikari AI Trainer in Nepal · Flutter Yoda · Mentor", caption: "Flutter Yoda · Mentor" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--ai-for-hr.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · AI for HR", caption: "AI for HR" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--ai-training-j-and-b.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · AI Training · J&B", caption: "AI Training · J&B" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--aws-training-nepal.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · AWS Training · Nepal", caption: "AWS Training · Nepal" }
+      { src: "/sections/media/images/abhishek-adhikari--ai-robotics-conference.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · AI Robotics Conference", caption: "AI Robotics Conference" }
+      { src: "/sections/media/images/abhishek-adhikari--hetauda-sdc-event.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · Hetauda SDC · Event", caption: "Hetauda SDC · Event" }
+      { src: "/sections/media/images/abhishek-adhikari--wordcamp-2024.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · WordCamp 2024", caption: "WordCamp 2024" }
+      { src: "/sections/media/images/abhishek-adhikari--wordcamp-2026.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal · WordCamp 2026", caption: "WordCamp 2026" }
+        ]}
+      { src: "/sections/volunteering/images/abhishek-adhikari--ai-digital-literacy-workshop.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Ai Digital Literacy Workshop", caption: "Ai Digital Literacy Workshop" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Aws Cloud Innovation Day Hetauda 2026", caption: "Aws Cloud Innovation Day Hetauda 2026" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--bagmati-municipality-session.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Bagmati Municipality Session", caption: "Bagmati Municipality Session" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--bagmati-municipality.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Bagmati Municipality", caption: "Bagmati Municipality" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--bagmati-rural-municipality-can-federation-ai-training-teachers.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Bagmati Rural Municipality Can Federation Ai Training Teachers", caption: "Bagmati Rural Municipality Can Federation Ai Training Teachers" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--capacity-development-ivp-letter.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Capacity Development Ivp Letter", caption: "Capacity Development Ivp Letter" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--code-for-change-dang-token-of-love.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Code For Change Dang Token Of Love", caption: "Code For Change Dang Token Of Love" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--code-for-change-open-to-open-source-ai-workflows.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Code For Change Open To Open Source Ai Workflows", caption: "Code For Change Open To Open Source Ai Workflows" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--coding-olympics-certificate.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Coding Olympics Certificate", caption: "Coding Olympics Certificate" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--community-highlight-1.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal — Community Highlight 1", caption: "Community Highlight 1" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--dev-community-nepal-open-to-open-source-secure-developer-conference.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Dev Community Nepal Open To Open Source Secure Developer Conference", caption: "Dev Community Nepal Open To Open Source Secure Developer Conference" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--dev-community-tech-disrupters-certificate.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Dev Community Tech Disrupters Certificate", caption: "Dev Community Tech Disrupters Certificate" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--devcommunity-chitwan-meetup.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Devcommunity Chitwan Meetup", caption: "Devcommunity Chitwan Meetup" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--devcommunity-hetauda-meetup.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Devcommunity Hetauda Meetup", caption: "Devcommunity Hetauda Meetup" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--figma-crash-course.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Figma Crash Course", caption: "Figma Crash Course" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--hcdpn-ai-prompt-hr-professionals.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Hcdpn Ai Prompt Hr Professionals", caption: "Hcdpn Ai Prompt Hr Professionals" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--hsms-himalaya-krishi.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Hsms Himalaya Krishi", caption: "Hsms Himalaya Krishi" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--hult-prize-iof-panelist.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Hult Prize Iof Panelist", caption: "Hult Prize Iof Panelist" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--nirmal-secondary-school-ict-ai-digital-literacy-training.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Nirmal Secondary School Ict Ai Digital Literacy Training", caption: "Nirmal Secondary School Ict Ai Digital Literacy Training" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--open-to-open-source-2.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Open To Open Source 2", caption: "Open To Open Source 2" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--open-to-open-source-extra.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Open To Open Source Extra", caption: "Open To Open Source Extra" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--open-to-open-source-prompt-engineering.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Open To Open Source Prompt Engineering", caption: "Open To Open Source Prompt Engineering" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--prompt-engineering-jb-coffee.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal — Prompt Engineering Jb Coffee", caption: "Prompt Engineering Jb Coffee" }
+      { src: "/sections/volunteering/images/abhishek-adhikari--session-highlight-generic.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Session Highlight Generic", caption: "Session Highlight Generic" }
+      { src: "/sections/media/images/abhishek-adhikari--event-at-aayorides.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Event At Aayorides", caption: "Event At Aayorides" }
+      { src: "/sections/media/images/abhishek-adhikari--itrocks-ai-interview-thumbnail.png", alt: "Abhishek Adhikari AI Trainer in Nepal — Itrocks Ai Interview Thumbnail", caption: "Itrocks Ai Interview Thumbnail" }
+      { src: "/sections/media/images/abhishek-adhikari--secure-developer-conference.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Secure Developer Conference", caption: "Secure Developer Conference" }
+      { src: "/sections/media/images/abhishek-adhikari--wordcamp-kathmandu-speaker.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Wordcamp Kathmandu Speaker", caption: "Wordcamp Kathmandu Speaker" }
+      { src: "/sections/news/images/abhishek-adhikari--github-repo-contributor.png", alt: "Abhishek Adhikari AI Trainer in Nepal — Github Repo Contributor", caption: "Github Repo Contributor" }
+      { src: "/sections/news/images/abhishek-adhikari--hric-steam-program-2025-hetauda.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Hric Steam Program 2025 Hetauda", caption: "Hric Steam Program 2025 Hetauda" }
+      { src: "/sections/news/images/abhishek-adhikari--krishi-pradarshani-2083-speaker.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Krishi Pradarshani 2083 Speaker", caption: "Krishi Pradarshani 2083 Speaker" }
+      { src: "/sections/news/images/abhishek-adhikari--top-10-contributor-prompt-engineering-roadmap.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal — Top 10 Contributor Prompt Engineering Roadmap", caption: "Top 10 Contributor Prompt Engineering Roadmap" }
+        ]}
         />
 
         {/* About */}

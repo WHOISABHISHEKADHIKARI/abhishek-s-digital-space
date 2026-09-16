@@ -22,4 +22,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemaps
-Sitemap: https://abhishekadhikari.com/sitemap.xml
+Sitemap: https://abhishekadhikari.com/sitemap-index.xml
