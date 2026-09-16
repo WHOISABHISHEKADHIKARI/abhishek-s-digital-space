@@ -1593,11 +1593,10 @@ export default function Portfolio() {
                   rows={5}
                   placeholder="What's on your mind?"
                   value={form.message}
-                  onChange={e => { setForm(f => ({ ...f, message: e.target.value })); setFormErrors(f => ({ ...f, message: undefined })); setSubmitError(""); }}
+                  onChange={e => { setForm(f => ({ ...f, message: e.target.value })); setSubmitError(""); }}
                   data-testid="input-message"
-                  className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition resize-none ${formErrors.message ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
+                  className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition resize-none focus:ring-primary/40"
                 />
-                {formErrors.message && <p className="text-xs text-destructive">{formErrors.message}</p>}
               </div>
               {submitError && <p className="text-sm text-destructive" role="alert">{submitError}</p>}
               <button
