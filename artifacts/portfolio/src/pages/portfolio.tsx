@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, MapPin } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Moon, Sun, Mail, Camera, Award, FileImage, Image, ArrowUp, Send, MapPin, Menu, X } from "lucide-react";
 import ImagePreview from "../components/image-preview";
 import ImageWithSkeleton from "../components/image-with-skeleton";
 import ErrorBoundary from "../components/error-boundary";
@@ -212,6 +212,7 @@ export default function Portfolio() {
   const [sending, setSending] = useState(false);
   const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null);
   const [erroredImages, setErroredImages] = useState<Set<string>>(new Set());
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [profileData, setProfileData] = useState<any>(() => {
     if (typeof document === "undefined") return null;
     const el = document.getElementById("profile-data") as HTMLScriptElement | null;
@@ -700,6 +701,13 @@ export default function Portfolio() {
       <header className="fixed top-0 w-full z-nav bg-background/80 backdrop-blur-md border-b">
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200 active:scale-90"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
             {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
@@ -724,6 +732,33 @@ export default function Portfolio() {
             </button>
           </div>
         </nav>
+        {mobileOpen && (
+        <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
+          <nav className="max-w-6xl mx-auto px-6 py-4 space-y-1">
+            {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
+              const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
+              const routePath = section === "projects" ? "/work" : `/${section}`;
+              return (
+                <a
+                  key={section}
+                  href={routePath}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200"
+                >
+                  {label}
+                </a>
+              );
+            })}
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="mt-2 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200"
+            >
+              {isDark ? <Sun size={16} /> : <Moon size={16} />}
+              {isDark ? "Light Mode" : "Dark Mode"}
+            </button>
+          </nav>
+        </div>
+        )}
       </header>
       </ErrorBoundary>
 
