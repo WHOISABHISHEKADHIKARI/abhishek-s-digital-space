@@ -207,7 +207,6 @@ export default function Portfolio() {
   const [showTop, setShowTop] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
-  const [formErrors, setFormErrors] = useState<{ name?: string; email?: string; message?: string }>({});
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [sending, setSending] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -478,22 +477,9 @@ export default function Portfolio() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const validate = () => {
-    const errors: { name?: string; email?: string; message?: string } = {};
-    if (!form.name.trim()) errors.name = "Name is required.";
-    if (!form.email.trim()) errors.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = "Enter a valid email address.";
-    if (!form.message.trim()) errors.message = "Message is required.";
-    if (form.message.trim().length < 10) errors.message = "Message must be at least 10 characters.";
-    return errors;
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError("");
-    const errors = validate();
-    setFormErrors(errors);
-    if (Object.keys(errors).length > 0) return;
     setSending(true);
     try {
       const response = await fetch("https://formspree.io/f/xrebreqr", {
@@ -504,7 +490,6 @@ export default function Portfolio() {
       if (!response.ok) throw new Error(`Form submission failed (${response.status})`);
       setSent(true);
       setForm({ name: "", email: "", message: "" });
-      setFormErrors({});
       setTimeout(() => setSent(false), 4000);
     } catch {
       setSubmitError("Something went wrong with your message. Please email abhishekadhikari1254@gmail.com directly.");
@@ -774,10 +759,10 @@ export default function Portfolio() {
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8">
             <div className="flex-1">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-primary">
-                {profileData.profile.name} — AI Trainer in Nepal
+                {profileData.profile.name}, AI Trainer in Nepal
               </h1>
               <p className="mt-5 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively — from ChatGPT to Claude to Gemini — without needing a technical background.
+                AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively, from ChatGPT to Claude to Gemini, without needing a technical background.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
                 1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
@@ -909,7 +894,7 @@ export default function Portfolio() {
           <SectionHeader
             label="AI Training"
             title="AI training workshops and prompt engineering sessions in Nepal"
-            summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, and professionals — no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
+            summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, and professionals with no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -952,7 +937,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Experience"
             title="Where I have worked"
-            summary="Professional experience across agritech, tech communities, design, and consulting — from an AI Trainer in Nepal to community builder and entrepreneur."
+            summary="Professional experience across agritech, tech communities, design, and consulting, from an AI Trainer in Nepal to community builder and entrepreneur."
           />
           <div className="relative">
             {/* Vertical timeline line */}
@@ -1127,7 +1112,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Leadership"
             title="Community and teaching moments"
-            summary="Community leadership and volunteer work by an AI Trainer in Nepal — events, certificates, and facilitation across Hetauda and beyond."
+            summary="Community leadership and volunteer work by an AI Trainer in Nepal, events, certificates, and facilitation across Hetauda and beyond."
           />
           <div className="grid md:grid-cols-2 gap-6">
             {volunteering.map((vol: any, i: number) => {
@@ -1211,7 +1196,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Certificates"
             title="Certifications I hold"
-            summary="Professional certifications earned by an AI Trainer in Nepal — Google UX, digital marketing, IoT, and community leadership credentials."
+            summary="Professional certifications earned by an AI Trainer in Nepal: Google UX, digital marketing, IoT, and community leadership credentials."
           />
           {certifications.length > 0 ? (
           <>
@@ -1333,7 +1318,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Recognition"
             title="News and public proof"
-            summary="News coverage, media mentions, and public recognition of an AI Trainer in Nepal — ICT Frame, HRIC, Hult Prize, AWS conferences, and more."
+            summary="News coverage, media mentions, and public recognition of an AI Trainer in Nepal: ICT Frame, HRIC, Hult Prize, AWS conferences, and more."
           />
           {newsMedia.length > 0 ? (
           <>
@@ -1474,7 +1459,7 @@ export default function Portfolio() {
           <SectionHeader
             label="Recommendations"
             title="What people say"
-            summary="LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — community building, leadership, and technical expertise."
+            summary="LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal for community building, leadership, and technical expertise."
           />
           <div className="grid md:grid-cols-2 gap-6">
             {recommendations.map((rec: any, i: number) => {
@@ -1583,11 +1568,10 @@ export default function Portfolio() {
                     required
                     placeholder="Your name"
                     value={form.name}
-                    onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setFormErrors(f => ({ ...f, name: undefined })); setSubmitError(""); }}
+                    onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setSubmitError(""); }}
                     data-testid="input-name"
-                    className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition ${formErrors.name ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
+                    className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition focus:ring-primary/40"
                   />
-                  {formErrors.name && <p className="text-xs text-destructive">{formErrors.name}</p>}
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Email <span className="text-destructive">*</span></label>
@@ -1596,11 +1580,10 @@ export default function Portfolio() {
                     required
                     placeholder="you@example.com"
                     value={form.email}
-                    onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setFormErrors(f => ({ ...f, email: undefined })); setSubmitError(""); }}
+                    onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setSubmitError(""); }}
                     data-testid="input-email"
-                    className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition ${formErrors.email ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
+                    className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition focus:ring-primary/40"
                   />
-                  {formErrors.email && <p className="text-xs text-destructive">{formErrors.email}</p>}
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
@@ -1662,7 +1645,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <div className="font-bold text-lg mb-1">{profileData.profile.name}</div>
-            <div className="text-sm text-muted-foreground">AI Trainer in Nepal — agritech entrepreneur and community builder.</div>
+            <div className="text-sm text-muted-foreground">AI Trainer in Nepal, agritech entrepreneur and community builder.</div>
           </div>
           <div className="flex gap-4">
             <a href={profileData.profile.linkedin} aria-label="LinkedIn profile" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
