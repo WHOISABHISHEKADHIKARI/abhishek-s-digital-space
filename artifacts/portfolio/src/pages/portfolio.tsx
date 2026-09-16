@@ -864,8 +864,8 @@ export default function Portfolio() {
             { src: "/sections/news/images/abhishek-adhikari--ict-frame-featured.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal — Ict Frame Featured", caption: "Ict Frame Featured" },
             { src: "/sections/news/images/abhishek-adhikari--krishi-pradarshani-2083-speaker.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Krishi Pradarshani 2083 Speaker", caption: "Krishi Pradarshani 2083 Speaker" },
             { src: "/sections/news/images/abhishek-adhikari--top-10-contributor-prompt-engineering-roadmap.jpg", alt: "Abhishek Adhikari AI Trainer in Nepal — Top 10 Contributor Prompt Engineering Roadmap", caption: "Top 10 Contributor Prompt Engineering Roadmap" },
-        ]}        </section>
-        </ErrorBoundary>
+          ]}
+        />
 
         {/* AI Training */}
         <ErrorBoundary section="AI Training">
