@@ -210,6 +210,7 @@ export default function Portfolio() {
   const [formErrors, setFormErrors] = useState<{ name?: string; email?: string; message?: string }>({});
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [preview, setPreview] = useState<{ src: string; alt: string } | null>(null);
   const [erroredImages, setErroredImages] = useState<Set<string>>(new Set());
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -489,6 +490,7 @@ export default function Portfolio() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
     const errors = validate();
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) return;
@@ -499,14 +501,13 @@ export default function Portfolio() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: form.name, email: form.email, message: form.message }),
       });
-      if (response.ok) {
-        setSent(true);
-        setForm({ name: "", email: "", message: "" });
-        setFormErrors({});
-        setTimeout(() => setSent(false), 4000);
-      }
+      if (!response.ok) throw new Error(`Form submission failed (${response.status})`);
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+      setFormErrors({});
+      setTimeout(() => setSent(false), 4000);
     } catch {
-      setFormErrors({ name: "Something went wrong. Please try again later." });
+      setSubmitError("Something went wrong with your message. Please email abhishekadhikari1254@gmail.com directly.");
     } finally {
       setSending(false);
     }
@@ -1554,8 +1555,8 @@ export default function Portfolio() {
                     </span>
                   </div>
                 )}
-                <a href={`mailto:${profileData.profile.email ?? "abhishek@abhishekadhikari.com"}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={16} /> {profileData.profile.email ?? "abhishek@abhishekadhikari.com"}
+                <a href={`mailto:${profileData.profile.email ?? "abhishekadhikari1254@gmail.com"}`} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Mail size={16} /> {profileData.profile.email ?? "abhishekadhikari1254@gmail.com"}
                 </a>
                 <a href={profileData.profile.linkedin} target="_blank" rel="me noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin size={16} /> LinkedIn
@@ -1582,7 +1583,7 @@ export default function Portfolio() {
                     required
                     placeholder="Your name"
                     value={form.name}
-                    onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setFormErrors(f => ({ ...f, name: undefined })); }}
+                    onChange={e => { setForm(f => ({ ...f, name: e.target.value })); setFormErrors(f => ({ ...f, name: undefined })); setSubmitError(""); }}
                     data-testid="input-name"
                     className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition ${formErrors.name ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
                   />
@@ -1595,7 +1596,7 @@ export default function Portfolio() {
                     required
                     placeholder="you@example.com"
                     value={form.email}
-                    onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setFormErrors(f => ({ ...f, email: undefined })); }}
+                    onChange={e => { setForm(f => ({ ...f, email: e.target.value })); setFormErrors(f => ({ ...f, email: undefined })); setSubmitError(""); }}
                     data-testid="input-email"
                     className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition ${formErrors.email ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
                   />
@@ -1609,12 +1610,13 @@ export default function Portfolio() {
                   rows={5}
                   placeholder="What's on your mind?"
                   value={form.message}
-                  onChange={e => { setForm(f => ({ ...f, message: e.target.value })); setFormErrors(f => ({ ...f, message: undefined })); }}
+                  onChange={e => { setForm(f => ({ ...f, message: e.target.value })); setFormErrors(f => ({ ...f, message: undefined })); setSubmitError(""); }}
                   data-testid="input-message"
                   className={`rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 transition resize-none ${formErrors.message ? "border-destructive/50 focus:ring-destructive/40" : "focus:ring-primary/40"}`}
                 />
                 {formErrors.message && <p className="text-xs text-destructive">{formErrors.message}</p>}
               </div>
+              {submitError && <p className="text-sm text-destructive" role="alert">{submitError}</p>}
               <button
                 type="submit"
                 data-testid="button-submit"

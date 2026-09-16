@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/ai-training", "destination": "/ai-training/index.html" },
+    { "source": "/experience", "destination": "/experience/index.html" },
+    { "source": "/work", "destination": "/work/index.html" },
+    { "source": "/volunteering", "destination": "/volunteering/index.html" },
+    { "source": "/certifications", "destination": "/certifications/index.html" },
+    { "source": "/news", "destination": "/news/index.html" },
+    { "source": "/media", "destination": "/media/index.html" },
+    { "source": "/recommendations", "destination": "/recommendations/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/:path*", "destination": "/index.html" }
+  ]
+}
