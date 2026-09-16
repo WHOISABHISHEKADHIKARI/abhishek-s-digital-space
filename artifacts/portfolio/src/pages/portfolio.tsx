@@ -344,10 +344,10 @@ export default function Portfolio() {
           "@type": "ListItem",
           position: i + 1,
           item: {
-            "@type": "Review",
-            author: { "@type": "Person", name: r.name },
-            reviewBody: r.excerpt?.slice(0, 200) || "",
-            itemReviewed: { "@type": "Person", name },
+            "@type": "Person",
+            name: r.name,
+            jobTitle: r.title,
+            description: r.excerpt?.slice(0, 200) || "",
           },
         })),
       });
