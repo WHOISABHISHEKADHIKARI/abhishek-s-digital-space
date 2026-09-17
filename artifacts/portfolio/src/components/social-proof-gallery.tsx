@@ -83,7 +83,7 @@ export default function SocialProofGallery({ items }: SocialProofGalleryProps) {
       aria-label="Social proof — sessions, workshops and community highlights"
       className="mt-6 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden border-y border-border/40 bg-muted/30 py-1"
     >
-      <div className="marquee-track flex w-max gap-2 px-2">
+      <ul className="marquee-track flex w-max gap-2 px-2 list-none">
         {items.length > 0 && [...items, ...items].map((item, index) => (
           <motion.li
             key={`${item.src}-${index % items.length}`}
@@ -104,7 +104,7 @@ export default function SocialProofGallery({ items }: SocialProofGalleryProps) {
             />
           </motion.li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
