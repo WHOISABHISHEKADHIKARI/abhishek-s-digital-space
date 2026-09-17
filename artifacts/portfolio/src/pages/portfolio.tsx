@@ -1599,6 +1599,11 @@ export default function Portfolio() {
                 />
               </div>
               {submitError && <p className="text-sm text-destructive" role="alert">{submitError}</p>}
+              {sent && (
+                <p className="text-sm font-medium" style={{ color: "oklch(0.52 0.16 152)" }} role="status">
+                  Thank you. Your message has been sent. I will reply as soon as I can.
+                </p>
+              )}
               <button
                 type="submit"
                 data-testid="button-submit"
