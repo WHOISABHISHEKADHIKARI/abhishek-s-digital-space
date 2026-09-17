@@ -189,7 +189,7 @@ function BlogPosts({ spring, prefersReducedMotion }: { spring: any; prefersReduc
               <span className="text-xs font-mono text-muted-foreground">{post.date}</span>
               <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{post.publication}</span>
             </div>
-            <h3 className="font-bold text-base group-hover:text-primary transition-colors">{post.title}</h3>
+            <p className="font-bold text-base group-hover:text-primary transition-colors">{post.title}</p>
             <p className="text-sm text-muted-foreground leading-relaxed">{post.summary}</p>
             <div className="flex flex-wrap gap-1.5 pt-1">
               {post.tags.map((tag: string, t: number) => (
@@ -688,7 +688,7 @@ export default function Portfolio() {
       <ErrorBoundary section="Navbar">
       <header className="fixed top-0 w-full z-nav bg-background/80 backdrop-blur-md border-b">
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href={profileData.profile.website} className="font-bold text-lg tracking-tight" rel="author">AA.</a>
+          <a href={profileData.profile.website} aria-label="Home" className="font-bold text-lg tracking-tight" rel="author">AA.</a>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200 active:scale-90"
@@ -922,7 +922,7 @@ export default function Portfolio() {
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">{item.type}</span>
                 </div>
-                <h3 className="font-semibold text-base leading-tight">{item.title}</h3>
+                <p className="font-semibold text-base leading-tight">{item.title}</p>
                 <div className="text-xs text-primary mt-1">{item.org}</div>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -1000,7 +1000,7 @@ export default function Portfolio() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                            <h3 className="text-base font-semibold leading-tight">{exp.role}</h3>
+                            <p className="text-base font-semibold leading-tight">{exp.role}</p>
                             <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{exp.startDate} – {exp.endDate}</span>
                           </div>
                           <div className="flex items-center gap-2 mt-0.5">
@@ -1098,7 +1098,7 @@ export default function Portfolio() {
                     <span className={`self-start text-xs font-semibold px-2.5 py-0.5 rounded-full ${badgeClass}`}>
                       {item.category}
                     </span>
-                    <h3 className="font-semibold text-base text-foreground leading-tight">{item.name}</h3>
+                    <p className="font-semibold text-base text-foreground leading-tight">{item.name}</p>
                     <span className="text-xs text-muted-foreground truncate">{item.url.replace(/^https?:\/\//, "")}</span>
                   </div>
                 </motion.a>
@@ -1182,7 +1182,7 @@ export default function Portfolio() {
                   {/* Card body */}
                   <div className="p-5 flex flex-col gap-1">
                     <div className="text-xs font-mono text-muted-foreground">{vol.date || vol.startDate}</div>
-                    <h3 className="font-bold text-base leading-tight">{vol.role}</h3>
+                    <p className="font-bold text-base leading-tight">{vol.role}</p>
                     <div className="text-primary text-sm mb-2">{vol.organization}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{vol.summary}</p>
                   </div>
@@ -1273,7 +1273,7 @@ export default function Portfolio() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-bold text-sm leading-snug text-foreground line-clamp-2">{cert.title}</h3>
+                      <p className="font-bold text-sm leading-snug text-foreground line-clamp-2">{cert.title}</p>
 
                       {/* Skills */}
                       {cert.skills && cert.skills.length > 0 && (
@@ -1371,7 +1371,7 @@ export default function Portfolio() {
                         </span>
                         <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
                       </div>
-                      <h3 className="font-bold text-sm leading-snug">{item.title}</h3>
+                      <p className="font-bold text-sm leading-snug">{item.title}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{item.description}</p>
                       <div className="text-xs text-primary/70 font-medium">{item.source}</div>
                       {item.url && (
@@ -1433,7 +1433,7 @@ export default function Portfolio() {
                     </span>
                     <span className="text-xs font-mono text-muted-foreground">{item.date}</span>
                   </div>
-                  <h3 className="font-bold text-base leading-snug">{item.title}</h3>
+                  <p className="font-bold text-base leading-snug">{item.title}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">{item.description}</p>
                   <div className="text-xs text-primary/70 font-medium">{item.outlet}</div>
                   {item.url && (
@@ -1511,7 +1511,7 @@ export default function Portfolio() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-bold text-sm">{rec.name}</h3>
+                      <p className="font-bold text-sm">{rec.name}</p>
                       <div className="text-xs text-muted-foreground mt-0.5 line-clamp-1">{rec.title}</div>
                       {rec.relationship && (
                         <div className="text-xs text-primary/70 mt-0.5">{rec.relationship}</div>
