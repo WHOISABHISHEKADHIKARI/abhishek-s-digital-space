@@ -30,17 +30,19 @@ function SectionHeader({
   label,
   title,
   summary,
+  headingId,
 }: {
   label: string;
   title: string;
   summary?: string;
+  headingId?: string;
 }) {
   return (
     <div className="mb-8 max-w-2xl">
       <div className="text-xs font-semibold tracking-wide text-primary mb-2">
         {label}
       </div>
-      <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+      <h2 id={headingId} className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
         {title}
       </h2>
       {summary && (
@@ -772,7 +774,9 @@ export default function Portfolio() {
             <div className="shrink-0">
               <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border shadow-xl bg-muted">
                 <ImageWithSkeleton
-                  src="/abhishek-adhikari-ai-trainer-nepal-hero.jpg"
+                  src="/abhishek-adhikari-ai-trainer-nepal-hero-tiny.jpg"
+                  srcSet="/abhishek-adhikari-ai-trainer-nepal-hero-416.jpg 416w, /abhishek-adhikari-ai-trainer-nepal-hero-tiny.jpg 520w"
+                  sizes="(min-width: 768px) 208px, 160px"
                   alt="Abhishek Adhikari — AI Trainer in Nepal. Portrait of the prompt engineering specialist and AI literacy educator from Hetauda, Nepal, trained 1,500+ students."
                   width={208}
                   height={208}
@@ -890,9 +894,10 @@ export default function Portfolio() {
 
         {/* AI Training */}
         <ErrorBoundary section="AI Training">
-        <section id="ai-training">
+        <section id="ai-training" aria-labelledby="ai-training-heading">
           <SectionHeader
             label="AI Training"
+            headingId="ai-training-heading"
             title="AI training workshops and prompt engineering sessions in Nepal"
             summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, and professionals with no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
           />
@@ -933,9 +938,10 @@ export default function Portfolio() {
 
         {/* Experience */}
         <ErrorBoundary section="Experience">
-        <section id="experience">
+        <section id="experience" aria-labelledby="experience-heading">
           <SectionHeader
             label="Experience"
+            headingId="experience-heading"
             title="Where I have worked"
             summary="Professional experience across agritech, tech communities, design, and consulting, from an AI Trainer in Nepal to community builder and entrepreneur."
           />
@@ -1031,9 +1037,10 @@ export default function Portfolio() {
 
         {/* Projects */}
         <ErrorBoundary section="Projects">
-        <section id="projects">
+        <section id="projects" aria-labelledby="projects-heading">
           <SectionHeader
             label="Projects"
+            headingId="projects-heading"
             title="What I have built"
             summary="Digital products built by an AI Trainer in Nepal across agriculture, SEO, coffee, and business sectors."
           />
@@ -1108,9 +1115,10 @@ export default function Portfolio() {
 
         {/* Volunteering */}
         <ErrorBoundary section="Volunteering">
-        <section id="volunteering">
+<section id="volunteering" aria-labelledby="volunteering-heading">
           <SectionHeader
-            label="Leadership"
+            label="Volunteering & Workshops"
+            headingId="volunteering-heading"
             title="Community and teaching moments"
             summary="Community leadership and volunteer work by an AI Trainer in Nepal, events, certificates, and facilitation across Hetauda and beyond."
           />
@@ -1192,9 +1200,10 @@ export default function Portfolio() {
 
         {/* Certifications */}
         <ErrorBoundary section="Certifications">
-        <section id="certifications">
+        <section id="certifications" aria-labelledby="certifications-heading">
           <SectionHeader
             label="Certificates"
+            headingId="certifications-heading"
             title="Certifications I hold"
             summary="Professional certifications earned by an AI Trainer in Nepal: Google UX, digital marketing, IoT, and community leadership credentials."
           />
@@ -1288,6 +1297,7 @@ export default function Portfolio() {
                         <div className="flex-1" />
                         {cert.url ? (
                           <a href={cert.url} target="_blank" rel="noopener noreferrer"
+                            aria-label={`Verify ${cert.title} credential`}
                             className="text-xs text-primary hover:text-primary/80 font-medium flex items-center gap-1 transition-colors">
                             Verify <ExternalLink size={11} />
                           </a>
@@ -1314,9 +1324,10 @@ export default function Portfolio() {
 
         {/* News & Media */}
         <ErrorBoundary section="News">
-        <section id="news">
+        <section id="news" aria-labelledby="news-heading">
           <SectionHeader
             label="Recognition"
+            headingId="news-heading"
             title="News and public proof"
             summary="News coverage, media mentions, and public recognition of an AI Trainer in Nepal: ICT Frame, HRIC, Hult Prize, AWS conferences, and more."
           />
@@ -1365,6 +1376,7 @@ export default function Portfolio() {
                       <div className="text-xs text-primary/70 font-medium">{item.source}</div>
                       {item.url && (
                         <a href={item.url} target="_blank" rel="noopener noreferrer"
+                          aria-label={`View ${item.title} coverage on ${item.source}`}
                           className="text-xs text-primary hover:underline flex items-center gap-1 w-fit">
                           <ExternalLink size={12} /> View coverage
                         </a>
@@ -1388,9 +1400,10 @@ export default function Portfolio() {
 
         {/* Interviews & Features */}
         <ErrorBoundary section="Interviews and Features">
-        <section id="media">
+        <section id="media" aria-labelledby="media-heading">
           <SectionHeader
             label="Media appearances"
+            headingId="media-heading"
             title="Interviews and features"
             summary="Selected conversations, bylines, and independently published profiles documenting the work of an AI Trainer in Nepal across agritech, AI, open source, and digital innovation."
           />
@@ -1447,17 +1460,18 @@ export default function Portfolio() {
 
         {/* Blog */}
         <ErrorBoundary section="Blog">
-        <section id="blog">
-          <SectionHeader label="Blog" title="What I write on Medium" summary="Articles by an AI Trainer in Nepal on design trends, agritech, React performance, content strategy, and no-code development." />
+        <section id="blog" aria-labelledby="blog-heading">
+          <SectionHeader headingId="blog-heading" label="Blog" title="What I write on Medium" summary="Articles by an AI Trainer in Nepal on design trends, agritech, React performance, content strategy, and no-code development." />
           <BlogPosts spring={spring} prefersReducedMotion={prefersReducedMotion} />
         </section>
         </ErrorBoundary>
 
         {/* Recommendations */}
         <ErrorBoundary section="Recommendations">
-        <section id="recommendations">
+        <section id="recommendations" aria-labelledby="recommendations-heading">
           <SectionHeader
             label="Recommendations"
+            headingId="recommendations-heading"
             title="What people say"
             summary="LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal for community building, leadership, and technical expertise."
           />
@@ -1518,9 +1532,10 @@ export default function Portfolio() {
 
         {/* Contact */}
         <ErrorBoundary section="Contact">
-        <section id="contact">
+        <section id="contact" aria-labelledby="contact-heading">
           <SectionHeader
             label="Contact"
+            headingId="contact-heading"
             title="Get in touch"
             summary="Book an AI training workshop in Nepal, discuss prompt engineering, or collaborate on agritech and community building."
           />
