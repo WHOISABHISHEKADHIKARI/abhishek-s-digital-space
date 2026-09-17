@@ -2,7 +2,7 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import { readFileSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 const port = Number(process.env.PORT) || 8080;
@@ -57,34 +57,33 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
 };
 
 function routeHtmlPlugin(): Plugin {
+  const distDir = path.resolve(import.meta.dirname, "dist/public");
+  const emitRoutePages = () => {
+    const base = readFileSync(path.join(distDir, "index.html"), "utf8");
+    for (const [route, meta] of Object.entries(ROUTE_META)) {
+      const canonical = `${SITE_URL}${route}`;
+      const escapedTitle = meta.title.replace(/&/g, "&amp;");
+      let out = base;
+      out = out.replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonical}" />`);
+      out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapedTitle}</title>`);
+      out = out.replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${meta.description}" />`);
+      out = out.replace(/<meta property="og:url" content="[^"]*"\s*\/>/, `<meta property="og:url" content="${canonical}" />`);
+      out = out.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, `<meta property="og:title" content="${escapedTitle}" />`);
+      out = out.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, `<meta property="og:description" content="${meta.description}" />`);
+      out = out.replace(/<meta name="twitter:url" content="[^"]*"\s*\/>/, `<meta name="twitter:url" content="${canonical}" />`);
+      out = out.replace(/<meta name="twitter:title" content="[^"]*"\s*\/>/, `<meta name="twitter:title" content="${escapedTitle}" />`);
+      out = out.replace(/<meta name="twitter:description" content="[^"]*"\s*\/>/, `<meta name="twitter:description" content="${meta.description}" />`);
+
+      const dir = path.join(distDir, route.replace(/^\//, ""));
+      mkdirSync(dir, { recursive: true });
+      writeFileSync(path.join(dir, "index.html"), out);
+    }
+  };
   return {
     name: "generate-route-pages",
     apply: "build",
-    generateBundle(_options, bundle) {
-      const htmlAsset = bundle["index.html"];
-      if (!htmlAsset || htmlAsset.type !== "asset") return;
-      const base = String(htmlAsset.source);
-
-      for (const [route, meta] of Object.entries(ROUTE_META)) {
-        const canonical = `${SITE_URL}${route}`;
-        const escapedTitle = meta.title.replace(/&/g, "&amp;");
-        let out = base;
-        out = out.replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonical}" />`);
-        out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapedTitle}</title>`);
-        out = out.replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${meta.description}" />`);
-        out = out.replace(/<meta property="og:url" content="[^"]*"\s*\/>/, `<meta property="og:url" content="${canonical}" />`);
-        out = out.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, `<meta property="og:title" content="${escapedTitle}" />`);
-        out = out.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, `<meta property="og:description" content="${meta.description}" />`);
-        out = out.replace(/<meta name="twitter:url" content="[^"]*"\s*\/>/, `<meta name="twitter:url" content="${canonical}" />`);
-        out = out.replace(/<meta name="twitter:title" content="[^"]*"\s*\/>/, `<meta name="twitter:title" content="${escapedTitle}" />`);
-        out = out.replace(/<meta name="twitter:description" content="[^"]*"\s*\/>/, `<meta name="twitter:description" content="${meta.description}" />`);
-
-        this.emitFile({
-          type: "asset",
-          fileName: `${route.replace(/^\//, "")}/index.html`,
-          source: out,
-        });
-      }
+    closeBundle() {
+      emitRoutePages();
     },
   };
 }
