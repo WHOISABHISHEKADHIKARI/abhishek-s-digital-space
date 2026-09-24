@@ -1329,13 +1329,13 @@ export default function Portfolio() {
 
         {/* News & Media */}
         <ErrorBoundary section="News">
-        <section id="news" aria-labelledby="news-heading">
-          <SectionHeader
-            label="Recognition"
-            headingId="news-heading"
-            title="News and public proof"
-            summary="News coverage, media mentions, and public recognition of an AI Trainer in Nepal: ICT Frame, HRIC, Hult Prize, AWS conferences, and more."
-          />
+<section id="news" aria-labelledby="news-heading">
+           <SectionHeader
+             label="Recognition & Media"
+             headingId="news-heading"
+             title="News, public proof, and media appearances"
+             summary="Recognition, news coverage, interviews, and features documenting the work of an AI Trainer in Nepal across ICT Frame, HRIC, Hult Prize, AWS, agritech, AI, and open source."
+           />
           {newsMedia.length > 0 ? (
           <>
             <div className="grid md:grid-cols-2 gap-4">
@@ -1400,20 +1400,14 @@ export default function Portfolio() {
         ) : (
           <EmptyState message="Nothing to show yet." />
         )}
-        </section>
-        </ErrorBoundary>
 
-        {/* Interviews & Features */}
-        <ErrorBoundary section="Interviews and Features">
-        <section id="media" aria-labelledby="media-heading">
-          <SectionHeader
-            label="Media appearances"
-            headingId="media-heading"
-            title="Interviews and features"
-            summary="Selected conversations, bylines, and independently published profiles documenting the work of an AI Trainer in Nepal across agritech, AI, open source, and digital innovation."
-          />
-          {mediaAppearances.length > 0 ? (
-          <>
+        {mediaAppearances.length > 0 ? (
+        <>
+            <div className="my-8 flex items-center gap-3">
+              <span className="text-lg font-bold">Media appearances</span>
+              <span className="text-sm text-muted-foreground">— Interviews and features</span>
+              <div className="h-px flex-1 bg-border" aria-hidden="true" />
+            </div>
             <div className="grid md:grid-cols-2 gap-4">
               {mediaAppearances.map((item: any, i: number) => (
                 <motion.article
@@ -1456,10 +1450,10 @@ export default function Portfolio() {
               hiddenCount={((profileData as any).mediaAppearances ?? []).length - sectionLimits.media}
               onClick={() => toggleSection("media")}
             />
-          </>
-          ) : (
-            <EmptyState message="Media appearances will be added soon." />
-          )}
+        </>
+        ) : (
+          <EmptyState message="Media appearances will be added soon." />
+        )}
         </section>
         </ErrorBoundary>
 
