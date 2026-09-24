@@ -839,7 +839,6 @@ export default function Portfolio() {
             { src: "/sections/volunteering/images/abhishek-adhikari--ai-for-hr.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Ai For Hr", caption: "Ai For Hr" },
             { src: "/sections/volunteering/images/abhishek-adhikari--ai-training-j-and-b.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Ai Training J And B", caption: "Ai Training J And B" },
             { src: "/sections/volunteering/images/abhishek-adhikari--arduino-robotics-workshop-trainer.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Arduino Robotics Workshop Trainer", caption: "Arduino Robotics Workshop Trainer" },
-            { src: "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Aws Cloud Innovation Day Hetauda 2026", caption: "Aws Cloud Innovation Day Hetauda 2026" },
             { src: "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp", alt: "Abhishek Adhikari AI Trainer in Nepal — Aws Cloud Innovation Day Hetauda 2026", caption: "Aws Cloud Innovation Day Hetauda 2026" },
             { src: "/sections/volunteering/images/abhishek-adhikari--aws-training-nepal.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Aws Training Nepal", caption: "Aws Training Nepal" },
             { src: "/sections/volunteering/images/abhishek-adhikari--bagmati-municipality-session.jpeg", alt: "Abhishek Adhikari AI Trainer in Nepal — Bagmati Municipality Session", caption: "Bagmati Municipality Session" },
