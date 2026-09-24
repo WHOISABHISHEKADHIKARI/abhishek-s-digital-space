@@ -6,6 +6,24 @@ import ImageWithSkeleton from "../components/image-with-skeleton";
 import ErrorBoundary from "../components/error-boundary";
 import SocialProofGallery from "../components/social-proof-gallery";
 
+function toIsoDate(value: unknown): string | undefined {
+  if (!value) return undefined;
+  const s = String(value).trim();
+  const months: Record<string, number> = {
+    jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+    jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+  };
+  let m = s.match(/^(\d{4})$/);
+  if (m) return `${m[1]}-01-01`;
+  m = s.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+  if (m) return `${m[1]}-${m[2]}${m[3] ? `-${m[3]}` : "-01"}`;
+  m = s.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{4})$/i);
+  if (m) return `${m[2]}-${String(months[m[1].toLowerCase().slice(0, 3)]).padStart(2, "0")}-01`;
+  m = s.match(/^(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{4})$/i);
+  if (m) return `${m[3]}-${String(months[m[2].toLowerCase().slice(0, 3)]).padStart(2, "0")}-${String(m[1]).padStart(2, "0")}`;
+  return undefined;
+}
+
 function injectStructuredData(id: string, data: Record<string, unknown>) {
   const existing = document.querySelector(`script[data-dynamic-ld="${id}"]`);
   if (existing) existing.remove();
@@ -276,18 +294,23 @@ export default function Portfolio() {
         "@type": "ItemList",
         name: `${name} Volunteering & Community Work`,
         description: "Community service, teaching, and leadership roles by Abhishek Adhikari",
-        itemListElement: profileData.volunteering.map((v: any, i: number) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          item: {
-            "@type": "VolunteerAction",
-            name: v.role,
-            description: v.summary?.slice(0, 200) || "",
-            agent: { "@type": "Person", name },
-            participant: v.organization,
-            startDate: v.date || v.startDate,
-          },
-        })),
+        itemListElement: profileData.volunteering.map((v: any, i: number) => {
+          const start = toIsoDate(v.date || v.startDate);
+          const end = toIsoDate(v.endDate);
+          return {
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "VolunteerAction",
+              name: v.role,
+              description: v.summary?.slice(0, 200) || "",
+              agent: { "@type": "Person", name },
+              participant: v.organization,
+              ...(start ? { startDate: start } : {}),
+              ...(end ? { endDate: end } : {}),
+            },
+          };
+        }),
       });
     }
 
@@ -419,31 +442,53 @@ export default function Portfolio() {
 
       // Event schemas for volunteering items that have dates
       if (profileData.volunteering?.length) {
+        const eventImage = profile.image
+          ? `https://abhishekadhikari.com${profile.image.startsWith("/") ? profile.image : "/" + profile.image}`
+          : "https://abhishekadhikari.com/abhishek-adhikari-social.webp";
         const events = profileData.volunteering
-          .filter((v: any) => v.date || v.startDate)
+          .filter((v: any) => toIsoDate(v.date || v.startDate || v.endDate))
           .slice(0, 10)
-          .map((v: any, i: number) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            item: {
-              "@type": "Event",
-              name: v.role,
-              description: v.summary?.slice(0, 200) || "",
-              organizer: v.organization,
-              location: {
-                "@type": "Place",
-                name: profile.address.locality,
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: profile.address.locality,
-                  addressRegion: profile.address.region,
-                  addressCountry: profile.address.countryCode,
+          .map((v: any, i: number) => {
+            const start = toIsoDate(v.date || v.startDate);
+            const end = toIsoDate(v.endDate);
+            return {
+              "@type": "ListItem",
+              position: i + 1,
+              item: {
+                "@type": "Event",
+                name: v.role,
+                description: v.summary?.slice(0, 200) || "",
+                url: profile.website,
+                image: v.images?.[0]?.imageUrl ? `https://abhishekadhikari.com${v.images[0].imageUrl.startsWith("/") ? v.images[0].imageUrl : "/" + v.images[0].imageUrl}` : eventImage,
+                organizer: {
+                  "@type": "Organization",
+                  name: v.organization,
+                  url: "https://abhishekadhikari.com/volunteering",
+                },
+                performer: { "@type": "Person", name },
+                eventStatus: "https://schema.org/EventCompleted",
+                location: {
+                  "@type": "Place",
+                  name: profile.address.locality,
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: profile.address.locality,
+                    addressRegion: profile.address.region,
+                    addressCountry: profile.address.countryCode,
+                  },
+                },
+                ...(start ? { startDate: start } : {}),
+                ...(end ? { endDate: end } : {}),
+                offers: {
+                  "@type": "Offer",
+                  url: profile.website,
+                  price: "0",
+                  priceCurrency: "NPR",
+                  availability: "https://schema.org/EventScheduled",
                 },
               },
-              ...(v.date ? { startDate: v.date } : {}),
-              ...(v.startDate ? { startDate: v.startDate } : {}),
-            },
-          }));
+            };
+          });
         if (events.length) {
           injectStructuredData("events", {
             "@context": "https://schema.org",
