@@ -1,0 +1,56 @@
+name: Validate Event Submission
+
+on:
+  pull_request:
+    paths:
+      - "docs/community/events/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reject if PR touches files outside docs/community/events/
+        run: |
+          OUT_OF_SCOPE=$(git diff --name-only origin/main...HEAD | grep -v '^docs/community/events/' || true)
+          if [ -n "$OUT_OF_SCOPE" ]; then
+            echo "PR modifies files outside the events folder:"
+            echo "$OUT_OF_SCOPE"
+            exit 1
+          fi
+
+      - name: Reject binary/oversized files
+        run: |
+          for f in $(git diff --name-only origin/main...HEAD); do
+            size=$(stat -c%s "$f" 2>/dev/null || echo 0)
+            if [ "$size" -gt 20000 ]; then
+              echo "File $f is ${size} bytes — event files must be text only, host images externally."
+              exit 1
+            fi
+          done
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install validators
+        run: npm install --no-save ajv ajv-formats gray-matter
+
+      - name: Validate front matter against schema
+        run: node scripts/validate-event-schema.js
+
+      - name: Check external links resolve
+        run: node scripts/check-event-links.js
+
+      - name: Check for duplicate submissions
+        run: node scripts/check-event-duplicates.js
+
+      - name: Label ready for triage
+        if: success()
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: ready-for-triage

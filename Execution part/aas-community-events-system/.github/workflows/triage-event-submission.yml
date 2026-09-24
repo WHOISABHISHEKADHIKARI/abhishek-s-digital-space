@@ -1,0 +1,43 @@
+name: Triage Event Submission
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  triage:
+    if: github.event.label.name == 'ready-for-triage'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      models: read          # enables free GitHub Models inference, no API key needed
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get changed event file
+        id: file
+        run: |
+          FILE=$(git diff --name-only origin/main...HEAD -- docs/community/events/ | head -n1)
+          echo "path=$FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Run rubric-bound classification
+        id: classify
+        uses: actions/ai-inference@v1     # GitHub Models action; verify current name/version in GitHub docs
+        with:
+          model: openai/gpt-4o-mini       # swap for any free-tier model available under GitHub Models
+          system-prompt-file: docs/community/TRIAGE.md
+          prompt: ${{ steps.file.outputs.path }}
+
+      - name: Apply label from verdict
+        run: |
+          echo "${{ steps.classify.outputs.response }}"
+          # scripts/apply-triage-label.js parses the one-line verdict
+          # and applies auto-approve-eligible / needs-human-review / reject-with-reason
+          node scripts/apply-triage-label.js --pr ${{ github.event.pull_request.number }} \
+            --verdict "${{ steps.classify.outputs.response }}"
+
+  # Fallback note: if GitHub Models is unavailable or rate-limited, remove
+  # this job — everything that passes Stage 2 will simply sit at
+  # `ready-for-triage` for a maintainer (or a local OpenCode session) to
+  # label manually. The pipeline degrades gracefully, it does not break.

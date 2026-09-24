@@ -1,0 +1,38 @@
+name: Draft Event PR from Submission
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  draft-pr:
+    if: contains(github.event.issue.labels.*.name, 'event-submission')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse issue form
+        id: parse
+        uses: stefanbuck/github-issue-parser@v3
+        with:
+          template-path: .github/ISSUE_TEMPLATE/event-submission.yml
+
+      - name: Render event markdown from template
+        run: |
+          python3 scripts/render_event_from_issue.py \
+            --payload '${{ steps.parse.outputs.jsonString }}' \
+            --template docs/community/EVENT_TEMPLATE.md \
+            --out-dir docs/community/events/
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Add event: ${{ steps.parse.outputs.issueparser_title }}"
+          branch: "event/${{ github.event.issue.number }}"
+          title: "Event: ${{ steps.parse.outputs.issueparser_title }}"
+          body: "Auto-drafted from #${{ github.event.issue.number }}. Do not edit fields outside the generated file."
+          labels: event-submission

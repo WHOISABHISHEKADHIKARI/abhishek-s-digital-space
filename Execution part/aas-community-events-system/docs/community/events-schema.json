@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AAS Community Event",
+  "type": "object",
+  "required": [
+    "title", "date", "type", "event_name", "location", "format",
+    "presenter", "audience", "summary", "tags"
+  ],
+  "properties": {
+    "title": { "type": "string", "minLength": 8, "maxLength": 140 },
+    "date": { "type": "string", "format": "date" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "workshop", "conference-talk", "hackathon", "bootcamp",
+        "meetup", "webinar", "corporate-training", "intro-session",
+        "skill-showcase"
+      ]
+    },
+    "event_name": { "type": "string", "minLength": 2, "maxLength": 140 },
+    "location": { "type": "string", "minLength": 2, "maxLength": 140 },
+    "format": { "type": "string", "enum": ["in-person", "virtual", "hybrid"] },
+    "presenter": { "type": "string", "minLength": 2, "maxLength": 100 },
+    "presenter_url": { "type": "string", "format": "uri" },
+    "audience": {
+      "type": "string",
+      "enum": ["developers", "students", "educators", "hr", "general", "corporate"]
+    },
+    "repo_features_used": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "slides_url": { "type": "string", "format": "uri" },
+    "recording_url": { "type": "string", "format": "uri" },
+    "cover_image_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://(github\\.com/user-attachments|.*\\.(youtube|speakerdeck|canva|docs\\.google)\\.com)"
+    },
+    "summary": { "type": "string", "minLength": 40, "maxLength": 500 },
+    "outcomes": { "type": "string", "minLength": 20 },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "minItems": 1,
+      "maxItems": 10
+    }
+  }
+}

@@ -1,0 +1,105 @@
+name: Event Submission
+description: Share a workshop, talk, bootcamp, or training session where you featured this repo.
+title: "[Event] "
+labels: ["event-submission"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Session title
+      placeholder: "Prompt is Smarter, Not Harder"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Event date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Session type
+      options:
+        - workshop
+        - conference-talk
+        - hackathon
+        - bootcamp
+        - meetup
+        - webinar
+        - corporate-training
+        - intro-session
+        - skill-showcase
+    validations:
+      required: true
+  - type: input
+    id: event_name
+    attributes:
+      label: Event / conference name
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "City, Country or Virtual"
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: [in-person, virtual, hybrid]
+    validations:
+      required: true
+  - type: input
+    id: presenter
+    attributes:
+      label: Your name
+    validations:
+      required: true
+  - type: input
+    id: presenter_url
+    attributes:
+      label: Your profile link (optional)
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience
+      options: [developers, students, educators, hr, general, corporate]
+    validations:
+      required: true
+  - type: input
+    id: slides_url
+    attributes:
+      label: Slides link (Speaker Deck / Canva / Google Slides)
+  - type: input
+    id: recording_url
+    attributes:
+      label: Recording link (YouTube / Vimeo)
+  - type: input
+    id: cover_image_url
+    attributes:
+      label: Cover image link
+      description: Drag your image into this text box first to get a github.com/user-attachments link — do not attach a file directly.
+  - type: textarea
+    id: summary
+    attributes:
+      label: One-paragraph summary
+      description: State plainly what this was, who it was for, and what was covered.
+    validations:
+      required: true
+  - type: textarea
+    id: outcomes
+    attributes:
+      label: What people learned / what happened
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (comma-separated)
+      placeholder: "career, open-source, workflow"
+    validations:
+      required: true
