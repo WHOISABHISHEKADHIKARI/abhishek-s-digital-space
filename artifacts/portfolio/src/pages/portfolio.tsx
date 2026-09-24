@@ -740,9 +740,9 @@ export default function Portfolio() {
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
-            {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
+            {["about", "ai-training", "experience", "projects", "certifications", "news", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
-              const routePath = section === "projects" ? "/work" : section === "media" ? "/news#media" : `/${section}`;
+              const routePath = section === "projects" ? "/work" : `/${section}`;
               return (
               <a
                 key={section}
@@ -766,9 +766,9 @@ export default function Portfolio() {
         {mobileOpen && (
         <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
           <nav className="max-w-6xl mx-auto px-6 py-4 space-y-1">
-            {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
+            {["about", "ai-training", "experience", "projects", "certifications", "news", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
-              const routePath = section === "projects" ? "/work" : section === "media" ? "/news#media" : `/${section}`;
+              const routePath = section === "projects" ? "/work" : `/${section}`;
               return (
                 <a
                   key={section}
