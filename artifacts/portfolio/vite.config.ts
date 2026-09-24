@@ -38,10 +38,6 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
     title: "News & Media – Abhishek Adhikari | AI Trainer in Nepal",
     description: "News coverage of an AI Trainer in Nepal — ICT Frame global top-10 coverage, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, and Krishi Pradarshani speaking.",
   },
-  "/media": {
-    title: "Interviews & Features – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Interviews, feature stories, and public speaking appearances by an AI Trainer in Nepal on agritech, AI, open source, and digital innovation.",
-  },
   "/recommendations": {
     title: "Recommendations – Abhishek Adhikari | AI Trainer in Nepal",
     description: "LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — Tanka Bhattarai, Lava Kafle, and other industry professionals.",

@@ -1,9 +1,38 @@
 {
-  "version": 2,
+  "framework": "vite",
+  "buildCommand": "pnpm --filter @workspace/portfolio run build",
+  "outputDirectory": "artifacts/portfolio/dist/public",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "headers": [
+    { "source": "/", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/>; rel=\"canonical\"" }] },
+    { "source": "/about", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/about>; rel=\"canonical\"" }] },
+    { "source": "/ai-training", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training>; rel=\"canonical\"" }] },
+    { "source": "/experience", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/experience>; rel=\"canonical\"" }] },
+    { "source": "/work", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/work>; rel=\"canonical\"" }] },
+    { "source": "/volunteering", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/volunteering>; rel=\"canonical\"" }] },
+    { "source": "/certifications", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/certifications>; rel=\"canonical\"" }] },
+    { "source": "/news", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/news>; rel=\"canonical\"" }] },
+    { "source": "/recommendations", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/recommendations>; rel=\"canonical\"" }] },
+    { "source": "/blog", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/blog>; rel=\"canonical\"" }] },
+    { "source": "/contact", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/contact>; rel=\"canonical\"" }] },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.rss2json.com https://api.microlink.io https://formspree.io; frame-ancestors 'none';" }
+      ]
+    }
+  ],
   "redirects": [
     { "source": "/projects", "destination": "/work", "permanent": true },
-    { "source": "/work/:path*", "destination": "/work", "permanent": true },
-    { "source": "/blog/:path*", "destination": "/blog", "permanent": true },
+    { "source": "/media", "destination": "/news", "permanent": true },
+    { "source": "/services", "destination": "/contact", "permanent": true },
+    { "source": "/skills", "destination": "/ai-training", "permanent": true },
+    { "source": "/work/:path+", "destination": "/work", "permanent": true },
+    { "source": "/blog/:path+", "destination": "/blog", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "rewrites": [
@@ -14,10 +43,8 @@
     { "source": "/volunteering", "destination": "/volunteering/index.html" },
     { "source": "/certifications", "destination": "/certifications/index.html" },
     { "source": "/news", "destination": "/news/index.html" },
-    { "source": "/media", "destination": "/media/index.html" },
     { "source": "/recommendations", "destination": "/recommendations/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/contact", "destination": "/contact/index.html" },
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/contact", "destination": "/contact/index.html" }
   ]
 }

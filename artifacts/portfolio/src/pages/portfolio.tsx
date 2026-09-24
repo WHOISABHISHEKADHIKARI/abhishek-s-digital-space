@@ -659,7 +659,6 @@ export default function Portfolio() {
       "/volunteering": "Volunteering – Abhishek Adhikari | AI Trainer in Nepal",
       "/certifications": "Certifications – Abhishek Adhikari | AI Trainer in Nepal",
       "/news": "News &amp; Media – Abhishek Adhikari | AI Trainer in Nepal",
-      "/media": "Interviews &amp; Features – Abhishek Adhikari | AI Trainer in Nepal",
       "/recommendations": "Recommendations – Abhishek Adhikari | AI Trainer in Nepal",
       "/blog": "Blog – Abhishek Adhikari | AI Trainer in Nepal",
       "/contact": "Contact – Abhishek Adhikari | AI Trainer in Nepal",
@@ -683,7 +682,6 @@ export default function Portfolio() {
       "/volunteering": "volunteering",
       "/certifications": "certifications",
       "/news": "news",
-      "/media": "media",
       "/recommendations": "recommendations",
       "/blog": "blog",
       "/contact": "contact",
@@ -744,7 +742,7 @@ export default function Portfolio() {
           <div className="hidden md:flex items-center gap-1 text-sm font-medium">
             {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
-              const routePath = section === "projects" ? "/work" : `/${section}`;
+              const routePath = section === "projects" ? "/work" : section === "media" ? "/news#media" : `/${section}`;
               return (
               <a
                 key={section}
@@ -770,7 +768,7 @@ export default function Portfolio() {
           <nav className="max-w-6xl mx-auto px-6 py-4 space-y-1">
             {["about", "ai-training", "experience", "projects", "certifications", "news", "media", "blog", "contact"].map((section) => {
               const label = section === "ai-training" ? "AI Training" : section.charAt(0).toUpperCase() + section.slice(1);
-              const routePath = section === "projects" ? "/work" : `/${section}`;
+              const routePath = section === "projects" ? "/work" : section === "media" ? "/news#media" : `/${section}`;
               return (
                 <a
                   key={section}

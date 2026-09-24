@@ -12,7 +12,6 @@
     { "source": "/volunteering", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/volunteering>; rel=\"canonical\"" }] },
     { "source": "/certifications", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/certifications>; rel=\"canonical\"" }] },
     { "source": "/news", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/news>; rel=\"canonical\"" }] },
-    { "source": "/media", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/media>; rel=\"canonical\"" }] },
     { "source": "/recommendations", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/recommendations>; rel=\"canonical\"" }] },
     { "source": "/blog", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/blog>; rel=\"canonical\"" }] },
     { "source": "/contact", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/contact>; rel=\"canonical\"" }] },
@@ -29,6 +28,7 @@
   ],
   "redirects": [
     { "source": "/projects", "destination": "/work", "permanent": true },
+    { "source": "/media", "destination": "/news", "permanent": true },
     { "source": "/services", "destination": "/contact", "permanent": true },
     { "source": "/skills", "destination": "/ai-training", "permanent": true },
     { "source": "/work/:path+", "destination": "/work", "permanent": true },
@@ -43,7 +43,6 @@
     { "source": "/volunteering", "destination": "/volunteering/index.html" },
     { "source": "/certifications", "destination": "/certifications/index.html" },
     { "source": "/news", "destination": "/news/index.html" },
-    { "source": "/media", "destination": "/media/index.html" },
     { "source": "/recommendations", "destination": "/recommendations/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/contact", "destination": "/contact/index.html" }
