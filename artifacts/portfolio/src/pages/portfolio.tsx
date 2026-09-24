@@ -671,7 +671,7 @@ export default function Portfolio() {
   const volunteering = visibleItems("volunteering", profileData.volunteering);
   const certifications = visibleItems("certifications", (profileData as any).certifications ?? []);
   const newsMedia = visibleItems("news", (profileData as any).newsMedia ?? []);
-  const mediaAppearances = visibleItems("media", (profileData as any).mediaAppearances ?? []);
+  const mediaAppearances = (profileData as any).mediaAppearances ?? [];
   const recommendations = visibleItems("recommendations", profileData?.recommendations ?? []);
 
   return (
@@ -1402,7 +1402,7 @@ export default function Portfolio() {
 
         {mediaAppearances.length > 0 ? (
         <>
-            <div className="my-8 flex items-center gap-3">
+            <div id="media" className="my-8 flex items-center gap-3 scroll-mt-28">
               <span className="text-lg font-bold">Media appearances</span>
               <span className="text-sm text-muted-foreground">— Interviews and features</span>
               <div className="h-px flex-1 bg-border" aria-hidden="true" />
@@ -1444,11 +1444,6 @@ export default function Portfolio() {
                 </motion.article>
               ))}
             </div>
-            <ShowMoreButton
-              expanded={Boolean(expandedSections.media)}
-              hiddenCount={((profileData as any).mediaAppearances ?? []).length - sectionLimits.media}
-              onClick={() => toggleSection("media")}
-            />
         </>
         ) : (
           <EmptyState message="Media appearances will be added soon." />
