@@ -256,6 +256,19 @@ export default function AITrainerNepal() {
                 <span className="flex items-center gap-2"><Check size={16} className="text-primary" /> Beginner to developer</span>
                 <span className="flex items-center gap-2"><Check size={16} className="text-primary" /> Responsible by design</span>
               </div>
+              <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-[.8fr_1.2fr]">
+                <a href="https://luma.com/user/whoisabhishek" target="_blank" rel="noopener noreferrer" className="group flex min-h-20 items-center gap-3 rounded-xl border bg-card/90 p-4 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-primary/50">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"><Users size={20} /></span>
+                  <span><span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Events on Luma</span><span className="mt-1 flex items-center gap-1 text-sm font-bold">@whoisabhishek <ExternalLink size={13} /></span></span>
+                </a>
+                <a href="https://www.star-history.com/sickn33/agentic-awesome-skills/" target="_blank" rel="noopener noreferrer" className="flex min-h-20 items-center rounded-xl border bg-card/90 p-3 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-primary/50" aria-label="View the Agentic Awesome Skills repository rank on Star History">
+                  <picture className="block w-full">
+                    <source media="(prefers-color-scheme: dark)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank&theme=dark" />
+                    <source media="(prefers-color-scheme: light)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" />
+                    <img src="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" alt="Star History rank for the Agentic Awesome Skills repository" width="334" height="56" className="h-auto w-full max-w-[334px]" />
+                  </picture>
+                </a>
+              </div>
             </div>
             <div className="relative mx-auto w-full max-w-lg">
               <div className="absolute -inset-4 rotate-2 rounded-[2rem] bg-primary/10" />
@@ -346,17 +359,6 @@ export default function AITrainerNepal() {
               ))}
             </ol>
             <a href="https://github.com/sickn33/agentic-awesome-skills" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary">Explore the open-source project <Github size={18} /></a>
-            <div className="mt-8 rounded-xl border bg-card p-5">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Live repository rank from Star History</p>
-              <a href="https://www.star-history.com/sickn33/agentic-awesome-skills/" target="_blank" rel="noopener noreferrer" className="block max-w-md" aria-label="View the Agentic Awesome Skills repository rank on Star History">
-                <picture>
-                  <source media="(prefers-color-scheme: dark)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank&theme=dark" />
-                  <source media="(prefers-color-scheme: light)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" />
-                  <img src="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" alt="Star History global rank for the Agentic Awesome Skills repository" width="334" height="56" loading="lazy" className="h-auto max-w-full" />
-                </picture>
-              </a>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">This live badge shows the repository’s rank, not an individual contributor ranking.</p>
-            </div>
           </div>
         </section>
 
