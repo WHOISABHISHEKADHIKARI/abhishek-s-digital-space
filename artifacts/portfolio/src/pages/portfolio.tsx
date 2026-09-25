@@ -843,6 +843,40 @@ export default function Portfolio() {
               <Github size={18} /> GitHub
             </a>
           </div>
+
+          <div className="grid gap-3 pt-2 sm:grid-cols-[0.85fr_1.15fr]" aria-label="Events and open-source proof">
+            <a
+              href="https://luma.com/user/whoisabhishek"
+              target="_blank"
+              rel="me noreferrer"
+              className="group flex min-h-20 items-center justify-between gap-4 rounded-xl border bg-card p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
+            >
+              <span>
+                <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">Events on Luma</span>
+                <span className="mt-1 block font-bold text-foreground">@whoisabhishek</span>
+              </span>
+              <ExternalLink size={17} className="shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a
+              href="https://www.star-history.com/sickn33/agentic-awesome-skills/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Agentic Awesome Skills repository rank on Star History"
+              className="flex min-h-20 items-center rounded-xl border bg-card p-3 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
+            >
+              <picture className="block w-full">
+                <source media="(prefers-color-scheme: dark)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank&theme=dark" />
+                <source media="(prefers-color-scheme: light)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" />
+                <img
+                  src="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank"
+                  alt="Star History rank for the Agentic Awesome Skills repository"
+                  width="334"
+                  height="56"
+                  className="h-auto w-full max-w-[334px]"
+                />
+              </picture>
+            </a>
+          </div>
         </section>
         </ErrorBoundary>
 
