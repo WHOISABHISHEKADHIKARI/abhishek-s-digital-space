@@ -22,7 +22,12 @@ const AI_TRAINER_SCHEMA = {
       sameAs: [
         "https://github.com/WHOISABHISHEKADHIKARI",
         "https://www.linkedin.com/in/whoisabhishekadhikari/",
+        "https://luma.com/user/whoisabhishek",
         "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+      ],
+      subjectOf: [
+        { "@type": "WebPage", url: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/", name: "Abhishek Adhikari — WordCamp Kathmandu 2026" },
+        { "@type": "ProfilePage", url: "https://luma.com/user/whoisabhishek", name: "Abhishek Adhikari on Luma" },
       ],
     },
     {
@@ -32,6 +37,13 @@ const AI_TRAINER_SCHEMA = {
       name: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
       about: { "@id": `${SITE_URL}/#person` },
       inLanguage: "en",
+      citation: [
+        "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+        "https://github.com/WHOISABHISHEKADHIKARI",
+        "https://github.com/sickn33/agentic-awesome-skills",
+        "https://luma.com/user/whoisabhishek",
+        "https://www.star-history.com/sickn33/agentic-awesome-skills/",
+      ],
     },
     {
       "@type": "Service",
@@ -55,6 +67,8 @@ const AI_TRAINER_STATIC_HTML = `
           <li><a href="https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/">WordCamp Kathmandu 2026 speaker profile</a></li>
           <li><a href="https://github.com/WHOISABHISHEKADHIKARI">Public GitHub profile and open-source work</a></li>
           <li><a href="https://github.com/sickn33/agentic-awesome-skills">Agentic Awesome Skills open-source project</a></li>
+          <li><a href="https://luma.com/user/whoisabhishek">Abhishek Adhikari’s Luma events profile</a></li>
+          <li><a href="https://www.star-history.com/sickn33/agentic-awesome-skills/">Live Star History rank for the Agentic Awesome Skills repository</a></li>
         </ul>
         <h2>Prompt Engineering Training in Nepal</h2>
         <p>Prompt engineering designs and improves instructions for an AI system. A strong prompt makes the objective, relevant context, examples, constraints and expected output clear, then evaluates the result. It is clear thinking translated into instructions, not a collection of secret phrases.</p>
@@ -77,6 +91,14 @@ const AI_TRAINER_STATIC_HTML = `
         <ol><li>Understand what the technology can and cannot do.</li><li>Apply it to realistic tasks.</li><li>Evaluate accuracy, assumptions and limitations.</li><li>Build useful experiments into repeatable workflows.</li></ol>
         <h2>Responsible AI</h2>
         <p>The goal is not to trust AI more. The goal is to use AI more intelligently. Training covers hallucinations, privacy, confidential information, bias, source checking, academic integrity and sensible automation boundaries.</p>
+        <h2>Verified public sources</h2>
+        <ol>
+          <li><a href="https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/">WordCamp Kathmandu 2026 speaker profile</a> — speaker status, session and public professional description.</li>
+          <li><a href="https://github.com/WHOISABHISHEKADHIKARI">Abhishek Adhikari on GitHub</a> — public developer identity and open-source activity.</li>
+          <li><a href="https://github.com/sickn33/agentic-awesome-skills">Agentic Awesome Skills on GitHub</a> — canonical project repository.</li>
+          <li><a href="https://luma.com/user/whoisabhishek">Abhishek Adhikari on Luma</a> — public events identity.</li>
+          <li><a href="https://www.star-history.com/sickn33/agentic-awesome-skills/">Agentic Awesome Skills on Star History</a> — live repository rank history, not an individual contributor rank.</li>
+        </ol>
         <h2 id="book">Book an AI Training Session in Nepal</h2>
         <p>Share your organization, audience, participant count, location, current experience, desired outcome, preferred format and duration.</p>
         <p><a href="mailto:abhishekadhikari1254@gmail.com?subject=AI%20Workshop%20Enquiry">Book an AI workshop</a> · <a href="/contact">Contact Abhishek</a></p>

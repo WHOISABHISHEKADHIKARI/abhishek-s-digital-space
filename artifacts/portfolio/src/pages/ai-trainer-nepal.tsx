@@ -45,6 +45,13 @@ const evidence = [
     copy: "Practical sessions for educators, students, professionals and technology communities in Nepal.",
     href: "/volunteering",
   },
+  {
+    image: "/sections/media/images/abhishek-adhikari--hetauda-sdc-event.jpeg",
+    label: "Events",
+    title: "Workshops and events on Luma",
+    copy: "View hosted and attended technology events connected to Abhishek’s public training and community work.",
+    href: "https://luma.com/user/whoisabhishek",
+  },
 ];
 
 const topics = [
@@ -71,6 +78,44 @@ const faqs = [
   ["What is agentic AI?", "Agentic AI describes systems that can work toward a goal over multiple steps, use approved tools, evaluate results and ask for human review when needed."],
   ["What tools are covered?", "Sessions may use ChatGPT, Claude, Gemini and other tools suited to the task. The durable focus is task definition, context, workflow design, verification and responsible use."],
   ["Can colleges and companies book a workshop?", "Yes. Sessions can be scoped for colleges, organizations, developer communities and teams. Share your audience, experience level, preferred format and desired outcome when you enquire."],
+];
+
+const citations = [
+  {
+    number: 1,
+    title: "Abhishek Adhikari — WordCamp Kathmandu 2026 speaker profile",
+    publisher: "WordCamp Kathmandu",
+    href: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+    supports: "Speaker status, session title and public description of AI, open-source, community and AgriTech work.",
+  },
+  {
+    number: 2,
+    title: "WHOISABHISHEKADHIKARI on GitHub",
+    publisher: "GitHub",
+    href: "https://github.com/WHOISABHISHEKADHIKARI",
+    supports: "Public developer identity, repositories and open-source activity.",
+  },
+  {
+    number: 3,
+    title: "Agentic Awesome Skills",
+    publisher: "GitHub",
+    href: "https://github.com/sickn33/agentic-awesome-skills",
+    supports: "Canonical open-source repository for the reusable agent skills project.",
+  },
+  {
+    number: 4,
+    title: "Abhishek Adhikari (@whoisabhishek)",
+    publisher: "Luma",
+    href: "https://luma.com/user/whoisabhishek",
+    supports: "Public events identity and hosted or attended technology events.",
+  },
+  {
+    number: 5,
+    title: "sickn33/agentic-awesome-skills repository rank",
+    publisher: "Star History",
+    href: "https://www.star-history.com/sickn33/agentic-awesome-skills/",
+    supports: "Live third-party repository star and global-rank history; this is not an individual contributor ranking.",
+  },
 ];
 
 function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
@@ -112,7 +157,12 @@ export default function AITrainerNepal() {
           sameAs: [
             "https://github.com/WHOISABHISHEKADHIKARI",
             "https://www.linkedin.com/in/whoisabhishekadhikari/",
+            "https://luma.com/user/whoisabhishek",
             "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+          ],
+          subjectOf: [
+            { "@type": "WebPage", url: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/", name: "Abhishek Adhikari — WordCamp Kathmandu 2026" },
+            { "@type": "ProfilePage", url: "https://luma.com/user/whoisabhishek", name: "Abhishek Adhikari on Luma" },
           ],
         },
         {
@@ -122,6 +172,7 @@ export default function AITrainerNepal() {
           name: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
           about: { "@id": `${SITE_URL}/#person` },
           inLanguage: "en",
+          citation: citations.map((source) => source.href),
         },
         {
           "@type": "Service",
@@ -222,14 +273,14 @@ export default function AITrainerNepal() {
             <p className="text-sm font-semibold text-primary">Quick answer</p>
             <div>
               <h2 className="text-2xl font-bold">Who is Abhishek Adhikari?</h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">Abhishek Adhikari is a Nepal-based AI trainer, prompt engineering practitioner, open-source contributor, technology community builder and AgriTech entrepreneur. His training focuses on practical generative AI, context engineering, agentic workflows, verification and responsible adoption rather than isolated tool demonstrations.</p>
+              <p className="mt-3 leading-relaxed text-muted-foreground">Abhishek Adhikari is a Nepal-based AI trainer, prompt engineering practitioner, open-source contributor, technology community builder and AgriTech entrepreneur. His training focuses on practical generative AI, context engineering, agentic workflows, verification and responsible adoption rather than isolated tool demonstrations. <a href="#source-1" aria-label="Citation 1" className="font-semibold text-primary">[1]</a></p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
           <SectionHeading eyebrow="Evidence, not adjectives" title="Work you can inspect" copy="Public speaker profiles, GitHub activity and real training environments make the expertise easier to verify." />
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {evidence.map((item) => (
               <a key={item.title} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined} className="group overflow-hidden rounded-xl border bg-card transition hover:-translate-y-1 hover:shadow-xl">
                 <img src={item.image} alt={item.title} width="640" height="420" loading="lazy" className="aspect-[16/10] w-full object-cover" />
@@ -295,6 +346,17 @@ export default function AITrainerNepal() {
               ))}
             </ol>
             <a href="https://github.com/sickn33/agentic-awesome-skills" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary">Explore the open-source project <Github size={18} /></a>
+            <div className="mt-8 rounded-xl border bg-card p-5">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Live repository rank from Star History</p>
+              <a href="https://www.star-history.com/sickn33/agentic-awesome-skills/" target="_blank" rel="noopener noreferrer" className="block max-w-md" aria-label="View the Agentic Awesome Skills repository rank on Star History">
+                <picture>
+                  <source media="(prefers-color-scheme: dark)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank&theme=dark" />
+                  <source media="(prefers-color-scheme: light)" srcSet="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" />
+                  <img src="https://api.star-history.com/badge?repo=sickn33/agentic-awesome-skills&type=rank" alt="Star History global rank for the Agentic Awesome Skills repository" width="334" height="56" loading="lazy" className="h-auto max-w-full" />
+                </picture>
+              </a>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">This live badge shows the repository’s rank, not an individual contributor ranking.</p>
+            </div>
           </div>
         </section>
 
@@ -363,6 +425,25 @@ export default function AITrainerNepal() {
               ))}
             </div>
           </div>
+        </section>
+
+        <section id="sources" aria-labelledby="sources-heading" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+          <SectionHeading eyebrow="Citations" title="Verified public sources" copy="These sources support the identity, speaking, events and open-source statements on this page. Repository metrics can change, so the live source is linked instead of freezing a number in the copy." />
+          <ol className="grid gap-4 md:grid-cols-2">
+            {citations.map((source) => (
+              <li id={`source-${source.number}`} key={source.number} className="rounded-xl border bg-card p-5 scroll-mt-24">
+                <div className="flex gap-4">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{source.number}</span>
+                  <div>
+                    <cite className="not-italic"><a href={source.href} target="_blank" rel="noopener noreferrer" className="font-bold hover:text-primary">{source.title} <ExternalLink size={14} className="inline" /></a></cite>
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-primary">{source.publisher}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{source.supports}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 text-xs text-muted-foreground">Sources reviewed 25 September 2026. Current availability and changing repository data should be checked at the linked source.</p>
         </section>
 
         <section id="book" className="px-5 py-20 md:px-8 md:py-28">
