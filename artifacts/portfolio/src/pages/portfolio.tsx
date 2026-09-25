@@ -849,6 +849,8 @@ export default function Portfolio() {
               href="https://luma.com/user/whoisabhishek"
               target="_blank"
               rel="me noreferrer"
+              title="Abhishek Adhikari events and AI training profile on Luma"
+              aria-label="View Abhishek Adhikari's AI training and technology events on Luma"
               className="inline-flex items-center gap-2 rounded-lg border bg-muted px-4 py-2 text-foreground shadow-sm transition-all duration-200 hover:bg-muted/70 active:scale-[0.97]"
             >
               <ExternalLink size={18} /> Luma
@@ -858,6 +860,7 @@ export default function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the Agentic Awesome Skills repository rank on Star History"
+              title="Live Star History rank for the Agentic Awesome Skills open-source repository"
               className="inline-flex items-center gap-2 rounded-lg border bg-muted px-4 py-2 text-foreground shadow-sm transition-all duration-200 hover:bg-muted/70 active:scale-[0.97]"
             >
               <Github size={18} /> Star History
