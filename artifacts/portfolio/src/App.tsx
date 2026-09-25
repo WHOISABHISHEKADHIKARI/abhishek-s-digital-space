@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ErrorBoundary from "@/components/error-boundary";
 import Portfolio from "@/pages/portfolio";
+import AITrainerNepal from "@/pages/ai-trainer-nepal";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Switch>
               <Route path="/" component={Portfolio} />
+              <Route path="/ai-trainer-nepal" component={AITrainerNepal} />
               {sectionPaths.map((p) => (
                 <Route key={p} path={p} component={Portfolio} />
               ))}
