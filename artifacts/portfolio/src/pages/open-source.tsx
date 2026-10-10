@@ -121,6 +121,11 @@ export default function OpenSourcePage() {
               relevant source for the commit and skills-added rankings cited here, and they can change over time — the
               live sources are linked on this page.
             </div>
+            <p className="mt-6 text-sm text-muted-foreground">
+              These skills shape the practical{" "}
+              <a href="/ai-trainer-nepal/" className="font-semibold text-primary">AI training in Nepal</a>{" "}
+              offered by Abhishek.
+            </p>
           </div>
 
           <aside className="space-y-4">

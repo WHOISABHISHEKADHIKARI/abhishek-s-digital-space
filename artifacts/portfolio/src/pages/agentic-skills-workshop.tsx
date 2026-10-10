@@ -63,7 +63,9 @@ export default function AgenticSkillsWorkshopPage() {
         <p className="mt-6 text-sm text-muted-foreground">
           See the{" "}
           <a href="/open-source" className="font-semibold text-primary">open-source contributions</a>{" "}
-          behind this workshop.
+          behind this workshop, or the{" "}
+          <a href="/ai-trainer-nepal/" className="font-semibold text-primary">AI Trainer in Nepal</a>{" "}
+          profile for how this work shapes practical training.
         </p>
       </section>
     </SiteLayout>

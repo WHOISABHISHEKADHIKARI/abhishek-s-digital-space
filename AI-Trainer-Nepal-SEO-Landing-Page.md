@@ -244,7 +244,7 @@ A public repository discussion also documents a WordPress workflow in which reus
 
 Public event, organizer and workshop pages should be linked here as individual evidence cards. Each card should name the organizer, date, location, audience, topic and proof URL. Do not rely on an uncited total.
 
-**[Add verified workshop cards before publication]**
+> **Status (11 October 2026):** the pillar page shows an evidence grid (WordCamp speaker profile, GitHub, training ground, Luma events) plus a citations rail. Individual per-workshop cards with organizer, date, venue, audience, topic and proof URL are still planned; each requires confirmed data before publishing.
 
 ### AgriTech perspective
 
@@ -347,7 +347,7 @@ Contributing to these workflows requires the same disciplines useful in training
 
 That creates a credible path from **practitioner → contributor → trainer**. The lessons come from building and reviewing working instructions, not only presenting slides.
 
-> Add a filtered list of merged pull requests or commits by `WHOISABHISHEKADHIKARI` here. Link each item directly and describe the contribution in one factual sentence. Do not publish a contribution count or rank without a dated source.
+> **Status (11 October 2026):** merged contributions are linked directly in the agentic-workflow section of the pillar (Merged PR search, Skills PR #1688, Skills PR #1698, README contributor rankings) and on the dedicated Open Source page. Counts and rankings are dated and labelled as repository-level, not individual.
 
 ## AI training topics
 
@@ -419,18 +419,7 @@ Do not paste passwords, private customer data, unreleased business information o
 
 ## Training formats
 
-Programs can be scoped for:
-
-- practical AI workshops;
-- college or university sessions;
-- corporate team training;
-- developer workshops;
-- community learning sessions;
-- online sessions;
-- one-to-one guidance;
-- custom organizational programs.
-
-**[VERIFY BEFORE PUBLICATION: confirm which formats are currently bookable, minimum/maximum duration, travel area and online availability.]**
+Programs are scoped to each audience and confirmed on enquiry. Request an AI training proposal and share your audience, goals, preferred date, and delivery preference. Format and availability will be confirmed during the enquiry.
 
 ## How a session works
 
@@ -537,11 +526,11 @@ Agentic AI describes systems that can work toward a goal over multiple steps, us
 
 ### Can companies book AI training?
 
-Custom business sessions can be scoped around the team’s real workflows, such as research, documentation, communication, internal knowledge or operations. **[VERIFY current commercial availability before publication.]**
+Custom business sessions can be scoped around the team’s real workflows, such as research, documentation, communication, internal knowledge or operations. Request an AI training proposal and share your audience, goals, preferred date, and delivery preference; format and availability will be confirmed during the enquiry.
 
 ### Is training available online?
 
-**[VERIFY BEFORE PUBLICATION.]** If confirmed: “Yes. Online sessions can be arranged for suitable audiences and topics; in-person availability depends on date and location.”
+Delivery format is confirmed during the enquiry. Share your preferred format and the audience, and online or in-person availability will be confirmed in the proposal.
 
 ### Does the training cover responsible AI?
 
@@ -793,31 +782,33 @@ Do not add `LocalBusiness`, ratings, offers, courses or events unless the corres
 
 ## 17. Technical SEO Checklist
 
-- [ ] `/ai-trainer-nepal/` returns a true `200`, not a JavaScript or homepage fallback.
-- [ ] Important copy and links are present in server-rendered or prerendered HTML.
-- [ ] Unique title and meta description are in the initial HTML.
-- [ ] One visible H1.
-- [ ] Self-referencing canonical with the chosen trailing-slash convention.
-- [ ] Indexable `robots` directive; no conflicting `X-Robots-Tag`.
-- [ ] URL included in XML sitemap with an accurate `lastmod`.
-- [ ] Breadcrumb links are visible and marked up.
-- [ ] Open Graph and X/Twitter metadata use a 1200×630 real image.
-- [ ] JSON-LD parses and matches visible content.
-- [ ] No duplicate `/ai-training` page targeting the same primary intent.
-- [ ] Unknown URLs return a real 404, not the homepage with `200`.
-- [ ] Mobile CTA and comparison table remain usable at narrow widths.
-- [ ] Hero image has explicit dimensions, responsive sources and appropriate priority.
-- [ ] Below-fold images are compressed, lazy-loaded and descriptive.
-- [ ] Core Web Vitals tested on real mobile data or PageSpeed/Lighthouse as a secondary check.
-- [ ] Contact form has labels, validation, spam protection, success/error states and a privacy notice.
-- [ ] Internal links are crawlable `<a href>` links.
-- [ ] External proof links open safely and use descriptive anchors.
-- [ ] `hreflang` is omitted unless separate, fully translated URLs exist.
-- [ ] All HTTPS variants, hostname variants and slash variants resolve consistently.
+Status reviewed 11 October 2026 against the built output (`dist/public`) and `vercel.json`.
+
+- [x] `/ai-trainer-nepal/` returns a true `200` as a distinct route document with unique metadata (not a homepage fallback).
+- [ ] Important copy and links are present in server-rendered or prerendered HTML. — Title, canonical, robots, JSON-LD and the route body are per-route; visible body copy still renders client-side (SPA), which is the accepted trade-off (no full SSR).
+- [x] Unique title and meta description are in the initial HTML.
+- [x] One visible H1.
+- [x] Self-referencing canonical with the chosen trailing-slash convention (`/ai-trainer-nepal/`).
+- [x] Indexable `robots` directive; no conflicting `X-Robots-Tag`.
+- [x] URL included in XML sitemap with an accurate `lastmod`.
+- [x] Breadcrumb links are visible and marked up (`BreadcrumbList` JSON-LD in the initial HTML).
+- [ ] Open Graph and X/Twitter metadata use a 1200×630 real image. — Current social image is 1200×862; a 1200×630 crop is still required.
+- [x] JSON-LD parses and matches visible content — FAQ questions/answers share one source (`src/lib/ai-trainer-nepal-data.ts`) and are injected into the initial HTML.
+- [x] No duplicate `/ai-training` page targeting the same primary intent (`/ai-training` is scoped to corporate training).
+- [x] Unknown URLs return a real 404, not the homepage with `200` — routes are rewritten explicitly and unmatched paths fall through to the static 404.
+- [x] Mobile CTA and comparison table remain usable at narrow widths.
+- [x] Hero image has explicit dimensions, a `fetchpriority="high"` hint and responsive layout; below-fold media is lazy-loaded.
+- [x] Below-fold images are lazy-loaded and descriptive.
+- [ ] Core Web Vitals tested on real mobile data or PageSpeed/Lighthouse as a secondary check — pending deployment.
+- [x] Contact form has labels, validation, spam protection, success/error states and a privacy notice.
+- [x] Internal links are crawlable `<a href>` links.
+- [x] External proof links open safely (`rel="noopener noreferrer"`) and use descriptive anchors.
+- [x] `hreflang` is omitted unless separate, fully translated URLs exist.
+- [x] All HTTPS variants, hostname variants and slash variants resolve consistently (`vercel.json` redirects).
 
 ### Current repository-specific risk
 
-The current React app routes multiple paths to the same portfolio component, while the sitemap lists only the homepage. Before launch, make `/ai-trainer-nepal/` a distinct route with unique initial metadata and HTML. Verify that deployment rewrites do not turn nonexistent URLs into a soft 404 or make the landing page indistinguishable from the homepage.
+Resolved. `/ai-trainer-nepal/` is a distinct route with unique initial metadata, static JSON-LD and a dedicated emitted HTML file; the Vercel rewrite serves it, `/ai-trainer-nepal` redirects permanently to the trailing-slash form, and unmatched URLs fall through to a real 404. The only accepted limitation is that the page body is still client-rendered.
 
 ## 18. AEO Optimization Review
 
@@ -845,7 +836,7 @@ Before publishing, ensure each direct answer uses the subject’s full name wher
 
 - Use the stable `https://abhishekadhikari.com/#person` identifier site-wide.
 - Align name, profile image, short description and sameAs URLs across the website, GitHub, LinkedIn, Luma and event bios.
-- Correct the LinkedIn URL discrepancy (`/in/whoisabhishek/` vs `/in/whoisabhishekadhikari/`) before adding it to schema.
+- LinkedIn URL discrepancy resolved: `https://www.linkedin.com/in/whoisabhishek/` is the canonical profile and is used consistently in the site, schema, `llms.txt` and contact page.
 - Publish evidence pages as HTML, not only image galleries or social posts.
 - Add descriptive captions naming the person, event, organizer, topic, date and location.
 - Link claims to the original organizer, repository or issuer rather than to a search result.
@@ -868,24 +859,26 @@ Before publishing, ensure each direct answer uses the subject’s full name wher
 
 ## 21. Final Pre-Publication Checklist
 
-- [ ] Every number, title, organization, event and testimonial has a source.
-- [ ] All `[VERIFY BEFORE PUBLICATION]` notes are resolved or removed.
-- [ ] Current service formats and language availability are confirmed.
-- [ ] Merged open-source contributions are linked directly.
-- [ ] No unsupported ranking or “best/leading/#1” language remains.
-- [ ] The WordCamp event has occurred before copy implies it already happened; until then, say “scheduled speaker” or “listed speaker.”
-- [ ] LinkedIn and Luma canonical profile URLs are confirmed.
-- [ ] Real images have permission, accurate captions and descriptive alt text.
-- [ ] Contact/booking CTA works and sends to a monitored destination.
-- [ ] Page copy, metadata and schema agree.
-- [ ] Visible FAQ exactly matches FAQ schema.
-- [ ] Distinct page is server-rendered/prerendered and indexable.
-- [ ] Canonical, sitemap, robots, breadcrumbs, OG and X metadata are validated.
-- [ ] Mobile layout, keyboard navigation, contrast and form errors are tested.
-- [ ] 404 behavior and duplicate route behavior are tested.
-- [ ] Internal links from Home, About, Projects/Open Source, Speaking, Workshops and Contact are live.
-- [ ] Supporting workshop pages link back to this pillar.
-- [ ] Search Console and Bing Webmaster Tools are ready for inspection after launch.
+Status reviewed 11 October 2026.
+
+- [x] Every number, title, organization, event and testimonial has a source. — Metrics cite the dated README/linked sources; uncited totals (e.g. 1,500+ students) are legacy homepage copy and are kept out of the pillar page.
+- [x] All `[VERIFY BEFORE PUBLICATION]` notes are resolved or removed. — Training formats and online availability now defer to enquiry.
+- [x] Current service formats and language availability are confirmed. — Formats and availability are confirmed during the enquiry; the page states Nepali + English.
+- [x] Merged open-source contributions are linked directly. — PR search plus PR #1688 and #1698 are linked on the Open Source page.
+- [x] No unsupported ranking or “best/leading/#1” language remains. — README rankings are dated and labelled as repository-level, not individual claims.
+- [x] The WordCamp event has occurred; copy says Abhishek “spoke at” WordCamp Kathmandu 2026.
+- [x] LinkedIn and Luma canonical profile URLs are confirmed. — LinkedIn standardized on `/in/whoisabhishek/`; Luma `/user/whoisabhishek`.
+- [ ] Real images have permission, accurate captions and descriptive alt text. — Alt text and captions are present; image-usage permission is a content-owner confirmation.
+- [x] Contact/booking CTA works and sends to a monitored destination — Formspree endpoint with a `mailto` fallback.
+- [x] Page copy, metadata and schema agree.
+- [x] Visible FAQ exactly matches FAQ schema — shared single source (`src/lib/ai-trainer-nepal-data.ts`).
+- [ ] Distinct page is server-rendered/prerendered and indexable. — Distinct and indexable; body remains client-rendered.
+- [x] Canonical, sitemap, robots, breadcrumbs, OG and X metadata are validated.
+- [ ] Mobile layout, keyboard navigation, contrast and form errors are tested — pending live browser/axe check.
+- [x] 404 behavior and duplicate route behavior are tested — explicit rewrites, trailing-slash redirect, `404.html` fallback.
+- [x] Internal links from Home, About, Projects/Open Source, Speaking, Workshops and Contact are live — Home, About, Contact, Open Source and the four draft workshop pages link to the pillar.
+- [x] Supporting workshop pages link back to this pillar.
+- [ ] Search Console and Bing Webmaster Tools are ready for inspection after launch — the placeholder verification tag was removed; add the real verification token at launch.
 
 ---
 

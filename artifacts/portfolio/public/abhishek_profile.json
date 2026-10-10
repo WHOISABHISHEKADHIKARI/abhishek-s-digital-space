@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Abhishek Adhikari",
-    "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari/",
+    "linkedin": "https://www.linkedin.com/in/whoisabhishek/",
     "github": "https://github.com/WHOISABHISHEKADHIKARI",
     "email": "abhishekadhikari1254@gmail.com",
     "website": "https://abhishekadhikari.com",
@@ -19,12 +19,12 @@
     },
     "image": "/abhishek-adhikari-social.webp",
     "sameAs": [
-      "https://www.linkedin.com/in/whoisabhishekadhikari/",
+      "https://www.linkedin.com/in/whoisabhishek/",
       "https://github.com/WHOISABHISHEKADHIKARI",
       "https://luma.com/user/whoisabhishek",
       "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/"
     ],
-    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. 1,500+ students trained on prompt engineering and AI literacy. WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests. Community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
+    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. 1,500+ students trained on prompt engineering and AI literacy. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests. Community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
     "jobTitle": "AI Trainer & Agritech Entrepreneur",
     "knowsLanguage": [
       "English",
@@ -1233,7 +1233,7 @@
       "title": "Prompt Smarter, Not Harder",
       "outlet": "WordCamp Kathmandu 2026",
       "date": "Sep 2026",
-      "description": "Officially listed speaker for WordCamp Kathmandu 2026, presenting a session on practical prompting.",
+      "description": "Spoke at WordCamp Kathmandu 2026, presenting a session on practical prompting.",
       "url": "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
       "imageUrl": "/sections/media/images/abhishek-adhikari--wordcamp-kathmandu-2026-speaker.jpg"
     },

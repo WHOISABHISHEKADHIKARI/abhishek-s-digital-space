@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { buildAITrainerNepalSchema } from "./src/lib/ai-trainer-nepal-data";
 
 const port = Number(process.env.PORT) || 8080;
 const basePath = process.env.BASE_PATH || "/";
@@ -20,7 +21,7 @@ const PERSON_SCHEMA = {
   homeLocation: { "@type": "Country", name: "Nepal" },
   sameAs: [
     "https://github.com/WHOISABHISHEKADHIKARI",
-    "https://www.linkedin.com/in/whoisabhishekadhikari/",
+    "https://www.linkedin.com/in/whoisabhishek/",
     "https://luma.com/user/whoisabhishek",
     "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
   ],
@@ -34,17 +35,17 @@ const PERSON_SCHEMA = {
 const ROUTE_META: Record<string, { title: string; description: string; keywords?: string; noindex?: boolean }> = {
   "/": {
     title: "Abhishek Adhikari | AI Trainer in Nepal – Prompt Engineering, AI Literacy & Digital Training",
-    description: "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. 1,500+ students trained, WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. AI workshops for schools, colleges, and businesses in Nepal.",
+    description: "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. 1,500+ students trained, spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. AI workshops for schools, colleges, and businesses in Nepal.",
     keywords: "AI trainer Nepal, artificial intelligence training Nepal, prompt engineering Nepal, AI workshop Nepal, AI literacy Nepal, AI training Hetauda, ChatGPT training Nepal, AI education Nepal, Abhishek Adhikari, agritech Nepal, community builder, Hetauda, Nepal",
   },
   "/ai-trainer-nepal/": {
     title: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
-    description: "Practical AI training in Nepal by Abhishek Adhikari, covering prompt engineering, context engineering, responsible AI and agentic workflows. 125 skills added through 36 merged PRs to Agentic Awesome Skills. WordCamp Kathmandu 2026 speaker.",
+    description: "Practical AI training in Nepal by Abhishek Adhikari, covering prompt engineering, context engineering, responsible AI and agentic workflows. 125 skills added through 36 merged PRs to Agentic Awesome Skills. Spoke at WordCamp Kathmandu 2026.",
     keywords: "AI trainer Nepal, AI training Nepal, prompt engineering Nepal, context engineering Nepal, agentic AI Nepal, AI workshop Nepal, Abhishek Adhikari, WordCamp Kathmandu",
   },
   "/about": {
     title: "About – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. 125 skills added through 36 merged pull requests.",
+    description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained and spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. 125 skills added through 36 merged pull requests.",
   },
   "/ai-training": {
     title: "Corporate AI Training in Nepal | Abhishek Adhikari",
@@ -158,6 +159,10 @@ function routeHtmlPlugin(): Plugin {
           /\s*<script id="profile-data" type="application\/json">[\s\S]*?<\/script>/,
           "",
         );
+        const schemaScript = `    <script data-page-schema="ai-trainer-nepal" type="application/ld+json">${JSON.stringify(
+          buildAITrainerNepalSchema(),
+        ).replace(/</g, "\\u003c")}</script>\n`;
+        out = out.replace("</head>", `${schemaScript}  </head>`);
       }
 
       const dir = path.join(distDir, canonicalRoute.replace(/^\//, "").replace(/\/$/, ""));

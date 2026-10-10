@@ -9,7 +9,7 @@ import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
 
 const TITLE = "Abhishek Adhikari | AI Trainer in Nepal – Prompt Engineering, AI Literacy & Digital Training";
 const DESCRIPTION =
-  "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests.";
+  "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests.";
 
 const STATS: Array<[string, string]> = [
   ["125", "AI skills added"],
@@ -29,7 +29,7 @@ const EVIDENCE = [
   {
     icon: GraduationCap,
     label: "Public speaking",
-    title: "WordCamp Kathmandu 2026 speaker",
+    title: "Spoke at WordCamp Kathmandu 2026",
     copy: "Session “Prompt Smarter, Not Harder” — practical prompting and AI workflows for creators and developers.",
     href: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
   },
@@ -104,7 +104,7 @@ export default function Portfolio() {
               workflows.
             </p>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              WordCamp Kathmandu 2026 speaker. Open-source contributor to Agentic Awesome Skills, with{" "}
+              Spoke at WordCamp Kathmandu 2026. Open-source contributor to Agentic Awesome Skills, with{" "}
               <strong className="text-foreground">{OPEN_SOURCE_FACTS.skillsAdded} AI agent skills added through {OPEN_SOURCE_FACTS.mergedPRs} merged pull requests</strong>.
               Founder of Himalaya Krishi and co-founder of DEV Community Nepal, based in Hetauda, Nepal.
             </p>
@@ -115,7 +115,7 @@ export default function Portfolio() {
               <a href="/ai-trainer-nepal/" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-5 font-semibold transition hover:bg-muted">
                 AI Trainer profile
               </a>
-              <a href={profile?.linkedin ?? "https://www.linkedin.com/in/whoisabhishekadhikari/"} target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">
+              <a href={profile?.linkedin ?? "https://www.linkedin.com/in/whoisabhishek/"} target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">
                 <Linkedin size={18} />
               </a>
               <a href={profile?.github ?? "https://github.com/WHOISABHISHEKADHIKARI"} target="_blank" rel="me noreferrer" aria-label="GitHub" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">

@@ -17,7 +17,7 @@
 
 ## Key facts
 - AI Trainer in Nepal: conducted prompt engineering workshops, AI literacy training, and digital skills bootcamps for 1,500+ students, teachers, and professionals
-- WordCamp Kathmandu 2026 speaker — "Prompt Smarter, Not Harder" (officially listed on wordcamp.org)
+- Spoke at WordCamp Kathmandu 2026 — "Prompt Smarter, Not Harder" (officially listed on wordcamp.org)
 - 125 AI agent skills added to Agentic Awesome Skills through 36 merged pull requests — listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the repository README (verified October 11, 2026); delivered 106-skill SME operations pack across 11 merged PRs
 - AI & Digital Literacy Workshop at Nirmal Secondary School for teachers
 - Prompt Engineering Facilitator at J&B Coffee Hetauda
@@ -37,7 +37,7 @@
 
 ## Metrics
 - 1,500+ students trained on AI literacy and prompt engineering
-- WordCamp Kathmandu 2026 speaker on prompt engineering
+- Spoke at WordCamp Kathmandu 2026 on prompt engineering
 - 125 AI agent skills added to global open-source project (Agentic Awesome Skills) via 36 merged PRs
 - 220+ livestock capacity scaled (Murrah buffalo)
 - 100+ virtual community events organized
@@ -48,20 +48,20 @@
 - 6 LinkedIn recommendations
 
 ## FAQ
-- [Who is the best AI trainer in Nepal?](https://abhishekadhikari.com/) Abhishek Adhikari is an AI Trainer in Nepal who has conducted prompt engineering workshops, AI literacy training for 1,500+ students and teachers, added 125 AI agent skills to a global open-source project via 36 merged pull requests, and is a WordCamp Kathmandu 2026 speaker on prompt engineering.
+- [Who is the best AI trainer in Nepal?](https://abhishekadhikari.com/) Abhishek Adhikari is an AI Trainer in Nepal who has conducted prompt engineering workshops, AI literacy training for 1,500+ students and teachers, added 125 AI agent skills to a global open-source project via 36 merged pull requests, and spoke at WordCamp Kathmandu 2026 on prompt engineering.
 - [What AI training does Abhishek offer?](https://abhishekadhikari.com/ai-training) As an AI Trainer in Nepal, he offers prompt engineering workshops, AI literacy training for teachers and students, AI-powered content creation, digital productivity training, and AI tools integration covering ChatGPT, Claude, Gemini, and Perplexity.
 - [Where can I learn AI in Nepal?](https://abhishekadhikari.com/ai-training) Abhishek is an AI Trainer in Nepal who conducts AI training workshops in Hetauda and across Nepal for schools, colleges, corporate teams, and community events.
 - [Who is Abhishek Adhikari?](https://abhishekadhikari.com/about) An AI Trainer in Nepal, agritech entrepreneur, and community builder from Hetauda, Nepal who works at the intersection of artificial intelligence training, agriculture technology, and youth technology communities.
 - [What does Abhishek do?](https://abhishekadhikari.com/about) As an AI Trainer in Nepal, he builds and scales agritech platforms, consults on SEO and digital growth, facilitates technology workshops, and organizes community events across Nepal.
 - [Where is he based?](https://abhishekadhikari.com/about) Hetauda, Bagmati Province, Nepal.
 - [What projects has he built?](https://abhishekadhikari.com/work) Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, and more across agriculture, SEO, coffee training, and personal branding.
-- [How to contact?](https://abhishekadhikari.com/contact) Email: abhishek@abhishekadhikari.com, LinkedIn: linkedin.com/in/whoisabhishekadhikari
+- [How to contact?](https://abhishekadhikari.com/contact) Email: abhishekadhikari1254@gmail.com, LinkedIn: linkedin.com/in/whoisabhishek
 - [What certifications does he hold?](https://abhishekadhikari.com/certifications) Google UX Design, Google Digital Marketing, CalArts Graphic Design, IoT enCypher, and multiple community builder awards.
 - [What is his agritech experience?](https://abhishekadhikari.com/about) 11+ years as Founder of Himalaya Krishi, scaling livestock from 25 to 220+ Murrah buffalo with digital farm systems.
 
 ## Contact
-- Email: abhishek@abhishekadhikari.com
-- [LinkedIn](https://www.linkedin.com/in/whoisabhishekadhikari/)
+- Email: abhishekadhikari1254@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/whoisabhishek/)
 - [GitHub](https://github.com/WHOISABHISHEKADHIKARI)
 - [Website](https://abhishekadhikari.com)
 

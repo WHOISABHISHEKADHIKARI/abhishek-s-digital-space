@@ -8,7 +8,7 @@ import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
 
 const TITLE = "About Abhishek Adhikari | AI Trainer in Nepal";
 const DESCRIPTION =
-  "AI trainer, prompt engineering practitioner, open-source contributor and agritech entrepreneur from Hetauda, Nepal. WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026).";
+  "AI trainer, prompt engineering practitioner, open-source contributor and agritech entrepreneur from Hetauda, Nepal. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026).";
 
 export default function AboutPage() {
   const data = useProfileData();
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 </div>
               </dl>
               <div className="mt-5 flex gap-3">
-                <a href="https://www.linkedin.com/in/whoisabhishekadhikari/" target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="rounded-md border p-2 hover:bg-muted">
+                <a href="https://www.linkedin.com/in/whoisabhishek/" target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="rounded-md border p-2 hover:bg-muted">
                   <Linkedin size={18} />
                 </a>
                 <a href="https://github.com/WHOISABHISHEKADHIKARI" target="_blank" rel="me noreferrer" aria-label="GitHub" className="rounded-md border p-2 hover:bg-muted">

@@ -19,16 +19,20 @@ import {
   Workflow,
   X,
 } from "lucide-react";
-
-const SITE_URL = "https://abhishekadhikari.com";
-const PAGE_URL = `${SITE_URL}/ai-trainer-nepal/`;
+import {
+  AI_TRAINER_CITATIONS,
+  AI_TRAINER_FAQ,
+  PAGE_URL,
+  buildAITrainerNepalSchema,
+} from "@/lib/ai-trainer-nepal-data";
+import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
 
 const evidence = [
   {
     image: "/sections/media/images/abhishek-adhikari--wordcamp-kathmandu-2026-speaker.jpg",
     label: "Public speaking",
-    title: "WordCamp Kathmandu 2026 speaker",
-    copy: "Official speaker for “Prompt Smarter, Not Harder,” a practical session on prompting and AI workflows.",
+    title: "Spoke at WordCamp Kathmandu 2026",
+    copy: "Presented “Prompt Smarter, Not Harder,” a practical session on prompting and AI workflows.",
     href: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
   },
   {
@@ -71,53 +75,6 @@ const audiences = [
   { title: "Agriculture & AgriTech", copy: "Explore records, knowledge access, communication and operational support without replacing domain experts." },
 ];
 
-const faqs = [
-  ["What does an AI trainer in Nepal teach?", "An AI trainer helps people apply artificial intelligence to real tasks. Sessions can cover AI literacy, prompt engineering, context engineering, research, verification, agentic workflows, automation and responsible use."],
-  ["Do I need coding skills?", "No. Foundational workshops for students, teachers, teams and professionals do not require coding. Developer sessions can go deeper into APIs, RAG, structured outputs and agent workflows."],
-  ["What is context engineering?", "Context engineering designs the full information environment around an AI task: instructions, files, retrieved documents, examples, memory, tools, permissions and evaluation rules."],
-  ["What is agentic AI?", "Agentic AI describes systems that can work toward a goal over multiple steps, use approved tools, evaluate results and ask for human review when needed."],
-  ["What tools are covered?", "Sessions may use ChatGPT, Claude, Gemini and other tools suited to the task. The durable focus is task definition, context, workflow design, verification and responsible use."],
-  ["Can colleges and companies book a workshop?", "Yes. Sessions can be scoped for colleges, organizations, developer communities and teams. Share your audience, experience level, preferred format and desired outcome when you enquire."],
-];
-
-const citations = [
-  {
-    number: 1,
-    title: "Abhishek Adhikari — WordCamp Kathmandu 2026 speaker profile",
-    publisher: "WordCamp Kathmandu",
-    href: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
-    supports: "Speaker status, session title and public description of AI, open-source, community and AgriTech work.",
-  },
-  {
-    number: 2,
-    title: "WHOISABHISHEKADHIKARI on GitHub",
-    publisher: "GitHub",
-    href: "https://github.com/WHOISABHISHEKADHIKARI",
-    supports: "Public developer identity, repositories and open-source activity.",
-  },
-  {
-    number: 3,
-    title: "Agentic Awesome Skills",
-    publisher: "GitHub",
-    href: "https://github.com/sickn33/agentic-awesome-skills",
-    supports: "Canonical open-source repository for the reusable agent skills project.",
-  },
-  {
-    number: 4,
-    title: "Abhishek Adhikari (@whoisabhishek)",
-    publisher: "Luma",
-    href: "https://luma.com/user/whoisabhishek",
-    supports: "Public events identity and hosted or attended technology events.",
-  },
-  {
-    number: 5,
-    title: "sickn33/agentic-awesome-skills repository rank",
-    publisher: "Star History",
-    href: "https://www.star-history.com/sickn33/agentic-awesome-skills/",
-    supports: "Live third-party repository star and global-rank history; this is not an individual contributor ranking.",
-  },
-];
-
 function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
   return (
     <div className="max-w-3xl mb-10">
@@ -143,61 +100,11 @@ export default function AITrainerNepal() {
     document.querySelector('meta[name="description"]')?.setAttribute("content", description);
     document.querySelector('link[rel="canonical"]')?.setAttribute("href", PAGE_URL);
 
-    const schema = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": `${SITE_URL}/#person`,
-          name: "Abhishek Adhikari",
-          url: SITE_URL,
-          image: `${SITE_URL}/abhishek-adhikari-ai-trainer-nepal-hero.webp`,
-          description: "Nepal-based AI trainer and practitioner focused on practical generative AI, prompt engineering, context engineering and agentic workflows.",
-          homeLocation: { "@type": "Country", name: "Nepal" },
-          sameAs: [
-            "https://github.com/WHOISABHISHEKADHIKARI",
-            "https://www.linkedin.com/in/whoisabhishekadhikari/",
-            "https://luma.com/user/whoisabhishek",
-            "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
-          ],
-          subjectOf: [
-            { "@type": "WebPage", url: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/", name: "Abhishek Adhikari — WordCamp Kathmandu 2026" },
-            { "@type": "ProfilePage", url: "https://luma.com/user/whoisabhishek", name: "Abhishek Adhikari on Luma" },
-          ],
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${PAGE_URL}#webpage`,
-          url: PAGE_URL,
-          name: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
-          about: { "@id": `${SITE_URL}/#person` },
-          inLanguage: "en",
-          citation: citations.map((source) => source.href),
-        },
-        {
-          "@type": "Service",
-          "@id": `${PAGE_URL}#service`,
-          name: "Practical AI Training in Nepal",
-          serviceType: "AI training and workshops",
-          provider: { "@id": `${SITE_URL}/#person` },
-          areaServed: { "@type": "Country", name: "Nepal" },
-          url: PAGE_URL,
-        },
-        {
-          "@type": "FAQPage",
-          "@id": `${PAGE_URL}#faq`,
-          mainEntity: faqs.map(([name, text]) => ({
-            "@type": "Question",
-            name,
-            acceptedAnswer: { "@type": "Answer", text },
-          })),
-        },
-      ],
-    };
+    if (document.querySelector('script[data-page-schema="ai-trainer-nepal"]')) return;
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.dataset.pageSchema = "ai-trainer-nepal";
-    script.textContent = JSON.stringify(schema);
+    script.textContent = JSON.stringify(buildAITrainerNepalSchema());
     document.head.appendChild(script);
     return () => script.remove();
   }, []);
@@ -240,6 +147,13 @@ export default function AITrainerNepal() {
       </header>
 
       <main id="main">
+        <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-5 pt-6 md:px-8">
+          <ol className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+            <li><a href="/" className="hover:text-foreground">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="font-medium text-foreground">AI Trainer in Nepal</li>
+          </ol>
+        </nav>
         <section className="relative overflow-hidden border-b">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--primary)/0.14),transparent_35%),radial-gradient(circle_at_85%_70%,hsl(var(--accent)/0.12),transparent_30%)]" />
           <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
@@ -359,6 +273,12 @@ export default function AITrainerNepal() {
               ))}
             </ol>
             <a href="https://github.com/sickn33/agentic-awesome-skills" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 font-semibold text-primary">Explore the open-source project <Github size={18} /></a>
+            <ul className="mt-6 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+              <li><a href={OPEN_SOURCE_FACTS.evidenceLinks.prSearch} target="_blank" rel="noopener noreferrer" className="hover:text-primary">Merged PRs by Abhishek →</a></li>
+              <li><a href={OPEN_SOURCE_FACTS.evidenceLinks.pr1688} target="_blank" rel="noopener noreferrer" className="hover:text-primary">Skills PR #1688 →</a></li>
+              <li><a href={OPEN_SOURCE_FACTS.evidenceLinks.pr1698} target="_blank" rel="noopener noreferrer" className="hover:text-primary">Skills PR #1698 →</a></li>
+              <li><a href={OPEN_SOURCE_FACTS.evidenceLinks.readmeContributors} target="_blank" rel="noopener noreferrer" className="hover:text-primary">README contributor rankings →</a></li>
+            </ul>
           </div>
         </section>
 
@@ -419,7 +339,7 @@ export default function AITrainerNepal() {
           <div className="mx-auto max-w-4xl">
             <SectionHeading eyebrow="Questions" title="AI training FAQs" />
             <div className="divide-y rounded-xl border bg-card">
-              {faqs.map(([question, answer]) => (
+              {AI_TRAINER_FAQ.map(([question, answer]) => (
                 <details key={question} className="group p-5 md:p-6">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-bold">{question}<ChevronDown size={18} className="shrink-0 transition group-open:rotate-180" /></summary>
                   <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">{answer}</p>
@@ -432,7 +352,7 @@ export default function AITrainerNepal() {
         <section id="sources" aria-labelledby="sources-heading" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
           <SectionHeading eyebrow="Citations" title="Verified public sources" copy="These sources support the identity, speaking, events and open-source statements on this page. Repository metrics can change, so the live source is linked instead of freezing a number in the copy." />
           <ol className="grid gap-4 md:grid-cols-2">
-            {citations.map((source) => (
+            {AI_TRAINER_CITATIONS.map((source) => (
               <li id={`source-${source.number}`} key={source.number} className="rounded-xl border bg-card p-5 scroll-mt-24">
                 <div className="flex gap-4">
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{source.number}</span>

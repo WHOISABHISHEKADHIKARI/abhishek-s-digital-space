@@ -57,6 +57,8 @@ export default function TeacherTrainingPage() {
         </div>
         <p className="mt-6 text-sm text-muted-foreground">
           For a confirmed, currently available offer, see{" "}
+          <a href="/ai-trainer-nepal/" className="font-semibold text-primary">AI training in Nepal</a>{" "}
+          or{" "}
           <a href="/ai-training" className="font-semibold text-primary">corporate AI training</a>.
         </p>
       </section>
