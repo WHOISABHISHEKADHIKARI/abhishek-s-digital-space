@@ -560,11 +560,11 @@ export default function Portfolio() {
     const sectionMeta: Record<string, { title: string; description: string }> = {
       about: {
         title: "About – Abhishek Adhikari | AI Trainer in Nepal",
-        description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker, Global Top 10 AI skills contributor.",
+        description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 3,000+ students, teachers, HR professionals, and corporate teams trained. WordCamp speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README.",
       },
       "ai-training": {
         title: "AI Training – Abhishek Adhikari | AI Trainer in Nepal",
-        description: "AI training workshops and prompt engineering sessions by an AI Trainer in Nepal. 1,500+ students trained on ChatGPT, Claude, Gemini, and AI literacy across schools, colleges, and community events.",
+        description: "AI training workshops and prompt engineering sessions by an AI Trainer in Nepal. 3,000+ students, teachers, HR professionals, and corporate teams trained on ChatGPT, Claude, Gemini, and AI literacy across schools, colleges, and community events.",
       },
       experience: {
         title: "Experience – Abhishek Adhikari | AI Trainer in Nepal",
@@ -810,7 +810,7 @@ export default function Portfolio() {
                 AI Trainer in Nepal and prompt engineering specialist. I help people and businesses use AI tools effectively, from ChatGPT to Claude to Gemini, without needing a technical background.
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xl">
-                1,500+ students trained on AI literacy and prompt engineering. WordCamp Kathmandu 2026 speaker. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
+                3,000+ students trained on AI literacy and prompt engineering, including teachers, HR professionals, and corporate teams. WordCamp Kathmandu 2026 speaker. Open-source contributor to Agentic Awesome Skills, with 125 AI agent skills added through 36 merged pull requests. Also founded Himalaya Krishi (220+ livestock) and co-founded DEV Community Nepal (100+ events) from Hetauda, Nepal.
               </p>
             </div>
 
@@ -820,7 +820,7 @@ export default function Portfolio() {
                   src="/abhishek-adhikari-ai-trainer-nepal-hero-tiny.jpg"
                   srcSet="/abhishek-adhikari-ai-trainer-nepal-hero-416.jpg 416w, /abhishek-adhikari-ai-trainer-nepal-hero-tiny.jpg 520w"
                   sizes="(min-width: 768px) 208px, 160px"
-                  alt="Abhishek Adhikari — AI Trainer in Nepal. Portrait of the prompt engineering specialist and AI literacy educator from Hetauda, Nepal, trained 1,500+ students."
+                  alt="Abhishek Adhikari — AI Trainer in Nepal. Portrait of the prompt engineering specialist and AI literacy educator from Hetauda, Nepal, trained 3,000+ students, teachers, HR professionals, and corporate teams."
                   width={208}
                   height={208}
                   fetchPriority="high"
@@ -878,10 +878,11 @@ export default function Portfolio() {
           className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden border bg-border"
         >
           {[
-            ["1,500+", "Students trained"],
+            ["3,000+", "Students trained"],
             ["220+", "Livestock capacity"],
             ["100+", "Community events"],
-            ["14", "AI skills contributed"],
+            ["125", "AI skills added"],
+            ["36", "Merged PRs"],
           ].map(([value, label]) => (
             <div key={label} className="bg-card px-6 py-8 text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary">{value}</div>
@@ -969,7 +970,7 @@ export default function Portfolio() {
             label="AI Training"
             headingId="ai-training-heading"
             title="AI training workshops and prompt engineering sessions in Nepal"
-            summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, and professionals with no technical background needed. 1,500+ participants trained across schools, colleges, coffee shops, and community events."
+            summary="As an AI Trainer in Nepal, I deliver practical AI literacy training for students, teachers, HR professionals, and corporate teams with no technical background needed. 3,000+ participants trained across schools, colleges, coffee shops, and community events."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -977,7 +978,7 @@ export default function Portfolio() {
               { title: "AI & Digital Literacy Workshop", org: "Nirmal Secondary School", desc: "Teacher training on AI tools, digital literacy, and integrating AI into classroom workflows.", type: "training" },
               { title: "AI in Education Workshop", org: "Nirmal Secondary School", desc: "6-hour practical session on using AI tools for lesson planning, content creation, and student engagement.", type: "workshop" },
               { title: "WordCamp Kathmandu 2026", org: "WordPress Community Nepal", desc: "Speaker — 'Prompt Smarter, Not Harder': practical prompt engineering strategies for content creators and developers.", type: "speaking" },
-              { title: "AI Skills Contributor", org: "Agentic Awesome Skills", desc: "14 named AI skills contributed to a global open-source project (41k+ GitHub stars) — ranked global top 10 contributor.", type: "open-source" },
+              { title: "Open-Source Contributor", org: "Agentic Awesome Skills", desc: "125 AI agent skills added through 36 merged pull requests. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026).", type: "open-source" },
               { title: "10-Day UI/UX Training Bootcamp", org: "HSMSS Hetauda", desc: "UI/UX design training bootcamp covering Figma, wireframing, prototyping, and design thinking for students.", type: "training" },
             ].map((item, i) => (
               <motion.div
@@ -1000,7 +1001,7 @@ export default function Portfolio() {
           </div>
           <div className="mt-6 p-5 rounded-xl bg-muted/30 border">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">1,500+ students and professionals trained</strong> across Nepal on prompt engineering, AI literacy, ChatGPT, Claude, Gemini, and practical AI tools. Available for school workshops, college sessions, corporate training, and community events. Based in Hetauda, Bagmati Province, Nepal.
+              <strong className="text-foreground">3,000+ students and professionals trained</strong> across Nepal on prompt engineering, AI literacy, ChatGPT, Claude, Gemini, and practical AI tools. Sessions include teacher training, HR training, corporate workshops, and student programs. Available for school workshops, college sessions, corporate training, and community events. Based in Hetauda, Bagmati Province, Nepal. Open-source contributor to Agentic Awesome Skills, with 125 AI agent skills added through 36 merged pull requests.
             </p>
           </div>
         </section>

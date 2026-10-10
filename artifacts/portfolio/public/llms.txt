@@ -17,7 +17,7 @@
 ## Key facts
 - AI Trainer in Nepal: conducted prompt engineering workshops, AI literacy training, and digital skills bootcamps for 1,500+ students, teachers, and professionals
 - WordCamp Kathmandu 2026 speaker — "Prompt Smarter, Not Harder" (officially listed on wordcamp.org)
-- 14 named AI skills contributed to Agentic Awesome Skills (41k+ GitHub stars, 1,541+ skills) — ranked global top 10 contributor
+- 125 AI agent skills added to Agentic Awesome Skills through 36 merged pull requests — listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the repository README (verified October 11, 2026); delivered 106-skill SME operations pack across 11 merged PRs
 - AI & Digital Literacy Workshop at Nirmal Secondary School for teachers
 - Prompt Engineering Facilitator at J&B Coffee Hetauda
 - 10-Day UI/UX Training Bootcamp at HSMSS Hetauda

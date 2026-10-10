@@ -21,11 +21,10 @@
     "sameAs": [
       "https://www.linkedin.com/in/whoisabhishekadhikari/",
       "https://github.com/WHOISABHISHEKADHIKARI",
-      "https://krishihimalaya.com",
-      "https://hetaudacity.com",
-      "https://devcommunitynepal.org"
+      "https://luma.com/user/whoisabhishek",
+      "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/"
     ],
-    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. 1,500+ students trained on prompt engineering and AI literacy, WordCamp Kathmandu 2026 speaker, global top-10 AI skills contributor, and community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
+    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. 1,500+ students trained on prompt engineering and AI literacy. WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests. Community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
     "jobTitle": "AI Trainer & Agritech Entrepreneur",
     "knowsLanguage": [
       "English",
@@ -728,7 +727,7 @@
   "featuredHighlights": [
     "Lead Organizer at HRIC STEAM Program 2025, Hetauda",
     "Facilitated an AI & Digital Literacy Workshop at Nirmal Secondary School",
-    "Listed as a top 10 contributor – 3 Hours of Prompt Engineering roadmap in Hetauda",
+    "Top 10 Contributor – 3 Hours of Prompt Engineering roadmap, Hetauda",
     "Project 100 Minds by DEV Community Nepal",
     "100 SEO Tools",
     "Co-organized the AWS Cloud Technology Conference 2026 in Hetauda",
@@ -742,7 +741,9 @@
     "Tech Meetup at Chiyaghar, Chitwan by DEV Community Nepal",
     "Published blog on TechSathi – The Ultimate Guide to Future Design Perfection",
     "Lead Organizer Certificate of Appreciation",
-    "Sharing Mentorship Figma Crash Course – 3 Days"
+    "Sharing Mentorship Figma Crash Course – 3 Days",
+    "Listed #1 'Most Commits' and #2 'Most Skills Added' in Agentic Awesome Skills README (verified Oct 11, 2026)",
+    "125 AI agent skills added through 36 merged PRs to Agentic Awesome Skills"
   ],
   "skills": [
     {
@@ -1182,10 +1183,10 @@
     },
     {
       "type": "recognition",
-      "title": "Global Top 10 Contributor — Agentic Awesome Skills (41k+ stars)",
+      "title": "Open-Source Contributor — Agentic Awesome Skills (41k+ stars)",
       "source": "ICT Frame",
       "date": "Jun 2026",
-      "description": "Hetauda Nepal Abhishek Adhikari AI Trainer in Nepal ranked global top 10 contributor to the Agentic Awesome Skills repository (41k+ GitHub stars) — open-source library of 1,541+ agentic skills for Claude Code, Cursor, Gemini CLI, and GitHub Copilot",
+      "description": "ICT Frame recognized Abhishek Adhikari for open-source contributions to Agentic Awesome Skills. The repository README lists the account #1 under 'Most Commits' and #2 under 'Most Skills Added' (verified October 11, 2026), with 125 skills added through 36 merged pull requests.",
       "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
       "imageUrl": "/sections/news/images/abhishek-adhikari--github-repo-contributor.png"
     },
@@ -1194,18 +1195,9 @@
       "title": "Proud Achievement – Agritech Entrepreneurship",
       "source": "RON Education",
       "date": "2026",
-      "description": "RON Education recognizes Abhishek Adhikari AI Trainer in Nepal agritech entrepreneur founder of Himalaya Krishi for community building and agricultural technology contributions in Nepal",
+      "description": "RON Education recognizes Abhishek Adhikari, founder of Himalaya Krishi, for community building and agricultural technology contributions in Nepal.",
       "url": "https://www.facebook.com/officialronbeducation/photos/proud-achievement-abhishek-adhikari-founder-of-himalaya-krishi-and-an-agritech-e/1048115057724349/",
       "imageUrl": null
-    },
-    {
-      "type": "press",
-      "title": "Hetauda entrepreneur earns global top-10 recognition for open-source work",
-      "source": "ICT Frame",
-      "date": "Jun 2026",
-      "description": "ICT Frame reported Abhishek Adhikari AI Trainer in Nepal's #10 global ranking for 11 contributions totaling 3,701+ lines to Agentic Awesome Skills.",
-      "url": "https://np.ictframe.com/hetaudas-abhishek-secures-spot-in-global/",
-      "imageUrl": "/sections/news/images/abhishek-adhikari--ict-frame-featured.jpg"
     }
   ],
   "mediaAppearances": [
