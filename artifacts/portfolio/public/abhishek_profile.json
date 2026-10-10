@@ -26,7 +26,7 @@
       "https://luma.com/user/whoisabhishek",
       "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/"
     ],
-    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. 1,500+ students trained on prompt engineering and AI literacy. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests. Community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
+    "description": "AI Trainer in Nepal and agritech entrepreneur from Hetauda. Trains students, teachers, and professionals on prompt engineering and AI literacy. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (checked October 11, 2026). 125 skills added through 36 merged pull requests. Community builder connecting rural innovation with Nepal's emerging tech ecosystem.",
     "jobTitle": "AI Trainer & Agritech Entrepreneur",
     "knowsLanguage": [
       "English",
@@ -718,7 +718,7 @@
     "Published blog on TechSathi – The Ultimate Guide to Future Design Perfection",
     "Lead Organizer Certificate of Appreciation",
     "Sharing Mentorship Figma Crash Course – 3 Days",
-    "Listed #1 'Most Commits' and #2 'Most Skills Added' in Agentic Awesome Skills README (verified Oct 11, 2026)",
+    "Listed #1 'Most Commits' and #2 'Most Skills Added' in Agentic Awesome Skills README (checked Oct 11, 2026)",
     "125 AI agent skills added through 36 merged PRs to Agentic Awesome Skills"
   ],
   "skills": [
@@ -1101,7 +1101,7 @@
       "title": "Open-Source Contributor — Agentic Awesome Skills",
       "source": "ICT Frame",
       "date": "Jun 2026",
-      "description": "Historical press coverage: in June 2026 ICT Frame covered Abhishek Adhikari's open-source work — its figures (top contributor rank, 3,701+ lines, ~40,000 users) and the name 'Antigravity Awesome Skills' reflect that time. The repository is now 'agentic-awesome-skills', where the account is listed #1 under 'Most Commits' and #2 under 'Most Skills Added' (verified October 11, 2026) with 125 skills added through 36 merged pull requests.",
+      "description": "Historical press coverage: in June 2026 ICT Frame covered Abhishek Adhikari's open-source work — its figures (top contributor rank, 3,701+ lines, ~40,000 users) and the name 'Antigravity Awesome Skills' reflect that time. The repository is now 'agentic-awesome-skills', where the account is listed #1 under 'Most Commits' and #2 under 'Most Skills Added' (checked October 11, 2026) with 125 skills added through 36 merged pull requests.",
       "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
       "imageUrl": "/sections/news/images/abhishek-adhikari--github-repo-contributor.png"
     },
@@ -1122,13 +1122,76 @@
       "description": "RON Education recognizes Abhishek Adhikari, founder of Himalaya Krishi, for community building and agricultural technology contributions in Nepal.",
       "url": "https://www.facebook.com/officialronbeducation/photos/proud-achievement-abhishek-adhikari-founder-of-himalaya-krishi-and-an-agritech-e/1048115057724349/",
       "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Hetauda's Abhishek listed among top 10 contributors of a 40,000-member international project",
+      "source": "Daman Post",
+      "date": "Jun 20, 2026",
+      "description": "Daman Post reported that Hetauda-based Abhishek Adhikari was listed among the top 10 contributors to a 40,000-member international open-source project. Historical coverage — the figures reflect the time of publication.",
+      "url": "https://damanpost.com/2026/06/20/309/",
+      "imageUrl": null
+    },
+    {
+      "type": "recognition",
+      "title": "Abhishek of Hetauda shines on the global tech stage: the 'Antigravity' project",
+      "source": "ICT Frame (Nepali)",
+      "date": "Jun 2026",
+      "description": "Nepali-language ICT Frame coverage of Abhishek Adhikari's open-source contribution to the project then named 'Antigravity Awesome Skills'. Historical coverage; the project has since been renamed.",
+      "url": "https://np.ictframe.com/hetaudas-abhishek-secures-spot-in-global/",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Sustainable farming in the village with new thinking — Abhishek Adhikari's progress in technology",
+      "source": "Kandara Samachar",
+      "date": "2026",
+      "description": "Independent Nepali coverage of Abhishek Adhikari's agritech work, combining sustainable farming with technology adoption.",
+      "url": "https://kandarasamachar.com/economy/68692/",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Young farmer Abhishek Adhikari's Himalayan Krishi and livestock farm",
+      "source": "E-kripa",
+      "date": "May 2025",
+      "description": "Independent Nepali agritech feature on Abhishek Adhikari and the Himalayan Krishi livestock farm. Outlet-reported investment figures are not independently verified and are not reproduced here.",
+      "url": "https://www.ekripa.com/2025/05/40153/",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Secure Developer Conference 2026 to bring Nepal's technology community to Hetauda",
+      "source": "Cyber Samir (blog)",
+      "date": "2026",
+      "description": "Independent write-up on the Secure Developer Conference 2026 being hosted in Hetauda, where Abhishek Adhikari is a listed speaker.",
+      "url": "https://blog.cybersamir.com/secure-developer-conference-2026-to-hetauda/",
+      "imageUrl": null
+    },
+    {
+      "type": "press",
+      "title": "Organic farming and technology feature",
+      "source": "Nawalpur Online",
+      "date": "May 2025",
+      "description": "Independent Nepali coverage of Abhishek Adhikari's organic farming and technology work.",
+      "url": "https://www.nawalpuronline.com/2025/05/26329",
+      "imageUrl": null
+    },
+    {
+      "type": "bylined_analysis",
+      "title": "The dream of a data center in Nepal — thirteen risks (authored analysis)",
+      "source": "Daman Post",
+      "date": "Jul 11, 2026",
+      "description": "Bylined analysis authored by Abhishek Adhikari (अभिषेक अधिकारी) examining thirteen risks of building a data center in Nepal. Presented as authored/opinion writing, not independent news coverage.",
+      "url": "https://damanpost.com/2026/07/11/518/",
+      "imageUrl": null
     }
   ],
 "mediaAppearances": [
     {
       "type": "Long-form interview",
-      "title": "Can AI Build Nepal's Future?",
-      "outlet": "ITRocks Podcast",
+      "title": "ITRocks #9 — Can AI Build Nepal's Future?",
+      "outlet": "ITRocks Podcast (Indra PC)",
       "date": "Jul 2026",
       "description": "A 60+ minute conversation on agritech, AI, open source, SEO, community building, and digital transformation in Nepal.",
       "url": "https://www.youtube.com/watch?v=INXrMHndbcI",
@@ -1136,7 +1199,7 @@
     },
     {
       "type": "Video feature",
-      "title": "Himalaya Krishi Farm: A Father and Son's Journey in Farming",
+      "title": "Himalaya Krishi Farm: A Father and Son's Journey in Farming (Ep 06)",
       "outlet": "Entrepreneurs of Nepal (नेपालका उद्यमीहरू)",
       "date": "2025",
       "description": "Feature on the Himalaya Krishi Farm journey with Abhishek Adhikari and Kedar Adhikari — agritech, sustainable farming, and community agriculture in Nepal.",
@@ -1145,10 +1208,10 @@
     },
     {
       "type": "TV feature",
-      "title": "गोबेस्रोत किसान समस्या — Himalaya Krishi (Global TV HD)",
+      "title": "सरकार को आखा वास्तविक किसान भएको ठाउँ मा पुगेन, किसान लाई मारेर छिमेकी देश बाट दूध ल्याउछन बिचौलिया",
       "outlet": "Global TV HD",
       "date": "2025",
-      "description": "Global TV HD feature highlighting real farmer challenges and the dairy supply chain in Nepal, with Himalaya Krishi.",
+      "description": "Global TV HD feature highlighting real farmer challenges and the dairy supply chain in Nepal, featuring Himalaya Krishi.",
       "url": "https://www.youtube.com/watch?v=uyfXU35Wt1s",
       "imageUrl": "https://img.youtube.com/vi/uyfXU35Wt1s/hqdefault.jpg"
     },
@@ -1169,15 +1232,6 @@
       "description": "Speaker at Secure Developer Conference 2026 presenting 'Agentic AI Workflows & Building Open-Source Tech Communities'. Listed on the official speaker page (bio: 'Co-Founder, DEV Community Nepal & Agritech Entrepreneur').",
       "url": "https://conference.devcommunitynepal.org/speaker-detail.html?speaker=abhishek-adhikari",
       "imageUrl": "/sections/media/images/abhishek-adhikari--secure-developer-conference-2026-speakers.jpg"
-    },
-    {
-      "type": "Panel judge",
-      "title": "Hacktoberfest Pulchowk 2026 — Introducing one of our judges from the panel: Mr Abhishek Adhikari",
-      "outlet": "Dev Community Nepal & Himalaya Krishi",
-      "date": "Sep 2026",
-      "description": "Poster announcement introducing Abhishek Adhikari as a judge on the Hacktoberfest Pulchowk 2026 panel. As Co-founder of Dev Community Nepal and a leader at Himalaya Krishi, he works across AI, open source, agriculture, and community technology, training students, developers, and professionals in AI, prompt engineering, and open-source tools, and exploring how AI and digital systems can solve real-world problems in rural technology and digital agriculture.",
-      "url": null,
-      "imageUrl": "/sections/social-proof/images/abhishek-adhikari--hacktoberfest-pulchowk-judge.jpg"
     },
     {
       "type": "Mentor",

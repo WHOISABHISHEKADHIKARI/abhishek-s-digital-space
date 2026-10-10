@@ -65,14 +65,19 @@ export default function BlogPage() {
   });
 
   useEffect(() => {
-    let cancelled = false;
-    fetch(MEDIUM_FEED)
-      .then((r) => r.json())
+    let active = true;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+    fetch(MEDIUM_FEED, { signal: controller.signal })
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then((res) => {
-        if (cancelled) return;
-        if (res?.status === "ok" && res.items?.length) {
+        if (!active) return;
+        if (res?.status === "ok") {
           setMedium(
-            res.items.map((item: { title: string; pubDate: string; link: string; description: string; categories?: string[]; thumbnail?: string }) => ({
+            (res.items ?? []).map((item: { title: string; pubDate: string; link: string; description: string; categories?: string[]; thumbnail?: string }) => ({
               title: item.title,
               date: new Date(item.pubDate).toLocaleDateString("en-US", { year: "numeric", month: "short" }),
               url: item.link.replace(/\?source=rss.*/, ""),
@@ -82,14 +87,17 @@ export default function BlogPage() {
             })),
           );
         } else {
-          setMedium([]);
+          setFailed(true);
         }
       })
       .catch(() => {
-        if (!cancelled) setFailed(true);
-      });
+        if (active) setFailed(true);
+      })
+      .finally(() => clearTimeout(timeout));
     return () => {
-      cancelled = true;
+      active = false;
+      clearTimeout(timeout);
+      controller.abort();
     };
   }, []);
 

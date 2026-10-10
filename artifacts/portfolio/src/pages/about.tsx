@@ -8,7 +8,7 @@ import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
 
 const TITLE = "About Abhishek Adhikari | AI Trainer in Nepal";
 const DESCRIPTION =
-  "AI trainer, prompt engineering practitioner, open-source contributor and agritech entrepreneur from Hetauda, Nepal. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026).";
+  "AI trainer, prompt engineering practitioner, open-source contributor and agritech entrepreneur from Hetauda, Nepal. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (checked October 11, 2026).";
 
 export default function AboutPage() {
   const data = useProfileData();
@@ -72,7 +72,7 @@ export default function AboutPage() {
             </p>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               The repository README lists his account #1 under “Most Commits” and #2 under “Most Skills Added”
-              (verified {OPEN_SOURCE_FACTS.readmeRanking.verifiedDate}). Details and evidence are on the{" "}
+              (checked {OPEN_SOURCE_FACTS.readmeRanking.verifiedDate}). Details and evidence are on the{" "}
               <a href="/open-source" className="font-semibold text-primary">
                 open-source page
               </a>

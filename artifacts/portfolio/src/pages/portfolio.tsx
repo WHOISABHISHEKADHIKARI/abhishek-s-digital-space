@@ -9,7 +9,7 @@ import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
 
 const TITLE = "Abhishek Adhikari | AI Trainer in Nepal – Prompt Engineering, AI Literacy & Digital Training";
 const DESCRIPTION =
-  "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (verified October 11, 2026). 125 skills added through 36 merged pull requests.";
+  "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. Spoke at WordCamp Kathmandu 2026. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README (checked October 11, 2026). 125 skills added through 36 merged pull requests.";
 
 const STATS: Array<[string, string]> = [
   ["125", "AI skills added"],

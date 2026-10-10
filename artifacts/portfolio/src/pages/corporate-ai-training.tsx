@@ -6,7 +6,7 @@ import { SITE_URL, breadcrumbSchema, personRef } from "@/lib/site";
 
 const TITLE = "Corporate AI Training in Nepal | Abhishek Adhikari";
 const DESCRIPTION =
-  "Corporate AI training workshops for SMEs, HR teams, teachers, and non-technical staff. Practical prompt engineering, context engineering, and agentic workflow sessions. On-site in Nepal and virtual delivery.";
+  "Corporate AI training workshops for SMEs, HR teams, teachers, and non-technical staff. Practical prompt engineering, context engineering, and agentic workflow sessions. Delivery format is agreed per engagement.";
 
 const faqs: Array<[string, string]> = [
   [

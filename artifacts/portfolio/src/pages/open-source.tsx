@@ -8,7 +8,7 @@ import { SME_PRS, smeSkillsTotal } from "@/lib/evidence";
 
 const TITLE = "Open-Source Contributions | Abhishek Adhikari — AI Trainer in Nepal";
 const DESCRIPTION =
-  "Open-source contributions by Abhishek Adhikari — 125 AI agent skills added through 36 merged pull requests to Agentic Awesome Skills, including 106 SME operations skills. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the repository README (verified October 11, 2026).";
+  "Open-source contributions by Abhishek Adhikari — 125 AI agent skills added through 36 merged pull requests to Agentic Awesome Skills, including 106 SME operations skills. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the repository README (checked October 11, 2026).";
 
 const stats: Array<[string, string]> = [
   [String(OPEN_SOURCE_FACTS.skillsAdded), "AI agent skills added"],
@@ -76,7 +76,7 @@ export default function OpenSourcePage() {
       <PageHero
         eyebrow="Open source"
         title="Reusable AI agent skills, contributed in the open"
-        intro={`${OPEN_SOURCE_FACTS.skillsAdded} AI agent skills added through ${OPEN_SOURCE_FACTS.mergedPRs} merged pull requests to Agentic Awesome Skills. The repository README lists the account #1 under “Most Commits” and #2 under “Most Skills Added” (verified ${OPEN_SOURCE_FACTS.readmeRanking.verifiedDate}).`}
+        intro={`${OPEN_SOURCE_FACTS.skillsAdded} AI agent skills added through ${OPEN_SOURCE_FACTS.mergedPRs} merged pull requests to Agentic Awesome Skills. The repository README lists the account #1 under “Most Commits” and #2 under “Most Skills Added” (checked ${OPEN_SOURCE_FACTS.readmeRanking.verifiedDate}).`}
       >
         <a href={OPEN_SOURCE_FACTS.evidenceLinks.repo} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-primary px-6 font-semibold text-primary-foreground">
           <Github size={18} /> View repository
