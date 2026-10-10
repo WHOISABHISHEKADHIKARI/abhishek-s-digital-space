@@ -5,6 +5,7 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "headers": [
     { "source": "/", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/>; rel=\"canonical\"" }] },
+    { "source": "/ai-trainer-nepal/", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-trainer-nepal/>; rel=\"canonical\"" }] },
     { "source": "/about", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/about>; rel=\"canonical\"" }] },
     { "source": "/ai-training", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training>; rel=\"canonical\"" }] },
     { "source": "/experience", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/experience>; rel=\"canonical\"" }] },
@@ -15,6 +16,11 @@
     { "source": "/recommendations", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/recommendations>; rel=\"canonical\"" }] },
     { "source": "/blog", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/blog>; rel=\"canonical\"" }] },
     { "source": "/contact", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/contact>; rel=\"canonical\"" }] },
+    { "source": "/open-source", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/open-source>; rel=\"canonical\"" }] },
+    { "source": "/ai-training-sme-operations", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training-sme-operations>; rel=\"canonical\"" }] },
+    { "source": "/ai-training-hr-nepal", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training-hr-nepal>; rel=\"canonical\"" }] },
+    { "source": "/ai-training-teachers-nepal", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/ai-training-teachers-nepal>; rel=\"canonical\"" }] },
+    { "source": "/agentic-ai-skills-workshop", "headers": [{ "key": "Link", "value": "<https://abhishekadhikari.com/agentic-ai-skills-workshop>; rel=\"canonical\"" }] },
     {
       "source": "/(.*)",
       "headers": [
@@ -33,9 +39,11 @@
     { "source": "/skills", "destination": "/ai-training", "permanent": true },
     { "source": "/work/:path+", "destination": "/work", "permanent": true },
     { "source": "/blog/:path+", "destination": "/blog", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/ai-trainer-nepal", "destination": "/ai-trainer-nepal/", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/ai-trainer-nepal/", "destination": "/ai-trainer-nepal/index.html" },
     { "source": "/about", "destination": "/about/index.html" },
     { "source": "/ai-training", "destination": "/ai-training/index.html" },
     { "source": "/experience", "destination": "/experience/index.html" },
@@ -45,6 +53,11 @@
     { "source": "/news", "destination": "/news/index.html" },
     { "source": "/recommendations", "destination": "/recommendations/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/contact", "destination": "/contact/index.html" }
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/open-source", "destination": "/open-source/index.html" },
+    { "source": "/ai-training-sme-operations", "destination": "/ai-training-sme-operations/index.html" },
+    { "source": "/ai-training-hr-nepal", "destination": "/ai-training-hr-nepal/index.html" },
+    { "source": "/ai-training-teachers-nepal", "destination": "/ai-training-teachers-nepal/index.html" },
+    { "source": "/agentic-ai-skills-workshop", "destination": "/agentic-ai-skills-workshop/index.html" }
   ]
 }

@@ -8,147 +8,105 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 const port = Number(process.env.PORT) || 8080;
 const basePath = process.env.BASE_PATH || "/";
 const SITE_URL = "https://abhishekadhikari.com";
-const AI_TRAINER_SCHEMA = {
+
+const PERSON_SCHEMA = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": `${SITE_URL}/#person`,
-      name: "Abhishek Adhikari",
-      url: `${SITE_URL}/`,
-      image: `${SITE_URL}/abhishek-adhikari-ai-trainer-nepal-hero.webp`,
-      description: "Nepal-based AI trainer and practitioner focused on practical generative AI, prompt engineering, context engineering and agentic workflows.",
-      homeLocation: { "@type": "Country", name: "Nepal" },
-      sameAs: [
-        "https://github.com/WHOISABHISHEKADHIKARI",
-        "https://www.linkedin.com/in/whoisabhishekadhikari/",
-        "https://luma.com/user/whoisabhishek",
-        "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
-      ],
-      subjectOf: [
-        { "@type": "WebPage", url: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/", name: "Abhishek Adhikari — WordCamp Kathmandu 2026" },
-        { "@type": "ProfilePage", url: "https://luma.com/user/whoisabhishek", name: "Abhishek Adhikari on Luma" },
-      ],
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/ai-trainer-nepal/#webpage`,
-      url: `${SITE_URL}/ai-trainer-nepal/`,
-      name: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
-      about: { "@id": `${SITE_URL}/#person` },
-      inLanguage: "en",
-      citation: [
-        "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
-        "https://github.com/WHOISABHISHEKADHIKARI",
-        "https://github.com/sickn33/agentic-awesome-skills",
-        "https://luma.com/user/whoisabhishek",
-        "https://www.star-history.com/sickn33/agentic-awesome-skills/",
-      ],
-    },
-    {
-      "@type": "Service",
-      "@id": `${SITE_URL}/ai-trainer-nepal/#service`,
-      name: "Practical AI Training in Nepal",
-      serviceType: "AI training and workshops",
-      provider: { "@id": `${SITE_URL}/#person` },
-      areaServed: { "@type": "Country", name: "Nepal" },
-      url: `${SITE_URL}/ai-trainer-nepal/`,
-    },
+  "@type": "Person",
+  "@id": `${SITE_URL}/#person`,
+  name: "Abhishek Adhikari",
+  url: SITE_URL,
+  image: `${SITE_URL}/abhishek-adhikari-ai-trainer-nepal-hero.webp`,
+  description: "Nepal-based AI trainer and practitioner focused on practical generative AI, prompt engineering, context engineering and agentic workflows.",
+  homeLocation: { "@type": "Country", name: "Nepal" },
+  sameAs: [
+    "https://github.com/WHOISABHISHEKADHIKARI",
+    "https://www.linkedin.com/in/whoisabhishekadhikari/",
+    "https://luma.com/user/whoisabhishek",
+    "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+  ],
+  knowsLanguage: ["English", "Nepali", "Hindi"],
+  subjectOf: [
+    { "@type": "WebPage", url: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/", name: "Abhishek Adhikari — WordCamp Kathmandu 2026" },
+    { "@type": "ProfilePage", url: "https://luma.com/user/whoisabhishek", name: "Abhishek Adhikari on Luma" },
   ],
 };
-const AI_TRAINER_STATIC_HTML = `
-    <div id="root" class="noise-overlay">
-      <main style="max-width:900px;margin:0 auto;padding:64px 24px;font-family:system-ui,sans-serif;line-height:1.65">
-        <h1>AI Trainer in Nepal for Practical AI, Prompt Engineering &amp; Agentic Workflows</h1>
-        <p>Abhishek Adhikari is a Nepal-based AI trainer, prompt engineering practitioner, open-source contributor, technology community builder and AgriTech entrepreneur. His training focuses on practical generative AI, context engineering, agentic workflows, verification and responsible adoption.</p>
-        <p><a href="#book">Book an AI workshop</a> · <a href="#topics">Explore training topics</a></p>
-        <h2>Evidence behind the training</h2>
-        <ul>
-          <li><a href="https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/">WordCamp Kathmandu 2026 speaker profile</a></li>
-          <li><a href="https://github.com/WHOISABHISHEKADHIKARI">Public GitHub profile and open-source work</a></li>
-          <li><a href="https://github.com/sickn33/agentic-awesome-skills">Agentic Awesome Skills open-source project</a></li>
-          <li><a href="https://luma.com/user/whoisabhishek">Abhishek Adhikari’s Luma events profile</a></li>
-          <li><a href="https://www.star-history.com/sickn33/agentic-awesome-skills/">Live Star History rank for the Agentic Awesome Skills repository</a></li>
-        </ul>
-        <h2>Prompt Engineering Training in Nepal</h2>
-        <p>Prompt engineering designs and improves instructions for an AI system. A strong prompt makes the objective, relevant context, examples, constraints and expected output clear, then evaluates the result. It is clear thinking translated into instructions, not a collection of secret phrases.</p>
-        <h2>Beyond Prompt Engineering: Context Engineering</h2>
-        <p>Context engineering designs the complete information environment around a task: system instructions, files, retrieved documents, examples, memory, tools, APIs, permissions and evaluation criteria. It becomes important when a task is too complex or important for a single chat message.</p>
-        <h2>Agentic AI Training in Nepal</h2>
-        <p>Agentic AI systems can pursue a goal through multiple steps, use tools and respond to results with varying autonomy. Reliable workflows make permissions, validation, stopping conditions and human checkpoints explicit.</p>
-        <h2 id="topics">AI training topics</h2>
-        <ul>
-          <li>AI literacy, capabilities, limitations and hallucination checking</li>
-          <li>Prompt engineering and structured outputs</li>
-          <li>Context engineering, files, tools, retrieval and memory</li>
-          <li>Agentic AI, reusable skills and workflow validation</li>
-          <li>AI-assisted development, APIs, RAG, tests and code review</li>
-          <li>Responsible AI, privacy, bias, verification and human oversight</li>
-        </ul>
-        <h2>Training for students, teachers, businesses and developers</h2>
-        <p>Sessions are adapted to the audience. Students can focus on learning and academic integrity; teachers on educational materials and privacy; businesses on real workflows and internal knowledge; developers on APIs, retrieval, evaluations and coding agents.</p>
-        <h2>How a session works</h2>
-        <ol><li>Understand what the technology can and cannot do.</li><li>Apply it to realistic tasks.</li><li>Evaluate accuracy, assumptions and limitations.</li><li>Build useful experiments into repeatable workflows.</li></ol>
-        <h2>Responsible AI</h2>
-        <p>The goal is not to trust AI more. The goal is to use AI more intelligently. Training covers hallucinations, privacy, confidential information, bias, source checking, academic integrity and sensible automation boundaries.</p>
-        <h2>Verified public sources</h2>
-        <ol>
-          <li><a href="https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/">WordCamp Kathmandu 2026 speaker profile</a> — speaker status, session and public professional description.</li>
-          <li><a href="https://github.com/WHOISABHISHEKADHIKARI">Abhishek Adhikari on GitHub</a> — public developer identity and open-source activity.</li>
-          <li><a href="https://github.com/sickn33/agentic-awesome-skills">Agentic Awesome Skills on GitHub</a> — canonical project repository.</li>
-          <li><a href="https://luma.com/user/whoisabhishek">Abhishek Adhikari on Luma</a> — public events identity.</li>
-          <li><a href="https://www.star-history.com/sickn33/agentic-awesome-skills/">Agentic Awesome Skills on Star History</a> — live repository rank history, not an individual contributor rank.</li>
-        </ol>
-        <h2 id="book">Book an AI Training Session in Nepal</h2>
-        <p>Share your organization, audience, participant count, location, current experience, desired outcome, preferred format and duration.</p>
-        <p><a href="mailto:abhishekadhikari1254@gmail.com?subject=AI%20Workshop%20Enquiry">Book an AI workshop</a> · <a href="/contact">Contact Abhishek</a></p>
-      </main>
-    </div>`;
 
-const ROUTE_META: Record<string, { title: string; description: string }> = {
-  "/ai-trainer-nepal": {
+const ROUTE_META: Record<string, { title: string; description: string; keywords?: string; noindex?: boolean }> = {
+  "/": {
+    title: "Abhishek Adhikari | AI Trainer in Nepal – Prompt Engineering, AI Literacy & Digital Training",
+    description: "Abhishek Adhikari — Nepal's AI trainer in prompt engineering, AI literacy, and digital productivity. 1,500+ students trained, WordCamp Kathmandu 2026 speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. AI workshops for schools, colleges, and businesses in Nepal.",
+    keywords: "AI trainer Nepal, artificial intelligence training Nepal, prompt engineering Nepal, AI workshop Nepal, AI literacy Nepal, AI training Hetauda, ChatGPT training Nepal, AI education Nepal, Abhishek Adhikari, agritech Nepal, community builder, Hetauda, Nepal",
+  },
+  "/ai-trainer-nepal/": {
     title: "AI Trainer in Nepal | Abhishek Adhikari — Practical AI",
-    description: "Practical AI training in Nepal by Abhishek Adhikari, covering prompt engineering, context engineering, responsible AI and agentic workflows.",
+    description: "Practical AI training in Nepal by Abhishek Adhikari, covering prompt engineering, context engineering, responsible AI and agentic workflows. 125 skills added through 36 merged PRs to Agentic Awesome Skills. WordCamp Kathmandu 2026 speaker.",
+    keywords: "AI trainer Nepal, AI training Nepal, prompt engineering Nepal, context engineering Nepal, agentic AI Nepal, AI workshop Nepal, Abhishek Adhikari, WordCamp Kathmandu",
   },
   "/about": {
     title: "About – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker, Global Top 10 AI skills contributor.",
+    description: "AI trainer, prompt engineering specialist, and agritech entrepreneur from Hetauda, Nepal. 1,500+ students trained, WordCamp speaker. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the Agentic Awesome Skills README. 125 skills added through 36 merged pull requests.",
   },
   "/ai-training": {
-    title: "AI Training – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "AI training workshops and prompt engineering sessions by an AI Trainer in Nepal. 1,500+ students trained on ChatGPT, Claude, Gemini, and AI literacy across schools, colleges, and community events.",
+    title: "Corporate AI Training in Nepal | Abhishek Adhikari",
+    description: "Corporate AI training workshops for SMEs, HR teams, teachers, and non-technical staff. Practical prompt engineering, context engineering, and agentic workflow sessions. On-site in Nepal and virtual delivery.",
+    keywords: "corporate AI training Nepal, AI workshop Nepal, prompt engineering workshop Nepal, AI literacy corporate training, SME AI training Nepal",
   },
   "/experience": {
     title: "Experience – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Professional experience of an AI Trainer in Nepal — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro.",
+    description: "Professional experience of Abhishek Adhikari — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro, and roles at Aayo Rides Nepal, Kisan Care, IT Club HSMSS, and Menzz.",
   },
   "/work": {
     title: "Projects – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Digital products built by an AI Trainer in Nepal — Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity across agritech, SEO, and branding.",
+    description: "Digital products built by Abhishek Adhikari — Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, Murraa, Hetaudacity, Himalaya Krishi, Aayo Rides, and more across agritech, SEO, coffee, and business sectors.",
   },
   "/volunteering": {
     title: "Volunteering – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Community leadership by an AI Trainer in Nepal — Co-organizer of AWS Cloud Technology Conference 2026, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, and Prompt Engineering Facilitator.",
+    description: "Community leadership and mentorship by Abhishek Adhikari — Co-organizer of AWS Cloud Technology Conference 2026, Panelist at Hult Prize, Mentor at Code for Change, Arduino Instructor, Prompt Engineering Facilitator, and DEV Community Nepal organizer.",
   },
   "/certifications": {
     title: "Certifications – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Professional certifications earned by an AI Trainer in Nepal — Google UX Design, Google Digital Garage, CalArts Graphic Design, IoT enCypher, and community builder awards.",
+    description: "Professional certifications earned by Abhishek Adhikari — Google UX Design Professional Certificate, Google Digital Garage, CalArts Graphic Design, IoT enCypher, and community builder awards from DEV Community Nepal, Coding Olympics Nepal, and others.",
   },
   "/news": {
     title: "News & Media – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "News coverage of an AI Trainer in Nepal — ICT Frame global top-10 coverage, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, and Krishi Pradarshani speaking.",
+    description: "News coverage and recognition of Abhishek Adhikari — ICT Frame open-source contribution recognition, HRIC STEAM Program leadership, Hult Prize panel, AWS Cloud Technology Conference co-organization, Krishi Pradarshani speaking, and Prompt Engineering roadmap contributor recognition.",
   },
   "/recommendations": {
     title: "Recommendations – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "LinkedIn recommendations from industry professionals endorsing an AI Trainer in Nepal — Tanka Bhattarai, Lava Kafle, and other industry professionals.",
+    description: "LinkedIn recommendations for Abhishek Adhikari from industry professionals — Tanka Bhattarai, Lava Kafle, Jagadish Bidari, Upendra Prasad Neupane, Sushovan Paudyal, and Rajiv Raman Neupane.",
   },
   "/blog": {
     title: "Blog – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Articles by an AI Trainer in Nepal on UI/UX design trends, agritech in Nepal, React best practices, content strategy, user research methods, and no-code development.",
+    description: "Articles by Abhishek Adhikari on UI/UX design trends, agritech in Nepal, React performance best practices, content strategy, user research methods, and no-code development.",
   },
   "/contact": {
     title: "Contact – Abhishek Adhikari | AI Trainer in Nepal",
     description: "Book an AI training workshop, discuss prompt engineering, or collaborate on agritech. Contact Abhishek Adhikari via email, LinkedIn, or the contact form.",
+  },
+  "/open-source": {
+    title: "Open-Source Contributions – Abhishek Adhikari | AI Trainer in Nepal",
+    description: "Open-source contributions by Abhishek Adhikari — 125 AI agent skills added through 36 merged pull requests to Agentic Awesome Skills, including 106 SME operations skills. Listed #1 in 'Most Commits' and #2 in 'Most Skills Added' in the repository README (verified October 11, 2026).",
+    keywords: "open source AI Nepal, Agentic Awesome Skills contributor, AI skills open source, Abhishek Adhikari GitHub",
+  },
+  "/ai-training-sme-operations": {
+    title: "AI Training for SME Operations – Abhishek Adhikari",
+    description: "AI training for SME operations covering accounting, HR, reporting, governance, and inventory workflows. Based on 106 open-source skills contributed to Agentic Awesome Skills. Draft page — content pending confirmation.",
+    noindex: true,
+  },
+  "/ai-training-hr-nepal": {
+    title: "AI Training for HR Professionals in Nepal – Abhishek Adhikari",
+    description: "AI training for HR teams covering prompt engineering, recruitment workflows, and employee communications. Draft page — content pending confirmation of workshop details.",
+    noindex: true,
+  },
+  "/ai-training-teachers-nepal": {
+    title: "AI Training for Teachers in Nepal – Abhishek Adhikari",
+    description: "AI training for teachers and educators covering lesson planning, content creation, and student engagement. Draft page — content pending confirmation of workshop agenda and delivery options.",
+    noindex: true,
+  },
+  "/agentic-ai-skills-workshop": {
+    title: "Agentic AI Skills Workshop – Abhishek Adhikari",
+    description: "Hands-on workshop on building agentic AI workflows using reusable skills. Based on open-source contributions to Agentic Awesome Skills. Draft page — curriculum and availability pending confirmation.",
+    noindex: true,
   },
 };
 
@@ -157,8 +115,9 @@ function routeHtmlPlugin(): Plugin {
   const emitRoutePages = () => {
     const base = readFileSync(path.join(distDir, "index.html"), "utf8");
     for (const [route, meta] of Object.entries(ROUTE_META)) {
-      const canonical = route === "/ai-trainer-nepal" ? `${SITE_URL}${route}/` : `${SITE_URL}${route}`;
-      const escapedTitle = meta.title.replace(/&/g, "&amp;");
+      const canonicalRoute = route === "/ai-trainer-nepal/" ? "/ai-trainer-nepal/" : route;
+      const canonical = `${SITE_URL}${canonicalRoute}`;
+      const escapedTitle = meta.title.replace(/&/g, "&");
       let out = base;
       out = out.replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonical}" />`);
       out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapedTitle}</title>`);
@@ -171,11 +130,26 @@ function routeHtmlPlugin(): Plugin {
       out = out.replace(/<meta name="twitter:title" content="[^"]*"\s*\/>/, `<meta name="twitter:title" content="${escapedTitle}" />`);
       out = out.replace(/<meta name="twitter:description" content="[^"]*"\s*\/>/, `<meta name="twitter:description" content="${meta.description}" />`);
 
-      if (route === "/ai-trainer-nepal") {
+      if (meta.keywords) {
         out = out.replace(
           /<meta name="keywords" content="[^"]*"\s*\/>/,
-          '<meta name="keywords" content="AI trainer Nepal, AI training Nepal, prompt engineering Nepal, context engineering Nepal, agentic AI Nepal, AI workshop Nepal" />',
+          `<meta name="keywords" content="${meta.keywords}" />`,
         );
+      }
+
+      if (meta.noindex) {
+        out = out.replace(
+          /<meta name="robots" content="[^"]*"\s*\/>/,
+          `<meta name="robots" content="noindex, follow" />`,
+        );
+      } else {
+        out = out.replace(
+          /<meta name="robots" content="[^"]*"\s*\/>/,
+          `<meta name="robots" content="index, follow, max-image-preview:large" />`,
+        );
+      }
+
+      if (route === "/ai-trainer-nepal/") {
         out = out.replace(
           /\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
           "",
@@ -184,17 +158,9 @@ function routeHtmlPlugin(): Plugin {
           /\s*<script id="profile-data" type="application\/json">[\s\S]*?<\/script>/,
           "",
         );
-        out = out.replace(
-          /<div id="root" class="noise-overlay">[\s\S]*<\/div>\s*<\/body>/,
-          `${AI_TRAINER_STATIC_HTML}\n  </body>`,
-        );
-        out = out.replace(
-          "</head>",
-          `    <script type="application/ld+json">${JSON.stringify(AI_TRAINER_SCHEMA)}</script>\n  </head>`,
-        );
       }
 
-      const dir = path.join(distDir, route.replace(/^\//, ""));
+      const dir = path.join(distDir, canonicalRoute.replace(/^\//, "").replace(/\/$/, ""));
       mkdirSync(dir, { recursive: true });
       writeFileSync(path.join(dir, "index.html"), out);
     }
