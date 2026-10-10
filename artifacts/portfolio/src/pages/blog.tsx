@@ -8,7 +8,7 @@ import { SITE_URL, breadcrumbSchema, personRef } from "@/lib/site";
 
 const TITLE = "Blog | Abhishek Adhikari — AI Trainer in Nepal";
 const DESCRIPTION =
-  "Articles by Abhishek Adhikari on UI/UX design trends, agritech in Nepal, React performance best practices, content strategy, user research methods, and no-code development.";
+  "Articles by Abhishek Adhikari — design and UI writing published on TechSathi, plus AI training in Nepal and open-source contributions.";
 
 const MEDIUM_FEED =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abhishekadhikari1254";

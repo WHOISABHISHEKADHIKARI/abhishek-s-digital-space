@@ -1,9 +1,10 @@
 {
   "profile": {
     "name": "Abhishek Adhikari",
-    "linkedin": "https://www.linkedin.com/in/whoisabhishek/",
+    "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari",
+    "instagram": "https://instagram.com/whoisabhishekadhikari",
     "github": "https://github.com/WHOISABHISHEKADHIKARI",
-    "email": "abhishek@abhishekadhikari.com",
+    "email": "abhishekadhikari1254@gmail.com",
     "website": "https://abhishekadhikari.com",
     "redesignProfile": "https://www.redesignprofile.com",
     "address": {
@@ -19,7 +20,8 @@
     },
     "image": "/abhishek-adhikari-social.jpg",
     "sameAs": [
-      "https://www.linkedin.com/in/whoisabhishek/",
+      "https://www.linkedin.com/in/whoisabhishekadhikari",
+      "https://instagram.com/whoisabhishekadhikari",
       "https://github.com/WHOISABHISHEKADHIKARI",
       "https://krishihimalaya.com",
       "https://hetaudacity.com",
@@ -172,32 +174,6 @@
         "Agritech Innovation"
       ],
       "logoUrl": "/sections/experience/images/abhishek-adhikari--himalaya-krishi-logo.jpeg"
-    },
-    {
-      "role": "Founder",
-      "organization": "Hashtag Web Solutions",
-      "type": "Full-time",
-      "startDate": "Oct 2024",
-      "endDate": "Mar 2026",
-      "duration": "1 yr 6 mos",
-      "location": "Nepal (On-site)",
-      "summary": "Helping businesses move from low visibility to scalable digital growth across Nepal and international markets.",
-      "responsibilities": [
-        "SEO strategy and technical audits",
-        "Digital growth systems and automation",
-        "AI powered tools and workflow optimization"
-      ],
-      "impact": [
-        "Generated 5+ international inbound inquiries through SEO improvements",
-        "Led brand transformation for Fresh Masala including packaging redesign, PR campaigns, and social media strategy",
-        "Built AI Agentic IDE improving development and content workflow efficiency by up to 3x",
-        "Created and maintained 100+ SEO tools for keyword research, technical audits, content optimization, and ranking analysis",
-        "Managed 10+ clients from onboarding to strategy, execution, and delivery"
-      ],
-      "skills": [
-        "SEO Audits"
-      ],
-      "logoUrl": "/sections/experience/images/abhishek-adhikari--hashtag-web-solutions-logo.jpeg"
     },
     {
       "role": "Business Development Manager",

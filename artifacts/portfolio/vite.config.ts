@@ -21,7 +21,8 @@ const PERSON_SCHEMA = {
   homeLocation: { "@type": "Country", name: "Nepal" },
   sameAs: [
     "https://github.com/WHOISABHISHEKADHIKARI",
-    "https://www.linkedin.com/in/whoisabhishek/",
+    "https://www.linkedin.com/in/whoisabhishekadhikari",
+    "https://instagram.com/whoisabhishekadhikari",
     "https://luma.com/user/whoisabhishek",
     "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
   ],
@@ -54,7 +55,7 @@ const ROUTE_META: Record<string, { title: string; description: string; keywords?
   },
   "/experience": {
     title: "Experience – Abhishek Adhikari | AI Trainer in Nepal",
-    description: "Professional experience of Abhishek Adhikari — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi & Hashtag Web Solutions, Product Designer at Sajilo Patro, and roles at Aayo Rides Nepal, Kisan Care, IT Club HSMSS, and Menzz.",
+    description: "Professional experience of Abhishek Adhikari — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi, Product Designer at Sajilo Patro, and roles at Aayo Rides Nepal, Kisan Care, IT Club HSMSS, and Menzz.",
   },
   "/work": {
     title: "Projects – Abhishek Adhikari | AI Trainer in Nepal",
@@ -153,10 +154,6 @@ function routeHtmlPlugin(): Plugin {
       if (route === "/ai-trainer-nepal/") {
         out = out.replace(
           /\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
-          "",
-        );
-        out = out.replace(
-          /\s*<script id="profile-data" type="application\/json">[\s\S]*?<\/script>/,
           "",
         );
         const schemaScript = `    <script data-page-schema="ai-trainer-nepal" type="application/ld+json">${JSON.stringify(

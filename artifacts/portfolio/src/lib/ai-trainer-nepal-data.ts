@@ -84,7 +84,8 @@ export function buildAITrainerNepalSchema() {
         homeLocation: { "@type": "Country", name: "Nepal" },
         sameAs: [
           "https://github.com/WHOISABHISHEKADHIKARI",
-          "https://www.linkedin.com/in/whoisabhishek/",
+          "https://www.linkedin.com/in/whoisabhishekadhikari",
+          "https://instagram.com/whoisabhishekadhikari",
           "https://luma.com/user/whoisabhishek",
           "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
         ],

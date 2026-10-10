@@ -4,6 +4,7 @@ import { PageHero, SectionHeading } from "@/components/page-parts";
 import { usePageMeta } from "@/lib/use-page-meta";
 import { SITE_URL, breadcrumbSchema, personRef } from "@/lib/site";
 import { OPEN_SOURCE_FACTS } from "@/lib/profile-data";
+import { SME_PRS, smeSkillsTotal } from "@/lib/evidence";
 
 const TITLE = "Open-Source Contributions | Abhishek Adhikari — AI Trainer in Nepal";
 const DESCRIPTION =
@@ -93,6 +94,46 @@ export default function OpenSourcePage() {
               <div className="mt-1.5 text-sm text-muted-foreground">{label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-b bg-card/40">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
+          <SectionHeading eyebrow="Audit trail" title="SME operations skills, PR by PR" />
+          <p className="max-w-3xl leading-relaxed text-muted-foreground">
+            The {smeSkillsTotal()} SME operations skills were merged across {SME_PRS.length} pull requests on September
+            29–30, 2026. Each PR added 10 skills, except the final PR #{SME_PRS[SME_PRS.length - 1].pr}, which added 6.
+            The table below lists every pull request in the batch.
+          </p>
+          <div className="mt-8 max-w-2xl overflow-hidden rounded-xl border bg-background">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">Skills added per merged pull request in the SME operations batch</caption>
+              <thead>
+                <tr className="border-b bg-muted/50 text-xs uppercase tracking-wide text-muted-foreground">
+                  <th scope="col" className="px-4 py-3 font-semibold">Pull request</th>
+                  <th scope="col" className="px-4 py-3 text-right font-semibold">Skills added</th>
+                </tr>
+              </thead>
+              <tbody>
+                {SME_PRS.map(({ pr, skills }) => (
+                  <tr key={pr} className="border-b last:border-0 hover:bg-muted/30">
+                    <td className="px-4 py-2.5">
+                      <a href={`https://github.com/sickn33/agentic-awesome-skills/pull/${pr}`} target="_blank" rel="noopener noreferrer" className="font-mono font-semibold text-primary hover:underline">
+                        PR #{pr} <ExternalLink size={12} className="inline" />
+                      </a>
+                    </td>
+                    <td className="px-4 py-2.5 text-right font-mono">{skills}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr className="border-t bg-muted/50">
+                  <td className="px-4 py-3 font-semibold">Total</td>
+                  <td className="px-4 py-3 text-right font-mono font-bold text-primary">{smeSkillsTotal()}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </section>
 

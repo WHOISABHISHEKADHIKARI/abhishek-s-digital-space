@@ -115,7 +115,7 @@ export default function Portfolio() {
               <a href="/ai-trainer-nepal/" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-5 font-semibold transition hover:bg-muted">
                 AI Trainer profile
               </a>
-              <a href={profile?.linkedin ?? "https://www.linkedin.com/in/whoisabhishek/"} target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">
+              <a href={profile?.linkedin ?? "https://www.linkedin.com/in/whoisabhishekadhikari"} target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">
                 <Linkedin size={18} />
               </a>
               <a href={profile?.github ?? "https://github.com/WHOISABHISHEKADHIKARI"} target="_blank" rel="me noreferrer" aria-label="GitHub" className="inline-flex min-h-12 items-center rounded-lg border bg-card px-4 transition hover:bg-muted">

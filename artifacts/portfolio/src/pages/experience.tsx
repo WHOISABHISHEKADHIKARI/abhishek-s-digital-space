@@ -6,7 +6,7 @@ import { SITE_URL, breadcrumbSchema, personRef } from "@/lib/site";
 
 const TITLE = "Experience | Abhishek Adhikari — AI Trainer in Nepal";
 const DESCRIPTION =
-  "Professional experience of Abhishek Adhikari — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi and Hashtag Web Solutions, Product Designer at Sajilo Patro, and roles at Aayo Rides Nepal, Kisan Care, IT Club HSMSS, and Menzz.";
+  "Professional experience of Abhishek Adhikari — Co-Founder of DEV Community Nepal, Founder of Himalaya Krishi, Product Designer at Sajilo Patro, and roles at Aayo Rides Nepal, Kisan Care, IT Club HSMSS, and Menzz.";
 
 export default function ExperiencePage() {
   const data = useProfileData();

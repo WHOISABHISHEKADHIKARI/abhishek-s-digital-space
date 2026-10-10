@@ -5,14 +5,14 @@
 - [Home](https://abhishekadhikari.com/): AI trainer, prompt engineering, AI literacy, portfolio overview, key metrics
 - [AI Training](https://abhishekadhikari.com/ai-training): Prompt engineering workshops, AI literacy sessions, 1,500+ students trained
 - [About](https://abhishekadhikari.com/about): AI trainer, agritech entrepreneur, community builder in Nepal
-- [Experience](https://abhishekadhikari.com/experience): 11 roles across agritech, tech communities, design, and consulting
+- [Experience](https://abhishekadhikari.com/experience): 10 roles across agritech, tech communities, design, and consulting
 - [Projects](https://abhishekadhikari.com/work): 15 digital products built across agriculture, SEO, coffee, and business sectors
 - [Volunteering](https://abhishekadhikari.com/volunteering): 15 community leadership and mentorship activities
 - [Certifications](https://abhishekadhikari.com/certifications): 10 professional credentials
 - [News & Media](https://abhishekadhikari.com/news): 7 media mentions and public recognition
 - [Open Source](https://abhishekadhikari.com/open-source): 125 AI agent skills added via 36 merged PRs to Agentic Awesome Skills; SME operations pack
 - [Recommendations](https://abhishekadhikari.com/recommendations): 6 LinkedIn recommendations
-- [Blog](https://abhishekadhikari.com/blog): Articles on design trends, agritech Nepal, React performance, content strategy, user research, no-code development
+- [Blog](https://abhishekadhikari.com/blog): Articles on design and Figma published on TechSathi and Medium
 - [Contact](https://abhishekadhikari.com/contact): Contact form and social links
 
 ## Key facts
@@ -24,7 +24,7 @@
 - 10-Day UI/UX Training Bootcamp at HSMSS Hetauda
 - Founded Himalaya Krishi: scaled Murrah buffalo livestock from 25 to 220+ head
 - Co-founded DEV Community Nepal: organized 100+ virtual events and 10+ physical meetups
-- Built Hashtag Web Solutions: SEO consulting for 10+ clients, built 100+ SEO tools
+- Built 100+ SEO tools (100SEOTools) for keyword research, technical audits, content optimization, and ranking analysis
 - Deputy Community Builder at Coding Olympics Nepal: reached 16+ colleges
 - Google UX Design Professional Certificate holder
 - Google Digital Marketing certified
@@ -41,7 +41,6 @@
 - 125 AI agent skills added to global open-source project (Agentic Awesome Skills) via 36 merged PRs
 - 220+ livestock capacity scaled (Murrah buffalo)
 - 100+ virtual community events organized
-- 10+ SEO and digital growth clients managed
 - 11+ years agritech experience
 - 15 digital products built
 - 10 professional certifications earned
@@ -55,13 +54,14 @@
 - [What does Abhishek do?](https://abhishekadhikari.com/about) As an AI Trainer in Nepal, he builds and scales agritech platforms, consults on SEO and digital growth, facilitates technology workshops, and organizes community events across Nepal.
 - [Where is he based?](https://abhishekadhikari.com/about) Hetauda, Bagmati Province, Nepal.
 - [What projects has he built?](https://abhishekadhikari.com/work) Krishi Himalaya, 100SEOTools, Redesign Profile, JNB Coffee, and more across agriculture, SEO, coffee training, and personal branding.
-- [How to contact?](https://abhishekadhikari.com/contact) Email: abhishekadhikari1254@gmail.com, LinkedIn: linkedin.com/in/whoisabhishek
+- [How to contact?](https://abhishekadhikari.com/contact) Email: abhishekadhikari1254@gmail.com, LinkedIn: linkedin.com/in/whoisabhishekadhikari, Instagram: instagram.com/whoisabhishekadhikari
 - [What certifications does he hold?](https://abhishekadhikari.com/certifications) Google UX Design, Google Digital Marketing, CalArts Graphic Design, IoT enCypher, and multiple community builder awards.
 - [What is his agritech experience?](https://abhishekadhikari.com/about) 11+ years as Founder of Himalaya Krishi, scaling livestock from 25 to 220+ Murrah buffalo with digital farm systems.
 
 ## Contact
 - Email: abhishekadhikari1254@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/whoisabhishek/)
+- [LinkedIn](https://www.linkedin.com/in/whoisabhishekadhikari)
+- [Instagram](https://instagram.com/whoisabhishekadhikari)
 - [GitHub](https://github.com/WHOISABHISHEKADHIKARI)
 - [Website](https://abhishekadhikari.com)
 

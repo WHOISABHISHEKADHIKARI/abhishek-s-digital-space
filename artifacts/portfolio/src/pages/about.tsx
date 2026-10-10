@@ -102,7 +102,7 @@ export default function AboutPage() {
                 </div>
               </dl>
               <div className="mt-5 flex gap-3">
-                <a href="https://www.linkedin.com/in/whoisabhishek/" target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="rounded-md border p-2 hover:bg-muted">
+                <a href="https://www.linkedin.com/in/whoisabhishekadhikari" target="_blank" rel="me noreferrer" aria-label="LinkedIn" className="rounded-md border p-2 hover:bg-muted">
                   <Linkedin size={18} />
                 </a>
                 <a href="https://github.com/WHOISABHISHEKADHIKARI" target="_blank" rel="me noreferrer" aria-label="GitHub" className="rounded-md border p-2 hover:bg-muted">

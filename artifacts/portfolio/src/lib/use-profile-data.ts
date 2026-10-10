@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import type { ProfileData } from "./profile-data";
 
 function readInjected(): ProfileData | null {
+  const g = globalThis as unknown as { __PROFILE_DATA__?: ProfileData };
+  if (g.__PROFILE_DATA__) return g.__PROFILE_DATA__;
   if (typeof document === "undefined") return null;
   const el = document.getElementById("profile-data") as HTMLScriptElement | null;
   if (el?.textContent) {

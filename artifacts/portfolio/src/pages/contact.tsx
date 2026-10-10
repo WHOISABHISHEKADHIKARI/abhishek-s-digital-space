@@ -128,7 +128,7 @@ export default function ContactPage() {
               <a href="mailto:abhishekadhikari1254@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary">
                 <Mail size={17} className="shrink-0" /> abhishekadhikari1254@gmail.com
               </a>
-              <a href="https://www.linkedin.com/in/whoisabhishek/" target="_blank" rel="me noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary">
+              <a href="https://www.linkedin.com/in/whoisabhishekadhikari" target="_blank" rel="me noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary">
                 <Linkedin size={17} className="shrink-0" /> LinkedIn
               </a>
             </div>

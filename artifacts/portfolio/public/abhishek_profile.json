@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "Abhishek Adhikari",
-    "linkedin": "https://www.linkedin.com/in/whoisabhishek/",
+    "linkedin": "https://www.linkedin.com/in/whoisabhishekadhikari",
+    "instagram": "https://instagram.com/whoisabhishekadhikari",
     "github": "https://github.com/WHOISABHISHEKADHIKARI",
     "email": "abhishekadhikari1254@gmail.com",
     "website": "https://abhishekadhikari.com",
@@ -19,7 +20,8 @@
     },
     "image": "/abhishek-adhikari-social.webp",
     "sameAs": [
-      "https://www.linkedin.com/in/whoisabhishek/",
+      "https://www.linkedin.com/in/whoisabhishekadhikari",
+      "https://instagram.com/whoisabhishekadhikari",
       "https://github.com/WHOISABHISHEKADHIKARI",
       "https://luma.com/user/whoisabhishek",
       "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/"
@@ -171,32 +173,6 @@
         "Agritech Innovation"
       ],
       "logoUrl": "/sections/experience/images/abhishek-adhikari--himalaya-krishi-logo.jpeg"
-    },
-    {
-      "role": "Founder",
-      "organization": "Hashtag Web Solutions",
-      "type": "Full-time",
-      "startDate": "Oct 2024",
-      "endDate": "Mar 2026",
-      "duration": "1 yr 6 mos",
-      "location": "Nepal (On-site)",
-      "summary": "Helping businesses move from low visibility to scalable digital growth across Nepal and international markets.",
-      "responsibilities": [
-        "SEO strategy and technical audits",
-        "Digital growth systems and automation",
-        "AI powered tools and workflow optimization"
-      ],
-      "impact": [
-        "Generated 5+ international inbound inquiries through SEO improvements",
-        "Led brand transformation for Fresh Masala including packaging redesign, PR campaigns, and social media strategy",
-        "Built AI Agentic IDE improving development and content workflow efficiency by up to 3x",
-        "Created and maintained 100+ SEO tools for keyword research, technical audits, content optimization, and ranking analysis",
-        "Managed 10+ clients from onboarding to strategy, execution, and delivery"
-      ],
-      "skills": [
-        "SEO Audits"
-      ],
-      "logoUrl": "/sections/experience/images/abhishek-adhikari--hashtag-web-solutions-logo.jpeg"
     },
     {
       "role": "Business Development Manager",
@@ -1051,87 +1027,26 @@
   ],
   "blog": [
     {
+      "title": "Designing is not a 10-minute job, What do you think?",
+      "publication": "TechSathi",
+      "date": "2023-01-25",
+      "url": "https://techsathi.com/designing-is-not-a-10-minute-job/",
+      "summary": "Why good design needs time — research, iteration, feedback and attention to detail are part of the job. Published on TechSathi.",
+      "tags": [
+        "Design",
+        "UI/UX"
+      ]
+    },
+    {
       "title": "The Ultimate Guide to Future Design Perfection",
       "publication": "TechSathi",
-      "date": "2024",
-      "url": "https://techsathi.com",
-      "summary": "An in-depth guide exploring future-forward design principles, tools, and workflows for digital creators and product teams.",
+      "date": "2023-02-15",
+      "url": "https://techsathi.com/the-ultimate-guide-to-future-design-perfection/",
+      "summary": "A hands-on guide to Figma — wireframes, prototypes, design systems and real-time team collaboration. Published on TechSathi.",
       "tags": [
+        "Figma",
         "Design",
-        "UI/UX",
-        "Future Tech"
-      ]
-    },
-    {
-      "title": "Design Trends 2024: UI/UX Patterns Shaping Digital Products",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/design-trends-2024",
-      "summary": "Exploring the top UI/UX design trends of 2024 including neumorphism, glassmorphism, micro-interactions, and data-driven design patterns shaping modern digital products and user experiences.",
-      "tags": [
-        "Design",
-        "UI/UX",
-        "Trends"
-      ]
-    },
-    {
-      "title": "AgriTech in Nepal: Opportunities and Challenges for Digital Agriculture",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/agri-tech-nepal",
-      "summary": "An analysis of the agritech landscape in Nepal covering opportunities in livestock management, digital farm systems, supply chain technology, and the challenges facing agricultural technology adoption.",
-      "tags": [
-        "AgriTech",
-        "Nepal",
-        "Agriculture"
-      ]
-    },
-    {
-      "title": "React Performance Best Practices for Modern Web Applications",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/react-performance-best-practices",
-      "summary": "Practical React performance optimization techniques including code splitting, memoization, lazy loading, virtualization, and bundle analysis for building fast modern web applications.",
-      "tags": [
-        "React",
-        "Performance",
-        "Web Development"
-      ]
-    },
-    {
-      "title": "Content Strategy for Digital Products: A Practical Framework",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/content-strategy-digital-products",
-      "summary": "A step-by-step framework for developing content strategy for digital products including audience research, content auditing, SEO optimization, information architecture, and measurement.",
-      "tags": [
-        "Content Strategy",
-        "SEO",
-        "Digital Products"
-      ]
-    },
-    {
-      "title": "User Research Methods for Product Design Teams",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/user-research-methods",
-      "summary": "A comprehensive guide to user research methods including interviews, surveys, usability testing, analytics analysis, and contextual inquiry for product design and UX teams.",
-      "tags": [
-        "User Research",
-        "UX",
-        "Product Design"
-      ]
-    },
-    {
-      "title": "No-Code and Modern Development: Building Without Traditional Programming",
-      "publication": "Abhishek Adhikari",
-      "date": "2024",
-      "url": "https://abhishekadhikari.com/blog/no-code-modern-development",
-      "summary": "Exploring the no-code and low-code development landscape including tools, platforms, use cases, and how modern development approaches enable faster prototyping and digital product creation.",
-      "tags": [
-        "No-Code",
-        "Development",
-        "Tools"
+        "UI/UX"
       ]
     }
   ],
@@ -1183,12 +1098,21 @@
     },
     {
       "type": "recognition",
-      "title": "Open-Source Contributor — Agentic Awesome Skills (41k+ stars)",
+      "title": "Open-Source Contributor — Agentic Awesome Skills",
       "source": "ICT Frame",
       "date": "Jun 2026",
-      "description": "ICT Frame recognized Abhishek Adhikari for open-source contributions to Agentic Awesome Skills. The repository README lists the account #1 under 'Most Commits' and #2 under 'Most Skills Added' (verified October 11, 2026), with 125 skills added through 36 merged pull requests.",
+      "description": "Historical press coverage: in June 2026 ICT Frame covered Abhishek Adhikari's open-source work — its figures (top contributor rank, 3,701+ lines, ~40,000 users) and the name 'Antigravity Awesome Skills' reflect that time. The repository is now 'agentic-awesome-skills', where the account is listed #1 under 'Most Commits' and #2 under 'Most Skills Added' (verified October 11, 2026) with 125 skills added through 36 merged pull requests.",
       "url": "https://ictframe.com/hetaudas-abhishek-ranks-global/",
       "imageUrl": "/sections/news/images/abhishek-adhikari--github-repo-contributor.png"
+    },
+    {
+      "type": "editorial_feature",
+      "title": "Top AI Trainer in Nepal (2026) — Editorial Feature",
+      "source": "Colleges Nepal",
+      "date": "Aug 10, 2026",
+      "description": "Editorial feature by the Colleges Nepal team titled 'Top AI Trainer in Nepal (2026): Abhishek Adhikari — Prompt Engineering, Agentic AI & AI Workflows', published with an editorial disclaimer. Presented here as attributed editorial coverage; its cited project figures (14 skills, 13 pull requests, 41k+ stars) are historical and predate the current 125 skills / 36 pull requests.",
+      "url": null,
+      "imageUrl": null
     },
     {
       "type": "recognition",
@@ -1233,17 +1157,17 @@
       "title": "Prompt Smarter, Not Harder",
       "outlet": "WordCamp Kathmandu 2026",
       "date": "Sep 2026",
-      "description": "Spoke at WordCamp Kathmandu 2026, presenting a session on practical prompting.",
-      "url": "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
+      "description": "Workshop session 'Prompt Smarter, Not Harder', presented by Abhishek Adhikari at WordCamp Kathmandu 2026 (September 18–19, 2026), where he is listed as an official speaker.",
+      "url": "https://kathmandu.wordcamp.org/2026/session/prompt-smarter-not-harder/",
       "imageUrl": "/sections/media/images/abhishek-adhikari--wordcamp-kathmandu-2026-speaker.jpg"
     },
     {
       "type": "Speaker",
-      "title": "Prompt Smarter, Not Harder — Secure Developer Conference 2026",
+      "title": "Agentic AI Workflows & Building Open-Source Tech Communities — Secure Developer Conference 2026",
       "outlet": "Secure Developer Conference",
       "date": "2026",
-      "description": "Speaker at Secure Developer Conference 2026 presenting 'Prompt Smarter, Not Harder' — practical prompt engineering strategies for developers and security professionals.",
-      "url": null,
+      "description": "Speaker at Secure Developer Conference 2026 presenting 'Agentic AI Workflows & Building Open-Source Tech Communities'. Listed on the official speaker page (bio: 'Co-Founder, DEV Community Nepal & Agritech Entrepreneur').",
+      "url": "https://conference.devcommunitynepal.org/speaker-detail.html?speaker=abhishek-adhikari",
       "imageUrl": "/sections/media/images/abhishek-adhikari--secure-developer-conference-2026-speakers.jpg"
     },
     {
@@ -1251,8 +1175,8 @@
       "title": "Hacktoberfest Pulchowk 2026 — Introducing one of our judges from the panel: Mr Abhishek Adhikari",
       "outlet": "Dev Community Nepal & Himalaya Krishi",
       "date": "Sep 2026",
-      "description": "Most people pick either tech or agriculture — Abhishek decided Nepal needed both. As Co-founder of Dev Community Nepal and a leader at Himalaya Krishi, he works across AI, open source, agriculture, and community technology, training students, developers, and professionals in AI, prompt engineering, and open-source tools. Beyond the tech hubs, he is actively exploring how AI and digital systems can solve real-world problems in rural technology and digital agriculture — connecting emerging tech with the people and problems that actually need it. #hacktoberfest #hacktoberfest2026 #hacktoberfestpulchowk",
-      "url": "https://hacktoberfest.com/",
+      "description": "Poster announcement introducing Abhishek Adhikari as a judge on the Hacktoberfest Pulchowk 2026 panel. As Co-founder of Dev Community Nepal and a leader at Himalaya Krishi, he works across AI, open source, agriculture, and community technology, training students, developers, and professionals in AI, prompt engineering, and open-source tools, and exploring how AI and digital systems can solve real-world problems in rural technology and digital agriculture.",
+      "url": null,
       "imageUrl": "/sections/social-proof/images/abhishek-adhikari--hacktoberfest-pulchowk-judge.jpg"
     },
     {
@@ -1261,7 +1185,7 @@
       "outlet": "Open to Open Source",
       "date": "Sep 2026",
       "description": "Join us and start your career in Open Source with AI and learn how to use AI, make your first open-source contributions, and take your tech skills to the next level!",
-      "url": "",
+      "url": "https://lu.ma/gd5zeuli",
       "imageUrl": "/sections/social-proof/images/abhishek-adhikari--open-to-open-source-mentor.webp"
     }
   ]

@@ -41,7 +41,7 @@ export default function NotFound() {
           <p className={`text-sm mb-8 leading-relaxed ${isDark ? "text-white/50" : "text-[#1a1a1a]/50"}`}>
             The page you are looking for does not exist or has been moved.
             <br />
-            This portfolio lives on a single page — try navigating from the home page.
+            Start from the home page to find AI training, experience, and open-source work.
           </p>
           <div className="flex items-center justify-center gap-3">
             <a

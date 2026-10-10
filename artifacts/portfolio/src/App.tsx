@@ -24,12 +24,12 @@ import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
-function App() {
+function App({ ssrPath }: { ssrPath?: string }) {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <ErrorBoundary>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")} ssrPath={ssrPath}>
             <Switch>
               <Route path="/" component={Portfolio} />
               <Route path="/ai-trainer-nepal" component={AITrainerNepal} />
