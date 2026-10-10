@@ -92,11 +92,22 @@ export default function ContactPage() {
           message: form.message,
         }),
       });
-      if (!response.ok) throw new Error(`Request failed (${response.status})`);
+      const data = await response.json().catch(() => null);
+      if (!response.ok || (data && data.ok === false)) {
+        const detail = Array.isArray(data?.errors)
+          ? data.errors.map((e: { message?: string }) => e?.message).filter(Boolean).join(" ")
+          : "";
+        throw new Error(detail || `Request failed (${response.status})`);
+      }
       setSent(true);
       setForm(EMPTY);
-    } catch {
-      setError("Something went wrong. Please email abhishekadhikari1254@gmail.com directly.");
+    } catch (err) {
+      const reason = err instanceof Error ? err.message : "";
+      setError(
+        reason && !reason.startsWith("Request failed")
+          ? reason
+          : "Something went wrong. Please email abhishekadhikari1254@gmail.com directly.",
+      );
     } finally {
       setSending(false);
     }
@@ -142,7 +153,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5" aria-describedby={error ? "form-error" : undefined}>
+          <form onSubmit={handleSubmit} action={FORM_ENDPOINT} method="POST" className="space-y-5" aria-describedby={error ? "form-error" : undefined}>
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="name" className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">

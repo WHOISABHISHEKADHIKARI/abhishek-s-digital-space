@@ -91,7 +91,7 @@ export default function AITrainerNepal() {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const initial = saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const initial = saved === "dark";
     setDark(initial);
     document.documentElement.classList.toggle("dark", initial);
 
