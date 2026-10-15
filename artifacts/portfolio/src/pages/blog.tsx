@@ -10,6 +10,9 @@ const TITLE = "Blog | Abhishek Adhikari — AI Trainer in Nepal";
 const DESCRIPTION =
   "Articles by Abhishek Adhikari — design and UI writing published on TechSathi, plus AI training in Nepal and open-source contributions.";
 
+// Add canonical URL for the blog page itself
+const BLOG_CANONICAL = "/blog";
+
 const MEDIUM_FEED =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@abhishekadhikari1254";
 
@@ -63,6 +66,24 @@ export default function BlogPage() {
       ],
     },
   });
+
+  // Add canonical link for blog page
+  useEffect(() => {
+    let active = true;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute("href", `${SITE_URL}${BLOG_CANONICAL}`);
+    } else {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      link.setAttribute("href", `${SITE_URL}${BLOG_CANONICAL}`);
+      document.head.appendChild(link);
+    }
+    return () => {
+      active = false;
+    };
+  }, []);
+
 
   useEffect(() => {
     let active = true;
@@ -165,7 +186,10 @@ export default function BlogPage() {
         <section className="border-t bg-card/40">
           <div className="mx-auto max-w-5xl px-5 py-16 md:px-8 md:py-24">
             <SectionHeading eyebrow="Published" title="Selected articles" />
-            <div className="space-y-4">
+            <p className="mt-3 text-sm text-muted-foreground/60">
+              {localPosts.length} article{localPosts.length > 1 ? "s" : ""} from the blog archive:
+            </p>
+            <div className="mt-6 space-y-4">
               {localPosts.map((post) => (
                 <a
                   key={post.title}
@@ -180,8 +204,14 @@ export default function BlogPage() {
                   </div>
                   <p className="mt-2 font-bold group-hover:text-primary">{post.title}</p>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{post.summary}</p>
+                  <ExternalLink size={16} className="hidden shrink-0 self-center text-muted-foreground sm:block" />
                 </a>
               ))}
+            </div>
+            <div className="mt-8 text-center">
+              <a href="/blog" className="font-semibold text-primary">
+                Read all blog articles →
+              </a>
             </div>
           </div>
         </section>

@@ -229,6 +229,9 @@ export default function CorporateAITraining() {
               <a href="mailto:abhishekadhikari1254@gmail.com?subject=Corporate%20AI%20Training%20Enquiry" className="inline-flex min-h-12 items-center justify-center rounded-md border border-background/25 px-6 font-semibold">
                 Email directly
               </a>
+              <a href="/ai-trainer-nepal/" className="inline-flex min-h-12 items-center justify-center rounded-md border bg-primary/10 px-6 font-semibold text-primary">
+                AI trainer in Nepal →
+              </a>
             </div>
           </div>
         </div>

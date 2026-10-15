@@ -63,6 +63,9 @@ export default function NewsPage() {
           <p className="text-muted-foreground">Loading coverage…</p>
         ) : (
           <div className="grid gap-6 md:grid-cols-2">
+            <p className="text-xs text-muted-foreground/60 mb-4">
+              Most recent coverage: {news[0]?.date ?? "—"}
+            </p>
             {news.map((item) => (
               <article key={`${item.title}-${item.source}`} className="flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm">
                 {item.imageUrl && (

@@ -32,7 +32,7 @@ const evidence = [
     image: "/sections/media/images/abhishek-adhikari--wordcamp-kathmandu-2026-speaker.jpg",
     label: "Public speaking",
     title: "Spoke at WordCamp Kathmandu 2026",
-    copy: "Presented “Prompt Smarter, Not Harder,” a practical session on prompting and AI workflows.",
+    copy: 'Presented "Prompt Smarter, Not Harder," a practical session on prompting and AI workflows.',
     href: "https://kathmandu.wordcamp.org/2026/speaker/abhishek-adhikari/",
   },
   {
@@ -53,8 +53,29 @@ const evidence = [
     image: "/sections/media/images/abhishek-adhikari--hetauda-sdc-event.jpeg",
     label: "Events",
     title: "Workshops and events on Luma",
-    copy: "View hosted and attended technology events connected to Abhishek’s public training and community work.",
+    copy: "View hosted and attended technology events connected to Abhishek's public training and community work.",
     href: "https://luma.com/user/whoisabhishek",
+  },
+  {
+    image: "/sections/volunteering/images/abhishek-adhikari--code-for-change-chitwan-figma-workshop.jpeg",
+    label: "Workshop",
+    title: "Code for Change Chitwan – Figma workshop",
+    copy: "Organizer and lead trainer, February 2026, Chitwan, Nepal. 30+ participants learned Figma prototyping and design systems.",
+    href: "https://abhishekadhikari.com/volunteering",
+  },
+  {
+    image: "/sections/volunteering/images/abhishek-adhikari--aws-cloud-innovation-day-hetauda-2026.webp",
+    label: "Workshop",
+    title: "AWS Cloud Innovation Day Hetauda 2026",
+    copy: "Co-organizer and trainer, May 2026, Hetauda, Nepal. 50+ participants covered AWS fundamentals and cloud AI tools.",
+    href: "https://abhishekadhikari.com/volunteering",
+  },
+  {
+    image: "/sections/volunteering/images/abhishek-adhikari--aws-training-nepal.jpeg",
+    label: "Workshop",
+    title: "AWS Training Nepal",
+    copy: "Trainer, 2025, Various locations. Hands-on cloud and AI training for technical audiences.",
+    href: "https://abhishekadhikari.com/volunteering",
   },
 ];
 
@@ -335,6 +356,13 @@ export default function AITrainerNepal() {
           </div>
         </section>
 
+        <section className="border-t bg-muted/40 px-5 py-8 md:px-8 md:py-12">
+          <div className="flex gap-3">
+            <a href="/ai-training" className="flex-1 rounded-md border bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">Corporate AI training →</a>
+            <a href="/ai-trainer-nepal/" className="flex-1 rounded-md bg-card px-4 py-2 text-sm font-medium hover:text-primary">AI trainer in Nepal →</a>
+          </div>
+        </section>
+
         <section id="faq" className="border-y bg-muted/40 px-5 py-20 md:px-8 md:py-28">
           <div className="mx-auto max-w-4xl">
             <SectionHeading eyebrow="Questions" title="AI training FAQs" />
@@ -346,6 +374,27 @@ export default function AITrainerNepal() {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="workshops" className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24">
+          <SectionHeading eyebrow="Workshop evidence" title="Public workshops and training events" copy="Organizer, date, venue, audience and topic for each public training engagement — verifiable with proof URLs." />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {evidence.map((item) => {
+              if (item.label !== "Workshop") return null;
+              return (
+                <article key={item.title} className="rounded-xl border bg-card p-6">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="text-lg font-bold">{item.title}</h3>
+                    <span className="font-mono text-sm text-primary">{item.copy}</span>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.label}</p>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-md border bg-primary px-3 text-sm font-medium text-primary-foreground">
+                    View proof <ExternalLink size={13} />
+                  </a>
+                </article>
+              );
+            })}
           </div>
         </section>
 
