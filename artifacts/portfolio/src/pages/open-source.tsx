@@ -82,7 +82,7 @@ export default function OpenSourcePage() {
           <Github size={18} /> View repository
         </a>
         <a href={OPEN_SOURCE_FACTS.evidenceLinks.prSearch} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border bg-card px-6 font-semibold hover:bg-muted">
-          <GitPullRequest size={18} /> See merged PRs
+          <GitPullRequest size={18} /> See all 36 merged PRs (SME: PR #1688–#1698)
         </a>
       </PageHero>
 
